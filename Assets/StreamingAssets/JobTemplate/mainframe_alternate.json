@@ -1,0 +1,54 @@
+{
+  "docType": "system_guide",
+  "schemaVersion": "1.1",
+  "visualMode": true,
+  "title": "Mainframe Dispatch Workflow (Full)",
+  "systemName": "Mainframe X",
+  "version": "v1.2",
+  "summary": "Step-by-step screenshot walkthrough for dispatching tasks on Mainframe X.",
+  "screenshotFolder": "screenshots",
+  "screenshots": [
+    {
+      "order": 1,
+      "file": "mf_01_vpn.png",
+      "caption": "Start and verify VPN connection (blur sensitive IDs)."
+    },
+    {
+      "order": 2,
+      "file": "mf_02_terminal.png",
+      "caption": "Open Terminal and SSH to mainframe.example.com. Do not paste passwords."
+    },
+    {
+      "order": 3,
+      "file": "mf_03_menu.png",
+      "caption": "From the main menu, choose Operations → Dispatch."
+    },
+    {
+      "order": 4,
+      "file": "mf_04_dispatch_form.png",
+      "caption": "Enter dispatch info. Use the dropdown to select yard code."
+    }
+  ],
+  "accessSteps": [
+    "Ensure VPN is connected",
+    "SSH to the host",
+    "Navigate to Operations → Dispatch",
+    "Follow on-screen annotations in screenshots"
+  ],
+  "usageTips": [
+    "Redact or blur personal/credential data in images",
+    "Use the checklist before performing changes"
+  ],
+  "contactsFile": "contacts.csv",
+  "links": [
+    {
+      "title": "Auth Procedures",
+      "url": "https://intranet.example.com/auth-guide"
+    },
+    {
+      "title": "Dispatch SOP",
+      "url": "https://intranet.example.com/dispatch-sop"
+    }
+  ],
+  "notes": "Put images under Assets/StreamingAssets/JobTemplate/screenshots/. The loader will log missing images instead of throwing errors."
+}

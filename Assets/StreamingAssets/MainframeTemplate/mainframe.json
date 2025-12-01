@@ -1,0 +1,38 @@
+{
+  "docType": "mainframe",
+  "title": "Mainframe System Guide",
+  "systemName": "Mainframe",
+  "version": "1.0",
+  "summary": "This guide covers access and usage of the Mainframe system.",
+  "accessSteps": [
+    "Step 1: Open Mainframe",
+    "Step 2: Type User ID",
+    "Step 3: Enter PIN #"
+  ],
+  "usageTips": [
+    "Tip 1: Use PF1 for Help",
+    "Tip 2: PF8 = Scroll down",
+	"Tip 3: PF3 = Exit",
+	"Tip 4: CLEAR = Back up a page"
+  ],
+  "sections": [
+    {
+      "label": "Mainframe Overview",
+      "file": "mainframe.md"
+    },
+    {
+      "label": "Contact List",
+      "file": "contacts.csv"
+    }
+  ],
+   "tables": [
+    {
+      "name": "Yard Office Address",
+      "file": "address.csv"
+    },
+    {
+      "name": "Territory Info",
+      "file": "territory.csv"
+    }
+  ]
+}

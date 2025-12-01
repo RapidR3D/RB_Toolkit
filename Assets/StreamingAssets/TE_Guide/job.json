@@ -1,0 +1,37 @@
+{
+  "docType": "te_guide",
+  "title": "T&E Guide",
+  "category": "Train & Engine",
+  "version": "2025.1",
+  "summary": "Standard operating procedures for T&E crews.",
+  "sections": [
+    {
+      "label": "Overview",
+      "file": "overview.md"
+    },
+    {
+      "label": "Tips & Tricks",
+      "file": "tips.md"
+    }
+  ],
+  "procedures": [
+    {
+      "name": "PlaceHolder",
+      "file": ""
+    }
+  ],
+   "tables": [
+    {
+      "name": "Contacts",
+      "file": "contacts.csv"
+    },
+    {
+      "name": "Yard Office Address",
+      "file": "address.csv"
+    },
+    {
+      "name": "Territory Info",
+      "file": "territory.csv"
+    }
+  ]
+}

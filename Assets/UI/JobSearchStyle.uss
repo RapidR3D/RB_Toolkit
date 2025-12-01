@@ -1,0 +1,278 @@
+.container {
+    flex-grow: 1;
+    background-color: rgba(0, 0, 0, 0.95);
+    padding: 20px;
+}
+
+.search-area {
+    flex-direction: row;
+    height: 120px;
+    margin-bottom: 10px;
+    align-items: center;
+}
+
+.search-field {
+    flex-grow: 1;
+    margin-right: 20px;
+    -unity-font-style: bold;
+    font-size: 48px;
+}
+
+/* Target the label of the TextField specifically */
+.search-field > .unity-label {
+    color: #ffffff;
+    margin-right: 20px;
+    width: auto; /* Allow label to size to content */
+}
+
+/* Target the input text part to ensure it's also readable */
+.search-field > .unity-base-field__input {
+    color: #000000; /* Keep input text black if background is white/light */
+    background-color: #ffffff;
+}
+
+.search-button {
+    width: 25%;
+    min-width: 200px;
+    height: 90px;
+    background-color: #00BCD4;
+    color: white;
+    -unity-font-style: bold;
+    border-radius: 15px;
+    font-size: 42px;
+}
+
+.search-button:hover {
+    background-color: #00ACC1;
+}
+
+.job-details-area {
+    flex-grow: 1;
+    background-color: rgba(30, 30, 30, 0.9);
+    border-radius: 10px;
+    padding: 30px;
+}
+
+.job-title {
+    font-size: 84px;
+    -unity-font-style: bold;
+    color: #ffffff;
+    margin-bottom: 15px;
+    white-space: normal;
+    margin-top: -40px; /* Moved down slightly from -60px */
+}
+
+.job-subtitle {
+    font-size: 54px;
+    color: #aaaaaa;
+    margin-bottom: 40px;
+    white-space: normal;
+    margin-top: -25px; /* Moved up more to be closer to title */
+    padding-bottom: 20px; /* Add padding to push content search field down */
+}
+
+.content-container {
+    flex-grow: 1;
+    flex-direction: row;
+}
+
+.left-pane {
+    width: 35%;
+    min-width: 350px;
+    margin-right: 20px;
+    flex-direction: column;
+}
+
+.search-controls-container {
+    flex-direction: row;
+    margin-bottom: 10px;
+    margin-top: -20px;
+    height: 60px;
+    align-items: center;
+}
+
+.content-search-field {
+    flex-grow: 1;
+    height: 100%;
+    font-size: 32px;
+    margin-right: 10px;
+}
+
+.content-search-field > .unity-base-field__input {
+    color: #000000;
+    background-color: #ffffff;
+    border-radius: 5px;
+}
+
+.search-nav-buttons {
+    flex-direction: row;
+    align-items: center;
+    height: 100%;
+}
+
+.nav-button {
+    width: 60px;
+    height: 60px;
+    font-size: 32px;
+    -unity-font-style: bold;
+    background-color: #00BCD4;
+    color: white;
+    border-radius: 5px;
+    margin-left: 5px;
+}
+
+.nav-button:hover {
+    background-color: #00ACC1;
+}
+
+.match-count-label {
+    font-size: 24px;
+    color: #aaaaaa;
+    margin-left: 10px;
+    margin-right: 10px;
+    -unity-text-align: middle-center;
+}
+
+.section-list {
+    flex-grow: 1;
+    background-color: rgba(0, 188, 212, 0.15); /* Cyan with transparency */
+    border-radius: 10px;
+    border-width: 1px;
+    border-color: #00BCD4;
+}
+
+.detail-view {
+    flex-grow: 1;
+    background-color: rgba(33, 150, 243, 0.15); /* Blue with transparency */
+    border-radius: 10px;
+    padding: 40px;
+    border-width: 1px;
+    border-color: #2196F3;
+}
+
+.detail-content {
+    font-size: 54px;
+    color: #ffffff;
+    white-space: normal;
+}
+
+.list-item-label {
+    padding: 30px;
+    font-size: 48px;
+    color: #eeeeee;
+    white-space: normal; /* Allow wrapping in list items */
+}
+
+.list-item-label:hover {
+    background-color: #444444;
+}
+
+.list-item-section-header {
+    padding: 30px;
+    font-size: 48px;
+    -unity-font-style: bold;
+    color: #FFD700; /* Gold/Yellow */
+    background-color: #222222; /* Slightly darker background */
+    white-space: normal;
+}
+
+/* Target the selected item container directly to ensure it works even without focus */
+.section-list .unity-collection-view__item--selected {
+    background-color: rgba(0, 188, 212, 0.4);
+}
+
+.section-list .unity-collection-view__item--selected:hover {
+    background-color: rgba(0, 188, 212, 0.5);
+}
+
+/* Ensure the label background doesn't override the selection color */
+.unity-collection-view__item--selected .list-item-label {
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.unity-collection-view__item--selected .list-item-section-header {
+    background-color: rgba(0, 188, 212, 0.4);
+}
+
+/* Specific override for table cells to prevent wrapping */
+.detail-view .table-cell Label {
+    font-size: 28px;
+    white-space: normal;
+}
+
+.detail-view .table-cell {
+    padding: 10px;
+}
+
+/* Full Screen Image Styles */
+.fullscreen-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.95);
+    justify-content: center;
+    align-items: center;
+    display: none; /* Hidden by default */
+}
+
+.full-image {
+    flex-grow: 1;
+    width: 100%;
+    height: 100%;
+    -unity-background-scale-mode: scale-to-fit;
+}
+
+.close-button {
+    position: absolute;
+    top: 50px;
+    right: 30px;
+    width: 80px;
+    height: 80px;
+    font-size: 50px;
+    background-color: #d32f2f;
+    color: white;
+    border-radius: 15px;
+    border-width: 0;
+    -unity-font-style: bold;
+}
+
+.zoom-button {
+    width: 80px;
+    height: 80px;
+    font-size: 50px;
+    background-color: #00BCD4;
+    color: white;
+    border-radius: 15px;
+    border-width: 0;
+    margin-bottom: 20px;
+    -unity-font-style: bold;
+}
+
+.zoom-controls {
+    position: absolute;
+    bottom: 50px;
+    right: 30px;
+    flex-direction: column;
+}
+
+/* Easter Egg Styles */
+.easter-egg-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+    display: none;
+}
+
+.easter-egg-image {
+    flex-grow: 1;
+    width: 100%;
+    height: 100%;
+    -unity-background-scale-mode: scale-to-fit;
+}

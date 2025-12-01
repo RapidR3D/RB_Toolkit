@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: a5c150e0d29fa9c4fad12715333b4bfe
+DefaultImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 295649
+  packageName: MarkdownRenderer
+  packageVersion: 1.1.1
+  assetPath: Assets/Markdown-Renderer/ExampleRessources/Sample Scene.unity
+  uploadId: 819864

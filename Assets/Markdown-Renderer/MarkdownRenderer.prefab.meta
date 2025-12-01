@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: a28b138044d5927459e496c43a1d0112
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 295649
+  packageName: MarkdownRenderer
+  packageVersion: 1.1.1
+  assetPath: Assets/Markdown-Renderer/MarkdownRenderer.prefab
+  uploadId: 819864

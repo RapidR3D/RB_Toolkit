@@ -1,0 +1,121 @@
+{
+  "jobNumber": "Y290",
+  "jobName": "RCO JUNE STREET",
+  "craft": "FO FOREMAN/S1 SWITCHMAN",  
+  "onduty": "1530",
+  "yardCode": "QUE",
+  "subdivisionCode": "CI",
+  "serviceType": "Yard",
+  "location": "June Street Crew Room",
+  "radioChannels": "Channel 96(INDUST YM 96)",
+  "equipment": [
+    "RCO Vest",
+    "RCO Flashlight",
+    "Personal Radio",
+    "PPE",
+    "June Street Map",
+    "Industry Maps(SEE IMAGES)",
+	"Safety Glasses",
+	"Work Boots",
+	"Gloves"
+  ],
+  "sections": [
+    {
+      "label": "Summary",
+      "file": "summary.md"
+    },
+    {
+      "label": "Operating Notes",
+      "file": "radio_procedures.md"
+    },
+	{
+		"label": "Starting Engine Procedure",
+		"file": "enginestart.md"
+	}
+  ],
+  "tables": [
+    {
+      "name": "Contacts",
+      "file": "contacts.csv"
+    },
+    {
+      "name": "Yard Office Address",
+      "file": "address.csv"
+    },
+    {
+      "name": "Territory Info",
+      "file": "territory.csv"
+    }
+  ],
+  "procedures": [
+    {
+	  "name": "<b>**RCO TESTS**<b>"
+    },
+    {
+      "name": "Tilt / Time-Out Test",
+      "file": "tilt_timeout.md"
+    },
+    {
+      "name": "Vigilance Test",
+      "file": "vigilance.md"
+    },
+    {
+      "name": "Standing Locomotive Air Brake Test",
+      "file": "standing_brake.md"
+    },
+    {
+      "name": "Locomotive Hand Brake Test",
+      "file": "hand_brake.md"
+    }
+  ],
+  "images":[
+	{
+	 "name": "<b>**Images**<b>"
+	},
+	{
+	 "name": "Byer Steel",
+	 "file": "Shared/Images/290_ByerSteel.jpeg"
+	},
+	{
+	 "name": "Byer Steel 02",
+	 "file": "Shared/Images/290_ByerSteel02.jpeg"
+	},
+	{
+	 "name": "Byer Steel 03",
+	 "file": "Shared/Images/290_ByerSteel03.jpeg"
+	},{
+	 "name": "Drumm",
+	 "file": "Shared/Images/290_Drumm.jpeg"
+	},{
+	 "name": "Drumm/Emory",
+	 "file": "Shared/Images/290_Drumm_Emory.jpeg"
+	},{
+	 "name": "Drumm 02",
+	 "file": "Shared/Images/290_Drumm02.jpeg"
+	},{
+	 "name": "Emery",
+	 "file": "Shared/Images/290_Emery.jpeg"
+	},{
+	 "name": "Pilot Chemical",
+	 "file": "Shared/Images/290_PilotChemical.jpeg"
+	},{
+	 "name": "Pilot Chemical 02",
+	 "file": "Shared/Images/290_PilotChemical02.jpeg"
+	},{
+	 "name": "South End Ivorydale",
+	 "file": "Shared/Images/290_SE_IvorydaleYard.jpeg"
+	},{
+	 "name": "US Ink",
+	 "file": "Shared/Images/290_USInk.jpeg"
+	},{
+	 "name": "US Ink B.E. 14.4",
+	 "file": "Shared/Images/290_USInk_BE14.4.jpeg"
+	},{
+	 "name": "US Ink 02",
+	 "file": "Shared/Images/290_USInk02.jpeg"
+	},{
+	 "name": "US Ink 03",
+	 "file": "Shared/Images/290_USInk03.jpeg"
+	}
+	]
+}

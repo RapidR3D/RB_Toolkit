@@ -1,0 +1,6 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements">
+    <ui:ListView style="height: 450px; width: 101px;" />
+    <ui:VisualElement style="flex-grow: 1; justify-content: flex-end; align-self: center;" />
+    <ui:VisualElement style="flex-grow: 1; justify-content: flex-end; align-self: center; flex-direction: column-reverse; align-items: stretch; top: auto; bottom: auto;" />
+    <ui:TextField label="Text Field" placeholder-text="filler text" />
+</ui:UXML>

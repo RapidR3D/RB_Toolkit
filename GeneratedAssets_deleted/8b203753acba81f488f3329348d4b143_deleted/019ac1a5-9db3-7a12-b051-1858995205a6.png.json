@@ -1,0 +1,20 @@
+{
+    "asset": "8b203753acba81f488f3329348d4b143",
+    "fileName": "019ac1a5-9db3-7a12-b051-1858995205a6.png",
+    "prompt": "Create a 2d texture from this image",
+    "negativePrompt": "",
+    "model": "5b5b2af1-6ea4-4266-b087-cc9f3bf4f450",
+    "modelName": "Flux.1 Dev",
+    "customSeed": -1,
+    "w3CTraceId": "33f9f7eb880dfe280448c6bde8366e70",
+    "refinementMode": "Generation",
+    "pixelateTargetSize": 0,
+    "pixelateKeepImageSize": false,
+    "pixelatePixelBlockSize": 0,
+    "pixelateMode": 0,
+    "pixelateOutlineThickness": 0,
+    "doodles": {
+        "m_Items": []
+    },
+    "upscaleFactor": 0
+}

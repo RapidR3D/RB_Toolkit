@@ -1,0 +1,13 @@
+{
+  "docType": "help",
+  "title": "RB Toolkit",
+  "category": "User Guide",
+  "version": "1.08",
+  "summary": "Welcome to the Cincinnati Playbook 2.0! Here is how to use the search bar to access different guides.",
+  "sections": [
+    {
+      "label": "Search Commands",
+      "file": "commands.md"
+    }
+  ]
+}

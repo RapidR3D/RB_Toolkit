@@ -1,0 +1,110 @@
+{
+  "docType": "MRT",
+  "title": "Mobile Rail Tool (MRT) Guide",
+  "category": "Railroad/Yard Operations",
+  "version": "2024.08.23",
+  "summary": "Comprehensive guide for CSX Mobile Rail Tool application covering yard jobs, locals, work order completion, switching operations, and train planning for transportation employees.",
+  "sections": [
+    {
+      "label": "Cover & Overview",
+      "file": "00_cover.md"
+    },
+    {
+      "label": "Contacts & Support",
+      "file": "01_contacts.md"
+    },
+    {
+      "label": "New Features",
+      "file": "02_new_features.md"
+    },
+    {
+      "label": "Troubleshooting & Quick Reference",
+      "file": "03_troubleshooting.md"
+    },
+    {
+      "label": "MRT Training & Help",
+      "file": "04_training.md"
+    },
+    {
+      "label": "Customer Switch Data (CSD)",
+      "file": "05_csd.md"
+    },
+    {
+      "label": "Work Instructions & Terminology",
+      "file": "06_work_instructions.md"
+    },
+    {
+      "label": "Exception Codes & Reasons",
+      "file": "07_exceptions.md"
+    },
+    {
+      "label": "Getting Started",
+      "file": "08_getting_started.md"
+    },
+    {
+      "label": "Yard Switching Tool (YST)",
+      "file": "09_yard_switching.md"
+    },
+    {
+      "label": "Switch Planning Tool (SPT)",
+      "file": "10_switch_planning.md"
+    },
+    {
+      "label": "Mobile Work Order Completion",
+      "file": "11_work_order.md"
+    },
+    {
+      "label": "Add Work & New Work",
+      "file": "12_add_work.md"
+    },
+    {
+      "label": "AEI Reads & Notifications",
+      "file": "13_aei_notifications.md"
+    },
+    {
+      "label": "Completing Work Orders",
+      "file": "14_completing.md"
+    },
+    {
+      "label": "**MRT_AEI**",
+      "file": "MRTAEI/job.json"
+    }
+  ],
+  "tables": [
+    {
+      "name": "Exception Codes and Reasons",
+      "file": "table_exception_codes.md"
+    },
+    {
+      "name": "Work Instruction Combinations",
+      "file": "table_work_instructions.md"
+    },
+    {
+      "name": "Load/Empty Status Codes",
+      "file": "table_load_empty.md"
+    }
+  ],
+  "keywords": [
+    "MRT",
+    "Mobile Rail Tool",
+    "CSX",
+    "Yard Switching",
+    "Switch Planning",
+    "Work Order",
+    "SPT",
+    "YST",
+    "AEI",
+    "Interchange",
+    "Customer Service",
+    "CSD",
+    "Exception Codes",
+    "Train Standing Order",
+    "EAC",
+    "Locomotive",
+    "EOT",
+    "Place",
+    "Pull",
+    "Pickup",
+    "Set Out"
+  ]
+}

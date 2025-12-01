@@ -1,0 +1,46 @@
+{
+  "docType": "MRT_AEI",
+  "title": "MRT AEI Guide - Accept an AEI Read in MRT Work Order",
+  "category": "Railroad/AEI Operations",
+  "version": "2024.1",
+  "summary": "Step-by-step guide for processing Automated Equipment Identification (AEI) reads in the Mobile Rail Tool Work Order system, including handling error cars, add cars, and accepting AEI standing orders.",
+  "sections": [
+    {
+      "label": "Overview & Access",
+      "file": "aei_00_overview.md"
+    },
+    {
+      "label": "AEI Error Cars",
+      "file": "aei_01_error_cars.md"
+    },
+    {
+      "label": "AEI Added Cars",
+      "file": "aei_02_added_cars.md"
+    },
+    {
+      "label": "Accept AEI Standing Order",
+      "file": "aei_03_accept_order.md"
+    },
+    {
+      "label": "Placeholder Cars Correction",
+      "file": "aei_04_placeholder_cars.md"
+    },
+	{
+      "label": "COMPLETE GUIDE CONDENSED",
+      "file": "aei_complete_guide.md"
+    }
+  ],
+  "keywords": [
+    "AEI",
+    "Automated Equipment Identification",
+    "AEI Read",
+    "AEI Scan",
+    "Error Cars",
+    "Add Cars",
+    "Standing Order",
+    "Placeholder Cars",
+    "Train Verification",
+    "Work Order",
+    "MRT"
+  ]
+}

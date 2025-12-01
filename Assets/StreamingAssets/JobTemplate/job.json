@@ -1,0 +1,39 @@
+{
+  "jobNumber": "TEMPLATE",
+  "jobName": "New Job Name",
+  "craft": "Craft Name",
+  "onduty": "0000",
+  "yardCode": "YARD",
+  "subdivisionCode": "SUB",
+  "serviceType": "Type",
+  "location": "Location Name",
+  "radioChannels": "000-000",
+  "equipment": [
+    "Item 1",
+    "Item 2"
+  ],
+  "sections": [
+    {
+      "label": "Summary",
+      "file": "summary.md"
+    }
+  ],
+  "tables": [
+    {
+      "name": "Contacts",
+      "file": "contacts.csv"
+    }
+  ],
+  "procedures": [
+    {
+      "name": "Procedure 1",
+      "file": "procedure1.md"
+    }
+  ],
+  "images": [
+    {
+      "name": "Example Map",
+      "file": "map.png"
+    }
+  ]
+}

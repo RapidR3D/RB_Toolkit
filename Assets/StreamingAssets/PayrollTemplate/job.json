@@ -1,0 +1,23 @@
+{
+  "docType": "payroll",
+  "title": "Payroll Guide",
+  "category": "Finance & Compensation",
+  "version": "2025.1",
+  "summary": "Information regarding pay periods, claims, and payroll contacts.",
+  "sections": [
+    {
+      "label": "Pay Schedule",
+      "file": "schedule.md"
+    },
+    {
+      "label": "Claims Guide",
+      "file": "claims.md"
+    }
+  ],
+  "links": [
+    {
+      "name": "Payroll Portal",
+      "file": "https://payroll.example.com"
+    }
+  ]
+}

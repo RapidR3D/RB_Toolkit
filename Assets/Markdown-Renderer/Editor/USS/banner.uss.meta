@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: 3b91b0b49e04d8046b99d9ab6710019e
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 12385, guid: 0000000000000000e000000000000000, type: 0}
+  disableValidation: 0
+AssetOrigin:
+  serializedVersion: 1
+  productId: 295649
+  packageName: MarkdownRenderer
+  packageVersion: 1.1.1
+  assetPath: Assets/Markdown-Renderer/Editor/USS/banner.uss
+  uploadId: 819864

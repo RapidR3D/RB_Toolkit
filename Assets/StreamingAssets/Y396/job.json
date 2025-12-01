@@ -1,0 +1,97 @@
+{
+  "jobNumber": "Y396",
+  "jobName": "HUMP RCO",
+  "craft": "HF HUMP FOREMAN",
+  "onduty": "2330",
+  "yardCode": "QUE",
+  "subdivisionCode": "CI",
+  "serviceType": "Yard",
+  "location": "Hump Tower Crew Room",
+  "radioChannels": "044-044",
+  "equipment": [
+    "RCO Vest",
+    "RCO Flashlight",
+    "Personal Radio",
+    "PPE",
+    "R Yard Map",
+    "Bowl/Trim Map",
+	"Safety Glasses",
+	"Work Boots",
+	"Gloves"
+  ],
+  "sections": [
+    {
+      "label": "Summary",
+      "file": "summary.md"
+    },
+    {
+      "label": "Operating Notes",
+      "file": "radio_procedures.md"
+    }
+  ],
+  "tables": [
+    {
+      "name": "Contacts",
+      "file": "contacts.csv"
+    },
+    {
+      "name": "Yard Office Address",
+      "file": "address.csv"
+    },
+    {
+      "name": "Territory Info",
+      "file": "territory.csv"
+    }
+  ],
+  "procedures": [
+	{
+	  "name": "<b>**RCO TESTS**<b>"
+    },
+    {
+      "name": "Tilt / Time-Out Test",
+      "file": "tilt_timeout.md"
+    },
+    {
+      "name": "Vigilance Test",
+      "file": "vigilance.md"
+    },
+    {
+      "name": "Standing Locomotive Air Brake Test",
+      "file": "standing_brake.md"
+    },
+    {
+      "name": "Locomotive Hand Brake Test",
+      "file": "hand_brake.md"
+    }
+  ],
+  "images":[
+  {
+	 "name": "<b>**Images**<b>"
+  },
+  {
+	  "name": "Humptower Pic",
+	  "file": "Shared/Images/Humptower.jpeg"
+  },
+  {
+	  "name": "North End R Yard",
+	  "file": "Shared/Images/NorthEndRYard(Hump).jpeg"
+  },
+  {
+	  "name": "South End Queensgate",
+	  "file": "Shared/Images/SouthEndQueensgate(Hump).jpeg"
+  },
+  {
+	  "name": "Receiving Yard",
+	  "file": "Shared/Images/ReceivingYard(Hump).jpeg"
+  },
+  {
+	  "name": "Hump",
+	  "file": "Shared/Images/Hump.jpeg"
+  },
+  {
+	  "name": "Car Shop Lead",
+	  "file": "Shared/Images/CarShopLead(Hump).jpeg"
+  }  
+  ]
+}
+

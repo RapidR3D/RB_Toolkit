@@ -1,0 +1,9 @@
+fileFormatVersion: 2
+guid: c7649b1bf02612148ba167468fb2f27d
+AssetOrigin:
+  serializedVersion: 1
+  productId: 295649
+  packageName: MarkdownRenderer
+  packageVersion: 1.1.1
+  assetPath: Assets/Markdown-Renderer/Runtime/Parser/Visuals/SyntaxHighlighter.cs
+  uploadId: 819864

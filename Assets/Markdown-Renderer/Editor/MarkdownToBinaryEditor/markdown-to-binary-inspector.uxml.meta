@@ -1,0 +1,17 @@
+fileFormatVersion: 2
+guid: 7fef872474a451d49898161ac5bbb389
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 13804, guid: 0000000000000000e000000000000000, type: 0}
+AssetOrigin:
+  serializedVersion: 1
+  productId: 295649
+  packageName: MarkdownRenderer
+  packageVersion: 1.1.1
+  assetPath: Assets/Markdown-Renderer/Editor/MarkdownToBinaryEditor/markdown-to-binary-inspector.uxml
+  uploadId: 819864

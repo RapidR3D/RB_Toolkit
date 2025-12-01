@@ -1,0 +1,23 @@
+{
+  "docType": "system_guide",
+  "schemaVersion": "1.1",
+  "visualMode": true,
+  "title": "Mainframe Quick Walkthrough (Login)",
+  "systemName": "Mainframe X",
+  "version": "v1.0",
+  "summary": "Short screenshot walkthrough for logging in.",
+  "screenshotFolder": "screenshots",
+  "screenshots": [
+    {
+      "order": 1,
+      "file": "login_step1.png",
+      "caption": "Open VPN client and confirm 'Connected'."
+    },
+    {
+      "order": 2,
+      "file": "login_step2.png",
+      "caption": "Open Terminal and run the example SSH command."
+    }
+  ],
+  "notes": "Crop or blur any sensitive details in screenshots before adding them to the repo."
+}

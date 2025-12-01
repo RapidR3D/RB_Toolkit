@@ -1,0 +1,76 @@
+{
+  "jobNumber": "Y231",
+  "jobName": "L 2ND RAMP YM-QUE",
+  "craft": "FO FOREMAN",
+  "onduty": "1500",
+  "yardCode": "QUE",
+  "subdivisionCode": "CI",
+  "serviceType": "Yard",
+  "location": "Ramp Office",
+  "radioChannels": "028-028",
+  "equipment": [
+    "Lantern (for 2nd Shift)",
+    "Personal Radio",
+    "PPE",
+    "Ramp Map",
+    "CSX Tablet",
+	"Safety Vest",
+	"Gloves",
+	"Safety Glasses"	
+  ],
+  "sections": [
+    {
+      "label": "Summary",
+      "file": "summary.md"
+    },
+    {
+      "label": "Operating Notes",
+      "file": "radio_procedures.md"
+    }
+  ],
+  "tables": [
+    {
+      "name": "Contacts",
+      "file": "contacts.csv"
+    },
+    {
+      "name": "Ramp Office Address",
+      "file": "address.csv"
+    },
+    {
+      "name": "Territory Info",
+      "file": "territory.csv"
+    }
+  ],
+  "procedures": [
+    {
+      "name": "",
+      "file": ""
+    }    
+  ],
+  "images":[
+  {
+	  "name": "<b>**Images**<b>"
+  },
+  {
+	  "name": "Intermodal Ramp",
+	  "file": "Shared/Images/Ramp01.jpeg"
+  },
+  {
+	  "name": "North End Ramp Lead",
+	  "file": "Shared/Images/Ramp02.jpeg"
+  },
+  {
+	  "name": "Ramp South End A/B Lead-Tracks 4-6",
+	  "file": "Shared/Images/Ramp03.jpeg"
+  },
+  {
+	  "name": "Ramp South End Ramp Lead",
+	  "file": "Shared/Images/Ramp04.jpeg"
+  },
+  {
+	  "name": "Ramp Track Map",
+	  "file": "Shared/Images/RampTrackMap.jpg"
+  }
+  ]
+}

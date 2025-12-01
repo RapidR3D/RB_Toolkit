@@ -1,0 +1,210 @@
+
+.heading {
+    -unity-font-style: bold;
+    margin-top: 12px;
+    color: #ffffff;
+}
+.heading.first-block {
+    margin-top: 0px;
+}
+
+.heading-1 {
+    font-size: 105px;
+}
+.heading-2 {
+    font-size: 90px;
+}
+.heading-3 {
+    font-size: 75px;
+}
+.heading-4 {
+    font-size: 60px;
+}
+.heading-5 {
+    font-size: 60px;
+    -unity-font-style: normal;
+}
+.heading-6 {
+    font-size: 60px;
+    opacity: .7;
+}
+
+.thematic-line {
+    border-bottom-color: rgba(255, 255, 255, .4);
+    border-bottom-width: 2px;
+}
+
+.table {
+    flex-direction: column;
+    flex-grow: 1;
+    color: #ffffff;
+}
+.table-row {
+    flex-grow: 1;
+    flex-direction: row;
+    border-bottom-width: 1px;
+    border-color: rgba(255, 255, 255, .3);
+}
+.row-data {
+    flex-direction: row;
+}
+.table-row.header .table-cell {
+    padding: 10px;
+}
+.table-cell {
+    padding-top: 6px;
+    padding-bottom: 6px;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-size: 28px;
+    color: #ffffff;
+}
+
+/* Explicitly target labels inside table cells to override global/inherited styles */
+.table-cell Label {
+    font-size: 28px;
+    color: #ffffff;
+    white-space: normal;
+}
+
+.table-row.header {
+    -unity-font-style: bold;
+    font-size: 32px;
+    border-top-width: 1px;
+    border-bottom-width: 2px;
+    border-right-width: 1px;
+    color: #ffffff;
+}
+.table-row.header .table-col {
+    border-right-width: 0px;
+}
+
+.table-col {
+    flex-grow:1;
+    border-left-width: 1px;
+    border-color: rgba(255, 255, 255, .3);
+    
+}
+.table-col.last-entry {
+    border-right-width: 1px;
+}
+
+.paragraph {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+.paragraph .line {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    white-space: normal;
+    position: relative;
+    overflow: hidden;
+}
+.paragraph .line SelectableLabel,
+.paragraph .line Label {
+    white-space: normal;
+    font-size: 48px;
+    color: #ffffff;
+}
+
+.list-element {
+    flex-direction: row;
+    padding-left: 6px;
+    margin-bottom: 10px;
+}
+
+.list-number {
+    opacity: .8;
+    font-size: 48px;
+    color: #ffffff;
+}
+
+.list-element .list-bullet {
+    opacity: .8;
+    background-color: #ffffff;
+    border-radius: 10px;
+    width: 15px;
+    height: 15px;
+    top: 25px;
+    margin-right: 18px;
+}
+
+.list-element .list-element .list-bullet {
+    border-color: #ffffff;
+    background-color: rgba(0,0,0,0);
+    border-width: 2px;
+}
+.list-element .list-element .list-element .list-element .list-bullet {
+    background-color: #ffffff;
+    
+    border-radius: 0;
+}
+
+.link-hidden {
+    position: absolute;
+    color: rgba(64, 150, 240, 1);
+    
+    left: 0;
+    right: 0;
+}
+.link-hidden.hover {
+    color: rgba(90, 200, 255, 1);
+}
+
+LinkImageElement {
+    -unity-background-scale-mode: scale-to-fit;
+    width: 300px;
+}
+
+LinkImageElement.clickable {
+    cursor: link;
+}
+
+.link {
+    position: absolute;
+    cursor: link;
+    overflow: hidden;
+    opacity: 0;
+}
+
+.block {
+    margin-bottom: 12px;
+}
+.block .block {
+    margin-bottom: 0px;
+}
+
+.quote-block {
+    padding-left: 48px;
+    margin-left: 24px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    border-left-color: rgba(255, 255, 255,.4);
+    border-left-width: 12px;
+}
+
+.code-block-text {
+    white-space: normal;
+    font-size: 48px;
+    color: #ffffff;
+}
+.code-block {
+    padding:6px;
+    background-color: rgba(0,0,0,.2);
+}
+.code-block .copy-button {
+    position: absolute;
+    top: 6px;
+    right: 6px;
+    width: 48px;
+    height: 48px;
+    border-width: 0;
+    opacity: .5;
+    background-image: resource("uMarkdownCopyIcon");
+    background-size: 36px;
+}
+.code-block .copy-button:hover {
+    opacity: .8;
+}

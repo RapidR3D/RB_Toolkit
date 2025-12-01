@@ -1,0 +1,43 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="False">
+    <ui:Style src="JobSearchStyle.uss" />
+    <ui:VisualElement name="Container" class="container">
+        <ui:VisualElement name="SearchArea" class="search-area">
+            <ui:TextField name="SearchField" label="Job ID:" placeholder-text="e.g. Y197" class="search-field"/>
+            <ui:Button name="SearchButton" text="Load Job" class="search-button"/>
+        </ui:VisualElement>
+        
+        <ui:VisualElement name="JobDetailsArea" class="job-details-area" style="display: none;">
+            <ui:Label name="JobTitle" text="Job Title" class="job-title" />
+            <ui:Label name="JobSubtitle" text="Job Details..." class="job-subtitle" />
+            
+            <ui:VisualElement name="ContentContainer" class="content-container">
+                <ui:VisualElement name="LeftPane" class="left-pane">
+                    <ui:VisualElement name="SearchControlsContainer" class="search-controls-container" style="display: none;">
+                        <ui:TextField name="ContentSearchField" placeholder-text="Filter..." class="content-search-field" />
+                        <ui:VisualElement name="SearchNavButtons" class="search-nav-buttons">
+                            <ui:Button name="PrevMatchButton" text="▲" class="nav-button" />
+                            <ui:Label name="MatchCountLabel" text="0/0" class="match-count-label" />
+                            <ui:Button name="NextMatchButton" text="▼" class="nav-button" />
+                        </ui:VisualElement>
+                    </ui:VisualElement>
+                    <ui:ListView name="SectionList" class="section-list" />
+                </ui:VisualElement>
+                <ui:ScrollView name="DetailView" class="detail-view" />
+            </ui:VisualElement>
+        </ui:VisualElement>
+        
+        <ui:VisualElement name="FullScreenContainer" class="fullscreen-container">
+            <ui:Image name="FullImage" class="full-image" />
+            <ui:Button name="CloseButton" text="X" class="close-button" />
+            <ui:VisualElement class="zoom-controls">
+                <ui:Button name="ZoomInButton" text="+" class="zoom-button" />
+                <ui:Button name="ZoomOutButton" text="-" class="zoom-button" />
+            </ui:VisualElement>
+        </ui:VisualElement>
+        
+        <ui:VisualElement name="EasterEggContainer" class="easter-egg-container" style="display: none;">
+            <ui:Image name="EasterEggImage" class="easter-egg-image" />
+            <ui:Button name="EasterEggCloseButton" text="X" class="close-button" />
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>

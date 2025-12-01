@@ -1,0 +1,53 @@
+{
+  "jobNumber": "Y321",
+  "jobName": "CEMENTDALE AUTOS",
+  "craft": "FO Foreman",
+  "onduty": "2230",
+  "yardCode": "QUE",
+  "subdivisionCode": "CI",
+  "serviceType": "Yard",
+  "location": "North Crew Room",
+  "radioChannels": "Channel 96(INDUST YM 96)",
+  "equipment": [
+    "Lantern (for 3rd Shift)",
+    "Personal Radio",
+    "PPE",
+    "Ramp Map",
+    "CSX Tablet",
+	"Safety Vest",
+	"Gloves",
+	"Safety Glasses"	
+  ],
+  "sections": [
+    {
+      "label": "Summary",
+      "file": "summary.md"
+    }
+  ],
+  "tables": [
+    {
+      "name": "Contacts",
+      "file": "contacts.csv"
+    },
+    {
+      "name": "North Crew Room",
+      "file": "address.csv"
+    },
+    {
+      "name": "Territory Info",
+      "file": "territory.csv"
+    }
+  ],
+  "procedures": [
+    {
+      "name": "Radio Procedures",
+      "file": "radio_procedures.md"
+    }
+  ],
+  "images": [
+    {
+      "name": "",
+      "file": ""
+    }
+  ]
+}

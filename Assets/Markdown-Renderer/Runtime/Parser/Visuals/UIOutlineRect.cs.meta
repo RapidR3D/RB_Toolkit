@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: 28cdbf2ec504e1d4e9353d4d145b1a17
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 295649
+  packageName: MarkdownRenderer
+  packageVersion: 1.1.1
+  assetPath: Assets/Markdown-Renderer/Runtime/Parser/Visuals/UIOutlineRect.cs
+  uploadId: 819864

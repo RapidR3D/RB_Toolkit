@@ -1,0 +1,19 @@
+{
+  "docType": "mrt",
+  "title": "Mobile Rail Tool Guide Template",
+  "category": "MRT",
+  "version": "1.0",
+  "summary": "Template for MRT guides.",
+  "sections": [
+    {
+      "label": "Overview",
+      "file": "overview.md"
+    }
+  ],
+  "accessSteps": [
+    "Step 1: Open App"
+  ],
+  "usageTips": [
+    "Tip 1: ..."
+  ]
+}

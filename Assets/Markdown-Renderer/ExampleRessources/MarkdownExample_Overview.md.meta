@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 939885dd19394c34ab501fa95985b57f
+TextScriptImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 295649
+  packageName: MarkdownRenderer
+  packageVersion: 1.1.1
+  assetPath: Assets/Markdown-Renderer/ExampleRessources/MarkdownExample_Overview.md
+  uploadId: 819864

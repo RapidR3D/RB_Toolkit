@@ -1,0 +1,47 @@
+{
+  "docType": "crewlife",
+  "title": "Crew Life",
+  "category": "Lifestyle & Benefits",
+  "version": "1.0",
+  "summary": "Information regarding benefits, scheduling, and crew resources.",
+  "sections": [
+    {
+      "label": "Crewlife Overview",
+      "file": "overview.md"
+    },
+	{
+      "label": "Operating Notes",
+      "file": "operatingnotes.md"
+    },
+    {
+      "label": "Contact List",
+      "file": "contacts.csv"
+    }
+  ],
+   "tables": [
+    {
+      "name": "Yard Office Address",
+      "file": "address.csv"
+    },
+    {
+      "name": "Territory Info",
+      "file": "territory.csv"
+    }
+  ],
+   "images":[
+  {
+	  "name": "Crew Life Screenshot",
+	  "file": "crewlifescreenpic.PNG"
+  },
+  {
+	  "name": "Payroll/Claims example",
+	  "file": "claimsexamplepic.PNG"
+  }
+  ],
+  "links": [
+    {
+      "name": "Union Website",
+      "file": "https://union.example.com"
+    }
+  ]
+}

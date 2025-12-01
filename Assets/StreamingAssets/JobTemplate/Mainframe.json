@@ -1,0 +1,27 @@
+{
+  "docType": "system_guide",
+  "schemaVersion": "1.0",
+  "title": "Mainframe Access & Usage",
+  "systemName": "Mainframe X",
+  "version": "v1.2",
+  "summary": "How to access and operate Mainframe X for routine tasks and dispatching.",
+  "accessSteps": [
+    "Connect to the corporate VPN",
+    "Open the Terminal and ssh to mainframe.example.com",
+    "Run `login-svc` and provide your LDAP credentials",
+    "Navigate: > menu > operations > dispatch"
+  ],
+  "usageTips": [
+    "Use the --safe flag for bulk updates",
+    "Run daily-backup before making changes"
+  ],
+  "credentialsNotes": "Do not store plaintext passwords here. This file should reference the secure credential vault.",
+  "contactsFile": "contacts.csv",
+  "links": [
+    {
+      "title": "Authentication Guide",
+      "url": "https://intranet.example.com/auth-guide"
+    }
+  ],
+  "notes": "Update schemaVersion when making breaking changes."
+}

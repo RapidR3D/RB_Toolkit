@@ -1,0 +1,9 @@
+fileFormatVersion: 2
+guid: ff84d9ec1610cf849bf8f7e34fe6f972
+AssetOrigin:
+  serializedVersion: 1
+  productId: 295649
+  packageName: MarkdownRenderer
+  packageVersion: 1.1.1
+  assetPath: Assets/Markdown-Renderer/Editor/UIFactory/VisualElements/GradientElement.cs
+  uploadId: 819864

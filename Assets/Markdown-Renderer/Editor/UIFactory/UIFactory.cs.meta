@@ -1,0 +1,9 @@
+fileFormatVersion: 2
+guid: a6d0072671904174f9fbeefa8e8e5202
+AssetOrigin:
+  serializedVersion: 1
+  productId: 295649
+  packageName: MarkdownRenderer
+  packageVersion: 1.1.1
+  assetPath: Assets/Markdown-Renderer/Editor/UIFactory/UIFactory.cs
+  uploadId: 819864

@@ -1,0 +1,85 @@
+{
+  "jobNumber": "Y391",
+  "jobName": "TRIM 1",
+  "craft": "FO FOREMAN/S1 SWITCHMAN",  
+  "onduty": "2230",
+  "yardCode": "QUE",
+  "subdivisionCode": "CI",
+  "serviceType": "Yard",
+  "location": "Trim Tower Crew Room",
+  "radioChannels": "Trim 1 (Channel: 021)",
+ "equipment": [
+    "RCO Vest",
+    "RCO Flashlight",
+    "Personal Radio",
+    "PPE",
+    "D Yard Map",
+    "Bowl/Trim Map",
+	"Safety Glasses",
+	"Work Boots",
+	"Gloves"
+  ],
+  "sections": [
+    {
+      "label": "Summary",
+      "file": "summary.md"
+    },
+    {
+      "label": "Operating Notes",
+      "file": "radio_procedures.md"
+    }
+  ],
+  "tables": [
+    {
+      "name": "Contacts",
+      "file": "contacts.csv"
+    },
+    {
+      "name": "Yard Office Address",
+      "file": "address.csv"
+    },
+    {
+      "name": "Territory Info",
+      "file": "territory.csv"
+    }
+  ],
+  "procedures": [
+    {
+	  "name": "<b>**RCO TESTS**<b>"
+    },
+    {
+      "name": "Tilt / Time-Out Test",
+      "file": "tilt_timeout.md"
+    },
+    {
+      "name": "Vigilance Test",
+      "file": "vigilance.md"
+    },
+    {
+      "name": "Standing Locomotive Air Brake Test",
+      "file": "standing_brake.md"
+    },
+    {
+      "name": "Locomotive Hand Brake Test",
+      "file": "hand_brake.md"
+    }
+  ],
+  "images":[
+	{
+	 "name": "<b>**Images**<b>"
+	},
+	{
+	 "name": "Bowl Area",
+	 "file": "Shared/Images/BowlArea(Trim).jpeg"
+	},
+	{
+	 "name": "North End Key Yard",
+	 "file": "Shared/Images/NorthEndKeyYard(Trim).jpeg"
+	},
+	{
+	 "name": "Trim Area",
+	 "file": "Shared/Images/TrimArea.jpeg"
+	}
+  ]
+}
+

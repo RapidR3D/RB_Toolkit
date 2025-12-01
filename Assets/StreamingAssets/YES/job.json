@@ -1,0 +1,23 @@
+{
+  "docType": "yes",
+  "title": "Yard Enterprise System",
+  "category": "Operations",
+  "version": "2025.1",
+  "summary": "Information regarding the Yard Enterprise System.",
+  "sections": [
+    {
+      "label": "Summary",
+      "file": "summary.md"
+    },
+    {
+      "label": "Operating Notes",
+      "file": "operatingnotes.md"
+    }
+  ],
+  "links": [
+    {
+      "name": "Payroll Portal",
+      "file": "https://payroll.example.com"
+    }
+  ]
+}

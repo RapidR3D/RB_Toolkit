@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: 01d2f2621fdb69a40861e14638e49213
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 295649
+  packageName: MarkdownRenderer
+  packageVersion: 1.1.1
+  assetPath: Assets/Markdown-Renderer/Editor/MarkdownToBinaryEditor/MarkdownToBinaryAssetEditor.cs
+  uploadId: 819864
