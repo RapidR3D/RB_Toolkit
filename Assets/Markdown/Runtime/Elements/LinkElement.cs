@@ -53,7 +53,8 @@ namespace BrewedInk.MarkdownSupport
             
             AddToClassList("link");
             
-            RegisterCallback<MouseDownEvent>(OnClicked);
+            // Use ClickEvent instead of MouseDownEvent for better mobile support
+            RegisterCallback<ClickEvent>(OnClicked);
             RegisterCallback<MouseEnterEvent>(OnMouseEnter);
             RegisterCallback<MouseLeaveEvent>(OnMouseLeave);
             line.RegisterCallback<GeometryChangedEvent>(OnLineChanged);
@@ -136,7 +137,7 @@ namespace BrewedInk.MarkdownSupport
             Action();
         }
 
-        private void OnClicked(MouseDownEvent evt)
+        private void OnClicked(ClickEvent evt)
         {
             _uri.Open(FindRoot());
         }

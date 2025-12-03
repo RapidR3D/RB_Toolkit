@@ -1,3 +1,4 @@
+using System;
 using Markdig;
 
 namespace BrewedInk.MarkdownSupport
@@ -8,6 +9,19 @@ namespace BrewedInk.MarkdownSupport
     /// </summary>
     public static class UMarkdown
     {
+        /// <summary>
+        /// Event triggered when a link is clicked in a Markdown document.
+        /// </summary>
+        public static event Action<string> OnLinkClick;
+
+        /// <summary>
+        /// Internal method to trigger the OnLinkClick event.
+        /// </summary>
+        internal static void TriggerLinkClick(string url)
+        {
+            OnLinkClick?.Invoke(url);
+        }
+
         /// <summary>
         /// Convert plain text markdown into a <see cref="MarkdownVisualElement"/>, which is renderable with
         /// UIToolkit. 

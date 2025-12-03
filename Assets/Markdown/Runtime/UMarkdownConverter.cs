@@ -404,7 +404,7 @@ namespace BrewedInk.MarkdownSupport
                     var img = new LinkImageElement(context, lineElement, title, new MarkdownLinkUri(subLink.Url, context));
                     lineElement.Add(img);
                             
-                    img.AddOpenUrlClick(linkUrl);
+                    img.AddOnClick(() => UMarkdown.TriggerLinkClick(link.Url));
                     AddLine();
                     return;
                 }
@@ -418,6 +418,27 @@ namespace BrewedInk.MarkdownSupport
                 }
                         
                 var linkElement = new LinkElement(context, lineElement, lineLabel, title, linkUrl, link.Title);
+                
+                // Intercept link clicks
+                linkElement.RegisterCallback<ClickEvent>(evt => {
+                    UMarkdown.TriggerLinkClick(link.Url);
+                    evt.StopPropagation();
+                });
+
+                // Expand clickable area by adding padding/margin or ensuring it takes up space
+                // For now, let's just ensure it's added to the line element which is a row
+                // The LinkElement itself is a VisualElement wrapping the label part.
+                // We can try to make it flex grow if it's the only thing, but it's inline.
+                
+                // Let's try to make the link element itself have a larger hit area by adding padding
+                linkElement.style.paddingLeft = 5;
+                linkElement.style.paddingRight = 200; // Extended 200px to the right
+                linkElement.style.paddingTop = 5;
+                linkElement.style.paddingBottom = 5;
+                
+                // Also ensure the label inside it (if any) doesn't block events or propagates them
+                // LinkElement implementation details might vary, but usually it's a container.
+
                 lineElement.Add(linkElement);
             }
             

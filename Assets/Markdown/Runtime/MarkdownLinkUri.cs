@@ -78,7 +78,7 @@ namespace BrewedInk.MarkdownSupport
             }
             else if (openUri.type == MarkdownLinkType.Web)
             {
-                Application.OpenURL(qualifiedLink);
+                // Application.OpenURL(qualifiedLink);
             } else if (openUri.type == MarkdownLinkType.File)
             {
                     
@@ -96,8 +96,8 @@ namespace BrewedInk.MarkdownSupport
                 }
 #endif
                     
-                var fileUri = "file://" + Path.GetFullPath(openUri.qualifiedLink);
-                Application.OpenURL(fileUri);
+                // var fileUri = "file://" + Path.GetFullPath(openUri.qualifiedLink);
+                // Application.OpenURL(fileUri);
             }
         }
     }

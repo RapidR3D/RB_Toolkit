@@ -2,7 +2,7 @@
   "docType": "help",
   "title": "RB Toolkit",
   "category": "User Guide",
-  "version": "3.11",
+  "version": "1.3.14",
   "summary": "Welcome to the RB Toolkit! Here is how to use the search bar to access different guides.",
   "sections": [
     {
@@ -12,6 +12,10 @@
     {
       "label": "Overview",
       "file": "overview.md"
+    },
+    {
+      "label": "Quick Links",
+      "file": "quick_links.md"
     }
   ]
 }

@@ -550,6 +550,16 @@ MonoBehaviour:
     soundFileName: EasEgg/GetOuttaThisPlace.wav
     loop: 1
     duration: 0
+  - triggerWord: 
+    type: 0
+    staticImage: {fileID: 0}
+    fileName: 
+    animationFrames: []
+    frameRate: 0
+    soundEffect: {fileID: 0}
+    soundFileName: 
+    loop: 1
+    duration: 0
   uiDocument: {fileID: 0}
 --- !u!1 &2032797893
 GameObject:

@@ -98,6 +98,9 @@ public class JobSearchUIController : MonoBehaviour
             return;
         }
 
+        // Register link click handler for UMarkdown
+        UMarkdown.OnLinkClick += HandleLinkClick;
+
         searchField = root.Q<TextField>("SearchField");
         if (searchField != null)
         {
@@ -284,6 +287,9 @@ public class JobSearchUIController : MonoBehaviour
 
     private void OnDisable()
     {
+        // Unregister link click handler
+        UMarkdown.OnLinkClick -= HandleLinkClick;
+
         if (searchButton != null)
             searchButton.clicked -= OnSearchClicked;
 
@@ -694,7 +700,13 @@ public class JobSearchUIController : MonoBehaviour
                 UpdateBackButtonState();
 
                 string directory = System.IO.Path.GetDirectoryName(fileKey);
+                
+                // On Android/iOS, Path.Combine might use backslashes if running in Editor on Windows,
+                // but we want forward slashes for the path string we pass to LoadJobFromInputField.
+                // LoadJobFromInputField now handles slash conversion, but let's be safe.
+                
                 string fullFolderPath = System.IO.Path.Combine(currentFolder, directory);
+                fullFolderPath = fullFolderPath.Replace("\\", "/");
                 
                 jobDataLoader.LoadJobFromInputField(fullFolderPath);
                 return;
@@ -1166,6 +1178,100 @@ public class JobSearchUIController : MonoBehaviour
         if (backButton != null)
         {
             backButton.style.display = navigationHistory.Count > 0 ? DisplayStyle.Flex : DisplayStyle.None;
+        }
+    }
+
+    private void HandleLinkClick(string url)
+    {
+        Debug.Log($"[JobSearchUIController] Link clicked: {url}");
+        
+        // Check if it's a job.json link
+        if (url.EndsWith("job.json", StringComparison.OrdinalIgnoreCase))
+        {
+            // It's a navigation link to another category
+            // We need to resolve the path relative to the current job folder if it's a relative path
+            
+            string targetPath = url;
+            
+            // If it starts with ../ it means go up one level from current folder
+            // But JobDataLoader expects a path relative to StreamingAssets or a full path
+            
+            // Let's try to resolve it.
+            // If current folder is "Help" and link is "../DirectAccess/job.json"
+            // We want "DirectAccess"
+            
+            // If it's a relative path starting with .., we need to handle it manually
+            if (targetPath.StartsWith("../"))
+            {
+                // Remove ../
+                targetPath = targetPath.Substring(3);
+                
+                // Remove /job.json to get the folder name
+                if (targetPath.EndsWith("/job.json", StringComparison.OrdinalIgnoreCase))
+                {
+                    targetPath = targetPath.Substring(0, targetPath.Length - 9);
+                }
+                
+                // Now targetPath should be "DirectAccess"
+                
+                // Push current folder to history
+                navigationHistory.Push(jobDataLoader.JobFolder);
+                UpdateBackButtonState();
+                
+                // Load the new job
+                jobDataLoader.LoadJobFromInputField(targetPath);
+            }
+            // If it's a relative path starting with StreamingAssets (e.g. from Quick Links in Help/job.json)
+            else if (targetPath.StartsWith("StreamingAssets", StringComparison.OrdinalIgnoreCase))
+            {
+                // The path is like "StreamingAssets\DirectAccess\job.json"
+                // We need to extract "DirectAccess"
+                
+                // Normalize slashes
+                targetPath = targetPath.Replace("\\", "/");
+                
+                // Remove StreamingAssets/
+                if (targetPath.StartsWith("StreamingAssets/", StringComparison.OrdinalIgnoreCase))
+                {
+                    targetPath = targetPath.Substring(16);
+                }
+                
+                // Remove /job.json
+                if (targetPath.EndsWith("/job.json", StringComparison.OrdinalIgnoreCase))
+                {
+                    targetPath = targetPath.Substring(0, targetPath.Length - 9);
+                }
+                
+                // Push current folder to history
+                navigationHistory.Push(jobDataLoader.JobFolder);
+                UpdateBackButtonState();
+                
+                // Load the new job
+                jobDataLoader.LoadJobFromInputField(targetPath);
+            }
+            else
+            {
+                // It might be a direct path or relative to current folder
+                // If it's just "job.json", it reloads current.
+                // If it's "SubFolder/job.json", we treat it as nested.
+                
+                string currentFolder = jobDataLoader.JobFolder;
+                string directory = System.IO.Path.GetDirectoryName(url);
+                
+                string fullFolderPath = System.IO.Path.Combine(currentFolder, directory);
+                fullFolderPath = fullFolderPath.Replace("\\", "/");
+                
+                // Push current folder to history
+                navigationHistory.Push(currentFolder);
+                UpdateBackButtonState();
+                
+                jobDataLoader.LoadJobFromInputField(fullFolderPath);
+            }
+        }
+        else
+        {
+            // Standard URL or other file type
+            Application.OpenURL(url);
         }
     }
 

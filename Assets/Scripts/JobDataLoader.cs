@@ -273,7 +273,7 @@ public class JobDataLoader : MonoBehaviour
         string upperInput = input.ToUpper();
         
         // Special handling for shortcuts (Root Level)
-        if (upperInput == "TE" || upperInput == "T&E" || upperInput == "TRAIN AND ENGINE" || upperInput == "TRAIN & ENGINE")
+        if (upperInput == "TE" || upperInput == "T&E" || upperInput == "TRAIN AND ENGINE" || upperInput == "TRAIN & ENGINE" || upperInput == "TE_GUIDE")
         {
             JobFolder = "TE_Guide";
         }
@@ -301,7 +301,7 @@ public class JobDataLoader : MonoBehaviour
         {
             JobFolder = "YES";
         }
-        else if (upperInput == "DA" || upperInput == "DIRECT ACCESS" || upperInput == "DIRECT" || upperInput == "ACCESS")
+        else if (upperInput == "DA" || upperInput == "DIRECT ACCESS" || upperInput == "DIRECT" || upperInput == "ACCESS" || upperInput == "DIRECTACCESS")
         {
             JobFolder = "DirectAccess";
         }
@@ -310,6 +310,10 @@ public class JobDataLoader : MonoBehaviour
             JobFolder = "Miscellaneous";
         }
         else if (upperInput == "OTR" || upperInput == "OVER THE ROAD" || upperInput == "ROAD" || upperInput == "AWAY" || upperInput == "OUT OF TOWN" || upperInput == "OVER" || upperInput == "ROAD TRAIN")
+        {
+            JobFolder = "OverTheRoad";
+        }
+        else if (upperInput == "OVERTHEROAD")
         {
             JobFolder = "OverTheRoad";
         }
