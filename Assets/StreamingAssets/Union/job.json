@@ -1,0 +1,18 @@
+{
+  "title": "Union",
+  "category": "Union Information",
+  "version": "1.0",
+  "docType": "union",
+  "keywords": [
+    "Union",
+    "Agreement",
+    "Contract",
+    "Representation"
+  ],
+  "sections": [
+    {
+      "label": "Overview",
+      "file": "overview.md"
+    }
+  ]
+}

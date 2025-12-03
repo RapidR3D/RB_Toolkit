@@ -325,6 +325,7 @@ public class JobSearchUIController : MonoBehaviour
         bool isMainframe = docType == "mainframe" || docType == "system_guide";
         bool isTEGuide = docType == "te_guide";
         bool isCrewLife = docType == "crewlife";
+        bool isClaims = docType == "claims";
         bool isPayroll = docType == "payroll";
         bool isHelp = docType == "help";
         bool isMRT = docType == "mrt";
@@ -332,11 +333,15 @@ public class JobSearchUIController : MonoBehaviour
         bool isYES = docType == "yes";
         bool isDirectAccess = docType == "direct_access";
         bool isMiscellaneous = docType == "miscellaneous";
+        bool isOverTheRoad = docType == "over_the_road";
+        bool isUnion = docType == "union";
+        bool isPayrollClaims = docType == "payroll_claims";
+        
 
         // Show/Hide Content Search Field
         if (searchControlsContainer != null)
         {
-            if (isMainframe || isTEGuide || isCrewLife || isPayroll || isMRT || isMRTAEI || isYES || isDirectAccess || isMiscellaneous)
+            if (isMainframe || isTEGuide || isCrewLife || isPayroll || isMRT || isMRTAEI || isYES || isDirectAccess || isMiscellaneous || isOverTheRoad || isUnion || isClaims || isPayrollClaims)
             {
                 Debug.Log($"Showing Search Controls for docType: {docType}");
                 searchControlsContainer.style.display = DisplayStyle.Flex;
@@ -360,7 +365,7 @@ public class JobSearchUIController : MonoBehaviour
         else if (contentSearchField != null)
         {
             // Fallback if container not found (e.g. old UXML)
-            if (isMainframe || isTEGuide || isCrewLife || isPayroll || isMRT || isMRTAEI || isYES || isDirectAccess || isMiscellaneous)
+            if (isMainframe || isTEGuide || isCrewLife || isPayroll || isMRT || isMRTAEI || isYES || isDirectAccess || isMiscellaneous || isOverTheRoad || isUnion || isClaims || isPayrollClaims)
             {
                 contentSearchField.style.display = DisplayStyle.Flex;
                 contentSearchField.value = "";
@@ -382,7 +387,7 @@ public class JobSearchUIController : MonoBehaviour
             if (jobTitle != null) jobTitle.text = job.title;
             if (jobSubtitle != null) jobSubtitle.text = $"{job.systemName} v{job.version}";
         }
-        else if (isTEGuide || isCrewLife || isPayroll || isHelp || isMRT || isMRTAEI || isYES || isDirectAccess || isMiscellaneous)
+        else if (isTEGuide || isCrewLife || isPayroll || isHelp || isMRT || isMRTAEI || isYES || isDirectAccess || isMiscellaneous || isOverTheRoad || isUnion || isClaims || isPayrollClaims)
         {
             if (jobTitle != null) jobTitle.text = job.title;
             if (jobSubtitle != null) jobSubtitle.text = $"{job.category} v{job.version}";
@@ -397,9 +402,9 @@ public class JobSearchUIController : MonoBehaviour
         // Populate List
         allSectionItems.Clear();
 
-        if (isMainframe || isMRT || isMRTAEI || isYES || isDirectAccess || isMiscellaneous)
+        if (isMainframe || isMRT || isMRTAEI || isYES || isDirectAccess || isMiscellaneous || isOverTheRoad || isUnion || isClaims || isPayrollClaims)
         {
-            // Add Mainframe/MRT/YES/DA/Misc specific sections
+            // Add Mainframe/MRT/YES/DA/Misc/OTR/Union specific sections
             allSectionItems.Add(new SectionItem { DisplayName = "**Summary**", Type = ItemType.MainframeGuide, GuideData = job });
             
             // Also add any standard sections/tables defined in the JSON for Mainframe

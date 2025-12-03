@@ -1,0 +1,56 @@
+{
+  "docType": "CLAIMS",
+  "title": "Claims Codes",
+  "category": "Payroll Claims",
+  "version": "2024.1",
+  "summary": "Claims Codes with a description of what the code represents, the qualifier, and who ultimately approves or denies",
+  "sections": [
+    {
+      "label": "Overview",
+      "file": "overview.md"
+    },
+	{
+      "label": "Claims Guide (Part 1)",
+      "file": "SharedDocs/claims_01.md"
+    },
+    {
+      "label": "Claims Guide (Part 2)",
+      "file": "SharedDocs/claims_02.md"
+    },
+    {
+      "label": "Claims Guide (Part 3)",
+      "file": "SharedDocs/claims_03.md"
+    },
+    {
+      "label": "Claims Guide (Part 4)",
+      "file": "SharedDocs/claims_04.md"
+    },
+    {
+      "label": "Claims Guide (Part 5)",
+      "file": "SharedDocs/claims_05.md"
+    },
+    {
+      "label": "Claims Guide (Part 6)",
+      "file": "SharedDocs/claims_06.md"
+    },
+    {
+      "label": "Claims Guide (Part 7)",
+      "file": "SharedDocs/claims_07.md"
+    },
+    {
+      "label": "Claims Guide (Part 8)",
+      "file": "SharedDocs/claims_08.md"
+    },
+    {
+      "label": "Claims Guide (Part 9)",
+      "file": "SharedDocs/claims_09.md"
+    },
+    {
+      "label": "Claims Guide (Part 10)",
+      "file": "SharedDocs/claims_10.md"
+    }  
+  ],
+  "keywords": [
+    "Claims"
+  ]
+}

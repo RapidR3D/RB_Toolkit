@@ -16,6 +16,10 @@
     {
       "label": "Contact List",
       "file": "contacts.csv"
+    },
+	{
+      "label": "**CLAIMS**",
+      "file": "Claims/job.json"
     }
   ],
    "tables": [

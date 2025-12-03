@@ -8,50 +8,14 @@
     {
       "label": "Pay Schedule",
       "file": "schedule.md"
-    },
-    {
-      "label": "Claims Guide (Part 1)",
-      "file": "claims_01.md"
-    },
-    {
-      "label": "Claims Guide (Part 2)",
-      "file": "claims_02.md"
-    },
-    {
-      "label": "Claims Guide (Part 3)",
-      "file": "claims_03.md"
-    },
-    {
-      "label": "Claims Guide (Part 4)",
-      "file": "claims_04.md"
-    },
-    {
-      "label": "Claims Guide (Part 5)",
-      "file": "claims_05.md"
-    },
-    {
-      "label": "Claims Guide (Part 6)",
-      "file": "claims_06.md"
-    },
-    {
-      "label": "Claims Guide (Part 7)",
-      "file": "claims_07.md"
-    },
-    {
-      "label": "Claims Guide (Part 8)",
-      "file": "claims_08.md"
-    },
-    {
-      "label": "Claims Guide (Part 9)",
-      "file": "claims_09.md"
-    },
-    {
-      "label": "Claims Guide (Part 10)",
-      "file": "claims_10.md"
-    },
+    },   
     {
       "label": "Payroll Web Reporting Guide",
       "file": "Payroll_Guide.md"
+    },
+	{
+      "label": "**PAYROLL CLAIMS**",
+      "file": "Payroll_Claims/job.json"
     }
   ],
    "tables": [

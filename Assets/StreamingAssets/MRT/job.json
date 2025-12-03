@@ -105,6 +105,7 @@
     "Place",
     "Pull",
     "Pickup",
-    "Set Out"
+    "Set Out",
+	"Add Cars"
   ]
 }

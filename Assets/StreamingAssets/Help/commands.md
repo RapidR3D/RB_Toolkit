@@ -1,3 +1,7 @@
+🛤️**Welcome to the Rail Brothers Toolkit**🛤️
+
+Created by: George Feller, Jeremy Ackley, Joe Boze, Brian Truesdell
+v3.11 120225
 # Search Commands
 
 Type any of the following into the search bar to access the corresponding guide:
@@ -11,7 +15,7 @@ Type any of the following into the search bar to access the corresponding guide:
 - **Example**: `DA`
 
 ## <color=#FFD700>YES</color>
-- **Format**: <color=#FFD700>Yard Enterprise System</color>
+- **Format**: 🛲<color=#FFD700>Yard Enterprise System</color>🛲
 - **Example**: <color=#FFD700>YES</color>
 
 ## Mainframe
@@ -34,9 +38,19 @@ Type any of the following into the search bar to access the corresponding guide:
 - **Format**: `Mobile Rail Tool`
 - **Example**: `MRT`
 
+## MRT
+- **Format**: `Over The Road`
+- **Example**: `OTR`
+
+## MRT
+- **Format**: `SMART Union`
+- **Example**: `Smart`
+
 ## Miscellaneous
 - **Format**: `Miscellaneous`
 - **Example**: `Misc`
 
 ## <color=#FFD700>Keyword Search Bar</color>
 - <color=#FFD700>Above categories (DA/MRT/T&E/ETC) you can type in a keyword. The categories that contain the keyword will be available for selection and the keywords will be highlighted with a GREEN background for quicker reference.</color>
+
+🚂🚃🚃🚃🚃🚃🚃🚃🚃🚃🚃🚃🚃🚃🚃

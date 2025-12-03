@@ -202,6 +202,12 @@ public class JobDataLoader : MonoBehaviour
         {
             fullPath = Path.Combine(Application.streamingAssetsPath, relativePath);
         }
+        // Check if the path starts with "SharedDocs/" or "SharedDocs\" (case-insensitive)
+        else if (relativePath.StartsWith("SharedDocs/", StringComparison.OrdinalIgnoreCase) || 
+                 relativePath.StartsWith("SharedDocs\\", StringComparison.OrdinalIgnoreCase))
+        {
+            fullPath = Path.Combine(Application.streamingAssetsPath, relativePath);
+        }
         else
         {
             fullPath = Path.Combine(Application.streamingAssetsPath, JobFolder, relativePath);
@@ -236,33 +242,41 @@ public class JobDataLoader : MonoBehaviour
         {
             JobFolder = "Help";
         }
-        else if (input == "PAYROLL" || input == "PAYROLL_INFO" || input == "PAY ROLL" || input == "PAYROLL INFO")
+        else if (input == "PAYROLL" || input == "PAYROLL_INFO" || input == "PAY ROLL" || input == "PAYROLL INFO" || input == "PAY" || input == "FUCKIN MONEY" || input == "MONEY" || input == "FUCKING MONEY")
         {
             JobFolder = "Payroll_Info";
         }
-        else if (input == "MAINFRAME" || input == "MAIN FRAME")
+        else if (input == "MAINFRAME" || input == "MAIN FRAME" || input == "MAIN" || input == "FRAME" || input == "MF")
         {
             JobFolder = "Mainframe";
         }
-        else if (input == "CREWLIFE" || input == "CREW LIFE")
+        else if (input == "CREWLIFE" || input == "CREW LIFE" || input == "CREW" || input == "LIFE" || input == "CL")
         {
             JobFolder = "CrewLife";
         }
-        else if (input == "MRT" || input == "MOBILE RAIL TOOL")
+        else if (input == "MRT" || input == "MOBILE RAIL TOOL" || input == "RAIL TOOL" || input == "RAIL")
         {
             JobFolder = "MRT";
         }
-        else if (input == "YES" || input == "YARD ENTERPRISE SYSTEM")
+        else if (input == "YES" || input == "YARD ENTERPRISE SYSTEM" || input == "YARD" || input == "SYSTEM")
         {
             JobFolder = "YES";
         }
-        else if (input == "DA" || input == "DIRECT ACCESS")
+        else if (input == "DA" || input == "DIRECT ACCESS" || input == "DIRECT" || input == "ACCESS")
         {
             JobFolder = "DirectAccess";
         }
         else if (input == "MISC" || input == "MISCELLANEOUS")
         {
             JobFolder = "Miscellaneous";
+        }
+        else if (input == "OTR" || input == "OVER THE ROAD" || input == "ROAD" || input == "AWAY" || input == "OUT OF TOWN" || input == "OVER" || input == "ROAD TRAIN")
+        {
+            JobFolder = "OverTheRoad";
+        }
+        else if (input == "UNION" || input == "UN" || input == "UNI" || input == "UNIO" || input == "SMART")
+        {
+            JobFolder = "Union";
         }
         else
         {
