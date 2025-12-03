@@ -1,0 +1,19 @@
+{
+  "title": "Miscellaneous",
+  "category": "General Info",
+  "version": "1.0",
+  "docType": "miscellaneous",
+  "keywords": [
+    "Miscellaneous",
+    "Misc",
+    "General",
+    "Info",
+    "Other"
+  ],
+  "sections": [
+    {
+      "label": "Overview",
+      "file": "overview.md"
+    }
+  ]
+}

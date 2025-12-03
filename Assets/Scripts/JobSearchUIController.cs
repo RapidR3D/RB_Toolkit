@@ -330,11 +330,13 @@ public class JobSearchUIController : MonoBehaviour
         bool isMRT = docType == "mrt";
         bool isMRTAEI = docType == "mrt_aei";
         bool isYES = docType == "yes";
+        bool isDirectAccess = docType == "direct_access";
+        bool isMiscellaneous = docType == "miscellaneous";
 
         // Show/Hide Content Search Field
         if (searchControlsContainer != null)
         {
-            if (isMainframe || isTEGuide || isCrewLife || isPayroll || isMRT || isMRTAEI || isYES)
+            if (isMainframe || isTEGuide || isCrewLife || isPayroll || isMRT || isMRTAEI || isYES || isDirectAccess || isMiscellaneous)
             {
                 Debug.Log($"Showing Search Controls for docType: {docType}");
                 searchControlsContainer.style.display = DisplayStyle.Flex;
@@ -358,7 +360,7 @@ public class JobSearchUIController : MonoBehaviour
         else if (contentSearchField != null)
         {
             // Fallback if container not found (e.g. old UXML)
-            if (isMainframe || isTEGuide || isCrewLife || isPayroll || isMRT || isMRTAEI || isYES)
+            if (isMainframe || isTEGuide || isCrewLife || isPayroll || isMRT || isMRTAEI || isYES || isDirectAccess || isMiscellaneous)
             {
                 contentSearchField.style.display = DisplayStyle.Flex;
                 contentSearchField.value = "";
@@ -380,7 +382,7 @@ public class JobSearchUIController : MonoBehaviour
             if (jobTitle != null) jobTitle.text = job.title;
             if (jobSubtitle != null) jobSubtitle.text = $"{job.systemName} v{job.version}";
         }
-        else if (isTEGuide || isCrewLife || isPayroll || isHelp || isMRT || isMRTAEI || isYES)
+        else if (isTEGuide || isCrewLife || isPayroll || isHelp || isMRT || isMRTAEI || isYES || isDirectAccess || isMiscellaneous)
         {
             if (jobTitle != null) jobTitle.text = job.title;
             if (jobSubtitle != null) jobSubtitle.text = $"{job.category} v{job.version}";
@@ -395,9 +397,9 @@ public class JobSearchUIController : MonoBehaviour
         // Populate List
         allSectionItems.Clear();
 
-        if (isMainframe || isMRT || isMRTAEI || isYES)
+        if (isMainframe || isMRT || isMRTAEI || isYES || isDirectAccess || isMiscellaneous)
         {
-            // Add Mainframe/MRT/YES specific sections
+            // Add Mainframe/MRT/YES/DA/Misc specific sections
             allSectionItems.Add(new SectionItem { DisplayName = "**Summary**", Type = ItemType.MainframeGuide, GuideData = job });
             
             // Also add any standard sections/tables defined in the JSON for Mainframe

@@ -6,6 +6,10 @@ Type any of the following into the search bar to access the corresponding guide:
 - **Format**: `[Job ID]`
 - **Example**: <color=#FFD700>Y197</color>, <color=#FFD700>Y295</color>
 
+## Direct Access
+- **Format**: `Direct Access`
+- **Example**: `DA`
+
 ## <color=#FFD700>YES</color>
 - **Format**: <color=#FFD700>Yard Enterprise System</color>
 - **Example**: <color=#FFD700>YES</color>
@@ -30,5 +34,9 @@ Type any of the following into the search bar to access the corresponding guide:
 - **Format**: `Mobile Rail Tool`
 - **Example**: `MRT`
 
+## Miscellaneous
+- **Format**: `Miscellaneous`
+- **Example**: `Misc`
+
 ## <color=#FFD700>Keyword Search Bar</color>
-- <color=#FFD700>Above categories (MRT/T&E/ETC) you can type in a keyword. The categories that contain the keyword will be available for selection and the keywords will be highlighted with a GREEN background for quicker reference.</color>
+- <color=#FFD700>Above categories (DA/MRT/T&E/ETC) you can type in a keyword. The categories that contain the keyword will be available for selection and the keywords will be highlighted with a GREEN background for quicker reference.</color>

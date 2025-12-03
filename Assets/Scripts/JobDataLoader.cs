@@ -256,6 +256,14 @@ public class JobDataLoader : MonoBehaviour
         {
             JobFolder = "YES";
         }
+        else if (input == "DA" || input == "DIRECT ACCESS")
+        {
+            JobFolder = "DirectAccess";
+        }
+        else if (input == "MISC" || input == "MISCELLANEOUS")
+        {
+            JobFolder = "Miscellaneous";
+        }
         else
         {
             JobFolder = input;

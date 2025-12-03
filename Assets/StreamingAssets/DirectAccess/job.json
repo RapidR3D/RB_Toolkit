@@ -1,0 +1,19 @@
+{
+  "title": "Direct Access",
+  "category": "System Access",
+  "version": "1.0",
+  "docType": "direct_access",
+  "keywords": [
+    "Direct Access",
+    "DA",
+    "Login",
+    "System",
+    "Access"
+  ],
+  "sections": [
+    {
+      "label": "Overview",
+      "file": "overview.md"
+    }
+  ]
+}
