@@ -2,6 +2,7 @@
     <ui:Style src="JobSearchStyle.uss" />
     <ui:VisualElement name="Container" class="container">
         <ui:VisualElement name="SearchArea" class="search-area">
+            <ui:Button name="BackButton" text="Back" class="back-button" style="display: none;"/>
             <ui:TextField name="SearchField" label="Job ID:" placeholder-text="e.g. Y197" class="search-field"/>
             <ui:Button name="SearchButton" text="Load Job" class="search-button"/>
         </ui:VisualElement>

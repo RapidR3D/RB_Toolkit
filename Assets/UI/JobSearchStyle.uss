@@ -46,6 +46,23 @@
     background-color: #00ACC1;
 }
 
+.back-button {
+    width: 100px;
+    height: 90px;
+    background-color: #CB4B4B; /* Solid Brick Red */
+    color: white;
+    -unity-font-style: bold;
+    border-radius: 15px;
+    font-size: 32px;
+    margin-right: 10px;
+    border-width: 1px;
+    border-color: #CB4B4B;
+}
+
+.back-button:hover {
+    background-color: #E55555; /* Slightly lighter Brick Red on hover */
+}
+
 .job-details-area {
     flex-grow: 1;
     background-color: rgba(30, 30, 30, 0.9);

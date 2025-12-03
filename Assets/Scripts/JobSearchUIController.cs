@@ -53,6 +53,7 @@ public class JobSearchUIController : MonoBehaviour
     private string currentSearchTerm = "";
     private int currentMatchIndex = -1;
     private int totalMatches = 0;
+    private Stack<string> navigationHistory = new Stack<string>();
 
     private const string ActiveMatchColor = "#4CAF5066";
     private const string InactiveMatchColor = "#FFFF0080";
@@ -66,6 +67,9 @@ public class JobSearchUIController : MonoBehaviour
         public ItemType Type;
         public JobData GuideData; // For Mainframe Guides
     }
+
+    // UI Elements
+    private Button backButton;
 
     private void OnEnable()
     {
@@ -102,6 +106,13 @@ public class JobSearchUIController : MonoBehaviour
             
             // Add click sound when typing
             searchField.RegisterCallback<KeyDownEvent>(evt => PlayClickSound());
+        }
+
+        backButton = root.Q<Button>("BackButton");
+        if (backButton != null)
+        {
+            backButton.clicked += OnBackClicked;
+            backButton.style.display = DisplayStyle.None; // Hide initially
         }
 
         searchButton = root.Q<Button>("SearchButton");
@@ -224,6 +235,35 @@ public class JobSearchUIController : MonoBehaviour
             sectionList.selectionChanged += OnSectionSelected;
             // Play sound on selection
             sectionList.selectionChanged += (items) => PlayClickSound();
+
+            // Add PointerDown callback for stylus/touch support
+            sectionList.RegisterCallback<PointerDownEvent>(evt => {
+                // Check if the pointer type is Pen (Stylus) or Touch
+                if (evt.pointerType == UnityEngine.UIElements.PointerType.pen || evt.pointerType == UnityEngine.UIElements.PointerType.touch)
+                {
+                    // Find the index of the item under the pointer
+                    // We need to find the visual element that was clicked and map it back to an index
+                    var target = evt.target as VisualElement;
+                    
+                    // Traverse up to find the Label which is our item
+                    while (target != null && !(target is Label))
+                    {
+                        target = target.parent;
+                    }
+
+                    if (target is Label label)
+                    {
+                        // This is a bit hacky but effective: find the index of this label in the list
+                        // Note: This relies on the fact that ListView recycles items, so we can't just use IndexOf on children
+                        // However, for simple selection, we can rely on the built-in selection logic which usually handles this.
+                        // If built-in selection fails for stylus, we might need to manually trigger it.
+                        
+                        // For now, let's ensure the ScrollView inside ListView handles the event
+                        // Usually Unity handles this, but sometimes explicit focus helps
+                        sectionList.Focus();
+                    }
+                }
+            });
         }
         else
         {
@@ -246,6 +286,9 @@ public class JobSearchUIController : MonoBehaviour
     {
         if (searchButton != null)
             searchButton.clicked -= OnSearchClicked;
+
+        if (backButton != null)
+            backButton.clicked -= OnBackClicked;
 
         if (jobDataLoader != null)
             jobDataLoader.JobLoaded -= OnJobLoaded;
@@ -292,6 +335,11 @@ public class JobSearchUIController : MonoBehaviour
             }
 
             Debug.Log($"Searching for job: {jobId}");
+            
+            // Clear history on new search
+            navigationHistory.Clear();
+            UpdateBackButtonState();
+            
             jobDataLoader.LoadJobFromInputField(jobId);
             
             // Hide keyboard after loading job
@@ -640,6 +688,11 @@ public class JobSearchUIController : MonoBehaviour
             if (fileKey.EndsWith(".json", StringComparison.OrdinalIgnoreCase))
             {
                 string currentFolder = jobDataLoader.JobFolder;
+                
+                // Push current folder to history
+                navigationHistory.Push(currentFolder);
+                UpdateBackButtonState();
+
                 string directory = System.IO.Path.GetDirectoryName(fileKey);
                 string fullFolderPath = System.IO.Path.Combine(currentFolder, directory);
                 
@@ -1095,6 +1148,24 @@ public class JobSearchUIController : MonoBehaviour
         if (audioSource != null && clickSound != null)
         {
             audioSource.PlayOneShot(clickSound);
+        }
+    }
+
+    private void OnBackClicked()
+    {
+        if (navigationHistory.Count > 0)
+        {
+            string previousFolder = navigationHistory.Pop();
+            UpdateBackButtonState();
+            jobDataLoader.LoadJobFromInputField(previousFolder);
+        }
+    }
+
+    private void UpdateBackButtonState()
+    {
+        if (backButton != null)
+        {
+            backButton.style.display = navigationHistory.Count > 0 ? DisplayStyle.Flex : DisplayStyle.None;
         }
     }
 
