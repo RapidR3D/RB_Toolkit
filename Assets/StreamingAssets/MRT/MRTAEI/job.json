@@ -1,6 +1,6 @@
 {
   "docType": "MRT_AEI",
-  "title": "MRT AEI Guide - Accept an AEI Read in MRT Work Order",
+  "title": "Accept AEI Read/MRT Work Order",
   "category": "Railroad/AEI Operations",
   "version": "2024.1",
   "summary": "Step-by-step guide for processing Automated Equipment Identification (AEI) reads in the Mobile Rail Tool Work Order system, including handling error cars, add cars, and accepting AEI standing orders.",

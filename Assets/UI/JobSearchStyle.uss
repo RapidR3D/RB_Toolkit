@@ -135,10 +135,10 @@
 
 .section-list {
     flex-grow: 1;
-    background-color: rgba(0, 188, 212, 0.15); /* Cyan with transparency */
+    background-color: rgba(203, 75, 75, 0.15); /* Brick Red with transparency */
     border-radius: 10px;
     border-width: 1px;
-    border-color: #00BCD4;
+    border-color: #CB4B4B;
 }
 
 .detail-view {
