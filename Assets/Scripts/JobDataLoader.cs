@@ -38,6 +38,11 @@ public class JobDataLoader : MonoBehaviour
 
         string basePath = Path.Combine(Application.streamingAssetsPath, JobFolder);
         string jobJsonPath = Path.Combine(basePath, JobJsonFile);
+        
+#if (UNITY_ANDROID || UNITY_IOS) && !UNITY_EDITOR
+        // Ensure forward slashes on Android and iOS
+        jobJsonPath = jobJsonPath.Replace("\\", "/");
+#endif
 
         string jobJsonText = null;
         // streamingAssetsPath may require UnityWebRequest on some platforms (Android)
@@ -206,12 +211,42 @@ public class JobDataLoader : MonoBehaviour
         else if (relativePath.StartsWith("SharedDocs/", StringComparison.OrdinalIgnoreCase) || 
                  relativePath.StartsWith("SharedDocs\\", StringComparison.OrdinalIgnoreCase))
         {
-            fullPath = Path.Combine(Application.streamingAssetsPath, relativePath);
+            // On Android, we need to be careful with Path.Combine if the path already contains separators
+            // relativePath might be "SharedDocs/filename.md"
+            // Application.streamingAssetsPath on Android is "jar:file://.../assets"
+            
+            // If we use Path.Combine, it might use backslashes on Windows editor which is fine,
+            // but on Android we want forward slashes.
+            
+            // Let's construct the path manually to ensure forward slashes for Android/iOS consistency
+            // relativePath is expected to be like "SharedDocs/file.md"
+            
+            // Remove any leading slash/backslash just in case
+            string cleanRelativePath = relativePath.TrimStart('/', '\\');
+            
+            fullPath = Path.Combine(Application.streamingAssetsPath, cleanRelativePath);
         }
         else
         {
+            // Handle nested folders in JobFolder (e.g. CREWLIFE/CLAIMS)
+            // If JobFolder contains slashes, Path.Combine might fail on Android if not handled carefully
+            // But usually Path.Combine(base, nested, file) works if base is clean.
+            
+            // However, if relativePath itself contains slashes (e.g. "SubFolder/file.md"), 
+            // we need to ensure separators are correct.
+            
             fullPath = Path.Combine(Application.streamingAssetsPath, JobFolder, relativePath);
         }
+        
+        // Fix for Android: Ensure no backslashes in the final path if it's a URL
+        // Path.Combine might introduce backslashes on Windows Editor, which is fine,
+        // but on Android device, we want forward slashes for the jar:file:// URL.
+        // The ToPathUrl method handles the prefix, but let's ensure the path part is clean.
+        
+#if (UNITY_ANDROID || UNITY_IOS) && !UNITY_EDITOR
+        fullPath = fullPath.Replace("\\", "/");
+#endif
+        
         return ToPathUrl(fullPath);
     }
 
@@ -230,57 +265,97 @@ public class JobDataLoader : MonoBehaviour
     
     public void LoadJobFromInputField(string jobFolder)
     {
-        // Convert input to uppercase to handle case-insensitivity (e.g., y197 -> Y197)
-        string input = jobFolder.Trim().ToUpper();
+        // If the path contains slashes, it's likely a nested path (e.g. CrewLife/Claims)
+        // We should NOT uppercase the whole thing because folder names on Android are case-sensitive.
+        // However, we still want to support case-insensitive shortcuts for the root part.
         
-        // Special handling for shortcuts
-        if (input == "TE" || input == "T&E" || input == "TRAIN AND ENGINE" || input == "TRAIN & ENGINE")
+        string input = jobFolder.Trim();
+        string upperInput = input.ToUpper();
+        
+        // Special handling for shortcuts (Root Level)
+        if (upperInput == "TE" || upperInput == "T&E" || upperInput == "TRAIN AND ENGINE" || upperInput == "TRAIN & ENGINE")
         {
             JobFolder = "TE_Guide";
         }
-        else if (input == "HELP")
+        else if (upperInput == "HELP")
         {
             JobFolder = "Help";
         }
-        else if (input == "PAYROLL" || input == "PAYROLL_INFO" || input == "PAY ROLL" || input == "PAYROLL INFO" || input == "PAY" || input == "FUCKIN MONEY" || input == "MONEY" || input == "FUCKING MONEY")
+        else if (upperInput == "PAYROLL" || upperInput == "PAYROLL_INFO" || upperInput == "PAY ROLL" || upperInput == "PAYROLL INFO" || upperInput == "PAY" || upperInput == "FUCKIN MONEY" || upperInput == "MONEY" || upperInput == "FUCKING MONEY")
         {
             JobFolder = "Payroll_Info";
         }
-        else if (input == "MAINFRAME" || input == "MAIN FRAME" || input == "MAIN" || input == "FRAME" || input == "MF")
+        else if (upperInput == "MAINFRAME" || upperInput == "MAIN FRAME" || upperInput == "MAIN" || upperInput == "FRAME" || upperInput == "MF")
         {
             JobFolder = "Mainframe";
         }
-        else if (input == "CREWLIFE" || input == "CREW LIFE" || input == "CREW" || input == "LIFE" || input == "CL")
+        else if (upperInput == "CREWLIFE" || upperInput == "CREW LIFE" || upperInput == "CREW" || upperInput == "LIFE" || upperInput == "CL")
         {
             JobFolder = "CrewLife";
         }
-        else if (input == "MRT" || input == "MOBILE RAIL TOOL" || input == "RAIL TOOL" || input == "RAIL")
+        else if (upperInput == "MRT" || upperInput == "MOBILE RAIL TOOL" || upperInput == "RAIL TOOL" || upperInput == "RAIL")
         {
             JobFolder = "MRT";
         }
-        else if (input == "YES" || input == "YARD ENTERPRISE SYSTEM" || input == "YARD" || input == "SYSTEM")
+        else if (upperInput == "YES" || upperInput == "YARD ENTERPRISE SYSTEM" || upperInput == "YARD" || upperInput == "SYSTEM")
         {
             JobFolder = "YES";
         }
-        else if (input == "DA" || input == "DIRECT ACCESS" || input == "DIRECT" || input == "ACCESS")
+        else if (upperInput == "DA" || upperInput == "DIRECT ACCESS" || upperInput == "DIRECT" || upperInput == "ACCESS")
         {
             JobFolder = "DirectAccess";
         }
-        else if (input == "MISC" || input == "MISCELLANEOUS")
+        else if (upperInput == "MISC" || upperInput == "MISCELLANEOUS")
         {
             JobFolder = "Miscellaneous";
         }
-        else if (input == "OTR" || input == "OVER THE ROAD" || input == "ROAD" || input == "AWAY" || input == "OUT OF TOWN" || input == "OVER" || input == "ROAD TRAIN")
+        else if (upperInput == "OTR" || upperInput == "OVER THE ROAD" || upperInput == "ROAD" || upperInput == "AWAY" || upperInput == "OUT OF TOWN" || upperInput == "OVER" || upperInput == "ROAD TRAIN")
         {
             JobFolder = "OverTheRoad";
         }
-        else if (input == "UNION" || input == "UN" || input == "UNI" || input == "UNIO" || input == "SMART")
+        else if (upperInput == "UNION" || upperInput == "UN" || upperInput == "UNI" || upperInput == "UNIO" || upperInput == "SMART")
         {
             JobFolder = "Union";
         }
         else
         {
-            JobFolder = input;
+            // If it's not a shortcut, use the input as is (preserving case for nested paths)
+            // But if it's a simple root folder like "y197", we might want to uppercase it if that's the convention
+            // The convention seems to be that Job IDs (Y197) are uppercase, but folders like CrewLife are CamelCase.
+            
+            // If it contains a slash, assume it's a constructed path from the UI and trust its casing.
+            if (input.Contains("/") || input.Contains("\\"))
+            {
+                JobFolder = input;
+            }
+            else
+            {
+                // If it's a single word, try to be smart.
+                // If it looks like a Job ID (starts with Y), uppercase it.
+                if (upperInput.StartsWith("Y"))
+                {
+                    JobFolder = upperInput;
+                }
+                else
+                {
+                    // For other single words, we might need to check if they exist or just use as is.
+                    // Previously we uppercased everything.
+                    // If we uppercase "CrewLife", it becomes "CREWLIFE", which fails.
+                    // But "CrewLife" is handled by the shortcut above.
+                    
+                    // If the user types "Claims" directly (if that's supported), we might have an issue.
+                    // But usually they type "Y197" or "CrewLife".
+                    
+                    // Let's default to preserving case if it's not a known shortcut/pattern.
+                    // But wait, if they type "y197", we want "Y197".
+                    // If they type "crewlife", we want "CrewLife" (handled above).
+                    
+                    // If they type "SomeFolder", we probably want "SomeFolder".
+                    
+                    // Let's stick to: if it has a slash, trust it. If not, uppercase it (legacy behavior for Job IDs).
+                    JobFolder = upperInput;
+                }
+            }
         }
         StartCoroutine(LoadJobCoroutine());
     }
