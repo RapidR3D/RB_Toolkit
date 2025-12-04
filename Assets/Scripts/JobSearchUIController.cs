@@ -424,7 +424,10 @@ public class JobSearchUIController : MonoBehaviour
                 searchControlsContainer.style.display = DisplayStyle.Flex;
                 if (contentSearchField != null)
                 {
-                    contentSearchField.value = ""; // Reset search
+                    // Only reset search if we are NOT navigating back/forward in history
+                    // Actually, for now, let's always reset search when loading a new job to avoid "hanging" state
+                    // This fixes the bug where switching categories with a search term active causes issues
+                    contentSearchField.value = ""; 
                     currentSearchTerm = "";
                 }
                 
@@ -437,6 +440,9 @@ public class JobSearchUIController : MonoBehaviour
             {
                 Debug.Log($"Hiding Search Controls for docType: {docType}");
                 searchControlsContainer.style.display = DisplayStyle.None;
+                // Also clear search term if we are hiding the controls
+                currentSearchTerm = "";
+                if (contentSearchField != null) contentSearchField.value = "";
             }
         }
         else if (contentSearchField != null)
@@ -451,6 +457,8 @@ public class JobSearchUIController : MonoBehaviour
             else
             {
                 contentSearchField.style.display = DisplayStyle.None;
+                currentSearchTerm = "";
+                contentSearchField.value = "";
             }
         }
         else
@@ -743,17 +751,147 @@ public class JobSearchUIController : MonoBehaviour
                 navigationHistory.Push(currentFolder);
                 UpdateBackButtonState();
 
+                // fileKey is relative to the current job folder, e.g. "MRTAEI/job.json"
+                // We want to extract the directory part, e.g. "MRTAEI"
                 string directory = System.IO.Path.GetDirectoryName(fileKey);
                 
-                // On Android/iOS, Path.Combine might use backslashes if running in Editor on Windows,
-                // but we want forward slashes for the path string we pass to LoadJobFromInputField.
-                // LoadJobFromInputField now handles slash conversion, but let's be safe.
+                // If directory is empty (fileKey is just "job.json"), it means reload current folder?
+                // But usually it's "SubFolder/job.json".
                 
-                string fullFolderPath = System.IO.Path.Combine(currentFolder, directory);
+                string fullFolderPath;
+                if (string.IsNullOrEmpty(directory))
+                {
+                    // If fileKey is just "job.json", we are reloading the same folder?
+                    // Or maybe it's a sibling?
+                    // Let's assume it's relative to current folder.
+                    fullFolderPath = currentFolder;
+                }
+                else
+                {
+                    // Check if currentFolder already ends with the directory we are trying to append
+                    // This prevents recursive duplication like "MRT/MRTAEI/MRTAEI"
+                    // Normalize separators for comparison
+                    string normalizedCurrent = currentFolder.Replace("\\", "/").TrimEnd('/');
+                    string normalizedDir = directory.Replace("\\", "/").TrimEnd('/');
+                    
+                    if (normalizedCurrent.EndsWith("/" + normalizedDir, StringComparison.OrdinalIgnoreCase) || 
+                        normalizedCurrent.Equals(normalizedDir, StringComparison.OrdinalIgnoreCase))
+                    {
+                        // If we are already in "MRT/MRTAEI" and trying to go to "MRTAEI", just stay here?
+                        // Or maybe the fileKey is relative to the PARENT?
+                        // No, fileKey comes from the JSON which is relative to the JSON file location.
+                        
+                        // If we are in MRT (root), fileKey is "MRTAEI/job.json".
+                        // fullFolderPath becomes "MRT/MRTAEI". Correct.
+                        
+                        // If we are in MRT/MRTAEI, and we click a link... wait, subcategories don't usually link to themselves.
+                        // But if they did, or if there's a loop.
+                        
+                        // The issue reported is "MRT/MRTAEI/MRTAEI/job.json".
+                        // This implies currentFolder was "MRT/MRTAEI" and we appended "MRTAEI" again.
+                        // This happens if the user is IN the subcategory and clicks the link again?
+                        // OR if the search term filtering somehow messes up the context.
+                        
+                        // If we are in "MRT", currentFolder="MRT". Link="MRTAEI/job.json". Result="MRT/MRTAEI". Correct.
+                        // If we are in "MRT/MRTAEI", currentFolder="MRT/MRTAEI".
+                        // If the list item "MRTAEI/job.json" is still visible (e.g. from the parent list?), that's the problem.
+                        // When we load a subcategory, we usually load a NEW job.json which has its OWN sections.
+                        // The parent's sections (including the link to the subcategory) should disappear.
+                        
+                        // UNLESS the subcategory's job.json ALSO has a link to itself or a child with the same name?
+                        // Let's check MRT/MRTAEI/job.json content if possible.
+                        // But assuming standard structure, maybe the "Back" navigation didn't clear something?
+                        
+                        // Wait, the error log says: "Failed to load .../MRT/MRTAEI/MRTAEI/job.json"
+                        // This means `currentFolder` was `MRT/MRTAEI` and `directory` was `MRTAEI`.
+                        // This implies `fileKey` was `MRTAEI/job.json`.
+                        // Why would `MRT/MRTAEI/job.json` contain a link to `MRTAEI/job.json`?
+                        // It shouldn't. It should contain sections for that subcategory.
+                        
+                        // HYPOTHESIS: When we filter with a search term, we might be showing items from the PREVIOUS job 
+                        // if `allSectionItems` wasn't cleared or updated correctly?
+                        // `OnJobLoaded` clears `allSectionItems`.
+                        
+                        // HYPOTHESIS 2: The user is in "MRT", types a search term.
+                        // The list filters to show "MRTAEI" (the subcategory link).
+                        // User clicks it. `RenderDetailView` runs.
+                        // It calculates path "MRT/MRTAEI". Loads it.
+                        // `OnJobLoaded` runs for "MRT/MRTAEI".
+                        // It clears `allSectionItems` and populates it with MRTAEI's content.
+                        // BUT `currentSearchTerm` is NOT cleared (before my previous fix).
+                        // So `FilterSectionList` runs immediately with the OLD search term.
+                        // If the old search term matches something in the NEW list, it shows it.
+                        
+                        // But if the user clicks the subcategory again?
+                        // The error happens "when you have a keyword ... and switch to a subcategory".
+                        // Maybe the click event fires twice? Or the UI doesn't update fast enough?
+                        
+                        // Let's look at the path construction again.
+                        // If `currentFolder` is "MRT/MRTAEI", and we append `directory` "MRTAEI", we get the error.
+                        // This means `fileKey` is "MRTAEI/job.json".
+                        // This means the item clicked was the one from the PARENT list ("MRT").
+                        // But `jobDataLoader.JobFolder` should have been updated to "MRT/MRTAEI" *after* the load starts?
+                        // No, `JobFolder` is updated in `LoadJobFromInputField` BEFORE starting the coroutine.
+                        
+                        // Sequence:
+                        // 1. User in "MRT". `JobFolder` = "MRT". List shows "MRTAEI/job.json".
+                        // 2. User clicks "MRTAEI".
+                        // 3. `RenderDetailView` runs.
+                        // 4. `currentFolder` = "MRT". `directory` = "MRTAEI".
+                        // 5. `fullFolderPath` = "MRT/MRTAEI".
+                        // 6. `navigationHistory.Push("MRT")`.
+                        // 7. `jobDataLoader.LoadJobFromInputField("MRT/MRTAEI")`.
+                        //    - Sets `JobFolder` = "MRT/MRTAEI".
+                        //    - Starts Coroutine.
+                        
+                        // If `RenderDetailView` runs AGAIN for the SAME item before the new job loads?
+                        // 1. `RenderDetailView` runs again.
+                        // 2. `currentFolder` is now "MRT/MRTAEI" (updated in step 7 above).
+                        // 3. Item is still "MRTAEI/job.json" (list hasn't refreshed yet).
+                        // 4. `directory` = "MRTAEI".
+                        // 5. `fullFolderPath` = "MRT/MRTAEI/MRTAEI". -> ERROR!
+                        
+                        // FIX: We need to prevent re-entrance or check if we are already loading?
+                        // Or simply check if `currentFolder` already contains the target directory?
+                        
+                        // If `currentFolder` ends with `directory`, we shouldn't append it again?
+                        // But what if we have `Folder/Sub/Sub`?
+                        
+                        // Better fix: Use the `navigationHistory` to determine the "base" folder for the current view?
+                        // No, that's complex.
+                        
+                        // Simple fix: If `currentFolder` already ends with `directory`, assume we double-clicked or are re-processing.
+                        // But we need to be careful about legitimate sibling folders with same names (unlikely here).
+                        
+                        // Let's implement the check.
+                         if (normalizedCurrent.EndsWith("/" + normalizedDir, StringComparison.OrdinalIgnoreCase))
+                         {
+                             // We are likely re-processing the same click while JobFolder has already updated.
+                             // Use currentFolder as is.
+                             fullFolderPath = currentFolder;
+                         }
+                         else
+                         {
+                             fullFolderPath = System.IO.Path.Combine(currentFolder, directory);
+                         }
+                    }
+                    else
+                    {
+                        fullFolderPath = System.IO.Path.Combine(currentFolder, directory);
+                    }
+                }
+
                 fullFolderPath = fullFolderPath.Replace("\\", "/");
                 
                 // Resolve any relative paths (like ..) before loading
                 fullFolderPath = ResolvePath(fullFolderPath);
+                
+                // Prevent reloading if we are already there (simple debounce)
+                if (fullFolderPath.Equals(jobDataLoader.JobFolder.Replace("\\", "/"), StringComparison.OrdinalIgnoreCase))
+                {
+                    Debug.Log("Ignoring duplicate load request for: " + fullFolderPath);
+                    return;
+                }
                 
                 jobDataLoader.LoadJobFromInputField(fullFolderPath);
                 return;

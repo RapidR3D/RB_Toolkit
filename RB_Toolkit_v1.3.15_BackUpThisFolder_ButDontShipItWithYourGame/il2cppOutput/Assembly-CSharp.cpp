@@ -741,6 +741,7 @@ IL2CPP_EXTERN_C String_t* _stringLiteral53D616171FD1D8FD983E887A3C1468EC7F17E268
 IL2CPP_EXTERN_C String_t* _stringLiteral54F4AAE0436CBCC0163FCF662535D64F6E0BB00C;
 IL2CPP_EXTERN_C String_t* _stringLiteral55F097B2603C69F9353B2AE824F1FE43E6B46F87;
 IL2CPP_EXTERN_C String_t* _stringLiteral5639A4EA8CAA5315F012CBC0883C9705157575C4;
+IL2CPP_EXTERN_C String_t* _stringLiteral5660EB2BC4BE28D6F4A1F391A4487DC4F679865C;
 IL2CPP_EXTERN_C String_t* _stringLiteral56B55F1AE7D34548BDC41081085DD3561CB80578;
 IL2CPP_EXTERN_C String_t* _stringLiteral571064A90BC2141BF7EF1D9F8D32E1911B64C679;
 IL2CPP_EXTERN_C String_t* _stringLiteral58B716FF5428F7961E1403E6D969E605D0F27EAF;
@@ -7450,6 +7451,7 @@ inline void Stack_1_Push_m6735A1D45311268768814737E1F1884B3615CA20 (Stack_1_tD77
 	((  void (*) (Stack_1_tD770B7BA3385BBF3A1703E386B6006FF670C5094*, String_t*, const RuntimeMethod*))Stack_1_Push_m709DD11BC1291A905814182CF9A367DE7399A778_gshared)(__this, ___0_item, method);
 }
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* Path_GetDirectoryName_m428BADBE493A3927B51A13DEF658929B430516F6 (String_t* ___0_path, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* String_TrimEnd_mDB4D96F8312F563656D4115A9F280062E05D2EE8 (String_t* __this, Il2CppChar ___0_trimChar, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* JobSearchUIController_ResolvePath_mC8E8B68F83428E115775CAD9DB0886BC2189F6F3 (JobSearchUIController_t771C13329EF1AB812817519956ED4643E0DE28C3* __this, String_t* ___0_path, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* JobSearchUIController_HighlightText_mA788090FDB79303519C05065052A2FCE22576894 (JobSearchUIController_t771C13329EF1AB812817519956ED4643E0DE28C3* __this, String_t* ___0_text, List_1_t425196350A2888B269895DE1C865A3E7E4E2C9B6* ___1_matches, int32_t ___2_activeIndex, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR UMarkdownContext_t0DACEEADCE750320BBEA9C49A396C0227BFC3713* UMarkdownContext_Runtime_m4D23A464C46E4B627894B5ABD190C3DE060D9376 (const RuntimeMethod* method) ;
@@ -16846,7 +16848,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void JobSearchUIController_OnJobLoaded_m4A46F
 	RuntimeObject* G_B16_0 = NULL;
 	int32_t G_B18_0 = 0;
 	RuntimeObject* G_B18_1 = NULL;
-	int32_t G_B68_0 = 0;
+	int32_t G_B69_0 = 0;
 	{
 		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:383>
 		JobData_t9D91E157BECCA13AE4C6A8FE3B22AEB24C8B0512* L_0 = ___0_job;
@@ -17086,7 +17088,7 @@ IL_014e:
 		VisualElement_t2667F9D19E62C7A315927506C06F223AB9234115* L_49 = __this->___searchControlsContainer;
 		if (!L_49)
 		{
-			goto IL_021d;
+			goto IL_0243;
 		}
 	}
 	{
@@ -17133,18 +17135,18 @@ IL_014e:
 		}
 	}
 	{
-		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:427>
+		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:430>
 		TextField_tDB34369F9468D7F02670087D9444EC23115827D9* L_69 = __this->___contentSearchField;
 		NullCheck(L_69);
 		VirtualActionInvoker1< String_t* >::Invoke(147, L_69, _stringLiteralDA39A3EE5E6B4B0D3255BFEF95601890AFD80709);
-		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:428>
+		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:431>
 		__this->___currentSearchTerm = _stringLiteralDA39A3EE5E6B4B0D3255BFEF95601890AFD80709;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___currentSearchTerm), (void*)_stringLiteralDA39A3EE5E6B4B0D3255BFEF95601890AFD80709);
 	}
 
 IL_01c7:
 	{
-		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:432>
+		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:435>
 		Label_tC160668F9119CE0F5567021FB208E64A5B1C5B70* L_70 = __this->___matchCountLbl;
 		if (!L_70)
 		{
@@ -17152,7 +17154,7 @@ IL_01c7:
 		}
 	}
 	{
-		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:432>
+		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:435>
 		Label_tC160668F9119CE0F5567021FB208E64A5B1C5B70* L_71 = __this->___matchCountLbl;
 		NullCheck(L_71);
 		VirtualActionInvoker1< String_t* >::Invoke(207, L_71, _stringLiteral9FD8B98AB45235570D25170630B341F83D8DB54F);
@@ -17160,22 +17162,22 @@ IL_01c7:
 
 IL_01df:
 	{
-		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:433>
+		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:436>
 		__this->___currentMatchIndex = (-1);
-		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:434>
+		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:437>
 		__this->___totalMatches = 0;
-		goto IL_029f;
+		goto IL_02e3;
 	}
 
 IL_01f2:
 	{
-		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:438>
+		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:441>
 		String_t* L_72 = V_0;
 		String_t* L_73;
 		L_73 = String_Concat_m9E3155FB84015C823606188F53B47CB44C444991(_stringLiteralB62C990F361EF703883D8AFC1B02DEBCB544FC2D, L_72, NULL);
 		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 		Debug_Log_m87A9A3C761FF5C43ED8A53B16190A53D08F818BB(L_73, NULL);
-		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:439>
+		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:442>
 		VisualElement_t2667F9D19E62C7A315927506C06F223AB9234115* L_74 = __this->___searchControlsContainer;
 		NullCheck(L_74);
 		RuntimeObject* L_75;
@@ -17184,327 +17186,349 @@ IL_01f2:
 		L_76 = StyleEnum_1_op_Implicit_mE2664CDFC678F602380EED12BA228071E6F49030(1, StyleEnum_1_op_Implicit_mE2664CDFC678F602380EED12BA228071E6F49030_RuntimeMethod_var);
 		NullCheck(L_75);
 		InterfaceActionInvoker1< StyleEnum_1_t3B02FFF55849C9C8E6A7C0AA9C7E5F65F10C9C69 >::Invoke(49, IStyle_t4FD66C97CA5F46BFE328FED0C65277A37E0A89F7_il2cpp_TypeInfo_var, L_75, L_76);
-		goto IL_029f;
-	}
-
-IL_021d:
-	{
-		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:442>
+		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:444>
+		__this->___currentSearchTerm = _stringLiteralDA39A3EE5E6B4B0D3255BFEF95601890AFD80709;
+		Il2CppCodeGenWriteBarrier((void**)(&__this->___currentSearchTerm), (void*)_stringLiteralDA39A3EE5E6B4B0D3255BFEF95601890AFD80709);
+		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:445>
 		TextField_tDB34369F9468D7F02670087D9444EC23115827D9* L_77 = __this->___contentSearchField;
 		if (!L_77)
 		{
-			goto IL_0295;
+			goto IL_02e3;
 		}
 	}
 	{
 		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:445>
-		bool L_78 = V_1;
-		bool L_79 = V_2;
-		bool L_80 = V_3;
-		bool L_81 = V_5;
-		bool L_82 = V_7;
-		bool L_83 = V_8;
-		bool L_84 = V_9;
-		bool L_85 = V_10;
-		bool L_86 = V_11;
-		bool L_87 = V_12;
-		bool L_88 = V_13;
-		bool L_89 = V_4;
-		bool L_90 = V_14;
-		if (!((int32_t)(((int32_t)(((int32_t)(((int32_t)(((int32_t)(((int32_t)(((int32_t)(((int32_t)(((int32_t)(((int32_t)(((int32_t)(((int32_t)((int32_t)L_78|(int32_t)L_79))|(int32_t)L_80))|(int32_t)L_81))|(int32_t)L_82))|(int32_t)L_83))|(int32_t)L_84))|(int32_t)L_85))|(int32_t)L_86))|(int32_t)L_87))|(int32_t)L_88))|(int32_t)L_89))|(int32_t)L_90)))
+		TextField_tDB34369F9468D7F02670087D9444EC23115827D9* L_78 = __this->___contentSearchField;
+		NullCheck(L_78);
+		VirtualActionInvoker1< String_t* >::Invoke(147, L_78, _stringLiteralDA39A3EE5E6B4B0D3255BFEF95601890AFD80709);
+		goto IL_02e3;
+	}
+
+IL_0243:
+	{
+		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:448>
+		TextField_tDB34369F9468D7F02670087D9444EC23115827D9* L_79 = __this->___contentSearchField;
+		if (!L_79)
 		{
-			goto IL_027d;
+			goto IL_02d9;
 		}
 	}
 	{
-		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:447>
-		TextField_tDB34369F9468D7F02670087D9444EC23115827D9* L_91 = __this->___contentSearchField;
-		NullCheck(L_91);
-		RuntimeObject* L_92;
-		L_92 = VisualElement_get_style_mDCFF8D835BE0AFE412905E108F48B32A83734224(L_91, NULL);
-		StyleEnum_1_t3B02FFF55849C9C8E6A7C0AA9C7E5F65F10C9C69 L_93;
-		L_93 = StyleEnum_1_op_Implicit_mE2664CDFC678F602380EED12BA228071E6F49030(0, StyleEnum_1_op_Implicit_mE2664CDFC678F602380EED12BA228071E6F49030_RuntimeMethod_var);
-		NullCheck(L_92);
-		InterfaceActionInvoker1< StyleEnum_1_t3B02FFF55849C9C8E6A7C0AA9C7E5F65F10C9C69 >::Invoke(49, IStyle_t4FD66C97CA5F46BFE328FED0C65277A37E0A89F7_il2cpp_TypeInfo_var, L_92, L_93);
-		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:448>
-		TextField_tDB34369F9468D7F02670087D9444EC23115827D9* L_94 = __this->___contentSearchField;
-		NullCheck(L_94);
-		VirtualActionInvoker1< String_t* >::Invoke(147, L_94, _stringLiteralDA39A3EE5E6B4B0D3255BFEF95601890AFD80709);
-		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:449>
-		__this->___currentSearchTerm = _stringLiteralDA39A3EE5E6B4B0D3255BFEF95601890AFD80709;
-		Il2CppCodeGenWriteBarrier((void**)(&__this->___currentSearchTerm), (void*)_stringLiteralDA39A3EE5E6B4B0D3255BFEF95601890AFD80709);
-		goto IL_029f;
+		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:451>
+		bool L_80 = V_1;
+		bool L_81 = V_2;
+		bool L_82 = V_3;
+		bool L_83 = V_5;
+		bool L_84 = V_7;
+		bool L_85 = V_8;
+		bool L_86 = V_9;
+		bool L_87 = V_10;
+		bool L_88 = V_11;
+		bool L_89 = V_12;
+		bool L_90 = V_13;
+		bool L_91 = V_4;
+		bool L_92 = V_14;
+		if (!((int32_t)(((int32_t)(((int32_t)(((int32_t)(((int32_t)(((int32_t)(((int32_t)(((int32_t)(((int32_t)(((int32_t)(((int32_t)(((int32_t)((int32_t)L_80|(int32_t)L_81))|(int32_t)L_82))|(int32_t)L_83))|(int32_t)L_84))|(int32_t)L_85))|(int32_t)L_86))|(int32_t)L_87))|(int32_t)L_88))|(int32_t)L_89))|(int32_t)L_90))|(int32_t)L_91))|(int32_t)L_92)))
+		{
+			goto IL_02a6;
+		}
 	}
-
-IL_027d:
 	{
 		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:453>
-		TextField_tDB34369F9468D7F02670087D9444EC23115827D9* L_95 = __this->___contentSearchField;
-		NullCheck(L_95);
-		RuntimeObject* L_96;
-		L_96 = VisualElement_get_style_mDCFF8D835BE0AFE412905E108F48B32A83734224(L_95, NULL);
-		StyleEnum_1_t3B02FFF55849C9C8E6A7C0AA9C7E5F65F10C9C69 L_97;
-		L_97 = StyleEnum_1_op_Implicit_mE2664CDFC678F602380EED12BA228071E6F49030(1, StyleEnum_1_op_Implicit_mE2664CDFC678F602380EED12BA228071E6F49030_RuntimeMethod_var);
+		TextField_tDB34369F9468D7F02670087D9444EC23115827D9* L_93 = __this->___contentSearchField;
+		NullCheck(L_93);
+		RuntimeObject* L_94;
+		L_94 = VisualElement_get_style_mDCFF8D835BE0AFE412905E108F48B32A83734224(L_93, NULL);
+		StyleEnum_1_t3B02FFF55849C9C8E6A7C0AA9C7E5F65F10C9C69 L_95;
+		L_95 = StyleEnum_1_op_Implicit_mE2664CDFC678F602380EED12BA228071E6F49030(0, StyleEnum_1_op_Implicit_mE2664CDFC678F602380EED12BA228071E6F49030_RuntimeMethod_var);
+		NullCheck(L_94);
+		InterfaceActionInvoker1< StyleEnum_1_t3B02FFF55849C9C8E6A7C0AA9C7E5F65F10C9C69 >::Invoke(49, IStyle_t4FD66C97CA5F46BFE328FED0C65277A37E0A89F7_il2cpp_TypeInfo_var, L_94, L_95);
+		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:454>
+		TextField_tDB34369F9468D7F02670087D9444EC23115827D9* L_96 = __this->___contentSearchField;
 		NullCheck(L_96);
-		InterfaceActionInvoker1< StyleEnum_1_t3B02FFF55849C9C8E6A7C0AA9C7E5F65F10C9C69 >::Invoke(49, IStyle_t4FD66C97CA5F46BFE328FED0C65277A37E0A89F7_il2cpp_TypeInfo_var, L_96, L_97);
-		goto IL_029f;
+		VirtualActionInvoker1< String_t* >::Invoke(147, L_96, _stringLiteralDA39A3EE5E6B4B0D3255BFEF95601890AFD80709);
+		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:455>
+		__this->___currentSearchTerm = _stringLiteralDA39A3EE5E6B4B0D3255BFEF95601890AFD80709;
+		Il2CppCodeGenWriteBarrier((void**)(&__this->___currentSearchTerm), (void*)_stringLiteralDA39A3EE5E6B4B0D3255BFEF95601890AFD80709);
+		goto IL_02e3;
 	}
 
-IL_0295:
+IL_02a6:
 	{
-		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:458>
+		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:459>
+		TextField_tDB34369F9468D7F02670087D9444EC23115827D9* L_97 = __this->___contentSearchField;
+		NullCheck(L_97);
+		RuntimeObject* L_98;
+		L_98 = VisualElement_get_style_mDCFF8D835BE0AFE412905E108F48B32A83734224(L_97, NULL);
+		StyleEnum_1_t3B02FFF55849C9C8E6A7C0AA9C7E5F65F10C9C69 L_99;
+		L_99 = StyleEnum_1_op_Implicit_mE2664CDFC678F602380EED12BA228071E6F49030(1, StyleEnum_1_op_Implicit_mE2664CDFC678F602380EED12BA228071E6F49030_RuntimeMethod_var);
+		NullCheck(L_98);
+		InterfaceActionInvoker1< StyleEnum_1_t3B02FFF55849C9C8E6A7C0AA9C7E5F65F10C9C69 >::Invoke(49, IStyle_t4FD66C97CA5F46BFE328FED0C65277A37E0A89F7_il2cpp_TypeInfo_var, L_98, L_99);
+		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:460>
+		__this->___currentSearchTerm = _stringLiteralDA39A3EE5E6B4B0D3255BFEF95601890AFD80709;
+		Il2CppCodeGenWriteBarrier((void**)(&__this->___currentSearchTerm), (void*)_stringLiteralDA39A3EE5E6B4B0D3255BFEF95601890AFD80709);
+		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:461>
+		TextField_tDB34369F9468D7F02670087D9444EC23115827D9* L_100 = __this->___contentSearchField;
+		NullCheck(L_100);
+		VirtualActionInvoker1< String_t* >::Invoke(147, L_100, _stringLiteralDA39A3EE5E6B4B0D3255BFEF95601890AFD80709);
+		goto IL_02e3;
+	}
+
+IL_02d9:
+	{
+		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:466>
 		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 		Debug_LogError_mB00B2B4468EF3CAF041B038D840820FB84C924B2(_stringLiteral33112ECB757FE44A5A182A73960AA699EFB902AA, NULL);
 	}
 
-IL_029f:
+IL_02e3:
 	{
-		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:462>
-		bool L_98 = V_1;
-		if (!L_98)
+		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:470>
+		bool L_101 = V_1;
+		if (!L_101)
 		{
-			goto IL_02ec;
+			goto IL_0330;
 		}
 	}
 	{
-		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:464>
-		Label_tC160668F9119CE0F5567021FB208E64A5B1C5B70* L_99 = __this->___jobTitle;
-		if (!L_99)
+		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:472>
+		Label_tC160668F9119CE0F5567021FB208E64A5B1C5B70* L_102 = __this->___jobTitle;
+		if (!L_102)
 		{
-			goto IL_02bb;
+			goto IL_02ff;
 		}
 	}
 	{
-		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:464>
-		Label_tC160668F9119CE0F5567021FB208E64A5B1C5B70* L_100 = __this->___jobTitle;
-		JobData_t9D91E157BECCA13AE4C6A8FE3B22AEB24C8B0512* L_101 = ___0_job;
-		NullCheck(L_101);
-		String_t* L_102 = L_101->___title;
-		NullCheck(L_100);
-		VirtualActionInvoker1< String_t* >::Invoke(207, L_100, L_102);
-	}
-
-IL_02bb:
-	{
-		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:465>
-		Label_tC160668F9119CE0F5567021FB208E64A5B1C5B70* L_103 = __this->___jobSubtitle;
-		if (!L_103)
-		{
-			goto IL_03cb;
-		}
-	}
-	{
-		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:465>
-		Label_tC160668F9119CE0F5567021FB208E64A5B1C5B70* L_104 = __this->___jobSubtitle;
-		JobData_t9D91E157BECCA13AE4C6A8FE3B22AEB24C8B0512* L_105 = ___0_job;
-		NullCheck(L_105);
-		String_t* L_106 = L_105->___systemName;
-		JobData_t9D91E157BECCA13AE4C6A8FE3B22AEB24C8B0512* L_107 = ___0_job;
-		NullCheck(L_107);
-		String_t* L_108 = L_107->___version;
-		String_t* L_109;
-		L_109 = String_Concat_m8855A6DE10F84DA7F4EC113CADDB59873A25573B(L_106, _stringLiteral8ADB23C6A87F61A7AD2AF763C381746BCD576FF0, L_108, NULL);
+		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:472>
+		Label_tC160668F9119CE0F5567021FB208E64A5B1C5B70* L_103 = __this->___jobTitle;
+		JobData_t9D91E157BECCA13AE4C6A8FE3B22AEB24C8B0512* L_104 = ___0_job;
 		NullCheck(L_104);
-		VirtualActionInvoker1< String_t* >::Invoke(207, L_104, L_109);
-		goto IL_03cb;
+		String_t* L_105 = L_104->___title;
+		NullCheck(L_103);
+		VirtualActionInvoker1< String_t* >::Invoke(207, L_103, L_105);
 	}
 
-IL_02ec:
+IL_02ff:
 	{
-		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:467>
-		bool L_110 = V_2;
-		bool L_111 = V_3;
-		bool L_112 = V_5;
-		bool L_113 = V_6;
-		bool L_114 = V_7;
-		bool L_115 = V_8;
-		bool L_116 = V_9;
-		bool L_117 = V_10;
-		bool L_118 = V_11;
-		bool L_119 = V_12;
-		bool L_120 = V_13;
-		bool L_121 = V_4;
-		bool L_122 = V_14;
-		if (!((int32_t)(((int32_t)(((int32_t)(((int32_t)(((int32_t)(((int32_t)(((int32_t)(((int32_t)(((int32_t)(((int32_t)(((int32_t)(((int32_t)((int32_t)L_110|(int32_t)L_111))|(int32_t)L_112))|(int32_t)L_113))|(int32_t)L_114))|(int32_t)L_115))|(int32_t)L_116))|(int32_t)L_117))|(int32_t)L_118))|(int32_t)L_119))|(int32_t)L_120))|(int32_t)L_121))|(int32_t)L_122)))
+		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:473>
+		Label_tC160668F9119CE0F5567021FB208E64A5B1C5B70* L_106 = __this->___jobSubtitle;
+		if (!L_106)
 		{
-			goto IL_0359;
+			goto IL_040f;
 		}
 	}
 	{
-		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:469>
-		Label_tC160668F9119CE0F5567021FB208E64A5B1C5B70* L_123 = __this->___jobTitle;
-		if (!L_123)
-		{
-			goto IL_032b;
-		}
-	}
-	{
-		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:469>
-		Label_tC160668F9119CE0F5567021FB208E64A5B1C5B70* L_124 = __this->___jobTitle;
-		JobData_t9D91E157BECCA13AE4C6A8FE3B22AEB24C8B0512* L_125 = ___0_job;
-		NullCheck(L_125);
-		String_t* L_126 = L_125->___title;
-		NullCheck(L_124);
-		VirtualActionInvoker1< String_t* >::Invoke(207, L_124, L_126);
+		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:473>
+		Label_tC160668F9119CE0F5567021FB208E64A5B1C5B70* L_107 = __this->___jobSubtitle;
+		JobData_t9D91E157BECCA13AE4C6A8FE3B22AEB24C8B0512* L_108 = ___0_job;
+		NullCheck(L_108);
+		String_t* L_109 = L_108->___systemName;
+		JobData_t9D91E157BECCA13AE4C6A8FE3B22AEB24C8B0512* L_110 = ___0_job;
+		NullCheck(L_110);
+		String_t* L_111 = L_110->___version;
+		String_t* L_112;
+		L_112 = String_Concat_m8855A6DE10F84DA7F4EC113CADDB59873A25573B(L_109, _stringLiteral8ADB23C6A87F61A7AD2AF763C381746BCD576FF0, L_111, NULL);
+		NullCheck(L_107);
+		VirtualActionInvoker1< String_t* >::Invoke(207, L_107, L_112);
+		goto IL_040f;
 	}
 
-IL_032b:
+IL_0330:
 	{
-		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:470>
-		Label_tC160668F9119CE0F5567021FB208E64A5B1C5B70* L_127 = __this->___jobSubtitle;
-		if (!L_127)
+		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:475>
+		bool L_113 = V_2;
+		bool L_114 = V_3;
+		bool L_115 = V_5;
+		bool L_116 = V_6;
+		bool L_117 = V_7;
+		bool L_118 = V_8;
+		bool L_119 = V_9;
+		bool L_120 = V_10;
+		bool L_121 = V_11;
+		bool L_122 = V_12;
+		bool L_123 = V_13;
+		bool L_124 = V_4;
+		bool L_125 = V_14;
+		if (!((int32_t)(((int32_t)(((int32_t)(((int32_t)(((int32_t)(((int32_t)(((int32_t)(((int32_t)(((int32_t)(((int32_t)(((int32_t)(((int32_t)((int32_t)L_113|(int32_t)L_114))|(int32_t)L_115))|(int32_t)L_116))|(int32_t)L_117))|(int32_t)L_118))|(int32_t)L_119))|(int32_t)L_120))|(int32_t)L_121))|(int32_t)L_122))|(int32_t)L_123))|(int32_t)L_124))|(int32_t)L_125)))
 		{
-			goto IL_03cb;
+			goto IL_039d;
 		}
 	}
 	{
-		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:470>
-		Label_tC160668F9119CE0F5567021FB208E64A5B1C5B70* L_128 = __this->___jobSubtitle;
-		JobData_t9D91E157BECCA13AE4C6A8FE3B22AEB24C8B0512* L_129 = ___0_job;
-		NullCheck(L_129);
-		String_t* L_130 = L_129->___category;
-		JobData_t9D91E157BECCA13AE4C6A8FE3B22AEB24C8B0512* L_131 = ___0_job;
-		NullCheck(L_131);
-		String_t* L_132 = L_131->___version;
-		String_t* L_133;
-		L_133 = String_Concat_m8855A6DE10F84DA7F4EC113CADDB59873A25573B(L_130, _stringLiteral8ADB23C6A87F61A7AD2AF763C381746BCD576FF0, L_132, NULL);
+		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:477>
+		Label_tC160668F9119CE0F5567021FB208E64A5B1C5B70* L_126 = __this->___jobTitle;
+		if (!L_126)
+		{
+			goto IL_036f;
+		}
+	}
+	{
+		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:477>
+		Label_tC160668F9119CE0F5567021FB208E64A5B1C5B70* L_127 = __this->___jobTitle;
+		JobData_t9D91E157BECCA13AE4C6A8FE3B22AEB24C8B0512* L_128 = ___0_job;
 		NullCheck(L_128);
-		VirtualActionInvoker1< String_t* >::Invoke(207, L_128, L_133);
-		goto IL_03cb;
+		String_t* L_129 = L_128->___title;
+		NullCheck(L_127);
+		VirtualActionInvoker1< String_t* >::Invoke(207, L_127, L_129);
 	}
 
-IL_0359:
+IL_036f:
 	{
-		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:475>
-		Label_tC160668F9119CE0F5567021FB208E64A5B1C5B70* L_134 = __this->___jobTitle;
-		if (!L_134)
+		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:478>
+		Label_tC160668F9119CE0F5567021FB208E64A5B1C5B70* L_130 = __this->___jobSubtitle;
+		if (!L_130)
 		{
-			goto IL_0382;
+			goto IL_040f;
 		}
 	}
 	{
-		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:475>
-		Label_tC160668F9119CE0F5567021FB208E64A5B1C5B70* L_135 = __this->___jobTitle;
-		JobData_t9D91E157BECCA13AE4C6A8FE3B22AEB24C8B0512* L_136 = ___0_job;
-		NullCheck(L_136);
-		String_t* L_137 = L_136->___jobNumber;
-		JobData_t9D91E157BECCA13AE4C6A8FE3B22AEB24C8B0512* L_138 = ___0_job;
+		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:478>
+		Label_tC160668F9119CE0F5567021FB208E64A5B1C5B70* L_131 = __this->___jobSubtitle;
+		JobData_t9D91E157BECCA13AE4C6A8FE3B22AEB24C8B0512* L_132 = ___0_job;
+		NullCheck(L_132);
+		String_t* L_133 = L_132->___category;
+		JobData_t9D91E157BECCA13AE4C6A8FE3B22AEB24C8B0512* L_134 = ___0_job;
+		NullCheck(L_134);
+		String_t* L_135 = L_134->___version;
+		String_t* L_136;
+		L_136 = String_Concat_m8855A6DE10F84DA7F4EC113CADDB59873A25573B(L_133, _stringLiteral8ADB23C6A87F61A7AD2AF763C381746BCD576FF0, L_135, NULL);
+		NullCheck(L_131);
+		VirtualActionInvoker1< String_t* >::Invoke(207, L_131, L_136);
+		goto IL_040f;
+	}
+
+IL_039d:
+	{
+		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:483>
+		Label_tC160668F9119CE0F5567021FB208E64A5B1C5B70* L_137 = __this->___jobTitle;
+		if (!L_137)
+		{
+			goto IL_03c6;
+		}
+	}
+	{
+		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:483>
+		Label_tC160668F9119CE0F5567021FB208E64A5B1C5B70* L_138 = __this->___jobTitle;
+		JobData_t9D91E157BECCA13AE4C6A8FE3B22AEB24C8B0512* L_139 = ___0_job;
+		NullCheck(L_139);
+		String_t* L_140 = L_139->___jobNumber;
+		JobData_t9D91E157BECCA13AE4C6A8FE3B22AEB24C8B0512* L_141 = ___0_job;
+		NullCheck(L_141);
+		String_t* L_142 = L_141->___jobName;
+		String_t* L_143;
+		L_143 = String_Concat_m8855A6DE10F84DA7F4EC113CADDB59873A25573B(L_140, _stringLiteral960E5E7F211EFF3243DF14EDD1901DC9EF314D62, L_142, NULL);
 		NullCheck(L_138);
-		String_t* L_139 = L_138->___jobName;
-		String_t* L_140;
-		L_140 = String_Concat_m8855A6DE10F84DA7F4EC113CADDB59873A25573B(L_137, _stringLiteral960E5E7F211EFF3243DF14EDD1901DC9EF314D62, L_139, NULL);
-		NullCheck(L_135);
-		VirtualActionInvoker1< String_t* >::Invoke(207, L_135, L_140);
+		VirtualActionInvoker1< String_t* >::Invoke(207, L_138, L_143);
 	}
 
-IL_0382:
+IL_03c6:
 	{
-		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:476>
-		Label_tC160668F9119CE0F5567021FB208E64A5B1C5B70* L_141 = __this->___jobSubtitle;
-		if (!L_141)
+		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:484>
+		Label_tC160668F9119CE0F5567021FB208E64A5B1C5B70* L_144 = __this->___jobSubtitle;
+		if (!L_144)
 		{
-			goto IL_03cb;
+			goto IL_040f;
 		}
 	}
 	{
-		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:476>
-		Label_tC160668F9119CE0F5567021FB208E64A5B1C5B70* L_142 = __this->___jobSubtitle;
-		StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* L_143 = (StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248*)(StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248*)SZArrayNew(StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248_il2cpp_TypeInfo_var, (uint32_t)5);
-		StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* L_144 = L_143;
-		JobData_t9D91E157BECCA13AE4C6A8FE3B22AEB24C8B0512* L_145 = ___0_job;
-		NullCheck(L_145);
-		String_t* L_146 = L_145->___craft;
-		NullCheck(L_144);
-		(L_144)->SetAt(static_cast<il2cpp_array_size_t>(0), (String_t*)L_146);
-		StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* L_147 = L_144;
-		NullCheck(L_147);
-		(L_147)->SetAt(static_cast<il2cpp_array_size_t>(1), (String_t*)_stringLiteralBD2155E54D0A0EF69D6B035ACE4FB0D1E5C8A136);
-		StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* L_148 = L_147;
-		JobData_t9D91E157BECCA13AE4C6A8FE3B22AEB24C8B0512* L_149 = ___0_job;
-		NullCheck(L_149);
-		String_t* L_150 = L_149->___onduty;
+		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:484>
+		Label_tC160668F9119CE0F5567021FB208E64A5B1C5B70* L_145 = __this->___jobSubtitle;
+		StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* L_146 = (StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248*)(StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248*)SZArrayNew(StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248_il2cpp_TypeInfo_var, (uint32_t)5);
+		StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* L_147 = L_146;
+		JobData_t9D91E157BECCA13AE4C6A8FE3B22AEB24C8B0512* L_148 = ___0_job;
 		NullCheck(L_148);
-		(L_148)->SetAt(static_cast<il2cpp_array_size_t>(2), (String_t*)L_150);
-		StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* L_151 = L_148;
-		NullCheck(L_151);
-		(L_151)->SetAt(static_cast<il2cpp_array_size_t>(3), (String_t*)_stringLiteralBD2155E54D0A0EF69D6B035ACE4FB0D1E5C8A136);
-		StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* L_152 = L_151;
-		JobData_t9D91E157BECCA13AE4C6A8FE3B22AEB24C8B0512* L_153 = ___0_job;
-		NullCheck(L_153);
-		String_t* L_154 = L_153->___location;
+		String_t* L_149 = L_148->___craft;
+		NullCheck(L_147);
+		(L_147)->SetAt(static_cast<il2cpp_array_size_t>(0), (String_t*)L_149);
+		StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* L_150 = L_147;
+		NullCheck(L_150);
+		(L_150)->SetAt(static_cast<il2cpp_array_size_t>(1), (String_t*)_stringLiteralBD2155E54D0A0EF69D6B035ACE4FB0D1E5C8A136);
+		StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* L_151 = L_150;
+		JobData_t9D91E157BECCA13AE4C6A8FE3B22AEB24C8B0512* L_152 = ___0_job;
 		NullCheck(L_152);
-		(L_152)->SetAt(static_cast<il2cpp_array_size_t>(4), (String_t*)L_154);
-		String_t* L_155;
-		L_155 = String_Concat_m647EBF831F54B6DF7D5AFA5FD012CF4EE7571B6A(L_152, NULL);
-		NullCheck(L_142);
-		VirtualActionInvoker1< String_t* >::Invoke(207, L_142, L_155);
+		String_t* L_153 = L_152->___onduty;
+		NullCheck(L_151);
+		(L_151)->SetAt(static_cast<il2cpp_array_size_t>(2), (String_t*)L_153);
+		StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* L_154 = L_151;
+		NullCheck(L_154);
+		(L_154)->SetAt(static_cast<il2cpp_array_size_t>(3), (String_t*)_stringLiteralBD2155E54D0A0EF69D6B035ACE4FB0D1E5C8A136);
+		StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* L_155 = L_154;
+		JobData_t9D91E157BECCA13AE4C6A8FE3B22AEB24C8B0512* L_156 = ___0_job;
+		NullCheck(L_156);
+		String_t* L_157 = L_156->___location;
+		NullCheck(L_155);
+		(L_155)->SetAt(static_cast<il2cpp_array_size_t>(4), (String_t*)L_157);
+		String_t* L_158;
+		L_158 = String_Concat_m647EBF831F54B6DF7D5AFA5FD012CF4EE7571B6A(L_155, NULL);
+		NullCheck(L_145);
+		VirtualActionInvoker1< String_t* >::Invoke(207, L_145, L_158);
 	}
 
-IL_03cb:
+IL_040f:
 	{
-		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:480>
-		List_1_tE65C14BDF2306E941D030D4A963B40ED16BEA0AA* L_156 = __this->___allSectionItems;
-		NullCheck(L_156);
-		List_1_Clear_m2E40CBE050DDE47DE1E510E268CAC201DDA2F5BA_inline(L_156, List_1_Clear_m2E40CBE050DDE47DE1E510E268CAC201DDA2F5BA_RuntimeMethod_var);
-		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:482>
-		bool L_157 = V_1;
-		bool L_158 = V_7;
-		bool L_159 = V_8;
-		bool L_160 = V_9;
-		bool L_161 = V_10;
-		bool L_162 = V_11;
-		bool L_163 = V_12;
-		bool L_164 = V_13;
-		bool L_165 = V_4;
-		bool L_166 = V_14;
-		if (!((int32_t)(((int32_t)(((int32_t)(((int32_t)(((int32_t)(((int32_t)(((int32_t)(((int32_t)(((int32_t)((int32_t)L_157|(int32_t)L_158))|(int32_t)L_159))|(int32_t)L_160))|(int32_t)L_161))|(int32_t)L_162))|(int32_t)L_163))|(int32_t)L_164))|(int32_t)L_165))|(int32_t)L_166)))
-		{
-			goto IL_050e;
-		}
-	}
-	{
-		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:485>
-		List_1_tE65C14BDF2306E941D030D4A963B40ED16BEA0AA* L_167 = __this->___allSectionItems;
-		SectionItem_t90584FE8BBA56A8A4D924FC69AFE6CB79BAB85AD* L_168 = (SectionItem_t90584FE8BBA56A8A4D924FC69AFE6CB79BAB85AD*)il2cpp_codegen_object_new(SectionItem_t90584FE8BBA56A8A4D924FC69AFE6CB79BAB85AD_il2cpp_TypeInfo_var);
-		SectionItem__ctor_m32F2F46EF89925BCFF1861A70C70D455E571125E(L_168, NULL);
-		SectionItem_t90584FE8BBA56A8A4D924FC69AFE6CB79BAB85AD* L_169 = L_168;
-		NullCheck(L_169);
-		L_169->___DisplayName = _stringLiteralB8C5F4827E120C440B59EE5C981B105FAC4C4AAF;
-		Il2CppCodeGenWriteBarrier((void**)(&L_169->___DisplayName), (void*)_stringLiteralB8C5F4827E120C440B59EE5C981B105FAC4C4AAF);
-		SectionItem_t90584FE8BBA56A8A4D924FC69AFE6CB79BAB85AD* L_170 = L_169;
-		NullCheck(L_170);
-		L_170->___Type = 2;
-		SectionItem_t90584FE8BBA56A8A4D924FC69AFE6CB79BAB85AD* L_171 = L_170;
-		JobData_t9D91E157BECCA13AE4C6A8FE3B22AEB24C8B0512* L_172 = ___0_job;
-		NullCheck(L_171);
-		L_171->___GuideData = L_172;
-		Il2CppCodeGenWriteBarrier((void**)(&L_171->___GuideData), (void*)L_172);
-		NullCheck(L_167);
-		List_1_Add_m49AEF2D43D3BB5C633442928B145B6230E33F057_inline(L_167, L_171, List_1_Add_m49AEF2D43D3BB5C633442928B145B6230E33F057_RuntimeMethod_var);
 		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:488>
-		JobData_t9D91E157BECCA13AE4C6A8FE3B22AEB24C8B0512* L_173 = ___0_job;
-		NullCheck(L_173);
-		List_1_t32102AEFD0547205880D319A8A7806C9E3505B53* L_174 = L_173->___sections;
-		if (!L_174)
+		List_1_tE65C14BDF2306E941D030D4A963B40ED16BEA0AA* L_159 = __this->___allSectionItems;
+		NullCheck(L_159);
+		List_1_Clear_m2E40CBE050DDE47DE1E510E268CAC201DDA2F5BA_inline(L_159, List_1_Clear_m2E40CBE050DDE47DE1E510E268CAC201DDA2F5BA_RuntimeMethod_var);
+		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:490>
+		bool L_160 = V_1;
+		bool L_161 = V_7;
+		bool L_162 = V_8;
+		bool L_163 = V_9;
+		bool L_164 = V_10;
+		bool L_165 = V_11;
+		bool L_166 = V_12;
+		bool L_167 = V_13;
+		bool L_168 = V_4;
+		bool L_169 = V_14;
+		if (!((int32_t)(((int32_t)(((int32_t)(((int32_t)(((int32_t)(((int32_t)(((int32_t)(((int32_t)(((int32_t)((int32_t)L_160|(int32_t)L_161))|(int32_t)L_162))|(int32_t)L_163))|(int32_t)L_164))|(int32_t)L_165))|(int32_t)L_166))|(int32_t)L_167))|(int32_t)L_168))|(int32_t)L_169)))
 		{
-			goto IL_049e;
+			goto IL_0552;
 		}
 	}
 	{
-		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:490>
+		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:493>
+		List_1_tE65C14BDF2306E941D030D4A963B40ED16BEA0AA* L_170 = __this->___allSectionItems;
+		SectionItem_t90584FE8BBA56A8A4D924FC69AFE6CB79BAB85AD* L_171 = (SectionItem_t90584FE8BBA56A8A4D924FC69AFE6CB79BAB85AD*)il2cpp_codegen_object_new(SectionItem_t90584FE8BBA56A8A4D924FC69AFE6CB79BAB85AD_il2cpp_TypeInfo_var);
+		SectionItem__ctor_m32F2F46EF89925BCFF1861A70C70D455E571125E(L_171, NULL);
+		SectionItem_t90584FE8BBA56A8A4D924FC69AFE6CB79BAB85AD* L_172 = L_171;
+		NullCheck(L_172);
+		L_172->___DisplayName = _stringLiteralB8C5F4827E120C440B59EE5C981B105FAC4C4AAF;
+		Il2CppCodeGenWriteBarrier((void**)(&L_172->___DisplayName), (void*)_stringLiteralB8C5F4827E120C440B59EE5C981B105FAC4C4AAF);
+		SectionItem_t90584FE8BBA56A8A4D924FC69AFE6CB79BAB85AD* L_173 = L_172;
+		NullCheck(L_173);
+		L_173->___Type = 2;
+		SectionItem_t90584FE8BBA56A8A4D924FC69AFE6CB79BAB85AD* L_174 = L_173;
 		JobData_t9D91E157BECCA13AE4C6A8FE3B22AEB24C8B0512* L_175 = ___0_job;
-		NullCheck(L_175);
-		List_1_t32102AEFD0547205880D319A8A7806C9E3505B53* L_176 = L_175->___sections;
+		NullCheck(L_174);
+		L_174->___GuideData = L_175;
+		Il2CppCodeGenWriteBarrier((void**)(&L_174->___GuideData), (void*)L_175);
+		NullCheck(L_170);
+		List_1_Add_m49AEF2D43D3BB5C633442928B145B6230E33F057_inline(L_170, L_174, List_1_Add_m49AEF2D43D3BB5C633442928B145B6230E33F057_RuntimeMethod_var);
+		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:496>
+		JobData_t9D91E157BECCA13AE4C6A8FE3B22AEB24C8B0512* L_176 = ___0_job;
 		NullCheck(L_176);
-		Enumerator_t5EEE3962ABD9FC289B940D8883C942AEAD778F88 L_177;
-		L_177 = List_1_GetEnumerator_mEA461487CF47D6022DF4D557B16F4932301D0579(L_176, List_1_GetEnumerator_mEA461487CF47D6022DF4D557B16F4932301D0579_RuntimeMethod_var);
-		V_15 = L_177;
+		List_1_t32102AEFD0547205880D319A8A7806C9E3505B53* L_177 = L_176->___sections;
+		if (!L_177)
+		{
+			goto IL_04e2;
+		}
+	}
+	{
+		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:498>
+		JobData_t9D91E157BECCA13AE4C6A8FE3B22AEB24C8B0512* L_178 = ___0_job;
+		NullCheck(L_178);
+		List_1_t32102AEFD0547205880D319A8A7806C9E3505B53* L_179 = L_178->___sections;
+		NullCheck(L_179);
+		Enumerator_t5EEE3962ABD9FC289B940D8883C942AEAD778F88 L_180;
+		L_180 = List_1_GetEnumerator_mEA461487CF47D6022DF4D557B16F4932301D0579(L_179, List_1_GetEnumerator_mEA461487CF47D6022DF4D557B16F4932301D0579_RuntimeMethod_var);
+		V_15 = L_180;
 	}
 	{
 		auto __finallyBlock = il2cpp::utils::Finally([&]
 		{
 
-FINALLY_0490:
+FINALLY_04d4:
 			{
 				Enumerator_Dispose_mAB3279B9D4B0FF337AE1734C5338662940543873((&V_15), Enumerator_Dispose_mAB3279B9D4B0FF337AE1734C5338662940543873_RuntimeMethod_var);
 				return;
@@ -17513,65 +17537,65 @@ FINALLY_0490:
 		try
 		{
 			{
-				goto IL_0485_1;
+				goto IL_04c9_1;
 			}
 
-IL_0437_1:
+IL_047b_1:
 			{
-				//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:490>
-				JobSection_t6F21B72E42DBB2CEF1F19750FF51B0BFCB2DA054* L_178;
-				L_178 = Enumerator_get_Current_m376BBECBBA9B44B1A82F79FDBAFAB1BA1CC77D00_inline((&V_15), Enumerator_get_Current_m376BBECBBA9B44B1A82F79FDBAFAB1BA1CC77D00_RuntimeMethod_var);
-				V_16 = L_178;
-				//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:493>
-				JobSection_t6F21B72E42DBB2CEF1F19750FF51B0BFCB2DA054* L_179 = V_16;
-				NullCheck(L_179);
-				String_t* L_180 = L_179->___label;
-				NullCheck(L_180);
-				bool L_181;
-				L_181 = String_Equals_m7BDFC0B951005B9DC2BAED464AFE68FF7E9ACE5A(L_180, _stringLiteralFC7406B69F387A8C895A2538CD1C1D2F0B4D3040, 5, NULL);
-				if (L_181)
+				//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:498>
+				JobSection_t6F21B72E42DBB2CEF1F19750FF51B0BFCB2DA054* L_181;
+				L_181 = Enumerator_get_Current_m376BBECBBA9B44B1A82F79FDBAFAB1BA1CC77D00_inline((&V_15), Enumerator_get_Current_m376BBECBBA9B44B1A82F79FDBAFAB1BA1CC77D00_RuntimeMethod_var);
+				V_16 = L_181;
+				//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:501>
+				JobSection_t6F21B72E42DBB2CEF1F19750FF51B0BFCB2DA054* L_182 = V_16;
+				NullCheck(L_182);
+				String_t* L_183 = L_182->___label;
+				NullCheck(L_183);
+				bool L_184;
+				L_184 = String_Equals_m7BDFC0B951005B9DC2BAED464AFE68FF7E9ACE5A(L_183, _stringLiteralFC7406B69F387A8C895A2538CD1C1D2F0B4D3040, 5, NULL);
+				if (L_184)
 				{
-					goto IL_0485_1;
+					goto IL_04c9_1;
 				}
 			}
 			{
-				//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:496>
-				List_1_tE65C14BDF2306E941D030D4A963B40ED16BEA0AA* L_182 = __this->___allSectionItems;
-				SectionItem_t90584FE8BBA56A8A4D924FC69AFE6CB79BAB85AD* L_183 = (SectionItem_t90584FE8BBA56A8A4D924FC69AFE6CB79BAB85AD*)il2cpp_codegen_object_new(SectionItem_t90584FE8BBA56A8A4D924FC69AFE6CB79BAB85AD_il2cpp_TypeInfo_var);
-				SectionItem__ctor_m32F2F46EF89925BCFF1861A70C70D455E571125E(L_183, NULL);
-				SectionItem_t90584FE8BBA56A8A4D924FC69AFE6CB79BAB85AD* L_184 = L_183;
-				JobSection_t6F21B72E42DBB2CEF1F19750FF51B0BFCB2DA054* L_185 = V_16;
-				NullCheck(L_185);
-				String_t* L_186 = L_185->___label;
-				NullCheck(L_184);
-				L_184->___DisplayName = L_186;
-				Il2CppCodeGenWriteBarrier((void**)(&L_184->___DisplayName), (void*)L_186);
-				SectionItem_t90584FE8BBA56A8A4D924FC69AFE6CB79BAB85AD* L_187 = L_184;
+				//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:504>
+				List_1_tE65C14BDF2306E941D030D4A963B40ED16BEA0AA* L_185 = __this->___allSectionItems;
+				SectionItem_t90584FE8BBA56A8A4D924FC69AFE6CB79BAB85AD* L_186 = (SectionItem_t90584FE8BBA56A8A4D924FC69AFE6CB79BAB85AD*)il2cpp_codegen_object_new(SectionItem_t90584FE8BBA56A8A4D924FC69AFE6CB79BAB85AD_il2cpp_TypeInfo_var);
+				SectionItem__ctor_m32F2F46EF89925BCFF1861A70C70D455E571125E(L_186, NULL);
+				SectionItem_t90584FE8BBA56A8A4D924FC69AFE6CB79BAB85AD* L_187 = L_186;
 				JobSection_t6F21B72E42DBB2CEF1F19750FF51B0BFCB2DA054* L_188 = V_16;
 				NullCheck(L_188);
-				String_t* L_189 = L_188->___file;
+				String_t* L_189 = L_188->___label;
 				NullCheck(L_187);
-				L_187->___FileKey = L_189;
-				Il2CppCodeGenWriteBarrier((void**)(&L_187->___FileKey), (void*)L_189);
+				L_187->___DisplayName = L_189;
+				Il2CppCodeGenWriteBarrier((void**)(&L_187->___DisplayName), (void*)L_189);
 				SectionItem_t90584FE8BBA56A8A4D924FC69AFE6CB79BAB85AD* L_190 = L_187;
+				JobSection_t6F21B72E42DBB2CEF1F19750FF51B0BFCB2DA054* L_191 = V_16;
+				NullCheck(L_191);
+				String_t* L_192 = L_191->___file;
 				NullCheck(L_190);
-				L_190->___Type = 0;
-				NullCheck(L_182);
-				List_1_Add_m49AEF2D43D3BB5C633442928B145B6230E33F057_inline(L_182, L_190, List_1_Add_m49AEF2D43D3BB5C633442928B145B6230E33F057_RuntimeMethod_var);
+				L_190->___FileKey = L_192;
+				Il2CppCodeGenWriteBarrier((void**)(&L_190->___FileKey), (void*)L_192);
+				SectionItem_t90584FE8BBA56A8A4D924FC69AFE6CB79BAB85AD* L_193 = L_190;
+				NullCheck(L_193);
+				L_193->___Type = 0;
+				NullCheck(L_185);
+				List_1_Add_m49AEF2D43D3BB5C633442928B145B6230E33F057_inline(L_185, L_193, List_1_Add_m49AEF2D43D3BB5C633442928B145B6230E33F057_RuntimeMethod_var);
 			}
 
-IL_0485_1:
+IL_04c9_1:
 			{
-				//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:490>
-				bool L_191;
-				L_191 = Enumerator_MoveNext_m69716A99117A49E56F8B99613B3B89931FD96583((&V_15), Enumerator_MoveNext_m69716A99117A49E56F8B99613B3B89931FD96583_RuntimeMethod_var);
-				if (L_191)
+				//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:498>
+				bool L_194;
+				L_194 = Enumerator_MoveNext_m69716A99117A49E56F8B99613B3B89931FD96583((&V_15), Enumerator_MoveNext_m69716A99117A49E56F8B99613B3B89931FD96583_RuntimeMethod_var);
+				if (L_194)
 				{
-					goto IL_0437_1;
+					goto IL_047b_1;
 				}
 			}
 			{
-				goto IL_049e;
+				goto IL_04e2;
 			}
 		}
 		catch(Il2CppExceptionWrapper& e)
@@ -17580,32 +17604,32 @@ IL_0485_1:
 		}
 	}
 
-IL_049e:
+IL_04e2:
 	{
-		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:500>
-		JobData_t9D91E157BECCA13AE4C6A8FE3B22AEB24C8B0512* L_192 = ___0_job;
-		NullCheck(L_192);
-		List_1_t1F70ED1D639347CF69227F7892222EC87CD44D1B* L_193 = L_192->___tables;
-		if (!L_193)
+		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:508>
+		JobData_t9D91E157BECCA13AE4C6A8FE3B22AEB24C8B0512* L_195 = ___0_job;
+		NullCheck(L_195);
+		List_1_t1F70ED1D639347CF69227F7892222EC87CD44D1B* L_196 = L_195->___tables;
+		if (!L_196)
 		{
-			goto IL_06d1;
+			goto IL_0715;
 		}
 	}
 	{
-		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:502>
-		JobData_t9D91E157BECCA13AE4C6A8FE3B22AEB24C8B0512* L_194 = ___0_job;
-		NullCheck(L_194);
-		List_1_t1F70ED1D639347CF69227F7892222EC87CD44D1B* L_195 = L_194->___tables;
-		NullCheck(L_195);
-		Enumerator_tF48FDF4DED4307E9910270AD459E232C2A9E5014 L_196;
-		L_196 = List_1_GetEnumerator_m894336024401D9CB7A60A8E1728EC4F04A8CFF58(L_195, List_1_GetEnumerator_m894336024401D9CB7A60A8E1728EC4F04A8CFF58_RuntimeMethod_var);
-		V_17 = L_196;
+		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:510>
+		JobData_t9D91E157BECCA13AE4C6A8FE3B22AEB24C8B0512* L_197 = ___0_job;
+		NullCheck(L_197);
+		List_1_t1F70ED1D639347CF69227F7892222EC87CD44D1B* L_198 = L_197->___tables;
+		NullCheck(L_198);
+		Enumerator_tF48FDF4DED4307E9910270AD459E232C2A9E5014 L_199;
+		L_199 = List_1_GetEnumerator_m894336024401D9CB7A60A8E1728EC4F04A8CFF58(L_198, List_1_GetEnumerator_m894336024401D9CB7A60A8E1728EC4F04A8CFF58_RuntimeMethod_var);
+		V_17 = L_199;
 	}
 	{
 		auto __finallyBlock = il2cpp::utils::Finally([&]
 		{
 
-FINALLY_0500:
+FINALLY_0544:
 			{
 				Enumerator_Dispose_m8DD2E54117841D31F11DFCED0B21F0E3DB7A4899((&V_17), Enumerator_Dispose_m8DD2E54117841D31F11DFCED0B21F0E3DB7A4899_RuntimeMethod_var);
 				return;
@@ -17614,52 +17638,52 @@ FINALLY_0500:
 		try
 		{
 			{
-				goto IL_04f2_1;
+				goto IL_0536_1;
 			}
 
-IL_04b8_1:
+IL_04fc_1:
 			{
-				//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:502>
-				JobTableRef_t1134D259A697A4DD914A077D1AD4B42F70362925* L_197;
-				L_197 = Enumerator_get_Current_m6436376BC8068CF454E261021B84C5BF7D78F73F_inline((&V_17), Enumerator_get_Current_m6436376BC8068CF454E261021B84C5BF7D78F73F_RuntimeMethod_var);
-				V_18 = L_197;
-				//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:504>
-				List_1_tE65C14BDF2306E941D030D4A963B40ED16BEA0AA* L_198 = __this->___allSectionItems;
-				SectionItem_t90584FE8BBA56A8A4D924FC69AFE6CB79BAB85AD* L_199 = (SectionItem_t90584FE8BBA56A8A4D924FC69AFE6CB79BAB85AD*)il2cpp_codegen_object_new(SectionItem_t90584FE8BBA56A8A4D924FC69AFE6CB79BAB85AD_il2cpp_TypeInfo_var);
-				SectionItem__ctor_m32F2F46EF89925BCFF1861A70C70D455E571125E(L_199, NULL);
-				SectionItem_t90584FE8BBA56A8A4D924FC69AFE6CB79BAB85AD* L_200 = L_199;
-				JobTableRef_t1134D259A697A4DD914A077D1AD4B42F70362925* L_201 = V_18;
-				NullCheck(L_201);
-				String_t* L_202 = L_201->___name;
-				NullCheck(L_200);
-				L_200->___DisplayName = L_202;
-				Il2CppCodeGenWriteBarrier((void**)(&L_200->___DisplayName), (void*)L_202);
-				SectionItem_t90584FE8BBA56A8A4D924FC69AFE6CB79BAB85AD* L_203 = L_200;
+				//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:510>
+				JobTableRef_t1134D259A697A4DD914A077D1AD4B42F70362925* L_200;
+				L_200 = Enumerator_get_Current_m6436376BC8068CF454E261021B84C5BF7D78F73F_inline((&V_17), Enumerator_get_Current_m6436376BC8068CF454E261021B84C5BF7D78F73F_RuntimeMethod_var);
+				V_18 = L_200;
+				//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:512>
+				List_1_tE65C14BDF2306E941D030D4A963B40ED16BEA0AA* L_201 = __this->___allSectionItems;
+				SectionItem_t90584FE8BBA56A8A4D924FC69AFE6CB79BAB85AD* L_202 = (SectionItem_t90584FE8BBA56A8A4D924FC69AFE6CB79BAB85AD*)il2cpp_codegen_object_new(SectionItem_t90584FE8BBA56A8A4D924FC69AFE6CB79BAB85AD_il2cpp_TypeInfo_var);
+				SectionItem__ctor_m32F2F46EF89925BCFF1861A70C70D455E571125E(L_202, NULL);
+				SectionItem_t90584FE8BBA56A8A4D924FC69AFE6CB79BAB85AD* L_203 = L_202;
 				JobTableRef_t1134D259A697A4DD914A077D1AD4B42F70362925* L_204 = V_18;
 				NullCheck(L_204);
-				String_t* L_205 = L_204->___file;
+				String_t* L_205 = L_204->___name;
 				NullCheck(L_203);
-				L_203->___FileKey = L_205;
-				Il2CppCodeGenWriteBarrier((void**)(&L_203->___FileKey), (void*)L_205);
+				L_203->___DisplayName = L_205;
+				Il2CppCodeGenWriteBarrier((void**)(&L_203->___DisplayName), (void*)L_205);
 				SectionItem_t90584FE8BBA56A8A4D924FC69AFE6CB79BAB85AD* L_206 = L_203;
+				JobTableRef_t1134D259A697A4DD914A077D1AD4B42F70362925* L_207 = V_18;
+				NullCheck(L_207);
+				String_t* L_208 = L_207->___file;
 				NullCheck(L_206);
-				L_206->___Type = 0;
-				NullCheck(L_198);
-				List_1_Add_m49AEF2D43D3BB5C633442928B145B6230E33F057_inline(L_198, L_206, List_1_Add_m49AEF2D43D3BB5C633442928B145B6230E33F057_RuntimeMethod_var);
+				L_206->___FileKey = L_208;
+				Il2CppCodeGenWriteBarrier((void**)(&L_206->___FileKey), (void*)L_208);
+				SectionItem_t90584FE8BBA56A8A4D924FC69AFE6CB79BAB85AD* L_209 = L_206;
+				NullCheck(L_209);
+				L_209->___Type = 0;
+				NullCheck(L_201);
+				List_1_Add_m49AEF2D43D3BB5C633442928B145B6230E33F057_inline(L_201, L_209, List_1_Add_m49AEF2D43D3BB5C633442928B145B6230E33F057_RuntimeMethod_var);
 			}
 
-IL_04f2_1:
+IL_0536_1:
 			{
-				//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:502>
-				bool L_207;
-				L_207 = Enumerator_MoveNext_m5811589C31132013DFF74A7D905570308EE78CA0((&V_17), Enumerator_MoveNext_m5811589C31132013DFF74A7D905570308EE78CA0_RuntimeMethod_var);
-				if (L_207)
+				//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:510>
+				bool L_210;
+				L_210 = Enumerator_MoveNext_m5811589C31132013DFF74A7D905570308EE78CA0((&V_17), Enumerator_MoveNext_m5811589C31132013DFF74A7D905570308EE78CA0_RuntimeMethod_var);
+				if (L_210)
 				{
-					goto IL_04b8_1;
+					goto IL_04fc_1;
 				}
 			}
 			{
-				goto IL_06d1;
+				goto IL_0715;
 			}
 		}
 		catch(Il2CppExceptionWrapper& e)
@@ -17668,32 +17692,32 @@ IL_04f2_1:
 		}
 	}
 
-IL_050e:
+IL_0552:
 	{
-		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:511>
-		JobData_t9D91E157BECCA13AE4C6A8FE3B22AEB24C8B0512* L_208 = ___0_job;
-		NullCheck(L_208);
-		List_1_t32102AEFD0547205880D319A8A7806C9E3505B53* L_209 = L_208->___sections;
-		if (!L_209)
+		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:519>
+		JobData_t9D91E157BECCA13AE4C6A8FE3B22AEB24C8B0512* L_211 = ___0_job;
+		NullCheck(L_211);
+		List_1_t32102AEFD0547205880D319A8A7806C9E3505B53* L_212 = L_211->___sections;
+		if (!L_212)
 		{
-			goto IL_0593;
+			goto IL_05d7;
 		}
 	}
 	{
-		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:513>
-		JobData_t9D91E157BECCA13AE4C6A8FE3B22AEB24C8B0512* L_210 = ___0_job;
-		NullCheck(L_210);
-		List_1_t32102AEFD0547205880D319A8A7806C9E3505B53* L_211 = L_210->___sections;
-		NullCheck(L_211);
-		Enumerator_t5EEE3962ABD9FC289B940D8883C942AEAD778F88 L_212;
-		L_212 = List_1_GetEnumerator_mEA461487CF47D6022DF4D557B16F4932301D0579(L_211, List_1_GetEnumerator_mEA461487CF47D6022DF4D557B16F4932301D0579_RuntimeMethod_var);
-		V_15 = L_212;
+		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:521>
+		JobData_t9D91E157BECCA13AE4C6A8FE3B22AEB24C8B0512* L_213 = ___0_job;
+		NullCheck(L_213);
+		List_1_t32102AEFD0547205880D319A8A7806C9E3505B53* L_214 = L_213->___sections;
+		NullCheck(L_214);
+		Enumerator_t5EEE3962ABD9FC289B940D8883C942AEAD778F88 L_215;
+		L_215 = List_1_GetEnumerator_mEA461487CF47D6022DF4D557B16F4932301D0579(L_214, List_1_GetEnumerator_mEA461487CF47D6022DF4D557B16F4932301D0579_RuntimeMethod_var);
+		V_15 = L_215;
 	}
 	{
 		auto __finallyBlock = il2cpp::utils::Finally([&]
 		{
 
-FINALLY_0585:
+FINALLY_05c9:
 			{
 				Enumerator_Dispose_mAB3279B9D4B0FF337AE1734C5338662940543873((&V_15), Enumerator_Dispose_mAB3279B9D4B0FF337AE1734C5338662940543873_RuntimeMethod_var);
 				return;
@@ -17702,78 +17726,78 @@ FINALLY_0585:
 		try
 		{
 			{
-				goto IL_057a_1;
+				goto IL_05be_1;
 			}
 
-IL_0525_1:
+IL_0569_1:
 			{
-				//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:513>
-				JobSection_t6F21B72E42DBB2CEF1F19750FF51B0BFCB2DA054* L_213;
-				L_213 = Enumerator_get_Current_m376BBECBBA9B44B1A82F79FDBAFAB1BA1CC77D00_inline((&V_15), Enumerator_get_Current_m376BBECBBA9B44B1A82F79FDBAFAB1BA1CC77D00_RuntimeMethod_var);
-				V_19 = L_213;
-				//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:516>
-				JobSection_t6F21B72E42DBB2CEF1F19750FF51B0BFCB2DA054* L_214 = V_19;
-				NullCheck(L_214);
-				String_t* L_215 = L_214->___file;
-				NullCheck(L_215);
-				bool L_216;
-				L_216 = String_EndsWith_m5E5D307CA6AEB7C08CE782B4693B19D07ADC9075(L_215, _stringLiteral3EBB9A38A97662C2D8E12F1E8E95FE80A2B17A4C, 5, NULL);
-				if (L_216)
+				//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:521>
+				JobSection_t6F21B72E42DBB2CEF1F19750FF51B0BFCB2DA054* L_216;
+				L_216 = Enumerator_get_Current_m376BBECBBA9B44B1A82F79FDBAFAB1BA1CC77D00_inline((&V_15), Enumerator_get_Current_m376BBECBBA9B44B1A82F79FDBAFAB1BA1CC77D00_RuntimeMethod_var);
+				V_19 = L_216;
+				//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:524>
+				JobSection_t6F21B72E42DBB2CEF1F19750FF51B0BFCB2DA054* L_217 = V_19;
+				NullCheck(L_217);
+				String_t* L_218 = L_217->___file;
+				NullCheck(L_218);
+				bool L_219;
+				L_219 = String_EndsWith_m5E5D307CA6AEB7C08CE782B4693B19D07ADC9075(L_218, _stringLiteral3EBB9A38A97662C2D8E12F1E8E95FE80A2B17A4C, 5, NULL);
+				if (L_219)
 				{
-					goto IL_0545_1;
+					goto IL_0589_1;
 				}
 			}
 			{
-				G_B68_0 = 0;
-				goto IL_0546_1;
+				G_B69_0 = 0;
+				goto IL_058a_1;
 			}
 
-IL_0545_1:
+IL_0589_1:
 			{
-				G_B68_0 = 0;
+				G_B69_0 = 0;
 			}
 
-IL_0546_1:
+IL_058a_1:
 			{
-				V_20 = G_B68_0;
-				//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:517>
-				List_1_tE65C14BDF2306E941D030D4A963B40ED16BEA0AA* L_217 = __this->___allSectionItems;
-				SectionItem_t90584FE8BBA56A8A4D924FC69AFE6CB79BAB85AD* L_218 = (SectionItem_t90584FE8BBA56A8A4D924FC69AFE6CB79BAB85AD*)il2cpp_codegen_object_new(SectionItem_t90584FE8BBA56A8A4D924FC69AFE6CB79BAB85AD_il2cpp_TypeInfo_var);
-				SectionItem__ctor_m32F2F46EF89925BCFF1861A70C70D455E571125E(L_218, NULL);
-				SectionItem_t90584FE8BBA56A8A4D924FC69AFE6CB79BAB85AD* L_219 = L_218;
-				JobSection_t6F21B72E42DBB2CEF1F19750FF51B0BFCB2DA054* L_220 = V_19;
-				NullCheck(L_220);
-				String_t* L_221 = L_220->___label;
-				NullCheck(L_219);
-				L_219->___DisplayName = L_221;
-				Il2CppCodeGenWriteBarrier((void**)(&L_219->___DisplayName), (void*)L_221);
-				SectionItem_t90584FE8BBA56A8A4D924FC69AFE6CB79BAB85AD* L_222 = L_219;
+				V_20 = G_B69_0;
+				//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:525>
+				List_1_tE65C14BDF2306E941D030D4A963B40ED16BEA0AA* L_220 = __this->___allSectionItems;
+				SectionItem_t90584FE8BBA56A8A4D924FC69AFE6CB79BAB85AD* L_221 = (SectionItem_t90584FE8BBA56A8A4D924FC69AFE6CB79BAB85AD*)il2cpp_codegen_object_new(SectionItem_t90584FE8BBA56A8A4D924FC69AFE6CB79BAB85AD_il2cpp_TypeInfo_var);
+				SectionItem__ctor_m32F2F46EF89925BCFF1861A70C70D455E571125E(L_221, NULL);
+				SectionItem_t90584FE8BBA56A8A4D924FC69AFE6CB79BAB85AD* L_222 = L_221;
 				JobSection_t6F21B72E42DBB2CEF1F19750FF51B0BFCB2DA054* L_223 = V_19;
 				NullCheck(L_223);
-				String_t* L_224 = L_223->___file;
+				String_t* L_224 = L_223->___label;
 				NullCheck(L_222);
-				L_222->___FileKey = L_224;
-				Il2CppCodeGenWriteBarrier((void**)(&L_222->___FileKey), (void*)L_224);
+				L_222->___DisplayName = L_224;
+				Il2CppCodeGenWriteBarrier((void**)(&L_222->___DisplayName), (void*)L_224);
 				SectionItem_t90584FE8BBA56A8A4D924FC69AFE6CB79BAB85AD* L_225 = L_222;
-				int32_t L_226 = V_20;
+				JobSection_t6F21B72E42DBB2CEF1F19750FF51B0BFCB2DA054* L_226 = V_19;
+				NullCheck(L_226);
+				String_t* L_227 = L_226->___file;
 				NullCheck(L_225);
-				L_225->___Type = L_226;
-				NullCheck(L_217);
-				List_1_Add_m49AEF2D43D3BB5C633442928B145B6230E33F057_inline(L_217, L_225, List_1_Add_m49AEF2D43D3BB5C633442928B145B6230E33F057_RuntimeMethod_var);
+				L_225->___FileKey = L_227;
+				Il2CppCodeGenWriteBarrier((void**)(&L_225->___FileKey), (void*)L_227);
+				SectionItem_t90584FE8BBA56A8A4D924FC69AFE6CB79BAB85AD* L_228 = L_225;
+				int32_t L_229 = V_20;
+				NullCheck(L_228);
+				L_228->___Type = L_229;
+				NullCheck(L_220);
+				List_1_Add_m49AEF2D43D3BB5C633442928B145B6230E33F057_inline(L_220, L_228, List_1_Add_m49AEF2D43D3BB5C633442928B145B6230E33F057_RuntimeMethod_var);
 			}
 
-IL_057a_1:
+IL_05be_1:
 			{
-				//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:513>
-				bool L_227;
-				L_227 = Enumerator_MoveNext_m69716A99117A49E56F8B99613B3B89931FD96583((&V_15), Enumerator_MoveNext_m69716A99117A49E56F8B99613B3B89931FD96583_RuntimeMethod_var);
-				if (L_227)
+				//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:521>
+				bool L_230;
+				L_230 = Enumerator_MoveNext_m69716A99117A49E56F8B99613B3B89931FD96583((&V_15), Enumerator_MoveNext_m69716A99117A49E56F8B99613B3B89931FD96583_RuntimeMethod_var);
+				if (L_230)
 				{
-					goto IL_0525_1;
+					goto IL_0569_1;
 				}
 			}
 			{
-				goto IL_0593;
+				goto IL_05d7;
 			}
 		}
 		catch(Il2CppExceptionWrapper& e)
@@ -17782,32 +17806,32 @@ IL_057a_1:
 		}
 	}
 
-IL_0593:
+IL_05d7:
 	{
-		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:522>
-		JobData_t9D91E157BECCA13AE4C6A8FE3B22AEB24C8B0512* L_228 = ___0_job;
-		NullCheck(L_228);
-		List_1_t1F70ED1D639347CF69227F7892222EC87CD44D1B* L_229 = L_228->___tables;
-		if (!L_229)
+		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:530>
+		JobData_t9D91E157BECCA13AE4C6A8FE3B22AEB24C8B0512* L_231 = ___0_job;
+		NullCheck(L_231);
+		List_1_t1F70ED1D639347CF69227F7892222EC87CD44D1B* L_232 = L_231->___tables;
+		if (!L_232)
 		{
-			goto IL_05fd;
+			goto IL_0641;
 		}
 	}
 	{
-		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:524>
-		JobData_t9D91E157BECCA13AE4C6A8FE3B22AEB24C8B0512* L_230 = ___0_job;
-		NullCheck(L_230);
-		List_1_t1F70ED1D639347CF69227F7892222EC87CD44D1B* L_231 = L_230->___tables;
-		NullCheck(L_231);
-		Enumerator_tF48FDF4DED4307E9910270AD459E232C2A9E5014 L_232;
-		L_232 = List_1_GetEnumerator_m894336024401D9CB7A60A8E1728EC4F04A8CFF58(L_231, List_1_GetEnumerator_m894336024401D9CB7A60A8E1728EC4F04A8CFF58_RuntimeMethod_var);
-		V_17 = L_232;
+		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:532>
+		JobData_t9D91E157BECCA13AE4C6A8FE3B22AEB24C8B0512* L_233 = ___0_job;
+		NullCheck(L_233);
+		List_1_t1F70ED1D639347CF69227F7892222EC87CD44D1B* L_234 = L_233->___tables;
+		NullCheck(L_234);
+		Enumerator_tF48FDF4DED4307E9910270AD459E232C2A9E5014 L_235;
+		L_235 = List_1_GetEnumerator_m894336024401D9CB7A60A8E1728EC4F04A8CFF58(L_234, List_1_GetEnumerator_m894336024401D9CB7A60A8E1728EC4F04A8CFF58_RuntimeMethod_var);
+		V_17 = L_235;
 	}
 	{
 		auto __finallyBlock = il2cpp::utils::Finally([&]
 		{
 
-FINALLY_05ef:
+FINALLY_0633:
 			{
 				Enumerator_Dispose_m8DD2E54117841D31F11DFCED0B21F0E3DB7A4899((&V_17), Enumerator_Dispose_m8DD2E54117841D31F11DFCED0B21F0E3DB7A4899_RuntimeMethod_var);
 				return;
@@ -17816,52 +17840,52 @@ FINALLY_05ef:
 		try
 		{
 			{
-				goto IL_05e4_1;
+				goto IL_0628_1;
 			}
 
-IL_05aa_1:
+IL_05ee_1:
 			{
-				//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:524>
-				JobTableRef_t1134D259A697A4DD914A077D1AD4B42F70362925* L_233;
-				L_233 = Enumerator_get_Current_m6436376BC8068CF454E261021B84C5BF7D78F73F_inline((&V_17), Enumerator_get_Current_m6436376BC8068CF454E261021B84C5BF7D78F73F_RuntimeMethod_var);
-				V_21 = L_233;
-				//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:526>
-				List_1_tE65C14BDF2306E941D030D4A963B40ED16BEA0AA* L_234 = __this->___allSectionItems;
-				SectionItem_t90584FE8BBA56A8A4D924FC69AFE6CB79BAB85AD* L_235 = (SectionItem_t90584FE8BBA56A8A4D924FC69AFE6CB79BAB85AD*)il2cpp_codegen_object_new(SectionItem_t90584FE8BBA56A8A4D924FC69AFE6CB79BAB85AD_il2cpp_TypeInfo_var);
-				SectionItem__ctor_m32F2F46EF89925BCFF1861A70C70D455E571125E(L_235, NULL);
-				SectionItem_t90584FE8BBA56A8A4D924FC69AFE6CB79BAB85AD* L_236 = L_235;
-				JobTableRef_t1134D259A697A4DD914A077D1AD4B42F70362925* L_237 = V_21;
-				NullCheck(L_237);
-				String_t* L_238 = L_237->___name;
-				NullCheck(L_236);
-				L_236->___DisplayName = L_238;
-				Il2CppCodeGenWriteBarrier((void**)(&L_236->___DisplayName), (void*)L_238);
-				SectionItem_t90584FE8BBA56A8A4D924FC69AFE6CB79BAB85AD* L_239 = L_236;
+				//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:532>
+				JobTableRef_t1134D259A697A4DD914A077D1AD4B42F70362925* L_236;
+				L_236 = Enumerator_get_Current_m6436376BC8068CF454E261021B84C5BF7D78F73F_inline((&V_17), Enumerator_get_Current_m6436376BC8068CF454E261021B84C5BF7D78F73F_RuntimeMethod_var);
+				V_21 = L_236;
+				//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:534>
+				List_1_tE65C14BDF2306E941D030D4A963B40ED16BEA0AA* L_237 = __this->___allSectionItems;
+				SectionItem_t90584FE8BBA56A8A4D924FC69AFE6CB79BAB85AD* L_238 = (SectionItem_t90584FE8BBA56A8A4D924FC69AFE6CB79BAB85AD*)il2cpp_codegen_object_new(SectionItem_t90584FE8BBA56A8A4D924FC69AFE6CB79BAB85AD_il2cpp_TypeInfo_var);
+				SectionItem__ctor_m32F2F46EF89925BCFF1861A70C70D455E571125E(L_238, NULL);
+				SectionItem_t90584FE8BBA56A8A4D924FC69AFE6CB79BAB85AD* L_239 = L_238;
 				JobTableRef_t1134D259A697A4DD914A077D1AD4B42F70362925* L_240 = V_21;
 				NullCheck(L_240);
-				String_t* L_241 = L_240->___file;
+				String_t* L_241 = L_240->___name;
 				NullCheck(L_239);
-				L_239->___FileKey = L_241;
-				Il2CppCodeGenWriteBarrier((void**)(&L_239->___FileKey), (void*)L_241);
+				L_239->___DisplayName = L_241;
+				Il2CppCodeGenWriteBarrier((void**)(&L_239->___DisplayName), (void*)L_241);
 				SectionItem_t90584FE8BBA56A8A4D924FC69AFE6CB79BAB85AD* L_242 = L_239;
+				JobTableRef_t1134D259A697A4DD914A077D1AD4B42F70362925* L_243 = V_21;
+				NullCheck(L_243);
+				String_t* L_244 = L_243->___file;
 				NullCheck(L_242);
-				L_242->___Type = 0;
-				NullCheck(L_234);
-				List_1_Add_m49AEF2D43D3BB5C633442928B145B6230E33F057_inline(L_234, L_242, List_1_Add_m49AEF2D43D3BB5C633442928B145B6230E33F057_RuntimeMethod_var);
+				L_242->___FileKey = L_244;
+				Il2CppCodeGenWriteBarrier((void**)(&L_242->___FileKey), (void*)L_244);
+				SectionItem_t90584FE8BBA56A8A4D924FC69AFE6CB79BAB85AD* L_245 = L_242;
+				NullCheck(L_245);
+				L_245->___Type = 0;
+				NullCheck(L_237);
+				List_1_Add_m49AEF2D43D3BB5C633442928B145B6230E33F057_inline(L_237, L_245, List_1_Add_m49AEF2D43D3BB5C633442928B145B6230E33F057_RuntimeMethod_var);
 			}
 
-IL_05e4_1:
+IL_0628_1:
 			{
-				//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:524>
-				bool L_243;
-				L_243 = Enumerator_MoveNext_m5811589C31132013DFF74A7D905570308EE78CA0((&V_17), Enumerator_MoveNext_m5811589C31132013DFF74A7D905570308EE78CA0_RuntimeMethod_var);
-				if (L_243)
+				//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:532>
+				bool L_246;
+				L_246 = Enumerator_MoveNext_m5811589C31132013DFF74A7D905570308EE78CA0((&V_17), Enumerator_MoveNext_m5811589C31132013DFF74A7D905570308EE78CA0_RuntimeMethod_var);
+				if (L_246)
 				{
-					goto IL_05aa_1;
+					goto IL_05ee_1;
 				}
 			}
 			{
-				goto IL_05fd;
+				goto IL_0641;
 			}
 		}
 		catch(Il2CppExceptionWrapper& e)
@@ -17870,32 +17894,32 @@ IL_05e4_1:
 		}
 	}
 
-IL_05fd:
+IL_0641:
 	{
-		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:531>
-		JobData_t9D91E157BECCA13AE4C6A8FE3B22AEB24C8B0512* L_244 = ___0_job;
-		NullCheck(L_244);
-		List_1_tD57C280D54A8D6CEA3E3497251870F0B7BDDA6C8* L_245 = L_244->___procedures;
-		if (!L_245)
+		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:539>
+		JobData_t9D91E157BECCA13AE4C6A8FE3B22AEB24C8B0512* L_247 = ___0_job;
+		NullCheck(L_247);
+		List_1_tD57C280D54A8D6CEA3E3497251870F0B7BDDA6C8* L_248 = L_247->___procedures;
+		if (!L_248)
 		{
-			goto IL_0667;
+			goto IL_06ab;
 		}
 	}
 	{
-		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:533>
-		JobData_t9D91E157BECCA13AE4C6A8FE3B22AEB24C8B0512* L_246 = ___0_job;
-		NullCheck(L_246);
-		List_1_tD57C280D54A8D6CEA3E3497251870F0B7BDDA6C8* L_247 = L_246->___procedures;
-		NullCheck(L_247);
-		Enumerator_tB4AE0A64362DE30AFA67B05A74996EB34A18FA10 L_248;
-		L_248 = List_1_GetEnumerator_mF0D1CA3FC1653083E3DC05505444E6CA5B115DE2(L_247, List_1_GetEnumerator_mF0D1CA3FC1653083E3DC05505444E6CA5B115DE2_RuntimeMethod_var);
-		V_22 = L_248;
+		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:541>
+		JobData_t9D91E157BECCA13AE4C6A8FE3B22AEB24C8B0512* L_249 = ___0_job;
+		NullCheck(L_249);
+		List_1_tD57C280D54A8D6CEA3E3497251870F0B7BDDA6C8* L_250 = L_249->___procedures;
+		NullCheck(L_250);
+		Enumerator_tB4AE0A64362DE30AFA67B05A74996EB34A18FA10 L_251;
+		L_251 = List_1_GetEnumerator_mF0D1CA3FC1653083E3DC05505444E6CA5B115DE2(L_250, List_1_GetEnumerator_mF0D1CA3FC1653083E3DC05505444E6CA5B115DE2_RuntimeMethod_var);
+		V_22 = L_251;
 	}
 	{
 		auto __finallyBlock = il2cpp::utils::Finally([&]
 		{
 
-FINALLY_0659:
+FINALLY_069d:
 			{
 				Enumerator_Dispose_m2043D832DBF83391CC8B538659F8EA0927EEDCFC((&V_22), Enumerator_Dispose_m2043D832DBF83391CC8B538659F8EA0927EEDCFC_RuntimeMethod_var);
 				return;
@@ -17904,52 +17928,52 @@ FINALLY_0659:
 		try
 		{
 			{
-				goto IL_064e_1;
+				goto IL_0692_1;
 			}
 
-IL_0614_1:
+IL_0658_1:
 			{
-				//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:533>
-				JobProcedure_t83B729C75B916CE9F40A2FC29C682F0608A43045* L_249;
-				L_249 = Enumerator_get_Current_mEDDDFCE776A76CA43490DBB67E4AD077EFC0DC8F_inline((&V_22), Enumerator_get_Current_mEDDDFCE776A76CA43490DBB67E4AD077EFC0DC8F_RuntimeMethod_var);
-				V_23 = L_249;
-				//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:535>
-				List_1_tE65C14BDF2306E941D030D4A963B40ED16BEA0AA* L_250 = __this->___allSectionItems;
-				SectionItem_t90584FE8BBA56A8A4D924FC69AFE6CB79BAB85AD* L_251 = (SectionItem_t90584FE8BBA56A8A4D924FC69AFE6CB79BAB85AD*)il2cpp_codegen_object_new(SectionItem_t90584FE8BBA56A8A4D924FC69AFE6CB79BAB85AD_il2cpp_TypeInfo_var);
-				SectionItem__ctor_m32F2F46EF89925BCFF1861A70C70D455E571125E(L_251, NULL);
-				SectionItem_t90584FE8BBA56A8A4D924FC69AFE6CB79BAB85AD* L_252 = L_251;
-				JobProcedure_t83B729C75B916CE9F40A2FC29C682F0608A43045* L_253 = V_23;
-				NullCheck(L_253);
-				String_t* L_254 = L_253->___name;
-				NullCheck(L_252);
-				L_252->___DisplayName = L_254;
-				Il2CppCodeGenWriteBarrier((void**)(&L_252->___DisplayName), (void*)L_254);
-				SectionItem_t90584FE8BBA56A8A4D924FC69AFE6CB79BAB85AD* L_255 = L_252;
+				//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:541>
+				JobProcedure_t83B729C75B916CE9F40A2FC29C682F0608A43045* L_252;
+				L_252 = Enumerator_get_Current_mEDDDFCE776A76CA43490DBB67E4AD077EFC0DC8F_inline((&V_22), Enumerator_get_Current_mEDDDFCE776A76CA43490DBB67E4AD077EFC0DC8F_RuntimeMethod_var);
+				V_23 = L_252;
+				//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:543>
+				List_1_tE65C14BDF2306E941D030D4A963B40ED16BEA0AA* L_253 = __this->___allSectionItems;
+				SectionItem_t90584FE8BBA56A8A4D924FC69AFE6CB79BAB85AD* L_254 = (SectionItem_t90584FE8BBA56A8A4D924FC69AFE6CB79BAB85AD*)il2cpp_codegen_object_new(SectionItem_t90584FE8BBA56A8A4D924FC69AFE6CB79BAB85AD_il2cpp_TypeInfo_var);
+				SectionItem__ctor_m32F2F46EF89925BCFF1861A70C70D455E571125E(L_254, NULL);
+				SectionItem_t90584FE8BBA56A8A4D924FC69AFE6CB79BAB85AD* L_255 = L_254;
 				JobProcedure_t83B729C75B916CE9F40A2FC29C682F0608A43045* L_256 = V_23;
 				NullCheck(L_256);
-				String_t* L_257 = L_256->___file;
+				String_t* L_257 = L_256->___name;
 				NullCheck(L_255);
-				L_255->___FileKey = L_257;
-				Il2CppCodeGenWriteBarrier((void**)(&L_255->___FileKey), (void*)L_257);
+				L_255->___DisplayName = L_257;
+				Il2CppCodeGenWriteBarrier((void**)(&L_255->___DisplayName), (void*)L_257);
 				SectionItem_t90584FE8BBA56A8A4D924FC69AFE6CB79BAB85AD* L_258 = L_255;
+				JobProcedure_t83B729C75B916CE9F40A2FC29C682F0608A43045* L_259 = V_23;
+				NullCheck(L_259);
+				String_t* L_260 = L_259->___file;
 				NullCheck(L_258);
-				L_258->___Type = 0;
-				NullCheck(L_250);
-				List_1_Add_m49AEF2D43D3BB5C633442928B145B6230E33F057_inline(L_250, L_258, List_1_Add_m49AEF2D43D3BB5C633442928B145B6230E33F057_RuntimeMethod_var);
+				L_258->___FileKey = L_260;
+				Il2CppCodeGenWriteBarrier((void**)(&L_258->___FileKey), (void*)L_260);
+				SectionItem_t90584FE8BBA56A8A4D924FC69AFE6CB79BAB85AD* L_261 = L_258;
+				NullCheck(L_261);
+				L_261->___Type = 0;
+				NullCheck(L_253);
+				List_1_Add_m49AEF2D43D3BB5C633442928B145B6230E33F057_inline(L_253, L_261, List_1_Add_m49AEF2D43D3BB5C633442928B145B6230E33F057_RuntimeMethod_var);
 			}
 
-IL_064e_1:
+IL_0692_1:
 			{
-				//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:533>
-				bool L_259;
-				L_259 = Enumerator_MoveNext_m63FA1B3DA28B266496534038858B778137AB63D4((&V_22), Enumerator_MoveNext_m63FA1B3DA28B266496534038858B778137AB63D4_RuntimeMethod_var);
-				if (L_259)
+				//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:541>
+				bool L_262;
+				L_262 = Enumerator_MoveNext_m63FA1B3DA28B266496534038858B778137AB63D4((&V_22), Enumerator_MoveNext_m63FA1B3DA28B266496534038858B778137AB63D4_RuntimeMethod_var);
+				if (L_262)
 				{
-					goto IL_0614_1;
+					goto IL_0658_1;
 				}
 			}
 			{
-				goto IL_0667;
+				goto IL_06ab;
 			}
 		}
 		catch(Il2CppExceptionWrapper& e)
@@ -17958,32 +17982,32 @@ IL_064e_1:
 		}
 	}
 
-IL_0667:
+IL_06ab:
 	{
-		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:540>
-		JobData_t9D91E157BECCA13AE4C6A8FE3B22AEB24C8B0512* L_260 = ___0_job;
-		NullCheck(L_260);
-		List_1_t2E5795A29E2BB7B04C576893C886883D0CA7A79E* L_261 = L_260->___images;
-		if (!L_261)
+		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:548>
+		JobData_t9D91E157BECCA13AE4C6A8FE3B22AEB24C8B0512* L_263 = ___0_job;
+		NullCheck(L_263);
+		List_1_t2E5795A29E2BB7B04C576893C886883D0CA7A79E* L_264 = L_263->___images;
+		if (!L_264)
 		{
-			goto IL_06d1;
+			goto IL_0715;
 		}
 	}
 	{
-		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:542>
-		JobData_t9D91E157BECCA13AE4C6A8FE3B22AEB24C8B0512* L_262 = ___0_job;
-		NullCheck(L_262);
-		List_1_t2E5795A29E2BB7B04C576893C886883D0CA7A79E* L_263 = L_262->___images;
-		NullCheck(L_263);
-		Enumerator_tF23BCA2896FEE5A6C9510F20C5E49D72F32D8558 L_264;
-		L_264 = List_1_GetEnumerator_mA6AFC492CEEA9F7F8DDD2E6213FC99C562F29845(L_263, List_1_GetEnumerator_mA6AFC492CEEA9F7F8DDD2E6213FC99C562F29845_RuntimeMethod_var);
-		V_24 = L_264;
+		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:550>
+		JobData_t9D91E157BECCA13AE4C6A8FE3B22AEB24C8B0512* L_265 = ___0_job;
+		NullCheck(L_265);
+		List_1_t2E5795A29E2BB7B04C576893C886883D0CA7A79E* L_266 = L_265->___images;
+		NullCheck(L_266);
+		Enumerator_tF23BCA2896FEE5A6C9510F20C5E49D72F32D8558 L_267;
+		L_267 = List_1_GetEnumerator_mA6AFC492CEEA9F7F8DDD2E6213FC99C562F29845(L_266, List_1_GetEnumerator_mA6AFC492CEEA9F7F8DDD2E6213FC99C562F29845_RuntimeMethod_var);
+		V_24 = L_267;
 	}
 	{
 		auto __finallyBlock = il2cpp::utils::Finally([&]
 		{
 
-FINALLY_06c3:
+FINALLY_0707:
 			{
 				Enumerator_Dispose_m697088424AC0557B62CF11514E0EC2B59F915920((&V_24), Enumerator_Dispose_m697088424AC0557B62CF11514E0EC2B59F915920_RuntimeMethod_var);
 				return;
@@ -17992,52 +18016,52 @@ FINALLY_06c3:
 		try
 		{
 			{
-				goto IL_06b8_1;
+				goto IL_06fc_1;
 			}
 
-IL_067e_1:
+IL_06c2_1:
 			{
-				//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:542>
-				JobImage_tA9A47369204FC0096C9711F07C2A5A5BFBCA9850* L_265;
-				L_265 = Enumerator_get_Current_mD972F6C8C0548AA0A782CFE78796C5F17886F8FE_inline((&V_24), Enumerator_get_Current_mD972F6C8C0548AA0A782CFE78796C5F17886F8FE_RuntimeMethod_var);
-				V_25 = L_265;
-				//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:544>
-				List_1_tE65C14BDF2306E941D030D4A963B40ED16BEA0AA* L_266 = __this->___allSectionItems;
-				SectionItem_t90584FE8BBA56A8A4D924FC69AFE6CB79BAB85AD* L_267 = (SectionItem_t90584FE8BBA56A8A4D924FC69AFE6CB79BAB85AD*)il2cpp_codegen_object_new(SectionItem_t90584FE8BBA56A8A4D924FC69AFE6CB79BAB85AD_il2cpp_TypeInfo_var);
-				SectionItem__ctor_m32F2F46EF89925BCFF1861A70C70D455E571125E(L_267, NULL);
-				SectionItem_t90584FE8BBA56A8A4D924FC69AFE6CB79BAB85AD* L_268 = L_267;
-				JobImage_tA9A47369204FC0096C9711F07C2A5A5BFBCA9850* L_269 = V_25;
-				NullCheck(L_269);
-				String_t* L_270 = L_269->___name;
-				NullCheck(L_268);
-				L_268->___DisplayName = L_270;
-				Il2CppCodeGenWriteBarrier((void**)(&L_268->___DisplayName), (void*)L_270);
-				SectionItem_t90584FE8BBA56A8A4D924FC69AFE6CB79BAB85AD* L_271 = L_268;
+				//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:550>
+				JobImage_tA9A47369204FC0096C9711F07C2A5A5BFBCA9850* L_268;
+				L_268 = Enumerator_get_Current_mD972F6C8C0548AA0A782CFE78796C5F17886F8FE_inline((&V_24), Enumerator_get_Current_mD972F6C8C0548AA0A782CFE78796C5F17886F8FE_RuntimeMethod_var);
+				V_25 = L_268;
+				//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:552>
+				List_1_tE65C14BDF2306E941D030D4A963B40ED16BEA0AA* L_269 = __this->___allSectionItems;
+				SectionItem_t90584FE8BBA56A8A4D924FC69AFE6CB79BAB85AD* L_270 = (SectionItem_t90584FE8BBA56A8A4D924FC69AFE6CB79BAB85AD*)il2cpp_codegen_object_new(SectionItem_t90584FE8BBA56A8A4D924FC69AFE6CB79BAB85AD_il2cpp_TypeInfo_var);
+				SectionItem__ctor_m32F2F46EF89925BCFF1861A70C70D455E571125E(L_270, NULL);
+				SectionItem_t90584FE8BBA56A8A4D924FC69AFE6CB79BAB85AD* L_271 = L_270;
 				JobImage_tA9A47369204FC0096C9711F07C2A5A5BFBCA9850* L_272 = V_25;
 				NullCheck(L_272);
-				String_t* L_273 = L_272->___file;
+				String_t* L_273 = L_272->___name;
 				NullCheck(L_271);
-				L_271->___FileKey = L_273;
-				Il2CppCodeGenWriteBarrier((void**)(&L_271->___FileKey), (void*)L_273);
+				L_271->___DisplayName = L_273;
+				Il2CppCodeGenWriteBarrier((void**)(&L_271->___DisplayName), (void*)L_273);
 				SectionItem_t90584FE8BBA56A8A4D924FC69AFE6CB79BAB85AD* L_274 = L_271;
+				JobImage_tA9A47369204FC0096C9711F07C2A5A5BFBCA9850* L_275 = V_25;
+				NullCheck(L_275);
+				String_t* L_276 = L_275->___file;
 				NullCheck(L_274);
-				L_274->___Type = 1;
-				NullCheck(L_266);
-				List_1_Add_m49AEF2D43D3BB5C633442928B145B6230E33F057_inline(L_266, L_274, List_1_Add_m49AEF2D43D3BB5C633442928B145B6230E33F057_RuntimeMethod_var);
+				L_274->___FileKey = L_276;
+				Il2CppCodeGenWriteBarrier((void**)(&L_274->___FileKey), (void*)L_276);
+				SectionItem_t90584FE8BBA56A8A4D924FC69AFE6CB79BAB85AD* L_277 = L_274;
+				NullCheck(L_277);
+				L_277->___Type = 1;
+				NullCheck(L_269);
+				List_1_Add_m49AEF2D43D3BB5C633442928B145B6230E33F057_inline(L_269, L_277, List_1_Add_m49AEF2D43D3BB5C633442928B145B6230E33F057_RuntimeMethod_var);
 			}
 
-IL_06b8_1:
+IL_06fc_1:
 			{
-				//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:542>
-				bool L_275;
-				L_275 = Enumerator_MoveNext_m39000391D63ADB9D8311ABA46D2026D7346E8468((&V_24), Enumerator_MoveNext_m39000391D63ADB9D8311ABA46D2026D7346E8468_RuntimeMethod_var);
-				if (L_275)
+				//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:550>
+				bool L_278;
+				L_278 = Enumerator_MoveNext_m39000391D63ADB9D8311ABA46D2026D7346E8468((&V_24), Enumerator_MoveNext_m39000391D63ADB9D8311ABA46D2026D7346E8468_RuntimeMethod_var);
+				if (L_278)
 				{
-					goto IL_067e_1;
+					goto IL_06c2_1;
 				}
 			}
 			{
-				goto IL_06d1;
+				goto IL_0715;
 			}
 		}
 		catch(Il2CppExceptionWrapper& e)
@@ -18046,34 +18070,34 @@ IL_06b8_1:
 		}
 	}
 
-IL_06d1:
+IL_0715:
 	{
-		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:550>
+		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:558>
 		JobSearchUIController_FilterSectionList_m74F662F2064E672B285E899A9871567C2D1A92D9(__this, _stringLiteralDA39A3EE5E6B4B0D3255BFEF95601890AFD80709, NULL);
-		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:553>
-		List_1_tE65C14BDF2306E941D030D4A963B40ED16BEA0AA* L_276 = __this->___currentSectionItems;
-		NullCheck(L_276);
-		int32_t L_277;
-		L_277 = List_1_get_Count_m3042DB07DA1BB31FCBD2FC265652059BB3480EB8_inline(L_276, List_1_get_Count_m3042DB07DA1BB31FCBD2FC265652059BB3480EB8_RuntimeMethod_var);
-		if ((((int32_t)L_277) <= ((int32_t)0)))
+		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:561>
+		List_1_tE65C14BDF2306E941D030D4A963B40ED16BEA0AA* L_279 = __this->___currentSectionItems;
+		NullCheck(L_279);
+		int32_t L_280;
+		L_280 = List_1_get_Count_m3042DB07DA1BB31FCBD2FC265652059BB3480EB8_inline(L_279, List_1_get_Count_m3042DB07DA1BB31FCBD2FC265652059BB3480EB8_RuntimeMethod_var);
+		if ((((int32_t)L_280) <= ((int32_t)0)))
 		{
-			goto IL_0701;
+			goto IL_0745;
 		}
 	}
 	{
-		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:556>
-		ListView_t46F7BEBFA3240E5A3BE3AC4EF5173C442B5C71FD* L_278 = __this->___sectionList;
-		NullCheck(L_278);
-		BaseVerticalCollectionView_ClearSelection_m6ACB83A50DF4149F7F45A864DB29A00A6B3A78E0(L_278, NULL);
-		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:557>
-		ListView_t46F7BEBFA3240E5A3BE3AC4EF5173C442B5C71FD* L_279 = __this->___sectionList;
-		NullCheck(L_279);
-		BaseVerticalCollectionView_set_selectedIndex_mFAC82D45A6517794F8A1E0C15AD488E63A231DDA(L_279, 0, NULL);
+		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:564>
+		ListView_t46F7BEBFA3240E5A3BE3AC4EF5173C442B5C71FD* L_281 = __this->___sectionList;
+		NullCheck(L_281);
+		BaseVerticalCollectionView_ClearSelection_m6ACB83A50DF4149F7F45A864DB29A00A6B3A78E0(L_281, NULL);
+		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:565>
+		ListView_t46F7BEBFA3240E5A3BE3AC4EF5173C442B5C71FD* L_282 = __this->___sectionList;
+		NullCheck(L_282);
+		BaseVerticalCollectionView_set_selectedIndex_mFAC82D45A6517794F8A1E0C15AD488E63A231DDA(L_282, 0, NULL);
 	}
 
-IL_0701:
+IL_0745:
 	{
-		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:559>
+		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:567>
 		return;
 	}
 }
@@ -18097,20 +18121,20 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void JobSearchUIController_OnContentSearchCha
 	SectionItem_t90584FE8BBA56A8A4D924FC69AFE6CB79BAB85AD* V_0 = NULL;
 	int32_t V_1 = 0;
 	{
-		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:564>
+		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:572>
 		ListView_t46F7BEBFA3240E5A3BE3AC4EF5173C442B5C71FD* L_0 = __this->___sectionList;
 		NullCheck(L_0);
 		RuntimeObject* L_1;
 		L_1 = BaseVerticalCollectionView_get_selectedItem_m4676A8A1634EEFAAAF2E7D308633ECF7BCAB147E(L_0, NULL);
 		V_0 = ((SectionItem_t90584FE8BBA56A8A4D924FC69AFE6CB79BAB85AD*)IsInstClass((RuntimeObject*)L_1, SectionItem_t90584FE8BBA56A8A4D924FC69AFE6CB79BAB85AD_il2cpp_TypeInfo_var));
-		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:566>
+		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:574>
 		String_t* L_2 = ___0_searchText;
 		__this->___currentSearchTerm = L_2;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___currentSearchTerm), (void*)L_2);
-		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:567>
+		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:575>
 		String_t* L_3 = ___0_searchText;
 		JobSearchUIController_FilterSectionList_m74F662F2064E672B285E899A9871567C2D1A92D9(__this, L_3, NULL);
-		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:570>
+		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:578>
 		String_t* L_4 = ___0_searchText;
 		NullCheck(L_4);
 		bool L_5;
@@ -18121,7 +18145,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void JobSearchUIController_OnContentSearchCha
 		}
 	}
 	{
-		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:572>
+		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:580>
 		bool L_6;
 		L_6 = TouchScreenKeyboard_get_isSupported_mCFAC95CA6CAA06B4E21F42E3C40A39668D6B438E(NULL);
 		if (!L_6)
@@ -18130,17 +18154,17 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void JobSearchUIController_OnContentSearchCha
 		}
 	}
 	{
-		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:574>
+		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:582>
 		TouchScreenKeyboard_set_hideInput_m8FDDB21FB7E9B06B791649BBE369E4EA0F5F5299((bool)1, NULL);
 	}
 
 IL_0039:
 	{
-		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:576>
+		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:584>
 		TextField_tDB34369F9468D7F02670087D9444EC23115827D9* L_7 = __this->___contentSearchField;
 		NullCheck(L_7);
 		VirtualActionInvoker0::Invoke(20, L_7);
-		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:578>
+		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:586>
 		TextField_tDB34369F9468D7F02670087D9444EC23115827D9* L_8 = __this->___contentSearchField;
 		String_t* L_9 = ___0_searchText;
 		NullCheck(L_9);
@@ -18152,7 +18176,7 @@ IL_0039:
 
 IL_005f:
 	{
-		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:582>
+		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:590>
 		SectionItem_t90584FE8BBA56A8A4D924FC69AFE6CB79BAB85AD* L_11 = V_0;
 		if (!L_11)
 		{
@@ -18171,19 +18195,19 @@ IL_005f:
 		}
 	}
 	{
-		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:584>
+		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:592>
 		List_1_tE65C14BDF2306E941D030D4A963B40ED16BEA0AA* L_15 = __this->___currentSectionItems;
 		SectionItem_t90584FE8BBA56A8A4D924FC69AFE6CB79BAB85AD* L_16 = V_0;
 		NullCheck(L_15);
 		int32_t L_17;
 		L_17 = List_1_IndexOf_mCD340B5000E9F2377FAD8E8591C4C33AAAA12E88(L_15, L_16, List_1_IndexOf_mCD340B5000E9F2377FAD8E8591C4C33AAAA12E88_RuntimeMethod_var);
 		V_1 = L_17;
-		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:585>
+		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:593>
 		ListView_t46F7BEBFA3240E5A3BE3AC4EF5173C442B5C71FD* L_18 = __this->___sectionList;
 		int32_t L_19 = V_1;
 		NullCheck(L_18);
 		BaseVerticalCollectionView_set_selectedIndex_mFAC82D45A6517794F8A1E0C15AD488E63A231DDA(L_18, L_19, NULL);
-		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:588>
+		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:596>
 		List_1_tA239CB83DE5615F348BB0507E45F490F4F7C9A8D* L_20 = (List_1_tA239CB83DE5615F348BB0507E45F490F4F7C9A8D*)il2cpp_codegen_object_new(List_1_tA239CB83DE5615F348BB0507E45F490F4F7C9A8D_il2cpp_TypeInfo_var);
 		List_1__ctor_m7F078BB342729BDF11327FD89D7872265328F690(L_20, List_1__ctor_m7F078BB342729BDF11327FD89D7872265328F690_RuntimeMethod_var);
 		List_1_tA239CB83DE5615F348BB0507E45F490F4F7C9A8D* L_21 = L_20;
@@ -18196,7 +18220,7 @@ IL_005f:
 
 IL_009c:
 	{
-		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:590>
+		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:598>
 		ListView_t46F7BEBFA3240E5A3BE3AC4EF5173C442B5C71FD* L_23 = __this->___sectionList;
 		NullCheck(L_23);
 		int32_t L_24;
@@ -18207,7 +18231,7 @@ IL_009c:
 		}
 	}
 	{
-		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:593>
+		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:601>
 		List_1_tA239CB83DE5615F348BB0507E45F490F4F7C9A8D* L_25 = (List_1_tA239CB83DE5615F348BB0507E45F490F4F7C9A8D*)il2cpp_codegen_object_new(List_1_tA239CB83DE5615F348BB0507E45F490F4F7C9A8D_il2cpp_TypeInfo_var);
 		List_1__ctor_m7F078BB342729BDF11327FD89D7872265328F690(L_25, List_1__ctor_m7F078BB342729BDF11327FD89D7872265328F690_RuntimeMethod_var);
 		List_1_tA239CB83DE5615F348BB0507E45F490F4F7C9A8D* L_26 = L_25;
@@ -18223,12 +18247,12 @@ IL_009c:
 
 IL_00c7:
 	{
-		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:595>
+		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:603>
 		List_1_tE65C14BDF2306E941D030D4A963B40ED16BEA0AA* L_29 = __this->___currentSectionItems;
 		NullCheck(L_29);
 		int32_t L_30;
 		L_30 = List_1_get_Count_m3042DB07DA1BB31FCBD2FC265652059BB3480EB8_inline(L_29, List_1_get_Count_m3042DB07DA1BB31FCBD2FC265652059BB3480EB8_RuntimeMethod_var);
-		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:605>
+		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:613>
 		return;
 	}
 }
@@ -18256,7 +18280,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void JobSearchUIController_FilterSectionList_
 	bool V_2 = false;
 	String_t* V_3 = NULL;
 	{
-		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:609>
+		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:617>
 		String_t* L_0 = ___0_searchText;
 		bool L_1;
 		L_1 = String_IsNullOrEmpty_mEA9E3FB005AC28FE02E69FCF95A7B8456192B478(L_0, NULL);
@@ -18266,7 +18290,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void JobSearchUIController_FilterSectionList_
 		}
 	}
 	{
-		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:611>
+		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:619>
 		List_1_tE65C14BDF2306E941D030D4A963B40ED16BEA0AA* L_2 = __this->___allSectionItems;
 		List_1_tE65C14BDF2306E941D030D4A963B40ED16BEA0AA* L_3 = (List_1_tE65C14BDF2306E941D030D4A963B40ED16BEA0AA*)il2cpp_codegen_object_new(List_1_tE65C14BDF2306E941D030D4A963B40ED16BEA0AA_il2cpp_TypeInfo_var);
 		List_1__ctor_m9C95E71FD697BEDDD4301C979D6469306DC1BDA2(L_3, L_2, List_1__ctor_m9C95E71FD697BEDDD4301C979D6469306DC1BDA2_RuntimeMethod_var);
@@ -18277,12 +18301,12 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void JobSearchUIController_FilterSectionList_
 
 IL_001e:
 	{
-		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:615>
+		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:623>
 		List_1_tE65C14BDF2306E941D030D4A963B40ED16BEA0AA* L_4 = (List_1_tE65C14BDF2306E941D030D4A963B40ED16BEA0AA*)il2cpp_codegen_object_new(List_1_tE65C14BDF2306E941D030D4A963B40ED16BEA0AA_il2cpp_TypeInfo_var);
 		List_1__ctor_m7B772CAC1C512D583E537D43A86FA51825C43C09(L_4, List_1__ctor_m7B772CAC1C512D583E537D43A86FA51825C43C09_RuntimeMethod_var);
 		__this->___currentSectionItems = L_4;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___currentSectionItems), (void*)L_4);
-		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:617>
+		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:625>
 		List_1_tE65C14BDF2306E941D030D4A963B40ED16BEA0AA* L_5 = __this->___allSectionItems;
 		NullCheck(L_5);
 		Enumerator_t5F995C38A58B536066C0BACCE9C7F0DFF0550000 L_6;
@@ -18307,13 +18331,13 @@ FINALLY_00f9:
 
 IL_003a_1:
 			{
-				//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:617>
+				//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:625>
 				SectionItem_t90584FE8BBA56A8A4D924FC69AFE6CB79BAB85AD* L_7;
 				L_7 = Enumerator_get_Current_m343743E9E2EF2B19BB79F2404EB5E9834656F289_inline((&V_0), Enumerator_get_Current_m343743E9E2EF2B19BB79F2404EB5E9834656F289_RuntimeMethod_var);
 				V_1 = L_7;
-				//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:619>
+				//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:627>
 				V_2 = (bool)0;
-				//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:622>
+				//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:630>
 				SectionItem_t90584FE8BBA56A8A4D924FC69AFE6CB79BAB85AD* L_8 = V_1;
 				NullCheck(L_8);
 				String_t* L_9 = L_8->___DisplayName;
@@ -18327,16 +18351,16 @@ IL_003a_1:
 				}
 			}
 			{
-				//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:624>
+				//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:632>
 				V_2 = (bool)1;
 				goto IL_00dc_1;
 			}
 
 IL_005b_1:
 			{
-				//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:628>
+				//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:636>
 				V_3 = (String_t*)NULL;
-				//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:630>
+				//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:638>
 				SectionItem_t90584FE8BBA56A8A4D924FC69AFE6CB79BAB85AD* L_12 = V_1;
 				NullCheck(L_12);
 				int32_t L_13 = L_12->___Type;
@@ -18357,14 +18381,14 @@ IL_005b_1:
 				}
 			}
 			{
-				//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:632>
+				//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:640>
 				SectionItem_t90584FE8BBA56A8A4D924FC69AFE6CB79BAB85AD* L_17 = V_1;
 				NullCheck(L_17);
 				String_t* L_18 = L_17->___FileKey;
 				String_t* L_19;
 				L_19 = JobSearchUIController_GetFileContent_mF4E9C45C32875BE6B89AEB4E8CF005829B571335(__this, L_18, NULL);
 				V_3 = L_19;
-				//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:634>
+				//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:642>
 				SectionItem_t90584FE8BBA56A8A4D924FC69AFE6CB79BAB85AD* L_20 = V_1;
 				NullCheck(L_20);
 				String_t* L_21 = L_20->___FileKey;
@@ -18386,7 +18410,7 @@ IL_005b_1:
 				}
 			}
 			{
-				//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:636>
+				//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:644>
 				String_t* L_25 = V_3;
 				String_t* L_26;
 				L_26 = JobSearchUIController_CsvToMarkdownTable_mED27827B8664F4D4C859296869AAEA62E3F8AB04(__this, L_25, NULL);
@@ -18396,7 +18420,7 @@ IL_005b_1:
 
 IL_00a4_1:
 			{
-				//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:639>
+				//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:647>
 				SectionItem_t90584FE8BBA56A8A4D924FC69AFE6CB79BAB85AD* L_27 = V_1;
 				NullCheck(L_27);
 				int32_t L_28 = L_27->___Type;
@@ -18415,7 +18439,7 @@ IL_00a4_1:
 				}
 			}
 			{
-				//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:641>
+				//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:649>
 				SectionItem_t90584FE8BBA56A8A4D924FC69AFE6CB79BAB85AD* L_31 = V_1;
 				NullCheck(L_31);
 				JobData_t9D91E157BECCA13AE4C6A8FE3B22AEB24C8B0512* L_32 = L_31->___GuideData;
@@ -18426,7 +18450,7 @@ IL_00a4_1:
 
 IL_00c2_1:
 			{
-				//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:644>
+				//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:652>
 				String_t* L_34 = V_3;
 				bool L_35;
 				L_35 = String_IsNullOrEmpty_mEA9E3FB005AC28FE02E69FCF95A7B8456192B478(L_34, NULL);
@@ -18436,7 +18460,7 @@ IL_00c2_1:
 				}
 			}
 			{
-				//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:647>
+				//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:655>
 				String_t* L_36 = V_3;
 				String_t* L_37 = ___0_searchText;
 				List_1_t425196350A2888B269895DE1C865A3E7E4E2C9B6* L_38;
@@ -18450,13 +18474,13 @@ IL_00c2_1:
 				}
 			}
 			{
-				//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:649>
+				//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:657>
 				V_2 = (bool)1;
 			}
 
 IL_00dc_1:
 			{
-				//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:654>
+				//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:662>
 				bool L_40 = V_2;
 				if (!L_40)
 				{
@@ -18464,7 +18488,7 @@ IL_00dc_1:
 				}
 			}
 			{
-				//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:656>
+				//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:664>
 				List_1_tE65C14BDF2306E941D030D4A963B40ED16BEA0AA* L_41 = __this->___currentSectionItems;
 				SectionItem_t90584FE8BBA56A8A4D924FC69AFE6CB79BAB85AD* L_42 = V_1;
 				NullCheck(L_41);
@@ -18473,7 +18497,7 @@ IL_00dc_1:
 
 IL_00eb_1:
 			{
-				//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:617>
+				//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:625>
 				bool L_43;
 				L_43 = Enumerator_MoveNext_m903ABF5E554591EBBD828F78D2560BEEEAFAC91B((&V_0), Enumerator_MoveNext_m903ABF5E554591EBBD828F78D2560BEEEAFAC91B_RuntimeMethod_var);
 				if (L_43)
@@ -18493,20 +18517,20 @@ IL_00eb_1:
 
 IL_0107:
 	{
-		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:661>
+		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:669>
 		ListView_t46F7BEBFA3240E5A3BE3AC4EF5173C442B5C71FD* L_44 = __this->___sectionList;
 		List_1_tE65C14BDF2306E941D030D4A963B40ED16BEA0AA* L_45 = __this->___currentSectionItems;
 		NullCheck(L_44);
 		BaseVerticalCollectionView_set_itemsSource_mD1B669C6202DE74A6DBF3D99488D7E939267BC3B(L_44, L_45, NULL);
-		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:662>
+		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:670>
 		ListView_t46F7BEBFA3240E5A3BE3AC4EF5173C442B5C71FD* L_46 = __this->___sectionList;
 		NullCheck(L_46);
 		BaseVerticalCollectionView_RefreshItems_m53943EBC70FFE5C66EE6A7FEF5ECA33DE80AC0D6(L_46, NULL);
-		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:663>
+		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:671>
 		ListView_t46F7BEBFA3240E5A3BE3AC4EF5173C442B5C71FD* L_47 = __this->___sectionList;
 		NullCheck(L_47);
 		BaseVerticalCollectionView_ScrollToItem_mA201CA77442DB59FDBAD1AEE7F61FFFA626A8716(L_47, 0, NULL);
-		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:664>
+		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:672>
 		return;
 	}
 }
@@ -18523,7 +18547,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* JobSearchUIController_GetFileConten
 	}
 	String_t* V_0 = NULL;
 	{
-		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:668>
+		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:676>
 		JobDataLoader_tF02F14CB37D7CE1D534D7695F5FC5B4C8604E8F7* L_0 = __this->___jobDataLoader;
 		NullCheck(L_0);
 		Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83* L_1 = L_0->___LoadedFiles;
@@ -18537,7 +18561,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* JobSearchUIController_GetFileConten
 		}
 	}
 	{
-		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:670>
+		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:678>
 		JobDataLoader_tF02F14CB37D7CE1D534D7695F5FC5B4C8604E8F7* L_4 = __this->___jobDataLoader;
 		NullCheck(L_4);
 		Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83* L_5 = L_4->___LoadedFiles;
@@ -18550,13 +18574,13 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* JobSearchUIController_GetFileConten
 
 IL_0025:
 	{
-		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:673>
+		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:681>
 		String_t* L_8 = ___0_fileKey;
 		il2cpp_codegen_runtime_class_init_inline(Path_t8A38A801D0219E8209C1B1D90D82D4D755D998BC_il2cpp_TypeInfo_var);
 		String_t* L_9;
 		L_9 = Path_GetFileName_mB1A8CE314EE250B06E3D33142315E2BD3A75D1D6(L_8, NULL);
 		V_0 = L_9;
-		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:674>
+		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:682>
 		JobDataLoader_tF02F14CB37D7CE1D534D7695F5FC5B4C8604E8F7* L_10 = __this->___jobDataLoader;
 		NullCheck(L_10);
 		Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83* L_11 = L_10->___LoadedFiles;
@@ -18570,7 +18594,7 @@ IL_0025:
 		}
 	}
 	{
-		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:676>
+		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:684>
 		JobDataLoader_tF02F14CB37D7CE1D534D7695F5FC5B4C8604E8F7* L_14 = __this->___jobDataLoader;
 		NullCheck(L_14);
 		Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83* L_15 = L_14->___LoadedFiles;
@@ -18583,7 +18607,7 @@ IL_0025:
 
 IL_0051:
 	{
-		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:679>
+		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:687>
 		return (String_t*)NULL;
 	}
 }
@@ -18591,9 +18615,9 @@ IL_0051:
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void JobSearchUIController_OnSectionSelected_m55386EAF0157E85210B4AD2A65B526CF4392A015 (JobSearchUIController_t771C13329EF1AB812817519956ED4643E0DE28C3* __this, RuntimeObject* ___0_selectedItems, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:684>
+		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:692>
 		JobSearchUIController_RenderDetailView_mBEE48C965BBD191BA4378C0B0B371AFE75BF07EC(__this, (bool)1, NULL);
-		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:685>
+		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:693>
 		return;
 	}
 }
@@ -18605,6 +18629,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void JobSearchUIController_RenderDetailView_m
 	{
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Action_1_tD7F74291FAA5A362F4A5F48D4E1CF3ED51FA6A33_il2cpp_TypeInfo_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Action_tD00B0A84D7945E50C2DFFC28EFEE6ED44ED2AD07_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&IVisualElementScheduledItem_t309F1A5445514122A9E3F64182D0D8A4DE34C48F_il2cpp_TypeInfo_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&IVisualElementScheduler_tA68650FA9218398E77265748741B091638336FD8_il2cpp_TypeInfo_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&JobSearchUIController_U3CRenderDetailViewU3Eb__46_0_m56393ECB7F8FDD6A19FA9F2A78B6515E037691D1_RuntimeMethod_var);
@@ -18618,6 +18643,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void JobSearchUIController_RenderDetailView_m
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral0A131A8E35103925FDD2D4B843CAE3B8E95B2C5A);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral0CF6E760F4429CA66FCDDB0BC125023158962742);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral3EBB9A38A97662C2D8E12F1E8E95FE80A2B17A4C);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral5660EB2BC4BE28D6F4A1F391A4487DC4F679865C);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral86BBAACC00198DBB3046818AD3FC2AA10AE48DE1);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteralD20E83884B812121AEB6C004C0EFA432607CF4BE);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteralDA39A3EE5E6B4B0D3255BFEF95601890AFD80709);
@@ -18630,21 +18656,23 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void JobSearchUIController_RenderDetailView_m
 	String_t* V_3 = NULL;
 	String_t* V_4 = NULL;
 	String_t* V_5 = NULL;
-	List_1_t425196350A2888B269895DE1C865A3E7E4E2C9B6* V_6 = NULL;
-	MarkdownVisualElement_t0E3EBE59FF7664CE271CEF836B818A9A55AC5ECE* V_7 = NULL;
-	String_t* V_8 = NULL;
-	String_t* V_9 = NULL;
-	MarkdownVisualElement_t0E3EBE59FF7664CE271CEF836B818A9A55AC5ECE* V_10 = NULL;
-	List_1_t425196350A2888B269895DE1C865A3E7E4E2C9B6* V_11 = NULL;
-	Label_tC160668F9119CE0F5567021FB208E64A5B1C5B70* V_12 = NULL;
+	String_t* V_6 = NULL;
+	String_t* V_7 = NULL;
+	List_1_t425196350A2888B269895DE1C865A3E7E4E2C9B6* V_8 = NULL;
+	MarkdownVisualElement_t0E3EBE59FF7664CE271CEF836B818A9A55AC5ECE* V_9 = NULL;
+	String_t* V_10 = NULL;
+	String_t* V_11 = NULL;
+	MarkdownVisualElement_t0E3EBE59FF7664CE271CEF836B818A9A55AC5ECE* V_12 = NULL;
+	List_1_t425196350A2888B269895DE1C865A3E7E4E2C9B6* V_13 = NULL;
+	Label_tC160668F9119CE0F5567021FB208E64A5B1C5B70* V_14 = NULL;
 	{
-		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:689>
+		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:697>
 		ListView_t46F7BEBFA3240E5A3BE3AC4EF5173C442B5C71FD* L_0 = __this->___sectionList;
 		NullCheck(L_0);
 		RuntimeObject* L_1;
 		L_1 = BaseVerticalCollectionView_get_selectedItem_m4676A8A1634EEFAAAF2E7D308633ECF7BCAB147E(L_0, NULL);
 		V_0 = ((SectionItem_t90584FE8BBA56A8A4D924FC69AFE6CB79BAB85AD*)IsInstClass((RuntimeObject*)L_1, SectionItem_t90584FE8BBA56A8A4D924FC69AFE6CB79BAB85AD_il2cpp_TypeInfo_var));
-		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:690>
+		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:698>
 		SectionItem_t90584FE8BBA56A8A4D924FC69AFE6CB79BAB85AD* L_2 = V_0;
 		if (!L_2)
 		{
@@ -18661,17 +18689,17 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void JobSearchUIController_RenderDetailView_m
 
 IL_001c:
 	{
-		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:690>
+		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:698>
 		return;
 	}
 
 IL_001d:
 	{
-		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:692>
+		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:700>
 		ScrollView_t7CE209084E084FAA0E8DF3CD8E3B8BB9EB27E8D9* L_4 = __this->___detailView;
 		NullCheck(L_4);
 		VisualElement_Clear_m201F95F3031691823F39BAEC5ED378C82F34AC7F(L_4, NULL);
-		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:693>
+		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:701>
 		bool L_5 = ___0_resetMatches;
 		if (!L_5)
 		{
@@ -18679,23 +18707,23 @@ IL_001d:
 		}
 	}
 	{
-		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:695>
+		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:703>
 		ScrollView_t7CE209084E084FAA0E8DF3CD8E3B8BB9EB27E8D9* L_6 = __this->___detailView;
 		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_7;
 		L_7 = Vector2_get_zero_m32506C40EC2EE7D5D4410BF40D3EE683A3D5F32C_inline(NULL);
 		NullCheck(L_6);
 		ScrollView_set_scrollOffset_m220AFAC09FA2E3784CBB76EB53D6AD71C056A1D5(L_6, L_7, NULL);
-		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:696>
+		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:704>
 		__this->___currentMatchIndex = (-1);
-		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:697>
+		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:705>
 		__this->___totalMatches = 0;
-		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:698>
+		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:706>
 		JobSearchUIController_UpdateMatchCountUI_m6E0FE1E48F981AA2115D77E4BDB6B0C195A417D4(__this, NULL);
 	}
 
 IL_004f:
 	{
-		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:701>
+		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:709>
 		SectionItem_t90584FE8BBA56A8A4D924FC69AFE6CB79BAB85AD* L_8 = V_0;
 		NullCheck(L_8);
 		int32_t L_9 = L_8->___Type;
@@ -18705,18 +18733,18 @@ IL_004f:
 		}
 	}
 	{
-		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:703>
+		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:711>
 		SectionItem_t90584FE8BBA56A8A4D924FC69AFE6CB79BAB85AD* L_10 = V_0;
 		NullCheck(L_10);
 		JobData_t9D91E157BECCA13AE4C6A8FE3B22AEB24C8B0512* L_11 = L_10->___GuideData;
 		bool L_12 = ___0_resetMatches;
 		JobSearchUIController_RenderMainframeGuide_mFC921293A0980CB46000964E6EC81C042A4B5A3A(__this, L_11, L_12, NULL);
-		goto IL_0270;
+		goto IL_0336;
 	}
 
 IL_006a:
 	{
-		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:705>
+		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:713>
 		SectionItem_t90584FE8BBA56A8A4D924FC69AFE6CB79BAB85AD* L_13 = V_0;
 		NullCheck(L_13);
 		int32_t L_14 = L_13->___Type;
@@ -18726,14 +18754,6 @@ IL_006a:
 		}
 	}
 	{
-		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:708>
-		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:709>
-		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:710>
-		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:711>
-		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:712>
-		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:713>
-		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:714>
-		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:715>
 		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:716>
 		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:717>
 		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:718>
@@ -18748,6 +18768,14 @@ IL_006a:
 		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:727>
 		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:728>
 		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:729>
+		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:730>
+		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:731>
+		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:732>
+		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:733>
+		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:734>
+		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:735>
+		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:736>
+		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:737>
 		JobDataLoader_tF02F14CB37D7CE1D534D7695F5FC5B4C8604E8F7* L_15 = __this->___jobDataLoader;
 		SectionItem_t90584FE8BBA56A8A4D924FC69AFE6CB79BAB85AD* L_16 = V_0;
 		NullCheck(L_16);
@@ -18756,342 +18784,474 @@ IL_006a:
 		Action_1__ctor_m0D74126D5BBFFF417FDA1881B8AEBD833A833F76(L_18, __this, (intptr_t)((void*)JobSearchUIController_U3CRenderDetailViewU3Eb__46_0_m56393ECB7F8FDD6A19FA9F2A78B6515E037691D1_RuntimeMethod_var), NULL);
 		NullCheck(L_15);
 		JobDataLoader_LoadImage_m45D3DE43C03CFF71E66768C59C80BB12AA8B45D3(L_15, L_17, L_18, NULL);
-		goto IL_0270;
+		goto IL_0336;
 	}
 
 IL_0095:
 	{
-		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:734>
+		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:742>
 		V_1 = _stringLiteralDA39A3EE5E6B4B0D3255BFEF95601890AFD80709;
-		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:735>
+		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:743>
 		SectionItem_t90584FE8BBA56A8A4D924FC69AFE6CB79BAB85AD* L_19 = V_0;
 		NullCheck(L_19);
 		String_t* L_20 = L_19->___FileKey;
 		V_2 = L_20;
-		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:738>
+		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:746>
 		String_t* L_21 = V_2;
 		NullCheck(L_21);
 		bool L_22;
 		L_22 = String_EndsWith_m5E5D307CA6AEB7C08CE782B4693B19D07ADC9075(L_21, _stringLiteral0CF6E760F4429CA66FCDDB0BC125023158962742, 5, NULL);
 		if (!L_22)
 		{
-			goto IL_010b;
+			goto IL_01d1;
 		}
 	}
 	{
-		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:740>
+		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:748>
 		JobDataLoader_tF02F14CB37D7CE1D534D7695F5FC5B4C8604E8F7* L_23 = __this->___jobDataLoader;
 		NullCheck(L_23);
 		String_t* L_24 = L_23->___JobFolder;
 		V_3 = L_24;
-		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:743>
+		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:751>
 		Stack_1_tD770B7BA3385BBF3A1703E386B6006FF670C5094* L_25 = __this->___navigationHistory;
 		String_t* L_26 = V_3;
 		NullCheck(L_25);
 		Stack_1_Push_m6735A1D45311268768814737E1F1884B3615CA20(L_25, L_26, Stack_1_Push_m6735A1D45311268768814737E1F1884B3615CA20_RuntimeMethod_var);
-		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:744>
+		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:752>
 		JobSearchUIController_UpdateBackButtonState_m42D7EE6CB42E8F9BEB8A15A3FF41238C9FFD8F3F(__this, NULL);
-		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:746>
+		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:756>
 		String_t* L_27 = V_2;
 		il2cpp_codegen_runtime_class_init_inline(Path_t8A38A801D0219E8209C1B1D90D82D4D755D998BC_il2cpp_TypeInfo_var);
 		String_t* L_28;
 		L_28 = Path_GetDirectoryName_m428BADBE493A3927B51A13DEF658929B430516F6(L_27, NULL);
 		V_4 = L_28;
-		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:752>
-		String_t* L_29 = V_3;
-		String_t* L_30 = V_4;
-		String_t* L_31;
-		L_31 = Path_Combine_m1ADAC05CDA2D1D61B172DF65A81E86592696BEAE(L_29, L_30, NULL);
+		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:762>
+		String_t* L_29 = V_4;
+		bool L_30;
+		L_30 = String_IsNullOrEmpty_mEA9E3FB005AC28FE02E69FCF95A7B8456192B478(L_29, NULL);
+		if (!L_30)
+		{
+			goto IL_00ea;
+		}
+	}
+	{
+		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:767>
+		String_t* L_31 = V_3;
 		V_5 = L_31;
-		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:753>
-		String_t* L_32 = V_5;
+		goto IL_0170;
+	}
+
+IL_00ea:
+	{
+		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:774>
+		String_t* L_32 = V_3;
 		NullCheck(L_32);
 		String_t* L_33;
 		L_33 = String_Replace_mABDB7003A1D0AEDCAE9FF85E3DFFFBA752D2A166(L_32, _stringLiteral09B11B6CC411D8B9FFB75EAAE9A35B2AF248CE40, _stringLiteral86BBAACC00198DBB3046818AD3FC2AA10AE48DE1, NULL);
-		V_5 = L_33;
-		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:756>
-		String_t* L_34 = V_5;
-		String_t* L_35;
-		L_35 = JobSearchUIController_ResolvePath_mC8E8B68F83428E115775CAD9DB0886BC2189F6F3(__this, L_34, NULL);
-		V_5 = L_35;
-		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:758>
-		JobDataLoader_tF02F14CB37D7CE1D534D7695F5FC5B4C8604E8F7* L_36 = __this->___jobDataLoader;
-		String_t* L_37 = V_5;
-		NullCheck(L_36);
-		JobDataLoader_LoadJobFromInputField_m31A8AA59247F4CBCAD7DF941137CA34A5525FF08(L_36, L_37, NULL);
-		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:759>
-		return;
-	}
-
-IL_010b:
-	{
-		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:762>
-		String_t* L_38 = V_2;
-		String_t* L_39;
-		L_39 = JobSearchUIController_GetFileContent_mF4E9C45C32875BE6B89AEB4E8CF005829B571335(__this, L_38, NULL);
-		V_1 = L_39;
-		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:763>
-		String_t* L_40 = V_1;
-		if (L_40)
-		{
-			goto IL_011c;
-		}
-	}
-	{
-		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:763>
-		V_1 = _stringLiteralD20E83884B812121AEB6C004C0EFA432607CF4BE;
-	}
-
-IL_011c:
-	{
-		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:766>
-		String_t* L_41 = __this->___currentSearchTerm;
-		bool L_42;
-		L_42 = String_IsNullOrEmpty_mEA9E3FB005AC28FE02E69FCF95A7B8456192B478(L_41, NULL);
-		if (L_42)
-		{
-			goto IL_017c;
-		}
-	}
-	{
-		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:768>
-		String_t* L_43 = V_2;
-		NullCheck(L_43);
-		bool L_44;
-		L_44 = String_EndsWith_m5E5D307CA6AEB7C08CE782B4693B19D07ADC9075(L_43, _stringLiteral3EBB9A38A97662C2D8E12F1E8E95FE80A2B17A4C, 5, NULL);
-		if (L_44)
-		{
-			goto IL_017c;
-		}
-	}
-	{
-		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:770>
-		String_t* L_45 = V_1;
-		String_t* L_46 = __this->___currentSearchTerm;
-		List_1_t425196350A2888B269895DE1C865A3E7E4E2C9B6* L_47;
-		L_47 = JobSearchUIController_GetValidMatches_m753FD2D070CADF0FAA75EF55CDF3E30C8B26435B(__this, L_45, L_46, NULL);
-		V_6 = L_47;
-		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:772>
-		bool L_48 = ___0_resetMatches;
-		if (!L_48)
-		{
-			goto IL_016c;
-		}
-	}
-	{
-		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:774>
-		List_1_t425196350A2888B269895DE1C865A3E7E4E2C9B6* L_49 = V_6;
-		NullCheck(L_49);
-		int32_t L_50;
-		L_50 = List_1_get_Count_m0D93129BCC0D9DE175A69DBA52CEF2C5C01655FA_inline(L_49, List_1_get_Count_m0D93129BCC0D9DE175A69DBA52CEF2C5C01655FA_RuntimeMethod_var);
-		__this->___totalMatches = L_50;
+		NullCheck(L_33);
+		String_t* L_34;
+		L_34 = String_TrimEnd_mDB4D96F8312F563656D4115A9F280062E05D2EE8(L_33, ((int32_t)47), NULL);
+		V_6 = L_34;
 		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:775>
-		int32_t L_51 = __this->___totalMatches;
-		if ((((int32_t)L_51) <= ((int32_t)0)))
+		String_t* L_35 = V_4;
+		NullCheck(L_35);
+		String_t* L_36;
+		L_36 = String_Replace_mABDB7003A1D0AEDCAE9FF85E3DFFFBA752D2A166(L_35, _stringLiteral09B11B6CC411D8B9FFB75EAAE9A35B2AF248CE40, _stringLiteral86BBAACC00198DBB3046818AD3FC2AA10AE48DE1, NULL);
+		NullCheck(L_36);
+		String_t* L_37;
+		L_37 = String_TrimEnd_mDB4D96F8312F563656D4115A9F280062E05D2EE8(L_36, ((int32_t)47), NULL);
+		V_7 = L_37;
+		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:777>
+		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:778>
+		String_t* L_38 = V_6;
+		String_t* L_39 = V_7;
+		String_t* L_40;
+		L_40 = String_Concat_m9E3155FB84015C823606188F53B47CB44C444991(_stringLiteral86BBAACC00198DBB3046818AD3FC2AA10AE48DE1, L_39, NULL);
+		NullCheck(L_38);
+		bool L_41;
+		L_41 = String_EndsWith_m5E5D307CA6AEB7C08CE782B4693B19D07ADC9075(L_38, L_40, 5, NULL);
+		if (L_41)
+		{
+			goto IL_013f;
+		}
+	}
+	{
+		String_t* L_42 = V_6;
+		String_t* L_43 = V_7;
+		NullCheck(L_42);
+		bool L_44;
+		L_44 = String_Equals_m7BDFC0B951005B9DC2BAED464AFE68FF7E9ACE5A(L_42, L_43, 5, NULL);
+		if (!L_44)
 		{
 			goto IL_0166;
 		}
 	}
+
+IL_013f:
 	{
-		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:777>
-		__this->___currentMatchIndex = 0;
+		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:867>
+		String_t* L_45 = V_6;
+		String_t* L_46 = V_7;
+		String_t* L_47;
+		L_47 = String_Concat_m9E3155FB84015C823606188F53B47CB44C444991(_stringLiteral86BBAACC00198DBB3046818AD3FC2AA10AE48DE1, L_46, NULL);
+		NullCheck(L_45);
+		bool L_48;
+		L_48 = String_EndsWith_m5E5D307CA6AEB7C08CE782B4693B19D07ADC9075(L_45, L_47, 5, NULL);
+		if (!L_48)
+		{
+			goto IL_015a;
+		}
+	}
+	{
+		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:871>
+		String_t* L_49 = V_3;
+		V_5 = L_49;
+		goto IL_0170;
+	}
+
+IL_015a:
+	{
+		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:875>
+		String_t* L_50 = V_3;
+		String_t* L_51 = V_4;
+		il2cpp_codegen_runtime_class_init_inline(Path_t8A38A801D0219E8209C1B1D90D82D4D755D998BC_il2cpp_TypeInfo_var);
+		String_t* L_52;
+		L_52 = Path_Combine_m1ADAC05CDA2D1D61B172DF65A81E86592696BEAE(L_50, L_51, NULL);
+		V_5 = L_52;
+		goto IL_0170;
 	}
 
 IL_0166:
 	{
-		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:779>
-		JobSearchUIController_UpdateMatchCountUI_m6E0FE1E48F981AA2115D77E4BDB6B0C195A417D4(__this, NULL);
-	}
-
-IL_016c:
-	{
-		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:782>
-		String_t* L_52 = V_1;
-		List_1_t425196350A2888B269895DE1C865A3E7E4E2C9B6* L_53 = V_6;
-		int32_t L_54 = __this->___currentMatchIndex;
+		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:880>
+		String_t* L_53 = V_3;
+		String_t* L_54 = V_4;
+		il2cpp_codegen_runtime_class_init_inline(Path_t8A38A801D0219E8209C1B1D90D82D4D755D998BC_il2cpp_TypeInfo_var);
 		String_t* L_55;
-		L_55 = JobSearchUIController_HighlightText_mA788090FDB79303519C05065052A2FCE22576894(__this, L_52, L_53, L_54, NULL);
-		V_1 = L_55;
+		L_55 = Path_Combine_m1ADAC05CDA2D1D61B172DF65A81E86592696BEAE(L_53, L_54, NULL);
+		V_5 = L_55;
 	}
 
-IL_017c:
+IL_0170:
 	{
-		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:787>
-		String_t* L_56 = V_2;
+		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:884>
+		String_t* L_56 = V_5;
 		NullCheck(L_56);
-		bool L_57;
-		L_57 = String_EndsWith_m5E5D307CA6AEB7C08CE782B4693B19D07ADC9075(L_56, _stringLiteralDFADBE5FBB51442102D6972975DEC6610EA336A4, 5, NULL);
-		if (!L_57)
+		String_t* L_57;
+		L_57 = String_Replace_mABDB7003A1D0AEDCAE9FF85E3DFFFBA752D2A166(L_56, _stringLiteral09B11B6CC411D8B9FFB75EAAE9A35B2AF248CE40, _stringLiteral86BBAACC00198DBB3046818AD3FC2AA10AE48DE1, NULL);
+		V_5 = L_57;
+		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:887>
+		String_t* L_58 = V_5;
+		String_t* L_59;
+		L_59 = JobSearchUIController_ResolvePath_mC8E8B68F83428E115775CAD9DB0886BC2189F6F3(__this, L_58, NULL);
+		V_5 = L_59;
+		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:890>
+		String_t* L_60 = V_5;
+		JobDataLoader_tF02F14CB37D7CE1D534D7695F5FC5B4C8604E8F7* L_61 = __this->___jobDataLoader;
+		NullCheck(L_61);
+		String_t* L_62 = L_61->___JobFolder;
+		NullCheck(L_62);
+		String_t* L_63;
+		L_63 = String_Replace_mABDB7003A1D0AEDCAE9FF85E3DFFFBA752D2A166(L_62, _stringLiteral09B11B6CC411D8B9FFB75EAAE9A35B2AF248CE40, _stringLiteral86BBAACC00198DBB3046818AD3FC2AA10AE48DE1, NULL);
+		NullCheck(L_60);
+		bool L_64;
+		L_64 = String_Equals_m7BDFC0B951005B9DC2BAED464AFE68FF7E9ACE5A(L_60, L_63, 5, NULL);
+		if (!L_64)
 		{
-			goto IL_01b1;
+			goto IL_01c3;
 		}
 	}
 	{
-		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:789>
-		String_t* L_58 = V_1;
-		UMarkdownContext_t0DACEEADCE750320BBEA9C49A396C0227BFC3713* L_59;
-		L_59 = UMarkdownContext_Runtime_m4D23A464C46E4B627894B5ABD190C3DE060D9376(NULL);
-		MarkdownVisualElement_t0E3EBE59FF7664CE271CEF836B818A9A55AC5ECE* L_60;
-		L_60 = UMarkdown_Parse_m215BDAC42BCBB6CD66D3C1E5E97EF40B37943EBC(L_58, L_59, NULL);
-		V_7 = L_60;
-		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:790>
-		ScrollView_t7CE209084E084FAA0E8DF3CD8E3B8BB9EB27E8D9* L_61 = __this->___detailView;
-		MarkdownVisualElement_t0E3EBE59FF7664CE271CEF836B818A9A55AC5ECE* L_62 = V_7;
-		NullCheck(L_61);
-		VisualElement_Add_mE2571CCB23C09103F8732EEC73833683F7236A7F(L_61, L_62, NULL);
-		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:791>
-		MarkdownVisualElement_t0E3EBE59FF7664CE271CEF836B818A9A55AC5ECE* L_63 = V_7;
-		JobSearchUIController_ApplyTableStyles_mF7A1F66AD7863472A3BA311F39FEB587504112A1(__this, L_63, NULL);
-		goto IL_0270;
+		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:892>
+		String_t* L_65 = V_5;
+		String_t* L_66;
+		L_66 = String_Concat_m9E3155FB84015C823606188F53B47CB44C444991(_stringLiteral5660EB2BC4BE28D6F4A1F391A4487DC4F679865C, L_65, NULL);
+		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
+		Debug_Log_m87A9A3C761FF5C43ED8A53B16190A53D08F818BB(L_66, NULL);
+		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:893>
+		return;
 	}
 
-IL_01b1:
+IL_01c3:
 	{
-		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:793>
-		String_t* L_64 = V_2;
-		NullCheck(L_64);
-		bool L_65;
-		L_65 = String_EndsWith_m5E5D307CA6AEB7C08CE782B4693B19D07ADC9075(L_64, _stringLiteral3EBB9A38A97662C2D8E12F1E8E95FE80A2B17A4C, 5, NULL);
-		if (!L_65)
-		{
-			goto IL_024f;
-		}
+		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:896>
+		JobDataLoader_tF02F14CB37D7CE1D534D7695F5FC5B4C8604E8F7* L_67 = __this->___jobDataLoader;
+		String_t* L_68 = V_5;
+		NullCheck(L_67);
+		JobDataLoader_LoadJobFromInputField_m31A8AA59247F4CBCAD7DF941137CA34A5525FF08(L_67, L_68, NULL);
+		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:897>
+		return;
 	}
+
+IL_01d1:
 	{
-		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:796>
-		String_t* L_66 = V_2;
-		String_t* L_67;
-		L_67 = JobSearchUIController_GetFileContent_mF4E9C45C32875BE6B89AEB4E8CF005829B571335(__this, L_66, NULL);
-		V_8 = L_67;
-		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:797>
-		String_t* L_68 = V_8;
-		String_t* L_69;
-		L_69 = JobSearchUIController_CsvToMarkdownTable_mED27827B8664F4D4C859296869AAEA62E3F8AB04(__this, L_68, NULL);
-		V_9 = L_69;
-		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:799>
-		String_t* L_70 = __this->___currentSearchTerm;
-		bool L_71;
-		L_71 = String_IsNullOrEmpty_mEA9E3FB005AC28FE02E69FCF95A7B8456192B478(L_70, NULL);
+		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:900>
+		String_t* L_69 = V_2;
+		String_t* L_70;
+		L_70 = JobSearchUIController_GetFileContent_mF4E9C45C32875BE6B89AEB4E8CF005829B571335(__this, L_69, NULL);
+		V_1 = L_70;
+		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:901>
+		String_t* L_71 = V_1;
 		if (L_71)
 		{
-			goto IL_022a;
+			goto IL_01e2;
 		}
 	}
 	{
-		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:801>
-		String_t* L_72 = V_9;
-		String_t* L_73 = __this->___currentSearchTerm;
-		List_1_t425196350A2888B269895DE1C865A3E7E4E2C9B6* L_74;
-		L_74 = JobSearchUIController_GetValidMatches_m753FD2D070CADF0FAA75EF55CDF3E30C8B26435B(__this, L_72, L_73, NULL);
-		V_11 = L_74;
-		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:803>
-		bool L_75 = ___0_resetMatches;
-		if (!L_75)
+		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:901>
+		V_1 = _stringLiteralD20E83884B812121AEB6C004C0EFA432607CF4BE;
+	}
+
+IL_01e2:
+	{
+		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:904>
+		String_t* L_72 = __this->___currentSearchTerm;
+		bool L_73;
+		L_73 = String_IsNullOrEmpty_mEA9E3FB005AC28FE02E69FCF95A7B8456192B478(L_72, NULL);
+		if (L_73)
 		{
-			goto IL_0218;
+			goto IL_0242;
 		}
 	}
 	{
-		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:806>
-		List_1_t425196350A2888B269895DE1C865A3E7E4E2C9B6* L_76 = V_11;
-		NullCheck(L_76);
-		int32_t L_77;
-		L_77 = List_1_get_Count_m0D93129BCC0D9DE175A69DBA52CEF2C5C01655FA_inline(L_76, List_1_get_Count_m0D93129BCC0D9DE175A69DBA52CEF2C5C01655FA_RuntimeMethod_var);
-		__this->___totalMatches = L_77;
-		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:807>
-		int32_t L_78 = __this->___totalMatches;
-		if ((((int32_t)L_78) <= ((int32_t)0)))
+		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:906>
+		String_t* L_74 = V_2;
+		NullCheck(L_74);
+		bool L_75;
+		L_75 = String_EndsWith_m5E5D307CA6AEB7C08CE782B4693B19D07ADC9075(L_74, _stringLiteral3EBB9A38A97662C2D8E12F1E8E95FE80A2B17A4C, 5, NULL);
+		if (L_75)
 		{
-			goto IL_0212;
+			goto IL_0242;
 		}
 	}
 	{
-		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:809>
+		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:908>
+		String_t* L_76 = V_1;
+		String_t* L_77 = __this->___currentSearchTerm;
+		List_1_t425196350A2888B269895DE1C865A3E7E4E2C9B6* L_78;
+		L_78 = JobSearchUIController_GetValidMatches_m753FD2D070CADF0FAA75EF55CDF3E30C8B26435B(__this, L_76, L_77, NULL);
+		V_8 = L_78;
+		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:910>
+		bool L_79 = ___0_resetMatches;
+		if (!L_79)
+		{
+			goto IL_0232;
+		}
+	}
+	{
+		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:912>
+		List_1_t425196350A2888B269895DE1C865A3E7E4E2C9B6* L_80 = V_8;
+		NullCheck(L_80);
+		int32_t L_81;
+		L_81 = List_1_get_Count_m0D93129BCC0D9DE175A69DBA52CEF2C5C01655FA_inline(L_80, List_1_get_Count_m0D93129BCC0D9DE175A69DBA52CEF2C5C01655FA_RuntimeMethod_var);
+		__this->___totalMatches = L_81;
+		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:913>
+		int32_t L_82 = __this->___totalMatches;
+		if ((((int32_t)L_82) <= ((int32_t)0)))
+		{
+			goto IL_022c;
+		}
+	}
+	{
+		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:915>
 		__this->___currentMatchIndex = 0;
 	}
 
-IL_0212:
+IL_022c:
 	{
-		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:811>
+		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:917>
 		JobSearchUIController_UpdateMatchCountUI_m6E0FE1E48F981AA2115D77E4BDB6B0C195A417D4(__this, NULL);
 	}
 
-IL_0218:
+IL_0232:
 	{
-		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:814>
-		String_t* L_79 = V_9;
-		List_1_t425196350A2888B269895DE1C865A3E7E4E2C9B6* L_80 = V_11;
-		int32_t L_81 = __this->___currentMatchIndex;
-		String_t* L_82;
-		L_82 = JobSearchUIController_HighlightText_mA788090FDB79303519C05065052A2FCE22576894(__this, L_79, L_80, L_81, NULL);
-		V_9 = L_82;
+		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:920>
+		String_t* L_83 = V_1;
+		List_1_t425196350A2888B269895DE1C865A3E7E4E2C9B6* L_84 = V_8;
+		int32_t L_85 = __this->___currentMatchIndex;
+		String_t* L_86;
+		L_86 = JobSearchUIController_HighlightText_mA788090FDB79303519C05065052A2FCE22576894(__this, L_83, L_84, L_85, NULL);
+		V_1 = L_86;
 	}
 
-IL_022a:
+IL_0242:
 	{
-		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:817>
-		String_t* L_83 = V_9;
-		UMarkdownContext_t0DACEEADCE750320BBEA9C49A396C0227BFC3713* L_84;
-		L_84 = UMarkdownContext_Runtime_m4D23A464C46E4B627894B5ABD190C3DE060D9376(NULL);
-		MarkdownVisualElement_t0E3EBE59FF7664CE271CEF836B818A9A55AC5ECE* L_85;
-		L_85 = UMarkdown_Parse_m215BDAC42BCBB6CD66D3C1E5E97EF40B37943EBC(L_83, L_84, NULL);
-		V_10 = L_85;
-		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:818>
-		ScrollView_t7CE209084E084FAA0E8DF3CD8E3B8BB9EB27E8D9* L_86 = __this->___detailView;
-		MarkdownVisualElement_t0E3EBE59FF7664CE271CEF836B818A9A55AC5ECE* L_87 = V_10;
-		NullCheck(L_86);
-		VisualElement_Add_mE2571CCB23C09103F8732EEC73833683F7236A7F(L_86, L_87, NULL);
-		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:819>
-		MarkdownVisualElement_t0E3EBE59FF7664CE271CEF836B818A9A55AC5ECE* L_88 = V_10;
-		JobSearchUIController_ApplyTableStyles_mF7A1F66AD7863472A3BA311F39FEB587504112A1(__this, L_88, NULL);
-		goto IL_0270;
-	}
-
-IL_024f:
-	{
-		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:823>
-		String_t* L_89 = V_1;
-		Label_tC160668F9119CE0F5567021FB208E64A5B1C5B70* L_90 = (Label_tC160668F9119CE0F5567021FB208E64A5B1C5B70*)il2cpp_codegen_object_new(Label_tC160668F9119CE0F5567021FB208E64A5B1C5B70_il2cpp_TypeInfo_var);
-		Label__ctor_m83EBFB8426823A52FD005780264806926C731009(L_90, L_89, NULL);
-		V_12 = L_90;
-		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:824>
-		Label_tC160668F9119CE0F5567021FB208E64A5B1C5B70* L_91 = V_12;
-		NullCheck(L_91);
-		VisualElement_AddToClassList_mAF0DD8D8CFD5130229A0471DD260E01ED82117F1(L_91, _stringLiteral0A131A8E35103925FDD2D4B843CAE3B8E95B2C5A, NULL);
-		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:825>
-		ScrollView_t7CE209084E084FAA0E8DF3CD8E3B8BB9EB27E8D9* L_92 = __this->___detailView;
-		Label_tC160668F9119CE0F5567021FB208E64A5B1C5B70* L_93 = V_12;
-		NullCheck(L_92);
-		VisualElement_Add_mE2571CCB23C09103F8732EEC73833683F7236A7F(L_92, L_93, NULL);
-	}
-
-IL_0270:
-	{
-		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:830>
-		int32_t L_94 = __this->___totalMatches;
-		if ((((int32_t)L_94) <= ((int32_t)0)))
+		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:925>
+		String_t* L_87 = V_2;
+		NullCheck(L_87);
+		bool L_88;
+		L_88 = String_EndsWith_m5E5D307CA6AEB7C08CE782B4693B19D07ADC9075(L_87, _stringLiteralDFADBE5FBB51442102D6972975DEC6610EA336A4, 5, NULL);
+		if (!L_88)
 		{
-			goto IL_029d;
+			goto IL_0277;
 		}
 	}
 	{
-		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:834>
-		ScrollView_t7CE209084E084FAA0E8DF3CD8E3B8BB9EB27E8D9* L_95 = __this->___detailView;
-		NullCheck(L_95);
-		RuntimeObject* L_96;
-		L_96 = VisualElement_get_schedule_m2BFE6967ED82371ACE1CD1FC32B8D8B93646ED76(L_95, NULL);
-		Action_tD00B0A84D7945E50C2DFFC28EFEE6ED44ED2AD07* L_97 = (Action_tD00B0A84D7945E50C2DFFC28EFEE6ED44ED2AD07*)il2cpp_codegen_object_new(Action_tD00B0A84D7945E50C2DFFC28EFEE6ED44ED2AD07_il2cpp_TypeInfo_var);
-		Action__ctor_mBDC7B0B4A3F583B64C2896F01BDED360772F67DC(L_97, __this, (intptr_t)((void*)JobSearchUIController_U3CRenderDetailViewU3Eb__46_1_mDD060941F9BA4462720633C5777A2F2DB0E978E3_RuntimeMethod_var), NULL);
-		NullCheck(L_96);
-		RuntimeObject* L_98;
-		L_98 = InterfaceFuncInvoker1< RuntimeObject*, Action_tD00B0A84D7945E50C2DFFC28EFEE6ED44ED2AD07* >::Invoke(1, IVisualElementScheduler_tA68650FA9218398E77265748741B091638336FD8_il2cpp_TypeInfo_var, L_96, L_97);
-		NullCheck(L_98);
-		InterfaceActionInvoker1< int64_t >::Invoke(3, IVisualElementScheduledItem_t309F1A5445514122A9E3F64182D0D8A4DE34C48F_il2cpp_TypeInfo_var, L_98, ((int64_t)((int32_t)100)));
+		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:927>
+		String_t* L_89 = V_1;
+		UMarkdownContext_t0DACEEADCE750320BBEA9C49A396C0227BFC3713* L_90;
+		L_90 = UMarkdownContext_Runtime_m4D23A464C46E4B627894B5ABD190C3DE060D9376(NULL);
+		MarkdownVisualElement_t0E3EBE59FF7664CE271CEF836B818A9A55AC5ECE* L_91;
+		L_91 = UMarkdown_Parse_m215BDAC42BCBB6CD66D3C1E5E97EF40B37943EBC(L_89, L_90, NULL);
+		V_9 = L_91;
+		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:928>
+		ScrollView_t7CE209084E084FAA0E8DF3CD8E3B8BB9EB27E8D9* L_92 = __this->___detailView;
+		MarkdownVisualElement_t0E3EBE59FF7664CE271CEF836B818A9A55AC5ECE* L_93 = V_9;
+		NullCheck(L_92);
+		VisualElement_Add_mE2571CCB23C09103F8732EEC73833683F7236A7F(L_92, L_93, NULL);
+		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:929>
+		MarkdownVisualElement_t0E3EBE59FF7664CE271CEF836B818A9A55AC5ECE* L_94 = V_9;
+		JobSearchUIController_ApplyTableStyles_mF7A1F66AD7863472A3BA311F39FEB587504112A1(__this, L_94, NULL);
+		goto IL_0336;
 	}
 
-IL_029d:
+IL_0277:
 	{
-		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:836>
+		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:931>
+		String_t* L_95 = V_2;
+		NullCheck(L_95);
+		bool L_96;
+		L_96 = String_EndsWith_m5E5D307CA6AEB7C08CE782B4693B19D07ADC9075(L_95, _stringLiteral3EBB9A38A97662C2D8E12F1E8E95FE80A2B17A4C, 5, NULL);
+		if (!L_96)
+		{
+			goto IL_0315;
+		}
+	}
+	{
+		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:934>
+		String_t* L_97 = V_2;
+		String_t* L_98;
+		L_98 = JobSearchUIController_GetFileContent_mF4E9C45C32875BE6B89AEB4E8CF005829B571335(__this, L_97, NULL);
+		V_10 = L_98;
+		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:935>
+		String_t* L_99 = V_10;
+		String_t* L_100;
+		L_100 = JobSearchUIController_CsvToMarkdownTable_mED27827B8664F4D4C859296869AAEA62E3F8AB04(__this, L_99, NULL);
+		V_11 = L_100;
+		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:937>
+		String_t* L_101 = __this->___currentSearchTerm;
+		bool L_102;
+		L_102 = String_IsNullOrEmpty_mEA9E3FB005AC28FE02E69FCF95A7B8456192B478(L_101, NULL);
+		if (L_102)
+		{
+			goto IL_02f0;
+		}
+	}
+	{
+		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:939>
+		String_t* L_103 = V_11;
+		String_t* L_104 = __this->___currentSearchTerm;
+		List_1_t425196350A2888B269895DE1C865A3E7E4E2C9B6* L_105;
+		L_105 = JobSearchUIController_GetValidMatches_m753FD2D070CADF0FAA75EF55CDF3E30C8B26435B(__this, L_103, L_104, NULL);
+		V_13 = L_105;
+		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:941>
+		bool L_106 = ___0_resetMatches;
+		if (!L_106)
+		{
+			goto IL_02de;
+		}
+	}
+	{
+		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:944>
+		List_1_t425196350A2888B269895DE1C865A3E7E4E2C9B6* L_107 = V_13;
+		NullCheck(L_107);
+		int32_t L_108;
+		L_108 = List_1_get_Count_m0D93129BCC0D9DE175A69DBA52CEF2C5C01655FA_inline(L_107, List_1_get_Count_m0D93129BCC0D9DE175A69DBA52CEF2C5C01655FA_RuntimeMethod_var);
+		__this->___totalMatches = L_108;
+		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:945>
+		int32_t L_109 = __this->___totalMatches;
+		if ((((int32_t)L_109) <= ((int32_t)0)))
+		{
+			goto IL_02d8;
+		}
+	}
+	{
+		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:947>
+		__this->___currentMatchIndex = 0;
+	}
+
+IL_02d8:
+	{
+		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:949>
+		JobSearchUIController_UpdateMatchCountUI_m6E0FE1E48F981AA2115D77E4BDB6B0C195A417D4(__this, NULL);
+	}
+
+IL_02de:
+	{
+		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:952>
+		String_t* L_110 = V_11;
+		List_1_t425196350A2888B269895DE1C865A3E7E4E2C9B6* L_111 = V_13;
+		int32_t L_112 = __this->___currentMatchIndex;
+		String_t* L_113;
+		L_113 = JobSearchUIController_HighlightText_mA788090FDB79303519C05065052A2FCE22576894(__this, L_110, L_111, L_112, NULL);
+		V_11 = L_113;
+	}
+
+IL_02f0:
+	{
+		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:955>
+		String_t* L_114 = V_11;
+		UMarkdownContext_t0DACEEADCE750320BBEA9C49A396C0227BFC3713* L_115;
+		L_115 = UMarkdownContext_Runtime_m4D23A464C46E4B627894B5ABD190C3DE060D9376(NULL);
+		MarkdownVisualElement_t0E3EBE59FF7664CE271CEF836B818A9A55AC5ECE* L_116;
+		L_116 = UMarkdown_Parse_m215BDAC42BCBB6CD66D3C1E5E97EF40B37943EBC(L_114, L_115, NULL);
+		V_12 = L_116;
+		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:956>
+		ScrollView_t7CE209084E084FAA0E8DF3CD8E3B8BB9EB27E8D9* L_117 = __this->___detailView;
+		MarkdownVisualElement_t0E3EBE59FF7664CE271CEF836B818A9A55AC5ECE* L_118 = V_12;
+		NullCheck(L_117);
+		VisualElement_Add_mE2571CCB23C09103F8732EEC73833683F7236A7F(L_117, L_118, NULL);
+		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:957>
+		MarkdownVisualElement_t0E3EBE59FF7664CE271CEF836B818A9A55AC5ECE* L_119 = V_12;
+		JobSearchUIController_ApplyTableStyles_mF7A1F66AD7863472A3BA311F39FEB587504112A1(__this, L_119, NULL);
+		goto IL_0336;
+	}
+
+IL_0315:
+	{
+		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:961>
+		String_t* L_120 = V_1;
+		Label_tC160668F9119CE0F5567021FB208E64A5B1C5B70* L_121 = (Label_tC160668F9119CE0F5567021FB208E64A5B1C5B70*)il2cpp_codegen_object_new(Label_tC160668F9119CE0F5567021FB208E64A5B1C5B70_il2cpp_TypeInfo_var);
+		Label__ctor_m83EBFB8426823A52FD005780264806926C731009(L_121, L_120, NULL);
+		V_14 = L_121;
+		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:962>
+		Label_tC160668F9119CE0F5567021FB208E64A5B1C5B70* L_122 = V_14;
+		NullCheck(L_122);
+		VisualElement_AddToClassList_mAF0DD8D8CFD5130229A0471DD260E01ED82117F1(L_122, _stringLiteral0A131A8E35103925FDD2D4B843CAE3B8E95B2C5A, NULL);
+		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:963>
+		ScrollView_t7CE209084E084FAA0E8DF3CD8E3B8BB9EB27E8D9* L_123 = __this->___detailView;
+		Label_tC160668F9119CE0F5567021FB208E64A5B1C5B70* L_124 = V_14;
+		NullCheck(L_123);
+		VisualElement_Add_mE2571CCB23C09103F8732EEC73833683F7236A7F(L_123, L_124, NULL);
+	}
+
+IL_0336:
+	{
+		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:968>
+		int32_t L_125 = __this->___totalMatches;
+		if ((((int32_t)L_125) <= ((int32_t)0)))
+		{
+			goto IL_0363;
+		}
+	}
+	{
+		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:972>
+		ScrollView_t7CE209084E084FAA0E8DF3CD8E3B8BB9EB27E8D9* L_126 = __this->___detailView;
+		NullCheck(L_126);
+		RuntimeObject* L_127;
+		L_127 = VisualElement_get_schedule_m2BFE6967ED82371ACE1CD1FC32B8D8B93646ED76(L_126, NULL);
+		Action_tD00B0A84D7945E50C2DFFC28EFEE6ED44ED2AD07* L_128 = (Action_tD00B0A84D7945E50C2DFFC28EFEE6ED44ED2AD07*)il2cpp_codegen_object_new(Action_tD00B0A84D7945E50C2DFFC28EFEE6ED44ED2AD07_il2cpp_TypeInfo_var);
+		Action__ctor_mBDC7B0B4A3F583B64C2896F01BDED360772F67DC(L_128, __this, (intptr_t)((void*)JobSearchUIController_U3CRenderDetailViewU3Eb__46_1_mDD060941F9BA4462720633C5777A2F2DB0E978E3_RuntimeMethod_var), NULL);
+		NullCheck(L_127);
+		RuntimeObject* L_129;
+		L_129 = InterfaceFuncInvoker1< RuntimeObject*, Action_tD00B0A84D7945E50C2DFFC28EFEE6ED44ED2AD07* >::Invoke(1, IVisualElementScheduler_tA68650FA9218398E77265748741B091638336FD8_il2cpp_TypeInfo_var, L_127, L_128);
+		NullCheck(L_129);
+		InterfaceActionInvoker1< int64_t >::Invoke(3, IVisualElementScheduledItem_t309F1A5445514122A9E3F64182D0D8A4DE34C48F_il2cpp_TypeInfo_var, L_129, ((int64_t)((int32_t)100)));
+	}
+
+IL_0363:
+	{
+		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:974>
 		return;
 	}
 }
@@ -19118,17 +19278,17 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* JobSearchUIController_ResolvePath_m
 	int32_t V_2 = 0;
 	String_t* V_3 = NULL;
 	{
-		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:841>
+		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:979>
 		String_t* L_0 = ___0_path;
 		NullCheck(L_0);
 		String_t* L_1;
 		L_1 = String_Replace_mABDB7003A1D0AEDCAE9FF85E3DFFFBA752D2A166(L_0, _stringLiteral09B11B6CC411D8B9FFB75EAAE9A35B2AF248CE40, _stringLiteral86BBAACC00198DBB3046818AD3FC2AA10AE48DE1, NULL);
 		___0_path = L_1;
-		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:843>
+		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:981>
 		List_1_tF470A3BE5C1B5B68E1325EF3F109D172E60BD7CD* L_2 = (List_1_tF470A3BE5C1B5B68E1325EF3F109D172E60BD7CD*)il2cpp_codegen_object_new(List_1_tF470A3BE5C1B5B68E1325EF3F109D172E60BD7CD_il2cpp_TypeInfo_var);
 		List_1__ctor_mCA8DD57EAC70C2B5923DBB9D5A77CEAC22E7068E(L_2, List_1__ctor_mCA8DD57EAC70C2B5923DBB9D5A77CEAC22E7068E_RuntimeMethod_var);
 		V_0 = L_2;
-		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:844>
+		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:982>
 		String_t* L_3 = ___0_path;
 		CharU5BU5D_t799905CF001DD5F13F7DBB310181FC4D8B7D0AAB* L_4 = (CharU5BU5D_t799905CF001DD5F13F7DBB310181FC4D8B7D0AAB*)(CharU5BU5D_t799905CF001DD5F13F7DBB310181FC4D8B7D0AAB*)SZArrayNew(CharU5BU5D_t799905CF001DD5F13F7DBB310181FC4D8B7D0AAB_il2cpp_TypeInfo_var, (uint32_t)1);
 		CharU5BU5D_t799905CF001DD5F13F7DBB310181FC4D8B7D0AAB* L_5 = L_4;
@@ -19137,7 +19297,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* JobSearchUIController_ResolvePath_m
 		NullCheck(L_3);
 		StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* L_6;
 		L_6 = String_Split_m6811F7CF4DE7C68019D76E9DC6D17B2293BA8B12(L_3, L_5, 1, NULL);
-		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:846>
+		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:984>
 		V_1 = L_6;
 		V_2 = 0;
 		goto IL_0071;
@@ -19145,14 +19305,14 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* JobSearchUIController_ResolvePath_m
 
 IL_002f:
 	{
-		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:846>
+		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:984>
 		StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* L_7 = V_1;
 		int32_t L_8 = V_2;
 		NullCheck(L_7);
 		int32_t L_9 = L_8;
 		String_t* L_10 = (L_7)->GetAt(static_cast<il2cpp_array_size_t>(L_9));
 		V_3 = L_10;
-		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:848>
+		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:986>
 		String_t* L_11 = V_3;
 		bool L_12;
 		L_12 = String_op_Equality_m030E1B219352228970A076136E455C4E568C02C1(L_11, _stringLiteral26DC9E6A16A2B862023CCDC29E42E5404E9ACD4F, NULL);
@@ -19162,7 +19322,7 @@ IL_002f:
 		}
 	}
 	{
-		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:850>
+		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:988>
 		List_1_tF470A3BE5C1B5B68E1325EF3F109D172E60BD7CD* L_13 = V_0;
 		NullCheck(L_13);
 		int32_t L_14;
@@ -19173,7 +19333,7 @@ IL_002f:
 		}
 	}
 	{
-		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:851>
+		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:989>
 		List_1_tF470A3BE5C1B5B68E1325EF3F109D172E60BD7CD* L_15 = V_0;
 		List_1_tF470A3BE5C1B5B68E1325EF3F109D172E60BD7CD* L_16 = V_0;
 		NullCheck(L_16);
@@ -19186,7 +19346,7 @@ IL_002f:
 
 IL_0059:
 	{
-		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:853>
+		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:991>
 		String_t* L_18 = V_3;
 		bool L_19;
 		L_19 = String_op_Inequality_m8C940F3CFC42866709D7CA931B3D77B4BE94BCB6(L_18, _stringLiteralF3E84B722399601AD7E281754E917478AA9AD48D, NULL);
@@ -19196,7 +19356,7 @@ IL_0059:
 		}
 	}
 	{
-		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:855>
+		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:993>
 		List_1_tF470A3BE5C1B5B68E1325EF3F109D172E60BD7CD* L_20 = V_0;
 		String_t* L_21 = V_3;
 		NullCheck(L_20);
@@ -19211,7 +19371,7 @@ IL_006d:
 
 IL_0071:
 	{
-		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:846>
+		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:984>
 		int32_t L_23 = V_2;
 		StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* L_24 = V_1;
 		NullCheck(L_24);
@@ -19221,7 +19381,7 @@ IL_0071:
 		}
 	}
 	{
-		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:859>
+		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:997>
 		List_1_tF470A3BE5C1B5B68E1325EF3F109D172E60BD7CD* L_25 = V_0;
 		String_t* L_26;
 		L_26 = String_Join_m8159F953B3D62AA54A0853A6E9573CDC0F63E158(_stringLiteral86BBAACC00198DBB3046818AD3FC2AA10AE48DE1, L_25, NULL);
@@ -19280,7 +19440,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR List_1_t425196350A2888B269895DE1C865A3E7E4E2C
 	ValueTuple_2_t973F7AB0EF5DD3619E518A966941F10D8098F52D V_14;
 	memset((&V_14), 0, sizeof(V_14));
 	{
-		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:864>
+		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1002>
 		String_t* L_0 = ___0_text;
 		bool L_1;
 		L_1 = String_IsNullOrEmpty_mEA9E3FB005AC28FE02E69FCF95A7B8456192B478(L_0, NULL);
@@ -19301,7 +19461,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR List_1_t425196350A2888B269895DE1C865A3E7E4E2C
 
 IL_0010:
 	{
-		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:864>
+		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1002>
 		List_1_t425196350A2888B269895DE1C865A3E7E4E2C9B6* L_4 = (List_1_t425196350A2888B269895DE1C865A3E7E4E2C9B6*)il2cpp_codegen_object_new(List_1_t425196350A2888B269895DE1C865A3E7E4E2C9B6_il2cpp_TypeInfo_var);
 		List_1__ctor_m781B70C57EDA95F60B8836BC2ACC28D081D51FAE(L_4, List_1__ctor_m781B70C57EDA95F60B8836BC2ACC28D081D51FAE_RuntimeMethod_var);
 		return L_4;
@@ -19309,7 +19469,7 @@ IL_0010:
 
 IL_0016:
 	{
-		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:866>
+		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1004>
 		String_t* L_5 = ___0_text;
 		String_t* L_6 = ___1_term;
 		il2cpp_codegen_runtime_class_init_inline(Regex_tE773142C2BE45C5D362B0F815AFF831707A51772_il2cpp_TypeInfo_var);
@@ -19322,15 +19482,15 @@ IL_0016:
 		List_1_t425196350A2888B269895DE1C865A3E7E4E2C9B6* L_10;
 		L_10 = Enumerable_ToList_TisMatch_tFBEBCF225BD8EA17BCE6CE3FE5C1BD8E3074105F_m99D7EB79E67ADE2BB884AF8F4302A2F9EFA435E7(L_9, Enumerable_ToList_TisMatch_tFBEBCF225BD8EA17BCE6CE3FE5C1BD8E3074105F_m99D7EB79E67ADE2BB884AF8F4302A2F9EFA435E7_RuntimeMethod_var);
 		V_0 = L_10;
-		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:867>
+		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1005>
 		List_1_t425196350A2888B269895DE1C865A3E7E4E2C9B6* L_11 = (List_1_t425196350A2888B269895DE1C865A3E7E4E2C9B6*)il2cpp_codegen_object_new(List_1_t425196350A2888B269895DE1C865A3E7E4E2C9B6_il2cpp_TypeInfo_var);
 		List_1__ctor_m781B70C57EDA95F60B8836BC2ACC28D081D51FAE(L_11, List_1__ctor_m781B70C57EDA95F60B8836BC2ACC28D081D51FAE_RuntimeMethod_var);
 		V_1 = L_11;
-		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:869>
+		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1007>
 		List_1_t524AA52218730C1F34ECD6B5431C1EF28C50E95B* L_12 = (List_1_t524AA52218730C1F34ECD6B5431C1EF28C50E95B*)il2cpp_codegen_object_new(List_1_t524AA52218730C1F34ECD6B5431C1EF28C50E95B_il2cpp_TypeInfo_var);
 		List_1__ctor_mB54BAEB6C21AF5571605F1F9EE491ACCD8D645E9(L_12, List_1__ctor_mB54BAEB6C21AF5571605F1F9EE491ACCD8D645E9_RuntimeMethod_var);
 		V_2 = L_12;
-		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:872>
+		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1010>
 		String_t* L_13 = ___0_text;
 		MatchCollection_t84805BAED3D556A405EE3FD165856045026106BC* L_14;
 		L_14 = Regex_Matches_m6173BAB925E8664D3E962C59D780625528CAC22F(L_13, _stringLiteral29DB9D933DF6DF545B64544E53EEFF27010DE7D5, NULL);
@@ -19374,13 +19534,13 @@ IL_00b6:
 
 IL_004d_1:
 			{
-				//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:872>
+				//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1010>
 				RuntimeObject* L_19 = V_3;
 				NullCheck(L_19);
 				RuntimeObject* L_20;
 				L_20 = InterfaceFuncInvoker0< RuntimeObject* >::Invoke(1, IEnumerator_t7B609C2FFA6EB5167D9C62A0C32A21DE2F666DAA_il2cpp_TypeInfo_var, L_19);
 				V_4 = ((Match_tFBEBCF225BD8EA17BCE6CE3FE5C1BD8E3074105F*)CastclassClass((RuntimeObject*)L_20, Match_tFBEBCF225BD8EA17BCE6CE3FE5C1BD8E3074105F_il2cpp_TypeInfo_var));
-				//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:874>
+				//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1012>
 				Match_tFBEBCF225BD8EA17BCE6CE3FE5C1BD8E3074105F* L_21 = V_4;
 				NullCheck(L_21);
 				GroupCollection_tFFA1789730DD9EA122FBE77DC03BFEDCC3F2945E* L_22;
@@ -19394,7 +19554,7 @@ IL_004d_1:
 				}
 			}
 			{
-				//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:876>
+				//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1014>
 				Match_tFBEBCF225BD8EA17BCE6CE3FE5C1BD8E3074105F* L_24 = V_4;
 				NullCheck(L_24);
 				GroupCollection_tFFA1789730DD9EA122FBE77DC03BFEDCC3F2945E* L_25;
@@ -19403,7 +19563,7 @@ IL_004d_1:
 				Group_t26371E9136D6F43782C487B63C67C5FC4F472881* L_26;
 				L_26 = GroupCollection_get_Item_m40EC174D4AC8FDD68F8819C35B779C79A44322F3(L_25, 1, NULL);
 				V_5 = L_26;
-				//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:877>
+				//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1015>
 				List_1_t524AA52218730C1F34ECD6B5431C1EF28C50E95B* L_27 = V_2;
 				Group_t26371E9136D6F43782C487B63C67C5FC4F472881* L_28 = V_5;
 				NullCheck(L_28);
@@ -19426,7 +19586,7 @@ IL_004d_1:
 
 IL_0099_1:
 			{
-				//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:872>
+				//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1010>
 				RuntimeObject* L_35 = V_3;
 				NullCheck(L_35);
 				bool L_36;
@@ -19448,7 +19608,7 @@ IL_0099_1:
 
 IL_00b7:
 	{
-		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:882>
+		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1020>
 		String_t* L_37 = ___0_text;
 		il2cpp_codegen_runtime_class_init_inline(Regex_tE773142C2BE45C5D362B0F815AFF831707A51772_il2cpp_TypeInfo_var);
 		MatchCollection_t84805BAED3D556A405EE3FD165856045026106BC* L_38;
@@ -19493,13 +19653,13 @@ IL_0115:
 
 IL_00ca_1:
 			{
-				//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:882>
+				//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1020>
 				RuntimeObject* L_43 = V_3;
 				NullCheck(L_43);
 				RuntimeObject* L_44;
 				L_44 = InterfaceFuncInvoker0< RuntimeObject* >::Invoke(1, IEnumerator_t7B609C2FFA6EB5167D9C62A0C32A21DE2F666DAA_il2cpp_TypeInfo_var, L_43);
 				V_7 = ((Match_tFBEBCF225BD8EA17BCE6CE3FE5C1BD8E3074105F*)CastclassClass((RuntimeObject*)L_44, Match_tFBEBCF225BD8EA17BCE6CE3FE5C1BD8E3074105F_il2cpp_TypeInfo_var));
-				//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:884>
+				//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1022>
 				List_1_t524AA52218730C1F34ECD6B5431C1EF28C50E95B* L_45 = V_2;
 				Match_tFBEBCF225BD8EA17BCE6CE3FE5C1BD8E3074105F* L_46 = V_7;
 				NullCheck(L_46);
@@ -19522,7 +19682,7 @@ IL_00ca_1:
 
 IL_00f8_1:
 			{
-				//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:882>
+				//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1020>
 				RuntimeObject* L_53 = V_3;
 				NullCheck(L_53);
 				bool L_54;
@@ -19544,7 +19704,7 @@ IL_00f8_1:
 
 IL_0116:
 	{
-		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:888>
+		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1026>
 		String_t* L_55 = ___0_text;
 		il2cpp_codegen_runtime_class_init_inline(Regex_tE773142C2BE45C5D362B0F815AFF831707A51772_il2cpp_TypeInfo_var);
 		MatchCollection_t84805BAED3D556A405EE3FD165856045026106BC* L_56;
@@ -19589,13 +19749,13 @@ IL_0175:
 
 IL_012a_1:
 			{
-				//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:888>
+				//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1026>
 				RuntimeObject* L_61 = V_3;
 				NullCheck(L_61);
 				RuntimeObject* L_62;
 				L_62 = InterfaceFuncInvoker0< RuntimeObject* >::Invoke(1, IEnumerator_t7B609C2FFA6EB5167D9C62A0C32A21DE2F666DAA_il2cpp_TypeInfo_var, L_61);
 				V_8 = ((Match_tFBEBCF225BD8EA17BCE6CE3FE5C1BD8E3074105F*)CastclassClass((RuntimeObject*)L_62, Match_tFBEBCF225BD8EA17BCE6CE3FE5C1BD8E3074105F_il2cpp_TypeInfo_var));
-				//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:890>
+				//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1028>
 				List_1_t524AA52218730C1F34ECD6B5431C1EF28C50E95B* L_63 = V_2;
 				Match_tFBEBCF225BD8EA17BCE6CE3FE5C1BD8E3074105F* L_64 = V_8;
 				NullCheck(L_64);
@@ -19618,7 +19778,7 @@ IL_012a_1:
 
 IL_0158_1:
 			{
-				//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:888>
+				//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1026>
 				RuntimeObject* L_71 = V_3;
 				NullCheck(L_71);
 				bool L_72;
@@ -19640,7 +19800,7 @@ IL_0158_1:
 
 IL_0176:
 	{
-		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:896>
+		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1034>
 		String_t* L_73 = ___0_text;
 		il2cpp_codegen_runtime_class_init_inline(Regex_tE773142C2BE45C5D362B0F815AFF831707A51772_il2cpp_TypeInfo_var);
 		MatchCollection_t84805BAED3D556A405EE3FD165856045026106BC* L_74;
@@ -19685,13 +19845,13 @@ IL_01d4:
 
 IL_0189_1:
 			{
-				//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:896>
+				//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1034>
 				RuntimeObject* L_79 = V_3;
 				NullCheck(L_79);
 				RuntimeObject* L_80;
 				L_80 = InterfaceFuncInvoker0< RuntimeObject* >::Invoke(1, IEnumerator_t7B609C2FFA6EB5167D9C62A0C32A21DE2F666DAA_il2cpp_TypeInfo_var, L_79);
 				V_9 = ((Match_tFBEBCF225BD8EA17BCE6CE3FE5C1BD8E3074105F*)CastclassClass((RuntimeObject*)L_80, Match_tFBEBCF225BD8EA17BCE6CE3FE5C1BD8E3074105F_il2cpp_TypeInfo_var));
-				//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:898>
+				//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1036>
 				List_1_t524AA52218730C1F34ECD6B5431C1EF28C50E95B* L_81 = V_2;
 				Match_tFBEBCF225BD8EA17BCE6CE3FE5C1BD8E3074105F* L_82 = V_9;
 				NullCheck(L_82);
@@ -19714,7 +19874,7 @@ IL_0189_1:
 
 IL_01b7_1:
 			{
-				//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:896>
+				//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1034>
 				RuntimeObject* L_89 = V_3;
 				NullCheck(L_89);
 				bool L_90;
@@ -19736,7 +19896,7 @@ IL_01b7_1:
 
 IL_01d5:
 	{
-		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:901>
+		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1039>
 		List_1_t425196350A2888B269895DE1C865A3E7E4E2C9B6* L_91 = V_0;
 		NullCheck(L_91);
 		Enumerator_t6598A88A9BA8128D76B421B7FE25CC31F48FE777 L_92;
@@ -19761,13 +19921,13 @@ FINALLY_0253:
 
 IL_01df_1:
 			{
-				//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:901>
+				//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1039>
 				Match_tFBEBCF225BD8EA17BCE6CE3FE5C1BD8E3074105F* L_93;
 				L_93 = Enumerator_get_Current_m869F50C39E9A7A11E76D1D5064C0484BEAF44872_inline((&V_10), Enumerator_get_Current_m869F50C39E9A7A11E76D1D5064C0484BEAF44872_RuntimeMethod_var);
 				V_11 = L_93;
-				//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:903>
+				//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1041>
 				V_12 = (bool)0;
-				//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:904>
+				//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1042>
 				List_1_t524AA52218730C1F34ECD6B5431C1EF28C50E95B* L_94 = V_2;
 				NullCheck(L_94);
 				Enumerator_tBEB5A548C0F75ED5F2B2798ED1BC59C83E7F04D0 L_95;
@@ -19792,11 +19952,11 @@ FINALLY_022e_1:
 
 IL_01f5_2:
 					{
-						//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:904>
+						//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1042>
 						ValueTuple_2_t973F7AB0EF5DD3619E518A966941F10D8098F52D L_96;
 						L_96 = Enumerator_get_Current_mD7D5D7BA923917170CB86166EE769487FC0C8EE3_inline((&V_13), Enumerator_get_Current_mD7D5D7BA923917170CB86166EE769487FC0C8EE3_RuntimeMethod_var);
 						V_14 = L_96;
-						//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:906>
+						//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1044>
 						Match_tFBEBCF225BD8EA17BCE6CE3FE5C1BD8E3074105F* L_97 = V_11;
 						NullCheck(L_97);
 						int32_t L_98;
@@ -19821,15 +19981,15 @@ IL_01f5_2:
 						}
 					}
 					{
-						//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:908>
+						//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1046>
 						V_12 = (bool)1;
-						//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:909>
+						//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1047>
 						goto IL_023c_1;
 					}
 
 IL_0223_2:
 					{
-						//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:904>
+						//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1042>
 						bool L_105;
 						L_105 = Enumerator_MoveNext_m854A90B9F1E332EEFA8428904FFA1B71C2330F44((&V_13), Enumerator_MoveNext_m854A90B9F1E332EEFA8428904FFA1B71C2330F44_RuntimeMethod_var);
 						if (L_105)
@@ -19849,7 +20009,7 @@ IL_0223_2:
 
 IL_023c_1:
 			{
-				//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:913>
+				//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1051>
 				bool L_106 = V_12;
 				if (L_106)
 				{
@@ -19857,7 +20017,7 @@ IL_023c_1:
 				}
 			}
 			{
-				//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:915>
+				//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1053>
 				List_1_t425196350A2888B269895DE1C865A3E7E4E2C9B6* L_107 = V_1;
 				Match_tFBEBCF225BD8EA17BCE6CE3FE5C1BD8E3074105F* L_108 = V_11;
 				NullCheck(L_107);
@@ -19866,7 +20026,7 @@ IL_023c_1:
 
 IL_0248_1:
 			{
-				//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:901>
+				//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1039>
 				bool L_109;
 				L_109 = Enumerator_MoveNext_mC78E8880681ABA11560BB1BFC2F805C4FD65224E((&V_10), Enumerator_MoveNext_mC78E8880681ABA11560BB1BFC2F805C4FD65224E_RuntimeMethod_var);
 				if (L_109)
@@ -19886,7 +20046,7 @@ IL_0248_1:
 
 IL_0261:
 	{
-		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:919>
+		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1057>
 		List_1_t425196350A2888B269895DE1C865A3E7E4E2C9B6* L_110 = V_1;
 		return L_110;
 	}
@@ -19915,7 +20075,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* JobSearchUIController_HighlightText
 	String_t* V_4 = NULL;
 	String_t* G_B8_0 = NULL;
 	{
-		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:924>
+		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1062>
 		String_t* L_0 = ___0_text;
 		bool L_1;
 		L_1 = String_IsNullOrEmpty_mEA9E3FB005AC28FE02E69FCF95A7B8456192B478(L_0, NULL);
@@ -19944,34 +20104,34 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* JobSearchUIController_HighlightText
 
 IL_0013:
 	{
-		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:924>
+		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1062>
 		String_t* L_5 = ___0_text;
 		return L_5;
 	}
 
 IL_0015:
 	{
-		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:926>
+		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1064>
 		StringBuilder_t* L_6 = (StringBuilder_t*)il2cpp_codegen_object_new(StringBuilder_t_il2cpp_TypeInfo_var);
 		StringBuilder__ctor_m1D99713357DE05DAFA296633639DB55F8C30587D(L_6, NULL);
 		V_0 = L_6;
-		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:927>
+		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1065>
 		V_1 = 0;
-		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:929>
+		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1067>
 		V_2 = 0;
 		goto IL_009b;
 	}
 
 IL_0021:
 	{
-		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:931>
+		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1069>
 		List_1_t425196350A2888B269895DE1C865A3E7E4E2C9B6* L_7 = ___1_matches;
 		int32_t L_8 = V_2;
 		NullCheck(L_7);
 		Match_tFBEBCF225BD8EA17BCE6CE3FE5C1BD8E3074105F* L_9;
 		L_9 = List_1_get_Item_mDFDA85F2FA83EA93846A5A4EF398CC153D64A575(L_7, L_8, List_1_get_Item_mDFDA85F2FA83EA93846A5A4EF398CC153D64A575_RuntimeMethod_var);
 		V_3 = L_9;
-		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:934>
+		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1072>
 		StringBuilder_t* L_10 = V_0;
 		String_t* L_11 = ___0_text;
 		int32_t L_12 = V_1;
@@ -19986,7 +20146,7 @@ IL_0021:
 		NullCheck(L_10);
 		StringBuilder_t* L_17;
 		L_17 = StringBuilder_Append_m08904D74E0C78E5F36DCD9C9303BDD07886D9F7D(L_10, L_16, NULL);
-		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:937>
+		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1075>
 		int32_t L_18 = V_2;
 		int32_t L_19 = ___2_activeIndex;
 		if ((((int32_t)L_18) == ((int32_t)L_19)))
@@ -20007,7 +20167,7 @@ IL_004a:
 IL_004f:
 	{
 		V_4 = G_B8_0;
-		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:938>
+		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1076>
 		StringBuilder_t* L_20 = V_0;
 		StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* L_21 = (StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248*)(StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248*)SZArrayNew(StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248_il2cpp_TypeInfo_var, (uint32_t)5);
 		StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* L_22 = L_21;
@@ -20035,7 +20195,7 @@ IL_004f:
 		NullCheck(L_20);
 		StringBuilder_t* L_31;
 		L_31 = StringBuilder_Append_m08904D74E0C78E5F36DCD9C9303BDD07886D9F7D(L_20, L_30, NULL);
-		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:940>
+		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1078>
 		Match_tFBEBCF225BD8EA17BCE6CE3FE5C1BD8E3074105F* L_32 = V_3;
 		NullCheck(L_32);
 		int32_t L_33;
@@ -20045,14 +20205,14 @@ IL_004f:
 		int32_t L_35;
 		L_35 = Capture_get_Length_mA3E97C9DF116CD4B4C20EBFB70A1312F33DA7A92_inline(L_34, NULL);
 		V_1 = ((int32_t)il2cpp_codegen_add(L_33, L_35));
-		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:929>
+		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1067>
 		int32_t L_36 = V_2;
 		V_2 = ((int32_t)il2cpp_codegen_add(L_36, 1));
 	}
 
 IL_009b:
 	{
-		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:929>
+		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1067>
 		int32_t L_37 = V_2;
 		List_1_t425196350A2888B269895DE1C865A3E7E4E2C9B6* L_38 = ___1_matches;
 		NullCheck(L_38);
@@ -20064,7 +20224,7 @@ IL_009b:
 		}
 	}
 	{
-		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:944>
+		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1082>
 		StringBuilder_t* L_40 = V_0;
 		String_t* L_41 = ___0_text;
 		int32_t L_42 = V_1;
@@ -20074,7 +20234,7 @@ IL_009b:
 		NullCheck(L_40);
 		StringBuilder_t* L_44;
 		L_44 = StringBuilder_Append_m08904D74E0C78E5F36DCD9C9303BDD07886D9F7D(L_40, L_43, NULL);
-		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:946>
+		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1084>
 		StringBuilder_t* L_45 = V_0;
 		NullCheck(L_45);
 		String_t* L_46;
@@ -20121,11 +20281,11 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* JobSearchUIController_GenerateMainf
 	memset((&V_4), 0, sizeof(V_4));
 	JobTableRef_t1134D259A697A4DD914A077D1AD4B42F70362925* V_5 = NULL;
 	{
-		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:951>
+		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1089>
 		StringBuilder_t* L_0 = (StringBuilder_t*)il2cpp_codegen_object_new(StringBuilder_t_il2cpp_TypeInfo_var);
 		StringBuilder__ctor_m1D99713357DE05DAFA296633639DB55F8C30587D(L_0, NULL);
 		V_0 = L_0;
-		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:954>
+		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1092>
 		JobData_t9D91E157BECCA13AE4C6A8FE3B22AEB24C8B0512* L_1 = ___0_guide;
 		NullCheck(L_1);
 		String_t* L_2 = L_1->___summary;
@@ -20137,12 +20297,12 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* JobSearchUIController_GenerateMainf
 		}
 	}
 	{
-		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:956>
+		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1094>
 		StringBuilder_t* L_4 = V_0;
 		NullCheck(L_4);
 		StringBuilder_t* L_5;
 		L_5 = StringBuilder_AppendLine_mF75744CE941C63E33188E22E936B71A24D3CBF88(L_4, _stringLiteral5EA5D8018E8DC6EE8E0BDE5B8A5AC2326607A407, NULL);
-		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:957>
+		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1095>
 		StringBuilder_t* L_6 = V_0;
 		JobData_t9D91E157BECCA13AE4C6A8FE3B22AEB24C8B0512* L_7 = ___0_guide;
 		NullCheck(L_7);
@@ -20150,7 +20310,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* JobSearchUIController_GenerateMainf
 		NullCheck(L_6);
 		StringBuilder_t* L_9;
 		L_9 = StringBuilder_AppendLine_mF75744CE941C63E33188E22E936B71A24D3CBF88(L_6, L_8, NULL);
-		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:958>
+		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1096>
 		StringBuilder_t* L_10 = V_0;
 		NullCheck(L_10);
 		StringBuilder_t* L_11;
@@ -20159,7 +20319,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* JobSearchUIController_GenerateMainf
 
 IL_0033:
 	{
-		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:962>
+		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1100>
 		JobData_t9D91E157BECCA13AE4C6A8FE3B22AEB24C8B0512* L_12 = ___0_guide;
 		NullCheck(L_12);
 		List_1_tF470A3BE5C1B5B68E1325EF3F109D172E60BD7CD* L_13 = L_12->___accessSteps;
@@ -20181,19 +20341,19 @@ IL_0033:
 		}
 	}
 	{
-		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:964>
+		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1102>
 		StringBuilder_t* L_17 = V_0;
 		NullCheck(L_17);
 		StringBuilder_t* L_18;
 		L_18 = StringBuilder_AppendLine_mF75744CE941C63E33188E22E936B71A24D3CBF88(L_17, _stringLiteral987F1530FDCE886B0FE83618529105D4184F325C, NULL);
-		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:965>
+		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1103>
 		V_1 = 0;
 		goto IL_0082;
 	}
 
 IL_0059:
 	{
-		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:967>
+		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1105>
 		StringBuilder_t* L_19 = V_0;
 		int32_t L_20 = V_1;
 		int32_t L_21 = ((int32_t)il2cpp_codegen_add(L_20, 1));
@@ -20210,14 +20370,14 @@ IL_0059:
 		NullCheck(L_19);
 		StringBuilder_t* L_28;
 		L_28 = StringBuilder_AppendLine_mF75744CE941C63E33188E22E936B71A24D3CBF88(L_19, L_27, NULL);
-		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:965>
+		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1103>
 		int32_t L_29 = V_1;
 		V_1 = ((int32_t)il2cpp_codegen_add(L_29, 1));
 	}
 
 IL_0082:
 	{
-		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:965>
+		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1103>
 		int32_t L_30 = V_1;
 		JobData_t9D91E157BECCA13AE4C6A8FE3B22AEB24C8B0512* L_31 = ___0_guide;
 		NullCheck(L_31);
@@ -20231,7 +20391,7 @@ IL_0082:
 		}
 	}
 	{
-		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:969>
+		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1107>
 		StringBuilder_t* L_34 = V_0;
 		NullCheck(L_34);
 		StringBuilder_t* L_35;
@@ -20240,7 +20400,7 @@ IL_0082:
 
 IL_0097:
 	{
-		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:973>
+		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1111>
 		JobData_t9D91E157BECCA13AE4C6A8FE3B22AEB24C8B0512* L_36 = ___0_guide;
 		NullCheck(L_36);
 		List_1_tF470A3BE5C1B5B68E1325EF3F109D172E60BD7CD* L_37 = L_36->___usageTips;
@@ -20262,12 +20422,12 @@ IL_0097:
 		}
 	}
 	{
-		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:975>
+		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1113>
 		StringBuilder_t* L_41 = V_0;
 		NullCheck(L_41);
 		StringBuilder_t* L_42;
 		L_42 = StringBuilder_AppendLine_mF75744CE941C63E33188E22E936B71A24D3CBF88(L_41, _stringLiteral31E6154FA5D27F8BA6BECE146E25AA08A9F9B475, NULL);
-		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:976>
+		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1114>
 		JobData_t9D91E157BECCA13AE4C6A8FE3B22AEB24C8B0512* L_43 = ___0_guide;
 		NullCheck(L_43);
 		List_1_tF470A3BE5C1B5B68E1325EF3F109D172E60BD7CD* L_44 = L_43->___usageTips;
@@ -20294,11 +20454,11 @@ FINALLY_00ec:
 
 IL_00c7_1:
 			{
-				//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:976>
+				//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1114>
 				String_t* L_46;
 				L_46 = Enumerator_get_Current_m143541DD8FBCD313E7554EA738FA813B8F4DB11A_inline((&V_2), Enumerator_get_Current_m143541DD8FBCD313E7554EA738FA813B8F4DB11A_RuntimeMethod_var);
 				V_3 = L_46;
-				//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:978>
+				//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1116>
 				StringBuilder_t* L_47 = V_0;
 				String_t* L_48 = V_3;
 				String_t* L_49;
@@ -20310,7 +20470,7 @@ IL_00c7_1:
 
 IL_00e1_1:
 			{
-				//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:976>
+				//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1114>
 				bool L_51;
 				L_51 = Enumerator_MoveNext_mDB47EEC4531D33B9C33FD2E70BA15E1535A0F3ED((&V_2), Enumerator_MoveNext_mDB47EEC4531D33B9C33FD2E70BA15E1535A0F3ED_RuntimeMethod_var);
 				if (L_51)
@@ -20330,7 +20490,7 @@ IL_00e1_1:
 
 IL_00fa:
 	{
-		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:980>
+		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1118>
 		StringBuilder_t* L_52 = V_0;
 		NullCheck(L_52);
 		StringBuilder_t* L_53;
@@ -20339,7 +20499,7 @@ IL_00fa:
 
 IL_0101:
 	{
-		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:984>
+		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1122>
 		JobData_t9D91E157BECCA13AE4C6A8FE3B22AEB24C8B0512* L_54 = ___0_guide;
 		NullCheck(L_54);
 		List_1_t1F70ED1D639347CF69227F7892222EC87CD44D1B* L_55 = L_54->___links;
@@ -20361,12 +20521,12 @@ IL_0101:
 		}
 	}
 	{
-		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:986>
+		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1124>
 		StringBuilder_t* L_59 = V_0;
 		NullCheck(L_59);
 		StringBuilder_t* L_60;
 		L_60 = StringBuilder_AppendLine_mF75744CE941C63E33188E22E936B71A24D3CBF88(L_59, _stringLiteral104ED4081790DFDE2A4A1B4C00BD2CFBD074EBEF, NULL);
-		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:987>
+		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1125>
 		JobData_t9D91E157BECCA13AE4C6A8FE3B22AEB24C8B0512* L_61 = ___0_guide;
 		NullCheck(L_61);
 		List_1_t1F70ED1D639347CF69227F7892222EC87CD44D1B* L_62 = L_61->___links;
@@ -20393,11 +20553,11 @@ FINALLY_0187:
 
 IL_0135_1:
 			{
-				//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:987>
+				//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1125>
 				JobTableRef_t1134D259A697A4DD914A077D1AD4B42F70362925* L_64;
 				L_64 = Enumerator_get_Current_m6436376BC8068CF454E261021B84C5BF7D78F73F_inline((&V_4), Enumerator_get_Current_m6436376BC8068CF454E261021B84C5BF7D78F73F_RuntimeMethod_var);
 				V_5 = L_64;
-				//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:989>
+				//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1127>
 				StringBuilder_t* L_65 = V_0;
 				StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* L_66 = (StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248*)(StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248*)SZArrayNew(StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248_il2cpp_TypeInfo_var, (uint32_t)5);
 				StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* L_67 = L_66;
@@ -20430,7 +20590,7 @@ IL_0135_1:
 
 IL_017c_1:
 			{
-				//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:987>
+				//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1125>
 				bool L_78;
 				L_78 = Enumerator_MoveNext_m5811589C31132013DFF74A7D905570308EE78CA0((&V_4), Enumerator_MoveNext_m5811589C31132013DFF74A7D905570308EE78CA0_RuntimeMethod_var);
 				if (L_78)
@@ -20450,7 +20610,7 @@ IL_017c_1:
 
 IL_0195:
 	{
-		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:993>
+		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1131>
 		StringBuilder_t* L_79 = V_0;
 		NullCheck(L_79);
 		String_t* L_80;
@@ -20471,12 +20631,12 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void JobSearchUIController_RenderMainframeGui
 	MarkdownVisualElement_t0E3EBE59FF7664CE271CEF836B818A9A55AC5ECE* V_1 = NULL;
 	List_1_t425196350A2888B269895DE1C865A3E7E4E2C9B6* V_2 = NULL;
 	{
-		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:998>
+		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1136>
 		JobData_t9D91E157BECCA13AE4C6A8FE3B22AEB24C8B0512* L_0 = ___0_guide;
 		String_t* L_1;
 		L_1 = JobSearchUIController_GenerateMainframeContent_mE010F60DFED7CD4A21023C3F3A9689FABB9452A5(__this, L_0, NULL);
 		V_0 = L_1;
-		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:999>
+		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1137>
 		String_t* L_2 = __this->___currentSearchTerm;
 		bool L_3;
 		L_3 = String_IsNullOrEmpty_mEA9E3FB005AC28FE02E69FCF95A7B8456192B478(L_2, NULL);
@@ -20486,13 +20646,13 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void JobSearchUIController_RenderMainframeGui
 		}
 	}
 	{
-		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1001>
+		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1139>
 		String_t* L_4 = V_0;
 		String_t* L_5 = __this->___currentSearchTerm;
 		List_1_t425196350A2888B269895DE1C865A3E7E4E2C9B6* L_6;
 		L_6 = JobSearchUIController_GetValidMatches_m753FD2D070CADF0FAA75EF55CDF3E30C8B26435B(__this, L_4, L_5, NULL);
 		V_2 = L_6;
-		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1003>
+		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1141>
 		bool L_7 = ___1_resetMatches;
 		if (!L_7)
 		{
@@ -20500,13 +20660,13 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void JobSearchUIController_RenderMainframeGui
 		}
 	}
 	{
-		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1005>
+		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1143>
 		List_1_t425196350A2888B269895DE1C865A3E7E4E2C9B6* L_8 = V_2;
 		NullCheck(L_8);
 		int32_t L_9;
 		L_9 = List_1_get_Count_m0D93129BCC0D9DE175A69DBA52CEF2C5C01655FA_inline(L_8, List_1_get_Count_m0D93129BCC0D9DE175A69DBA52CEF2C5C01655FA_RuntimeMethod_var);
 		__this->___totalMatches = L_9;
-		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1006>
+		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1144>
 		int32_t L_10 = __this->___totalMatches;
 		if ((((int32_t)L_10) <= ((int32_t)0)))
 		{
@@ -20514,19 +20674,19 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void JobSearchUIController_RenderMainframeGui
 		}
 	}
 	{
-		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1008>
+		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1146>
 		__this->___currentMatchIndex = 0;
 	}
 
 IL_0042:
 	{
-		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1010>
+		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1148>
 		JobSearchUIController_UpdateMatchCountUI_m6E0FE1E48F981AA2115D77E4BDB6B0C195A417D4(__this, NULL);
 	}
 
 IL_0048:
 	{
-		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1013>
+		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1151>
 		String_t* L_11 = V_0;
 		List_1_t425196350A2888B269895DE1C865A3E7E4E2C9B6* L_12 = V_2;
 		int32_t L_13 = __this->___currentMatchIndex;
@@ -20537,22 +20697,22 @@ IL_0048:
 
 IL_0057:
 	{
-		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1016>
+		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1154>
 		String_t* L_15 = V_0;
 		UMarkdownContext_t0DACEEADCE750320BBEA9C49A396C0227BFC3713* L_16;
 		L_16 = UMarkdownContext_Runtime_m4D23A464C46E4B627894B5ABD190C3DE060D9376(NULL);
 		MarkdownVisualElement_t0E3EBE59FF7664CE271CEF836B818A9A55AC5ECE* L_17;
 		L_17 = UMarkdown_Parse_m215BDAC42BCBB6CD66D3C1E5E97EF40B37943EBC(L_15, L_16, NULL);
 		V_1 = L_17;
-		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1017>
+		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1155>
 		ScrollView_t7CE209084E084FAA0E8DF3CD8E3B8BB9EB27E8D9* L_18 = __this->___detailView;
 		MarkdownVisualElement_t0E3EBE59FF7664CE271CEF836B818A9A55AC5ECE* L_19 = V_1;
 		NullCheck(L_18);
 		VisualElement_Add_mE2571CCB23C09103F8732EEC73833683F7236A7F(L_18, L_19, NULL);
-		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1018>
+		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1156>
 		MarkdownVisualElement_t0E3EBE59FF7664CE271CEF836B818A9A55AC5ECE* L_20 = V_1;
 		JobSearchUIController_ApplyTableStyles_mF7A1F66AD7863472A3BA311F39FEB587504112A1(__this, L_20, NULL);
-		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1019>
+		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1157>
 		return;
 	}
 }
@@ -20567,7 +20727,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void JobSearchUIController_UpdateMatchCountUI
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1023>
+		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1161>
 		Label_tC160668F9119CE0F5567021FB208E64A5B1C5B70* L_0 = __this->___matchCountLbl;
 		if (!L_0)
 		{
@@ -20575,7 +20735,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void JobSearchUIController_UpdateMatchCountUI
 		}
 	}
 	{
-		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1025>
+		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1163>
 		int32_t L_1 = __this->___totalMatches;
 		if ((((int32_t)L_1) <= ((int32_t)0)))
 		{
@@ -20583,7 +20743,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void JobSearchUIController_UpdateMatchCountUI
 		}
 	}
 	{
-		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1027>
+		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1165>
 		Label_tC160668F9119CE0F5567021FB208E64A5B1C5B70* L_2 = __this->___matchCountLbl;
 		int32_t L_3 = __this->___currentMatchIndex;
 		int32_t L_4 = ((int32_t)il2cpp_codegen_add(L_3, 1));
@@ -20600,7 +20760,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void JobSearchUIController_UpdateMatchCountUI
 
 IL_003f:
 	{
-		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1031>
+		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1169>
 		Label_tC160668F9119CE0F5567021FB208E64A5B1C5B70* L_10 = __this->___matchCountLbl;
 		NullCheck(L_10);
 		VirtualActionInvoker1< String_t* >::Invoke(207, L_10, _stringLiteral9FD8B98AB45235570D25170630B341F83D8DB54F);
@@ -20608,7 +20768,7 @@ IL_003f:
 
 IL_004f:
 	{
-		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1034>
+		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1172>
 		return;
 	}
 }
@@ -20616,7 +20776,7 @@ IL_004f:
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void JobSearchUIController_OnPrevMatch_m80E68B2A836A017294EB9977DB9C1014135F7174 (JobSearchUIController_t771C13329EF1AB812817519956ED4643E0DE28C3* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1038>
+		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1176>
 		int32_t L_0 = __this->___totalMatches;
 		if ((((int32_t)L_0) <= ((int32_t)0)))
 		{
@@ -20624,10 +20784,10 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void JobSearchUIController_OnPrevMatch_m80E68
 		}
 	}
 	{
-		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1040>
+		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1178>
 		int32_t L_1 = __this->___currentMatchIndex;
 		__this->___currentMatchIndex = ((int32_t)il2cpp_codegen_subtract(L_1, 1));
-		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1041>
+		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1179>
 		int32_t L_2 = __this->___currentMatchIndex;
 		if ((((int32_t)L_2) >= ((int32_t)0)))
 		{
@@ -20635,24 +20795,24 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void JobSearchUIController_OnPrevMatch_m80E68
 		}
 	}
 	{
-		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1041>
+		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1179>
 		int32_t L_3 = __this->___totalMatches;
 		__this->___currentMatchIndex = ((int32_t)il2cpp_codegen_subtract(L_3, 1));
 	}
 
 IL_002e:
 	{
-		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1042>
+		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1180>
 		JobSearchUIController_UpdateMatchCountUI_m6E0FE1E48F981AA2115D77E4BDB6B0C195A417D4(__this, NULL);
-		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1043>
+		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1181>
 		JobSearchUIController_PlayClickSound_m3B8E853CF7DB6FD85F3D1A83B65C82E72A6D09C2(__this, NULL);
-		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1044>
+		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1182>
 		JobSearchUIController_RenderDetailView_mBEE48C965BBD191BA4378C0B0B371AFE75BF07EC(__this, (bool)0, NULL);
 	}
 
 IL_0041:
 	{
-		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1046>
+		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1184>
 		return;
 	}
 }
@@ -20660,7 +20820,7 @@ IL_0041:
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void JobSearchUIController_OnNextMatch_m8E7937875F0CC394D589946804A75A6E9DA59999 (JobSearchUIController_t771C13329EF1AB812817519956ED4643E0DE28C3* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1050>
+		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1188>
 		int32_t L_0 = __this->___totalMatches;
 		if ((((int32_t)L_0) <= ((int32_t)0)))
 		{
@@ -20668,10 +20828,10 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void JobSearchUIController_OnNextMatch_m8E793
 		}
 	}
 	{
-		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1052>
+		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1190>
 		int32_t L_1 = __this->___currentMatchIndex;
 		__this->___currentMatchIndex = ((int32_t)il2cpp_codegen_add(L_1, 1));
-		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1053>
+		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1191>
 		int32_t L_2 = __this->___currentMatchIndex;
 		int32_t L_3 = __this->___totalMatches;
 		if ((((int32_t)L_2) < ((int32_t)L_3)))
@@ -20680,23 +20840,23 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void JobSearchUIController_OnNextMatch_m8E793
 		}
 	}
 	{
-		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1053>
+		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1191>
 		__this->___currentMatchIndex = 0;
 	}
 
 IL_002c:
 	{
-		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1054>
+		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1192>
 		JobSearchUIController_UpdateMatchCountUI_m6E0FE1E48F981AA2115D77E4BDB6B0C195A417D4(__this, NULL);
-		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1055>
+		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1193>
 		JobSearchUIController_PlayClickSound_m3B8E853CF7DB6FD85F3D1A83B65C82E72A6D09C2(__this, NULL);
-		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1056>
+		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1194>
 		JobSearchUIController_RenderDetailView_mBEE48C965BBD191BA4378C0B0B371AFE75BF07EC(__this, (bool)0, NULL);
 	}
 
 IL_003f:
 	{
-		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1058>
+		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1196>
 		return;
 	}
 }
@@ -20728,7 +20888,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void JobSearchUIController_ScrollToMatch_mFEA
 	Rect_tA04E0F8A1830E767F40FB27ECD8D309303571F0D V_4;
 	memset((&V_4), 0, sizeof(V_4));
 	{
-		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1062>
+		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1200>
 		ScrollView_t7CE209084E084FAA0E8DF3CD8E3B8BB9EB27E8D9* L_0 = __this->___detailView;
 		if (!L_0)
 		{
@@ -20747,13 +20907,13 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void JobSearchUIController_ScrollToMatch_mFEA
 
 IL_0015:
 	{
-		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1062>
+		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1200>
 		return;
 	}
 
 IL_0016:
 	{
-		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1064>
+		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1202>
 		ScrollView_t7CE209084E084FAA0E8DF3CD8E3B8BB9EB27E8D9* L_3 = __this->___detailView;
 		il2cpp_codegen_runtime_class_init_inline(UQueryExtensions_t1271382882DF1B8FEEDE5EFA510405ABA7BD3426_il2cpp_TypeInfo_var);
 		UQueryBuilder_1_tB0C1F7D8890925E132BB98AD40BAFE19DB0D6EC7 L_4;
@@ -20761,7 +20921,7 @@ IL_0016:
 		V_0 = L_4;
 		List_1_t0683F95B87DEEF82BDC8BC98AB71504A4CEE6C1A* L_5;
 		L_5 = UQueryBuilder_1_ToList_m0639D7D8474D307CD5D8CA0E4CFE53FBCD57CEC2((&V_0), UQueryBuilder_1_ToList_m0639D7D8474D307CD5D8CA0E4CFE53FBCD57CEC2_RuntimeMethod_var);
-		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1066>
+		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1204>
 		NullCheck(L_5);
 		Enumerator_tA0741E8B0430A0BBE8108FDF3684EDE60DED6D94 L_6;
 		L_6 = List_1_GetEnumerator_m4D34D47EC98C93BFAADE9C293567AA5393652875(L_5, List_1_GetEnumerator_m4D34D47EC98C93BFAADE9C293567AA5393652875_RuntimeMethod_var);
@@ -20785,11 +20945,11 @@ FINALLY_014c:
 
 IL_0036_1:
 			{
-				//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1066>
+				//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1204>
 				Label_tC160668F9119CE0F5567021FB208E64A5B1C5B70* L_7;
 				L_7 = Enumerator_get_Current_m403CBDC7AA03C59AD2C88F8F45C55B496EF8A507_inline((&V_1), Enumerator_get_Current_m403CBDC7AA03C59AD2C88F8F45C55B496EF8A507_RuntimeMethod_var);
 				V_2 = L_7;
-				//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1070>
+				//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1208>
 				Label_tC160668F9119CE0F5567021FB208E64A5B1C5B70* L_8 = V_2;
 				NullCheck(L_8);
 				String_t* L_9;
@@ -20803,7 +20963,7 @@ IL_0036_1:
 				}
 			}
 			{
-				//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1075>
+				//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1213>
 				Label_tC160668F9119CE0F5567021FB208E64A5B1C5B70* L_11 = V_2;
 				NullCheck(L_11);
 				Rect_tA04E0F8A1830E767F40FB27ECD8D309303571F0D L_12;
@@ -20849,7 +21009,7 @@ IL_0036_1:
 
 IL_009f_1:
 			{
-				//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1078>
+				//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1216>
 				ScrollView_t7CE209084E084FAA0E8DF3CD8E3B8BB9EB27E8D9* L_22 = __this->___detailView;
 				NullCheck(L_22);
 				RuntimeObject* L_23;
@@ -20859,13 +21019,13 @@ IL_009f_1:
 				NullCheck(L_23);
 				RuntimeObject* L_25;
 				L_25 = InterfaceFuncInvoker1< RuntimeObject*, Action_tD00B0A84D7945E50C2DFFC28EFEE6ED44ED2AD07* >::Invoke(1, IVisualElementScheduler_tA68650FA9218398E77265748741B091638336FD8_il2cpp_TypeInfo_var, L_23, L_24);
-				//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1079>
+				//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1217>
 				goto IL_015a;
 			}
 
 IL_00c1_1:
 			{
-				//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1083>
+				//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1221>
 				Label_tC160668F9119CE0F5567021FB208E64A5B1C5B70* L_26 = V_2;
 				NullCheck(L_26);
 				Rect_tA04E0F8A1830E767F40FB27ECD8D309303571F0D L_27;
@@ -20883,7 +21043,7 @@ IL_00c1_1:
 				V_4 = L_31;
 				float L_32;
 				L_32 = Rect_get_y_mC733E8D49F3CE21B2A3D40A1B72D687F22C97F49_inline((&V_4), NULL);
-				//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1086>
+				//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1224>
 				ScrollView_t7CE209084E084FAA0E8DF3CD8E3B8BB9EB27E8D9* L_33 = __this->___detailView;
 				NullCheck(L_33);
 				Rect_tA04E0F8A1830E767F40FB27ECD8D309303571F0D L_34;
@@ -20899,7 +21059,7 @@ IL_00c1_1:
 				float L_38;
 				L_38 = Rect_get_height_mE1AA6C6C725CCD2D317BD2157396D3CF7D47C9D8_inline((&V_4), NULL);
 				V_3 = ((float)il2cpp_codegen_add(((float)il2cpp_codegen_subtract(((float)il2cpp_codegen_subtract(L_28, L_32)), ((float)(L_35/(2.0f))))), ((float)(L_38/(2.0f)))));
-				//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1088>
+				//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1226>
 				ScrollView_t7CE209084E084FAA0E8DF3CD8E3B8BB9EB27E8D9* L_39 = __this->___detailView;
 				float L_40 = V_3;
 				float L_41;
@@ -20909,13 +21069,13 @@ IL_00c1_1:
 				Vector2__ctor_m9525B79969AFFE3254B303A40997A56DEEB6F548_inline((&L_42), (0.0f), L_41, NULL);
 				NullCheck(L_39);
 				ScrollView_set_scrollOffset_m220AFAC09FA2E3784CBB76EB53D6AD71C056A1D5(L_39, L_42, NULL);
-				//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1089>
+				//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1227>
 				goto IL_015a;
 			}
 
 IL_013e_1:
 			{
-				//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1066>
+				//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1204>
 				bool L_43;
 				L_43 = Enumerator_MoveNext_mF3F61CEAC03BFA02F636050AF6F6948E10167F92((&V_1), Enumerator_MoveNext_mF3F61CEAC03BFA02F636050AF6F6948E10167F92_RuntimeMethod_var);
 				if (L_43)
@@ -20935,7 +21095,7 @@ IL_013e_1:
 
 IL_015a:
 	{
-		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1092>
+		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1230>
 		return;
 	}
 }
@@ -20960,22 +21120,22 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void JobSearchUIController_ApplyTableStyles_m
 	Action_1_t66B514BE877E216616DEDD40416127189FE16FA3* G_B1_0 = NULL;
 	UQueryBuilder_1_tC18E0AFFC0E0113DFEBC6E56C8BB13FD596A3139* G_B1_1 = NULL;
 	{
-		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1097>
-		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1098>
-		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1099>
-		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1100>
-		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1101>
-		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1102>
-		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1103>
-		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1104>
-		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1105>
-		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1106>
-		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1107>
-		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1108>
-		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1109>
-		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1110>
-		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1111>
-		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1112>
+		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1235>
+		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1236>
+		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1237>
+		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1238>
+		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1239>
+		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1240>
+		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1241>
+		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1242>
+		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1243>
+		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1244>
+		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1245>
+		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1246>
+		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1247>
+		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1248>
+		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1249>
+		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1250>
 		VisualElement_t2667F9D19E62C7A315927506C06F223AB9234115* L_0 = ___0_root;
 		il2cpp_codegen_runtime_class_init_inline(UQueryExtensions_t1271382882DF1B8FEEDE5EFA510405ABA7BD3426_il2cpp_TypeInfo_var);
 		UQueryBuilder_1_tC18E0AFFC0E0113DFEBC6E56C8BB13FD596A3139 L_1;
@@ -21008,7 +21168,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void JobSearchUIController_ApplyTableStyles_m
 IL_002e:
 	{
 		UQueryBuilder_1_ForEach_mE4A776DD81A6C912A4EE7C9963CC0D93DAD35B87(G_B2_1, G_B2_0, UQueryBuilder_1_ForEach_mE4A776DD81A6C912A4EE7C9963CC0D93DAD35B87_RuntimeMethod_var);
-		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1113>
+		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1251>
 		return;
 	}
 }
@@ -21054,12 +21214,12 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* JobSearchUIController_CsvToMarkdown
 	String_t* V_8 = NULL;
 	String_t* G_B22_0 = NULL;
 	{
-		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1117>
+		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1255>
 		String_t* L_0 = ___0_csvContent;
 		List_1_t57C4718BFC29C0490EDA5E5E0FD72088A3797A7C* L_1;
 		L_1 = CSVParser_Parse_m4AABB1FF08AC97492733220BFDE56A2D9217F716(L_0, NULL);
 		V_0 = L_1;
-		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1118>
+		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1256>
 		List_1_t57C4718BFC29C0490EDA5E5E0FD72088A3797A7C* L_2 = V_0;
 		if (!L_2)
 		{
@@ -21079,17 +21239,17 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* JobSearchUIController_CsvToMarkdown
 
 IL_0012:
 	{
-		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1118>
+		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1256>
 		return _stringLiteral1B29BB840EC28FE2D6E5A384F0929C7403D1FBF2;
 	}
 
 IL_0018:
 	{
-		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1120>
+		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1258>
 		StringBuilder_t* L_5 = (StringBuilder_t*)il2cpp_codegen_object_new(StringBuilder_t_il2cpp_TypeInfo_var);
 		StringBuilder__ctor_m1D99713357DE05DAFA296633639DB55F8C30587D(L_5, NULL);
 		V_1 = L_5;
-		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1121>
+		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1259>
 		List_1_t57C4718BFC29C0490EDA5E5E0FD72088A3797A7C* L_6 = V_0;
 		NullCheck(L_6);
 		Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83* L_7;
@@ -21100,12 +21260,12 @@ IL_0018:
 		List_1_tF470A3BE5C1B5B68E1325EF3F109D172E60BD7CD* L_9;
 		L_9 = Enumerable_ToList_TisString_t_m86360148F90DE6EA1A8363F38B7C2A88FD139131(L_8, Enumerable_ToList_TisString_t_m86360148F90DE6EA1A8363F38B7C2A88FD139131_RuntimeMethod_var);
 		V_2 = L_9;
-		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1124>
+		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1262>
 		StringBuilder_t* L_10 = V_1;
 		NullCheck(L_10);
 		StringBuilder_t* L_11;
 		L_11 = StringBuilder_Append_m08904D74E0C78E5F36DCD9C9303BDD07886D9F7D(L_10, _stringLiteralA42779B09629BCE81B76EF626A57A0B40F2AD827, NULL);
-		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1125>
+		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1263>
 		List_1_tF470A3BE5C1B5B68E1325EF3F109D172E60BD7CD* L_12 = V_2;
 		NullCheck(L_12);
 		Enumerator_tA7A4B718FE1ED1D87565680D8C8195EC8AEAB3D1 L_13;
@@ -21130,11 +21290,11 @@ FINALLY_0071:
 
 IL_0045_1:
 			{
-				//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1125>
+				//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1263>
 				String_t* L_14;
 				L_14 = Enumerator_get_Current_m143541DD8FBCD313E7554EA738FA813B8F4DB11A_inline((&V_3), Enumerator_get_Current_m143541DD8FBCD313E7554EA738FA813B8F4DB11A_RuntimeMethod_var);
 				V_4 = L_14;
-				//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1125>
+				//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1263>
 				StringBuilder_t* L_15 = V_1;
 				String_t* L_16 = V_4;
 				String_t* L_17;
@@ -21146,7 +21306,7 @@ IL_0045_1:
 
 IL_0066_1:
 			{
-				//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1125>
+				//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1263>
 				bool L_19;
 				L_19 = Enumerator_MoveNext_mDB47EEC4531D33B9C33FD2E70BA15E1535A0F3ED((&V_3), Enumerator_MoveNext_mDB47EEC4531D33B9C33FD2E70BA15E1535A0F3ED_RuntimeMethod_var);
 				if (L_19)
@@ -21166,17 +21326,17 @@ IL_0066_1:
 
 IL_007f:
 	{
-		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1126>
+		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1264>
 		StringBuilder_t* L_20 = V_1;
 		NullCheck(L_20);
 		StringBuilder_t* L_21;
 		L_21 = StringBuilder_AppendLine_m3BC704C4E6A8531027D8C9287D0AB2AA0188AC4E(L_20, NULL);
-		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1129>
+		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1267>
 		StringBuilder_t* L_22 = V_1;
 		NullCheck(L_22);
 		StringBuilder_t* L_23;
 		L_23 = StringBuilder_Append_m08904D74E0C78E5F36DCD9C9303BDD07886D9F7D(L_22, _stringLiteralA42779B09629BCE81B76EF626A57A0B40F2AD827, NULL);
-		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1130>
+		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1268>
 		List_1_tF470A3BE5C1B5B68E1325EF3F109D172E60BD7CD* L_24 = V_2;
 		NullCheck(L_24);
 		Enumerator_tA7A4B718FE1ED1D87565680D8C8195EC8AEAB3D1 L_25;
@@ -21201,10 +21361,10 @@ FINALLY_00ba:
 
 IL_009b_1:
 			{
-				//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1130>
+				//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1268>
 				String_t* L_26;
 				L_26 = Enumerator_get_Current_m143541DD8FBCD313E7554EA738FA813B8F4DB11A_inline((&V_3), Enumerator_get_Current_m143541DD8FBCD313E7554EA738FA813B8F4DB11A_RuntimeMethod_var);
-				//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1130>
+				//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1268>
 				StringBuilder_t* L_27 = V_1;
 				NullCheck(L_27);
 				StringBuilder_t* L_28;
@@ -21213,7 +21373,7 @@ IL_009b_1:
 
 IL_00af_1:
 			{
-				//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1130>
+				//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1268>
 				bool L_29;
 				L_29 = Enumerator_MoveNext_mDB47EEC4531D33B9C33FD2E70BA15E1535A0F3ED((&V_3), Enumerator_MoveNext_mDB47EEC4531D33B9C33FD2E70BA15E1535A0F3ED_RuntimeMethod_var);
 				if (L_29)
@@ -21233,12 +21393,12 @@ IL_00af_1:
 
 IL_00c8:
 	{
-		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1131>
+		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1269>
 		StringBuilder_t* L_30 = V_1;
 		NullCheck(L_30);
 		StringBuilder_t* L_31;
 		L_31 = StringBuilder_AppendLine_m3BC704C4E6A8531027D8C9287D0AB2AA0188AC4E(L_30, NULL);
-		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1134>
+		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1272>
 		List_1_t57C4718BFC29C0490EDA5E5E0FD72088A3797A7C* L_32 = V_0;
 		NullCheck(L_32);
 		Enumerator_t0081804F75C3A398D84E44D872A24DECC2558AFD L_33;
@@ -21263,16 +21423,16 @@ FINALLY_0163:
 
 IL_00d9_1:
 			{
-				//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1134>
+				//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1272>
 				Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83* L_34;
 				L_34 = Enumerator_get_Current_m0B1987707C20475DEC45A4328E72E2A4628FBA11_inline((&V_5), Enumerator_get_Current_m0B1987707C20475DEC45A4328E72E2A4628FBA11_RuntimeMethod_var);
 				V_6 = L_34;
-				//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1136>
+				//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1274>
 				StringBuilder_t* L_35 = V_1;
 				NullCheck(L_35);
 				StringBuilder_t* L_36;
 				L_36 = StringBuilder_Append_m08904D74E0C78E5F36DCD9C9303BDD07886D9F7D(L_35, _stringLiteralA42779B09629BCE81B76EF626A57A0B40F2AD827, NULL);
-				//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1137>
+				//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1275>
 				List_1_tF470A3BE5C1B5B68E1325EF3F109D172E60BD7CD* L_37 = V_2;
 				NullCheck(L_37);
 				Enumerator_tA7A4B718FE1ED1D87565680D8C8195EC8AEAB3D1 L_38;
@@ -21297,11 +21457,11 @@ FINALLY_0140_1:
 
 IL_00f7_2:
 					{
-						//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1137>
+						//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1275>
 						String_t* L_39;
 						L_39 = Enumerator_get_Current_m143541DD8FBCD313E7554EA738FA813B8F4DB11A_inline((&V_3), Enumerator_get_Current_m143541DD8FBCD313E7554EA738FA813B8F4DB11A_RuntimeMethod_var);
 						V_7 = L_39;
-						//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1139>
+						//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1277>
 						Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83* L_40 = V_6;
 						String_t* L_41 = V_7;
 						NullCheck(L_40);
@@ -21330,7 +21490,7 @@ IL_0112_2:
 IL_011b_2:
 					{
 						V_8 = G_B22_0;
-						//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1140>
+						//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1278>
 						StringBuilder_t* L_46 = V_1;
 						String_t* L_47 = V_8;
 						String_t* L_48;
@@ -21342,7 +21502,7 @@ IL_011b_2:
 
 IL_0135_2:
 					{
-						//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1137>
+						//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1275>
 						bool L_50;
 						L_50 = Enumerator_MoveNext_mDB47EEC4531D33B9C33FD2E70BA15E1535A0F3ED((&V_3), Enumerator_MoveNext_mDB47EEC4531D33B9C33FD2E70BA15E1535A0F3ED_RuntimeMethod_var);
 						if (L_50)
@@ -21362,7 +21522,7 @@ IL_0135_2:
 
 IL_014e_1:
 			{
-				//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1142>
+				//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1280>
 				StringBuilder_t* L_51 = V_1;
 				NullCheck(L_51);
 				StringBuilder_t* L_52;
@@ -21371,7 +21531,7 @@ IL_014e_1:
 
 IL_0155_1:
 			{
-				//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1134>
+				//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1272>
 				bool L_53;
 				L_53 = Enumerator_MoveNext_mDC53B79DE9118274F5C5224D689A136FBBDEA52F((&V_5), Enumerator_MoveNext_mDC53B79DE9118274F5C5224D689A136FBBDEA52F_RuntimeMethod_var);
 				if (L_53)
@@ -21391,7 +21551,7 @@ IL_0155_1:
 
 IL_0171:
 	{
-		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1145>
+		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1283>
 		StringBuilder_t* L_54 = V_1;
 		NullCheck(L_54);
 		String_t* L_55;
@@ -21411,7 +21571,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void JobSearchUIController_OpenFullScreen_m89
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1152>
+		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1290>
 		VisualElement_t2667F9D19E62C7A315927506C06F223AB9234115* L_0 = __this->___fullScreenContainer;
 		if (!L_0)
 		{
@@ -21428,18 +21588,18 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void JobSearchUIController_OpenFullScreen_m89
 
 IL_0010:
 	{
-		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1152>
+		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1290>
 		return;
 	}
 
 IL_0011:
 	{
-		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1154>
+		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1292>
 		Image_tAEB35FD00A2200BF406AE5EDD15B4CB24DBBB8E3* L_2 = __this->___fullImage;
 		Texture2D_tE6505BC111DD8A424A9DBE8E05D7D09E11FFFCF4* L_3 = ___0_texture;
 		NullCheck(L_2);
 		Image_set_image_mF6FBE8FC8B449E1BB7780C7FE7BDD2F047743171(L_2, L_3, NULL);
-		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1155>
+		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1293>
 		VisualElement_t2667F9D19E62C7A315927506C06F223AB9234115* L_4 = __this->___fullScreenContainer;
 		NullCheck(L_4);
 		RuntimeObject* L_5;
@@ -21448,9 +21608,9 @@ IL_0011:
 		L_6 = StyleEnum_1_op_Implicit_mE2664CDFC678F602380EED12BA228071E6F49030(0, StyleEnum_1_op_Implicit_mE2664CDFC678F602380EED12BA228071E6F49030_RuntimeMethod_var);
 		NullCheck(L_5);
 		InterfaceActionInvoker1< StyleEnum_1_t3B02FFF55849C9C8E6A7C0AA9C7E5F65F10C9C69 >::Invoke(49, IStyle_t4FD66C97CA5F46BFE328FED0C65277A37E0A89F7_il2cpp_TypeInfo_var, L_5, L_6);
-		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1158>
+		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1296>
 		__this->___currentZoom = (1.0f);
-		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1159>
+		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1297>
 		Image_tAEB35FD00A2200BF406AE5EDD15B4CB24DBBB8E3* L_7 = __this->___fullImage;
 		NullCheck(L_7);
 		RuntimeObject* L_8;
@@ -21459,7 +21619,7 @@ IL_0011:
 		L_9 = Vector3_get_one_mC9B289F1E15C42C597180C9FE6FB492495B51D02_inline(NULL);
 		NullCheck(L_8);
 		InterfaceActionInvoker1< Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 >::Invoke(2, ITransform_tE5B8E1959EF1ABDE4E6DD44E9FB55EB043FCCDA4_il2cpp_TypeInfo_var, L_8, L_9);
-		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1160>
+		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1298>
 		Image_tAEB35FD00A2200BF406AE5EDD15B4CB24DBBB8E3* L_10 = __this->___fullImage;
 		NullCheck(L_10);
 		RuntimeObject* L_11;
@@ -21468,7 +21628,7 @@ IL_0011:
 		L_12 = Vector3_get_zero_m0C1249C3F25B1C70EAD3CC8B31259975A457AE39_inline(NULL);
 		NullCheck(L_11);
 		InterfaceActionInvoker1< Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 >::Invoke(1, ITransform_tE5B8E1959EF1ABDE4E6DD44E9FB55EB043FCCDA4_il2cpp_TypeInfo_var, L_11, L_12);
-		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1161>
+		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1299>
 		return;
 	}
 }
@@ -21483,7 +21643,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void JobSearchUIController_CloseFullScreen_mF
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1165>
+		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1303>
 		VisualElement_t2667F9D19E62C7A315927506C06F223AB9234115* L_0 = __this->___fullScreenContainer;
 		if (!L_0)
 		{
@@ -21491,7 +21651,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void JobSearchUIController_CloseFullScreen_mF
 		}
 	}
 	{
-		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1166>
+		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1304>
 		VisualElement_t2667F9D19E62C7A315927506C06F223AB9234115* L_1 = __this->___fullScreenContainer;
 		NullCheck(L_1);
 		RuntimeObject* L_2;
@@ -21504,7 +21664,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void JobSearchUIController_CloseFullScreen_mF
 
 IL_001e:
 	{
-		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1167>
+		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1305>
 		return;
 	}
 }
@@ -21518,7 +21678,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void JobSearchUIController_ZoomIn_m99EF5F5040
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1171>
+		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1309>
 		Image_tAEB35FD00A2200BF406AE5EDD15B4CB24DBBB8E3* L_0 = __this->___fullImage;
 		if (L_0)
 		{
@@ -21526,18 +21686,18 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void JobSearchUIController_ZoomIn_m99EF5F5040
 		}
 	}
 	{
-		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1171>
+		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1309>
 		return;
 	}
 
 IL_0009:
 	{
-		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1172>
+		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1310>
 		float L_1 = __this->___currentZoom;
 		float L_2;
 		L_2 = Mathf_Min_m747CA71A9483CDB394B13BD0AD048EE17E48FFE4_inline(((float)il2cpp_codegen_add(L_1, (0.5f))), (5.0f), NULL);
 		__this->___currentZoom = L_2;
-		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1173>
+		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1311>
 		Image_tAEB35FD00A2200BF406AE5EDD15B4CB24DBBB8E3* L_3 = __this->___fullImage;
 		NullCheck(L_3);
 		RuntimeObject* L_4;
@@ -21549,7 +21709,7 @@ IL_0009:
 		L_7 = Vector3_op_Multiply_m87BA7C578F96C8E49BB07088DAAC4649F83B0353_inline(L_5, L_6, NULL);
 		NullCheck(L_4);
 		InterfaceActionInvoker1< Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 >::Invoke(2, ITransform_tE5B8E1959EF1ABDE4E6DD44E9FB55EB043FCCDA4_il2cpp_TypeInfo_var, L_4, L_7);
-		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1174>
+		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1312>
 		return;
 	}
 }
@@ -21563,7 +21723,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void JobSearchUIController_ZoomOut_m35A72C549
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1178>
+		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1316>
 		Image_tAEB35FD00A2200BF406AE5EDD15B4CB24DBBB8E3* L_0 = __this->___fullImage;
 		if (L_0)
 		{
@@ -21571,18 +21731,18 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void JobSearchUIController_ZoomOut_m35A72C549
 		}
 	}
 	{
-		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1178>
+		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1316>
 		return;
 	}
 
 IL_0009:
 	{
-		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1179>
+		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1317>
 		float L_1 = __this->___currentZoom;
 		float L_2;
 		L_2 = Mathf_Max_mF5379E63D2BBAC76D090748695D833934F8AD051_inline(((float)il2cpp_codegen_subtract(L_1, (0.5f))), (1.0f), NULL);
 		__this->___currentZoom = L_2;
-		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1180>
+		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1318>
 		float L_3 = __this->___currentZoom;
 		if ((!(((float)L_3) == ((float)(1.0f)))))
 		{
@@ -21590,7 +21750,7 @@ IL_0009:
 		}
 	}
 	{
-		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1182>
+		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1320>
 		Image_tAEB35FD00A2200BF406AE5EDD15B4CB24DBBB8E3* L_4 = __this->___fullImage;
 		NullCheck(L_4);
 		RuntimeObject* L_5;
@@ -21603,7 +21763,7 @@ IL_0009:
 
 IL_0047:
 	{
-		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1184>
+		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1322>
 		Image_tAEB35FD00A2200BF406AE5EDD15B4CB24DBBB8E3* L_7 = __this->___fullImage;
 		NullCheck(L_7);
 		RuntimeObject* L_8;
@@ -21615,7 +21775,7 @@ IL_0047:
 		L_11 = Vector3_op_Multiply_m87BA7C578F96C8E49BB07088DAAC4649F83B0353_inline(L_9, L_10, NULL);
 		NullCheck(L_8);
 		InterfaceActionInvoker1< Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 >::Invoke(2, ITransform_tE5B8E1959EF1ABDE4E6DD44E9FB55EB043FCCDA4_il2cpp_TypeInfo_var, L_8, L_11);
-		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1185>
+		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1323>
 		return;
 	}
 }
@@ -21631,7 +21791,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void JobSearchUIController_OnPointerDown_m7FC
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1189>
+		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1327>
 		float L_0 = __this->___currentZoom;
 		if ((!(((float)L_0) > ((float)(1.0f)))))
 		{
@@ -21639,9 +21799,9 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void JobSearchUIController_OnPointerDown_m7FC
 		}
 	}
 	{
-		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1191>
+		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1329>
 		__this->___isPanning = (bool)1;
-		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1192>
+		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1330>
 		PointerDownEvent_tABAAD1BACBB98156D6BCCED51E11883EAFE03A51* L_1 = ___0_evt;
 		NullCheck(L_1);
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_2;
@@ -21649,7 +21809,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void JobSearchUIController_OnPointerDown_m7FC
 		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_3;
 		L_3 = Vector2_op_Implicit_mE8EBEE9291F11BB02F062D6E000F4798968CBD96_inline(L_2, NULL);
 		__this->___panStart = L_3;
-		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1193>
+		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1331>
 		Image_tAEB35FD00A2200BF406AE5EDD15B4CB24DBBB8E3* L_4 = __this->___fullImage;
 		NullCheck(L_4);
 		RuntimeObject* L_5;
@@ -21658,14 +21818,14 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void JobSearchUIController_OnPointerDown_m7FC
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_6;
 		L_6 = InterfaceFuncInvoker0< Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 >::Invoke(0, ITransform_tE5B8E1959EF1ABDE4E6DD44E9FB55EB043FCCDA4_il2cpp_TypeInfo_var, L_5);
 		__this->___imageStartPos = L_6;
-		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1194>
+		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1332>
 		Image_tAEB35FD00A2200BF406AE5EDD15B4CB24DBBB8E3* L_7 = __this->___fullImage;
 		PointerDownEvent_tABAAD1BACBB98156D6BCCED51E11883EAFE03A51* L_8 = ___0_evt;
 		NullCheck(L_8);
 		int32_t L_9;
 		L_9 = PointerEventBase_1_get_pointerId_m2666488A68716BD85D3277905899BDE7CF3826C8_inline(L_8, PointerEventBase_1_get_pointerId_m2666488A68716BD85D3277905899BDE7CF3826C8_RuntimeMethod_var);
 		PointerCaptureHelper_CapturePointer_m7A647567160ADA0E052A7277C5B531D7A01E5F7F(L_7, L_9, NULL);
-		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1195>
+		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1333>
 		PointerDownEvent_tABAAD1BACBB98156D6BCCED51E11883EAFE03A51* L_10 = ___0_evt;
 		NullCheck(L_10);
 		EventBase_StopPropagation_mEFC7E5AB7164157065FF19064A6ADCBB0D8AF6FB(L_10, NULL);
@@ -21673,7 +21833,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void JobSearchUIController_OnPointerDown_m7FC
 
 IL_0052:
 	{
-		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1197>
+		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1335>
 		return;
 	}
 }
@@ -21691,7 +21851,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void JobSearchUIController_OnPointerMove_m43F
 	Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 V_0;
 	memset((&V_0), 0, sizeof(V_0));
 	{
-		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1201>
+		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1339>
 		bool L_0 = __this->___isPanning;
 		if (!L_0)
 		{
@@ -21712,7 +21872,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void JobSearchUIController_OnPointerMove_m43F
 		}
 	}
 	{
-		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1203>
+		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1341>
 		PointerMoveEvent_t2C1E2E20A07034638F48C3EB94B8520549D770C3* L_5 = ___0_evt;
 		NullCheck(L_5);
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_6;
@@ -21723,7 +21883,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void JobSearchUIController_OnPointerMove_m43F
 		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_9;
 		L_9 = Vector2_op_Subtraction_m44475FCDAD2DA2F98D78A6625EC2DCDFE8803837_inline(L_7, L_8, NULL);
 		V_0 = L_9;
-		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1204>
+		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1342>
 		Image_tAEB35FD00A2200BF406AE5EDD15B4CB24DBBB8E3* L_10 = __this->___fullImage;
 		NullCheck(L_10);
 		RuntimeObject* L_11;
@@ -21736,7 +21896,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void JobSearchUIController_OnPointerMove_m43F
 		L_15 = Vector3_op_Addition_m78C0EC70CB66E8DCAC225743D82B268DAEE92067_inline(L_12, L_14, NULL);
 		NullCheck(L_11);
 		InterfaceActionInvoker1< Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 >::Invoke(1, ITransform_tE5B8E1959EF1ABDE4E6DD44E9FB55EB043FCCDA4_il2cpp_TypeInfo_var, L_11, L_15);
-		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1205>
+		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1343>
 		PointerMoveEvent_t2C1E2E20A07034638F48C3EB94B8520549D770C3* L_16 = ___0_evt;
 		NullCheck(L_16);
 		EventBase_StopPropagation_mEFC7E5AB7164157065FF19064A6ADCBB0D8AF6FB(L_16, NULL);
@@ -21744,7 +21904,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void JobSearchUIController_OnPointerMove_m43F
 
 IL_0059:
 	{
-		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1207>
+		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1345>
 		return;
 	}
 }
@@ -21758,7 +21918,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void JobSearchUIController_OnPointerUp_m48041
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1211>
+		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1349>
 		bool L_0 = __this->___isPanning;
 		if (!L_0)
 		{
@@ -21766,16 +21926,16 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void JobSearchUIController_OnPointerUp_m48041
 		}
 	}
 	{
-		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1213>
+		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1351>
 		__this->___isPanning = (bool)0;
-		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1214>
+		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1352>
 		Image_tAEB35FD00A2200BF406AE5EDD15B4CB24DBBB8E3* L_1 = __this->___fullImage;
 		PointerUpEvent_tCE779E8B94675B6A2758B82F6A84771CB26913D9* L_2 = ___0_evt;
 		NullCheck(L_2);
 		int32_t L_3;
 		L_3 = PointerEventBase_1_get_pointerId_m494A184CC32780C69FAE61D8361DE5F4A53FF2C6_inline(L_2, PointerEventBase_1_get_pointerId_m494A184CC32780C69FAE61D8361DE5F4A53FF2C6_RuntimeMethod_var);
 		PointerCaptureHelper_ReleasePointer_m0FF47D46D610A94601B72E011344700B0EA7E1B9(L_1, L_3, NULL);
-		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1215>
+		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1353>
 		PointerUpEvent_tCE779E8B94675B6A2758B82F6A84771CB26913D9* L_4 = ___0_evt;
 		NullCheck(L_4);
 		EventBase_StopPropagation_mEFC7E5AB7164157065FF19064A6ADCBB0D8AF6FB(L_4, NULL);
@@ -21783,7 +21943,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void JobSearchUIController_OnPointerUp_m48041
 
 IL_0026:
 	{
-		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1217>
+		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1355>
 		return;
 	}
 }
@@ -21797,7 +21957,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void JobSearchUIController_OnPointerCancel_mA
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1221>
+		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1359>
 		bool L_0 = __this->___isPanning;
 		if (!L_0)
 		{
@@ -21805,16 +21965,16 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void JobSearchUIController_OnPointerCancel_mA
 		}
 	}
 	{
-		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1223>
+		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1361>
 		__this->___isPanning = (bool)0;
-		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1224>
+		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1362>
 		Image_tAEB35FD00A2200BF406AE5EDD15B4CB24DBBB8E3* L_1 = __this->___fullImage;
 		PointerCancelEvent_t566D42065C3B376AD49A44A406AFE929A6CFEE51* L_2 = ___0_evt;
 		NullCheck(L_2);
 		int32_t L_3;
 		L_3 = PointerEventBase_1_get_pointerId_m10A301E89D623BE4E099DC7CE768AE0D12ADF5B4_inline(L_2, PointerEventBase_1_get_pointerId_m10A301E89D623BE4E099DC7CE768AE0D12ADF5B4_RuntimeMethod_var);
 		PointerCaptureHelper_ReleasePointer_m0FF47D46D610A94601B72E011344700B0EA7E1B9(L_1, L_3, NULL);
-		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1225>
+		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1363>
 		PointerCancelEvent_t566D42065C3B376AD49A44A406AFE929A6CFEE51* L_4 = ___0_evt;
 		NullCheck(L_4);
 		EventBase_StopPropagation_mEFC7E5AB7164157065FF19064A6ADCBB0D8AF6FB(L_4, NULL);
@@ -21822,7 +21982,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void JobSearchUIController_OnPointerCancel_mA
 
 IL_0026:
 	{
-		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1227>
+		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1365>
 		return;
 	}
 }
@@ -21836,7 +21996,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void JobSearchUIController_PlayClickSound_m3B
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1231>
+		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1369>
 		AudioSource_t871AC2272F896738252F04EE949AEF5B241D3299* L_0 = __this->___audioSource;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_1;
@@ -21857,7 +22017,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void JobSearchUIController_PlayClickSound_m3B
 		}
 	}
 	{
-		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1233>
+		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1371>
 		AudioSource_t871AC2272F896738252F04EE949AEF5B241D3299* L_4 = __this->___audioSource;
 		AudioClip_t5D272C4EB4F2D3ED49F1C346DEA373CF6D585F20* L_5 = __this->___clickSound;
 		NullCheck(L_4);
@@ -21866,7 +22026,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void JobSearchUIController_PlayClickSound_m3B
 
 IL_002d:
 	{
-		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1235>
+		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1373>
 		return;
 	}
 }
@@ -21882,7 +22042,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void JobSearchUIController_OnBackClicked_m4F0
 	}
 	String_t* V_0 = NULL;
 	{
-		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1239>
+		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1377>
 		Stack_1_tD770B7BA3385BBF3A1703E386B6006FF670C5094* L_0 = __this->___navigationHistory;
 		NullCheck(L_0);
 		int32_t L_1;
@@ -21893,15 +22053,15 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void JobSearchUIController_OnBackClicked_m4F0
 		}
 	}
 	{
-		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1241>
+		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1379>
 		Stack_1_tD770B7BA3385BBF3A1703E386B6006FF670C5094* L_2 = __this->___navigationHistory;
 		NullCheck(L_2);
 		String_t* L_3;
 		L_3 = Stack_1_Pop_mFE7E2A46CC49662C0B06E3F80D39FA8986EE690D(L_2, Stack_1_Pop_mFE7E2A46CC49662C0B06E3F80D39FA8986EE690D_RuntimeMethod_var);
 		V_0 = L_3;
-		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1242>
+		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1380>
 		JobSearchUIController_UpdateBackButtonState_m42D7EE6CB42E8F9BEB8A15A3FF41238C9FFD8F3F(__this, NULL);
-		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1243>
+		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1381>
 		JobDataLoader_tF02F14CB37D7CE1D534D7695F5FC5B4C8604E8F7* L_4 = __this->___jobDataLoader;
 		String_t* L_5 = V_0;
 		NullCheck(L_4);
@@ -21910,7 +22070,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void JobSearchUIController_OnBackClicked_m4F0
 
 IL_002c:
 	{
-		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1245>
+		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1383>
 		return;
 	}
 }
@@ -21925,17 +22085,17 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void JobSearchUIController_OnHomeClicked_m02D
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1250>
+		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1388>
 		Stack_1_tD770B7BA3385BBF3A1703E386B6006FF670C5094* L_0 = __this->___navigationHistory;
 		NullCheck(L_0);
 		Stack_1_Clear_mB5DD9A67516D41D7A82FD1B0ABFA38AAA8593C0E(L_0, Stack_1_Clear_mB5DD9A67516D41D7A82FD1B0ABFA38AAA8593C0E_RuntimeMethod_var);
-		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1251>
+		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1389>
 		JobSearchUIController_UpdateBackButtonState_m42D7EE6CB42E8F9BEB8A15A3FF41238C9FFD8F3F(__this, NULL);
-		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1254>
+		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1392>
 		JobDataLoader_tF02F14CB37D7CE1D534D7695F5FC5B4C8604E8F7* L_1 = __this->___jobDataLoader;
 		NullCheck(L_1);
 		JobDataLoader_LoadJobFromInputField_m31A8AA59247F4CBCAD7DF941137CA34A5525FF08(L_1, _stringLiteral9FB4A3DFA8FB5EDDF6BD48208481F84B1A7F4074, NULL);
-		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1255>
+		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1393>
 		return;
 	}
 }
@@ -21955,7 +22115,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void JobSearchUIController_UpdateBackButtonSt
 	int32_t G_B4_0 = 0;
 	RuntimeObject* G_B4_1 = NULL;
 	{
-		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1259>
+		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1397>
 		Button_t8EC3B431665F84C0B637C11B0EA29236828646C2* L_0 = __this->___backButton;
 		if (!L_0)
 		{
@@ -21963,7 +22123,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void JobSearchUIController_UpdateBackButtonSt
 		}
 	}
 	{
-		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1261>
+		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1399>
 		Button_t8EC3B431665F84C0B637C11B0EA29236828646C2* L_1 = __this->___backButton;
 		NullCheck(L_1);
 		RuntimeObject* L_2;
@@ -22001,7 +22161,7 @@ IL_0025:
 
 IL_002f:
 	{
-		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1263>
+		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1401>
 		return;
 	}
 }
@@ -22031,13 +22191,13 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void JobSearchUIController_HandleLinkClick_m9
 	String_t* V_3 = NULL;
 	String_t* V_4 = NULL;
 	{
-		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1267>
+		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1405>
 		String_t* L_0 = ___0_url;
 		String_t* L_1;
 		L_1 = String_Concat_m9E3155FB84015C823606188F53B47CB44C444991(_stringLiteralCBCD10533A1F8CA9268E5845AF16A3EFACE047BB, L_0, NULL);
 		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 		Debug_Log_m87A9A3C761FF5C43ED8A53B16190A53D08F818BB(L_1, NULL);
-		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1270>
+		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1408>
 		String_t* L_2 = ___0_url;
 		NullCheck(L_2);
 		bool L_3;
@@ -22048,10 +22208,10 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void JobSearchUIController_HandleLinkClick_m9
 		}
 	}
 	{
-		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1275>
+		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1413>
 		String_t* L_4 = ___0_url;
 		V_0 = L_4;
-		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1285>
+		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1423>
 		String_t* L_5 = V_0;
 		NullCheck(L_5);
 		bool L_6;
@@ -22062,22 +22222,22 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void JobSearchUIController_HandleLinkClick_m9
 		}
 	}
 	{
-		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1288>
+		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1426>
 		JobDataLoader_tF02F14CB37D7CE1D534D7695F5FC5B4C8604E8F7* L_7 = __this->___jobDataLoader;
 		NullCheck(L_7);
 		String_t* L_8 = L_7->___JobFolder;
-		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1289>
+		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1427>
 		String_t* L_9 = V_0;
 		il2cpp_codegen_runtime_class_init_inline(Path_t8A38A801D0219E8209C1B1D90D82D4D755D998BC_il2cpp_TypeInfo_var);
 		String_t* L_10;
 		L_10 = Path_Combine_m1ADAC05CDA2D1D61B172DF65A81E86592696BEAE(L_8, L_9, NULL);
 		V_1 = L_10;
-		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1290>
+		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1428>
 		String_t* L_11 = V_1;
 		String_t* L_12;
 		L_12 = JobSearchUIController_ResolvePath_mC8E8B68F83428E115775CAD9DB0886BC2189F6F3(__this, L_11, NULL);
 		V_1 = L_12;
-		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1293>
+		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1431>
 		String_t* L_13 = V_1;
 		NullCheck(L_13);
 		bool L_14;
@@ -22088,7 +22248,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void JobSearchUIController_HandleLinkClick_m9
 		}
 	}
 	{
-		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1295>
+		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1433>
 		String_t* L_15 = V_1;
 		String_t* L_16 = V_1;
 		NullCheck(L_16);
@@ -22102,16 +22262,16 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void JobSearchUIController_HandleLinkClick_m9
 
 IL_0069:
 	{
-		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1299>
+		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1437>
 		Stack_1_tD770B7BA3385BBF3A1703E386B6006FF670C5094* L_19 = __this->___navigationHistory;
 		JobDataLoader_tF02F14CB37D7CE1D534D7695F5FC5B4C8604E8F7* L_20 = __this->___jobDataLoader;
 		NullCheck(L_20);
 		String_t* L_21 = L_20->___JobFolder;
 		NullCheck(L_19);
 		Stack_1_Push_m6735A1D45311268768814737E1F1884B3615CA20(L_19, L_21, Stack_1_Push_m6735A1D45311268768814737E1F1884B3615CA20_RuntimeMethod_var);
-		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1300>
+		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1438>
 		JobSearchUIController_UpdateBackButtonState_m42D7EE6CB42E8F9BEB8A15A3FF41238C9FFD8F3F(__this, NULL);
-		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1303>
+		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1441>
 		JobDataLoader_tF02F14CB37D7CE1D534D7695F5FC5B4C8604E8F7* L_22 = __this->___jobDataLoader;
 		String_t* L_23 = V_1;
 		NullCheck(L_22);
@@ -22121,7 +22281,7 @@ IL_0069:
 
 IL_0092:
 	{
-		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1306>
+		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1444>
 		String_t* L_24 = V_0;
 		NullCheck(L_24);
 		bool L_25;
@@ -22132,13 +22292,13 @@ IL_0092:
 		}
 	}
 	{
-		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1312>
+		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1450>
 		String_t* L_26 = V_0;
 		NullCheck(L_26);
 		String_t* L_27;
 		L_27 = String_Replace_mABDB7003A1D0AEDCAE9FF85E3DFFFBA752D2A166(L_26, _stringLiteral09B11B6CC411D8B9FFB75EAAE9A35B2AF248CE40, _stringLiteral86BBAACC00198DBB3046818AD3FC2AA10AE48DE1, NULL);
 		V_0 = L_27;
-		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1315>
+		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1453>
 		String_t* L_28 = V_0;
 		NullCheck(L_28);
 		bool L_29;
@@ -22149,7 +22309,7 @@ IL_0092:
 		}
 	}
 	{
-		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1317>
+		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1455>
 		String_t* L_30 = V_0;
 		NullCheck(L_30);
 		String_t* L_31;
@@ -22159,7 +22319,7 @@ IL_0092:
 
 IL_00c8:
 	{
-		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1321>
+		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1459>
 		String_t* L_32 = V_0;
 		NullCheck(L_32);
 		bool L_33;
@@ -22170,7 +22330,7 @@ IL_00c8:
 		}
 	}
 	{
-		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1323>
+		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1461>
 		String_t* L_34 = V_0;
 		String_t* L_35 = V_0;
 		NullCheck(L_35);
@@ -22184,16 +22344,16 @@ IL_00c8:
 
 IL_00e7:
 	{
-		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1327>
+		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1465>
 		Stack_1_tD770B7BA3385BBF3A1703E386B6006FF670C5094* L_38 = __this->___navigationHistory;
 		JobDataLoader_tF02F14CB37D7CE1D534D7695F5FC5B4C8604E8F7* L_39 = __this->___jobDataLoader;
 		NullCheck(L_39);
 		String_t* L_40 = L_39->___JobFolder;
 		NullCheck(L_38);
 		Stack_1_Push_m6735A1D45311268768814737E1F1884B3615CA20(L_38, L_40, Stack_1_Push_m6735A1D45311268768814737E1F1884B3615CA20_RuntimeMethod_var);
-		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1328>
+		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1466>
 		JobSearchUIController_UpdateBackButtonState_m42D7EE6CB42E8F9BEB8A15A3FF41238C9FFD8F3F(__this, NULL);
-		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1331>
+		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1469>
 		JobDataLoader_tF02F14CB37D7CE1D534D7695F5FC5B4C8604E8F7* L_41 = __this->___jobDataLoader;
 		String_t* L_42 = V_0;
 		NullCheck(L_41);
@@ -22203,37 +22363,37 @@ IL_00e7:
 
 IL_0110:
 	{
-		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1339>
+		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1477>
 		JobDataLoader_tF02F14CB37D7CE1D534D7695F5FC5B4C8604E8F7* L_43 = __this->___jobDataLoader;
 		NullCheck(L_43);
 		String_t* L_44 = L_43->___JobFolder;
 		V_2 = L_44;
-		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1340>
+		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1478>
 		String_t* L_45 = ___0_url;
 		il2cpp_codegen_runtime_class_init_inline(Path_t8A38A801D0219E8209C1B1D90D82D4D755D998BC_il2cpp_TypeInfo_var);
 		String_t* L_46;
 		L_46 = Path_GetDirectoryName_m428BADBE493A3927B51A13DEF658929B430516F6(L_45, NULL);
 		V_3 = L_46;
-		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1342>
+		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1480>
 		String_t* L_47 = V_2;
 		String_t* L_48 = V_3;
 		String_t* L_49;
 		L_49 = Path_Combine_m1ADAC05CDA2D1D61B172DF65A81E86592696BEAE(L_47, L_48, NULL);
 		V_4 = L_49;
-		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1343>
+		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1481>
 		String_t* L_50 = V_4;
 		NullCheck(L_50);
 		String_t* L_51;
 		L_51 = String_Replace_mABDB7003A1D0AEDCAE9FF85E3DFFFBA752D2A166(L_50, _stringLiteral09B11B6CC411D8B9FFB75EAAE9A35B2AF248CE40, _stringLiteral86BBAACC00198DBB3046818AD3FC2AA10AE48DE1, NULL);
 		V_4 = L_51;
-		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1346>
+		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1484>
 		Stack_1_tD770B7BA3385BBF3A1703E386B6006FF670C5094* L_52 = __this->___navigationHistory;
 		String_t* L_53 = V_2;
 		NullCheck(L_52);
 		Stack_1_Push_m6735A1D45311268768814737E1F1884B3615CA20(L_52, L_53, Stack_1_Push_m6735A1D45311268768814737E1F1884B3615CA20_RuntimeMethod_var);
-		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1347>
+		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1485>
 		JobSearchUIController_UpdateBackButtonState_m42D7EE6CB42E8F9BEB8A15A3FF41238C9FFD8F3F(__this, NULL);
-		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1349>
+		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1487>
 		JobDataLoader_tF02F14CB37D7CE1D534D7695F5FC5B4C8604E8F7* L_54 = __this->___jobDataLoader;
 		String_t* L_55 = V_4;
 		NullCheck(L_54);
@@ -22243,11 +22403,11 @@ IL_0110:
 
 IL_015f:
 	{
-		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1355>
+		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1493>
 		String_t* L_56 = ___0_url;
 		il2cpp_codegen_runtime_class_init_inline(Application_tDB03BE91CDF0ACA614A5E0B67CFB77C44EB19B21_il2cpp_TypeInfo_var);
 		Application_OpenURL_mE748FA4D503715DEE12BCA4BDD8A5305AE41DB89(L_56, NULL);
-		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1357>
+		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1495>
 		return;
 	}
 }
@@ -22264,7 +22424,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void JobSearchUIController_HandleSearchNaviga
 	int32_t V_0 = 0;
 	int32_t V_1 = 0;
 	{
-		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1362>
+		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1500>
 		int32_t L_0 = __this->___totalMatches;
 		if ((((int32_t)L_0) <= ((int32_t)0)))
 		{
@@ -22272,7 +22432,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void JobSearchUIController_HandleSearchNaviga
 		}
 	}
 	{
-		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1364>
+		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1502>
 		KeyDownEvent_t1971978254C8EE65CDDD992AF86B44E442CDD18C* L_1 = ___0_evt;
 		NullCheck(L_1);
 		int32_t L_2;
@@ -22283,19 +22443,19 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void JobSearchUIController_HandleSearchNaviga
 		}
 	}
 	{
-		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1366>
+		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1504>
 		JobSearchUIController_OnNextMatch_m8E7937875F0CC394D589946804A75A6E9DA59999(__this, NULL);
-		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1367>
+		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1505>
 		KeyDownEvent_t1971978254C8EE65CDDD992AF86B44E442CDD18C* L_3 = ___0_evt;
 		NullCheck(L_3);
 		EventBase_StopPropagation_mEFC7E5AB7164157065FF19064A6ADCBB0D8AF6FB(L_3, NULL);
-		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1368>
+		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1506>
 		return;
 	}
 
 IL_0023:
 	{
-		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1370>
+		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1508>
 		KeyDownEvent_t1971978254C8EE65CDDD992AF86B44E442CDD18C* L_4 = ___0_evt;
 		NullCheck(L_4);
 		int32_t L_5;
@@ -22306,19 +22466,19 @@ IL_0023:
 		}
 	}
 	{
-		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1372>
+		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1510>
 		JobSearchUIController_OnPrevMatch_m80E68B2A836A017294EB9977DB9C1014135F7174(__this, NULL);
-		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1373>
+		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1511>
 		KeyDownEvent_t1971978254C8EE65CDDD992AF86B44E442CDD18C* L_6 = ___0_evt;
 		NullCheck(L_6);
 		EventBase_StopPropagation_mEFC7E5AB7164157065FF19064A6ADCBB0D8AF6FB(L_6, NULL);
-		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1374>
+		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1512>
 		return;
 	}
 
 IL_003d:
 	{
-		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1379>
+		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1517>
 		ListView_t46F7BEBFA3240E5A3BE3AC4EF5173C442B5C71FD* L_7 = __this->___sectionList;
 		if (!L_7)
 		{
@@ -22345,13 +22505,13 @@ IL_003d:
 
 IL_005a:
 	{
-		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1379>
+		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1517>
 		return;
 	}
 
 IL_005b:
 	{
-		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1381>
+		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1519>
 		KeyDownEvent_t1971978254C8EE65CDDD992AF86B44E442CDD18C* L_11 = ___0_evt;
 		NullCheck(L_11);
 		int32_t L_12;
@@ -22362,13 +22522,13 @@ IL_005b:
 		}
 	}
 	{
-		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1383>
+		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1521>
 		ListView_t46F7BEBFA3240E5A3BE3AC4EF5173C442B5C71FD* L_13 = __this->___sectionList;
 		NullCheck(L_13);
 		int32_t L_14;
 		L_14 = BaseVerticalCollectionView_get_selectedIndex_m3BB7BE9EEBE76A482FA0747031B16CD566052F7B(L_13, NULL);
 		V_0 = ((int32_t)il2cpp_codegen_add(L_14, 1));
-		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1384>
+		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1522>
 		int32_t L_15 = V_0;
 		List_1_tE65C14BDF2306E941D030D4A963B40ED16BEA0AA* L_16 = __this->___currentSectionItems;
 		NullCheck(L_16);
@@ -22380,12 +22540,12 @@ IL_005b:
 		}
 	}
 	{
-		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1386>
+		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1524>
 		ListView_t46F7BEBFA3240E5A3BE3AC4EF5173C442B5C71FD* L_18 = __this->___sectionList;
 		int32_t L_19 = V_0;
 		NullCheck(L_18);
 		BaseVerticalCollectionView_set_selectedIndex_mFAC82D45A6517794F8A1E0C15AD488E63A231DDA(L_18, L_19, NULL);
-		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1387>
+		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1525>
 		ListView_t46F7BEBFA3240E5A3BE3AC4EF5173C442B5C71FD* L_20 = __this->___sectionList;
 		int32_t L_21 = V_0;
 		NullCheck(L_20);
@@ -22394,7 +22554,7 @@ IL_005b:
 
 IL_009c:
 	{
-		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1389>
+		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1527>
 		KeyDownEvent_t1971978254C8EE65CDDD992AF86B44E442CDD18C* L_22 = ___0_evt;
 		NullCheck(L_22);
 		EventBase_StopPropagation_mEFC7E5AB7164157065FF19064A6ADCBB0D8AF6FB(L_22, NULL);
@@ -22403,7 +22563,7 @@ IL_009c:
 
 IL_00a3:
 	{
-		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1391>
+		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1529>
 		KeyDownEvent_t1971978254C8EE65CDDD992AF86B44E442CDD18C* L_23 = ___0_evt;
 		NullCheck(L_23);
 		int32_t L_24;
@@ -22414,13 +22574,13 @@ IL_00a3:
 		}
 	}
 	{
-		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1393>
+		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1531>
 		ListView_t46F7BEBFA3240E5A3BE3AC4EF5173C442B5C71FD* L_25 = __this->___sectionList;
 		NullCheck(L_25);
 		int32_t L_26;
 		L_26 = BaseVerticalCollectionView_get_selectedIndex_m3BB7BE9EEBE76A482FA0747031B16CD566052F7B(L_25, NULL);
 		V_1 = ((int32_t)il2cpp_codegen_subtract(L_26, 1));
-		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1394>
+		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1532>
 		int32_t L_27 = V_1;
 		if ((((int32_t)L_27) < ((int32_t)0)))
 		{
@@ -22428,12 +22588,12 @@ IL_00a3:
 		}
 	}
 	{
-		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1396>
+		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1534>
 		ListView_t46F7BEBFA3240E5A3BE3AC4EF5173C442B5C71FD* L_28 = __this->___sectionList;
 		int32_t L_29 = V_1;
 		NullCheck(L_28);
 		BaseVerticalCollectionView_set_selectedIndex_mFAC82D45A6517794F8A1E0C15AD488E63A231DDA(L_28, L_29, NULL);
-		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1397>
+		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1535>
 		ListView_t46F7BEBFA3240E5A3BE3AC4EF5173C442B5C71FD* L_30 = __this->___sectionList;
 		int32_t L_31 = V_1;
 		NullCheck(L_30);
@@ -22442,7 +22602,7 @@ IL_00a3:
 
 IL_00da:
 	{
-		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1399>
+		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1537>
 		KeyDownEvent_t1971978254C8EE65CDDD992AF86B44E442CDD18C* L_32 = ___0_evt;
 		NullCheck(L_32);
 		EventBase_StopPropagation_mEFC7E5AB7164157065FF19064A6ADCBB0D8AF6FB(L_32, NULL);
@@ -22450,7 +22610,7 @@ IL_00da:
 
 IL_00e0:
 	{
-		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1401>
+		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1539>
 		return;
 	}
 }
@@ -22899,7 +23059,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void JobSearchUIController_U3CRenderDetailVie
 		NullCheck(L_2);
 		L_2->___texture = L_3;
 		Il2CppCodeGenWriteBarrier((void**)(&L_2->___texture), (void*)L_3);
-		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:710>
+		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:718>
 		U3CU3Ec__DisplayClass46_0_t97113DEDA2F1DD304926E5AD7A239A5517987FC9* L_4 = V_0;
 		NullCheck(L_4);
 		Texture2D_tE6505BC111DD8A424A9DBE8E05D7D09E11FFFCF4* L_5 = L_4->___texture;
@@ -22912,18 +23072,18 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void JobSearchUIController_U3CRenderDetailVie
 		}
 	}
 	{
-		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:712>
+		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:720>
 		Image_tAEB35FD00A2200BF406AE5EDD15B4CB24DBBB8E3* L_7 = (Image_tAEB35FD00A2200BF406AE5EDD15B4CB24DBBB8E3*)il2cpp_codegen_object_new(Image_tAEB35FD00A2200BF406AE5EDD15B4CB24DBBB8E3_il2cpp_TypeInfo_var);
 		Image__ctor_m62D27E02AF8B7138AEFE16892CE266F19E8F041B(L_7, NULL);
 		V_1 = L_7;
-		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:713>
+		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:721>
 		Image_tAEB35FD00A2200BF406AE5EDD15B4CB24DBBB8E3* L_8 = V_1;
 		U3CU3Ec__DisplayClass46_0_t97113DEDA2F1DD304926E5AD7A239A5517987FC9* L_9 = V_0;
 		NullCheck(L_9);
 		Texture2D_tE6505BC111DD8A424A9DBE8E05D7D09E11FFFCF4* L_10 = L_9->___texture;
 		NullCheck(L_8);
 		Image_set_image_mF6FBE8FC8B449E1BB7780C7FE7BDD2F047743171(L_8, L_10, NULL);
-		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:714>
+		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:722>
 		Image_tAEB35FD00A2200BF406AE5EDD15B4CB24DBBB8E3* L_11 = V_1;
 		NullCheck(L_11);
 		RuntimeObject* L_12;
@@ -22932,7 +23092,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void JobSearchUIController_U3CRenderDetailVie
 		L_13 = StyleFloat_op_Implicit_m534A028510332FD68BBBAF6C96028FAE936A2DDB((1.0f), NULL);
 		NullCheck(L_12);
 		InterfaceActionInvoker1< StyleFloat_t4A100BCCDC275C2302517C5858C9BE9EC43D4841 >::Invoke(55, IStyle_t4FD66C97CA5F46BFE328FED0C65277A37E0A89F7_il2cpp_TypeInfo_var, L_12, L_13);
-		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:715>
+		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:723>
 		Image_tAEB35FD00A2200BF406AE5EDD15B4CB24DBBB8E3* L_14 = V_1;
 		NullCheck(L_14);
 		RuntimeObject* L_15;
@@ -22941,7 +23101,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void JobSearchUIController_U3CRenderDetailVie
 		L_16 = StyleEnum_1_op_Implicit_m30B2123F31ABB3EED8C53C3F54559BDDE31EE99C(2, StyleEnum_1_op_Implicit_m30B2123F31ABB3EED8C53C3F54559BDDE31EE99C_RuntimeMethod_var);
 		NullCheck(L_15);
 		InterfaceActionInvoker1< StyleEnum_1_tBEC07A4EA31392571EF3DAC75585C85AD2048E8A >::Invoke(170, IStyle_t4FD66C97CA5F46BFE328FED0C65277A37E0A89F7_il2cpp_TypeInfo_var, L_15, L_16);
-		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:716>
+		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:724>
 		Image_tAEB35FD00A2200BF406AE5EDD15B4CB24DBBB8E3* L_17 = V_1;
 		NullCheck(L_17);
 		RuntimeObject* L_18;
@@ -22950,14 +23110,14 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void JobSearchUIController_U3CRenderDetailVie
 		L_19 = StyleLength_op_Implicit_mA1ED6E9AD696C34231A35B83084B1298A700B019((500.0f), NULL);
 		NullCheck(L_18);
 		InterfaceActionInvoker1< StyleLength_tF02B24735FC88BE29BEB36F7A87709CA28AF72D8 >::Invoke(83, IStyle_t4FD66C97CA5F46BFE328FED0C65277A37E0A89F7_il2cpp_TypeInfo_var, L_18, L_19);
-		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:719>
+		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:727>
 		Image_tAEB35FD00A2200BF406AE5EDD15B4CB24DBBB8E3* L_20 = V_1;
 		U3CU3Ec__DisplayClass46_0_t97113DEDA2F1DD304926E5AD7A239A5517987FC9* L_21 = V_0;
 		EventCallback_1_t9761F99D7427630456C522FCA9AB2D1D521DB878* L_22 = (EventCallback_1_t9761F99D7427630456C522FCA9AB2D1D521DB878*)il2cpp_codegen_object_new(EventCallback_1_t9761F99D7427630456C522FCA9AB2D1D521DB878_il2cpp_TypeInfo_var);
 		EventCallback_1__ctor_mC5F75326004D33D4C2FEE09868556E956B397F71(L_22, L_21, (intptr_t)((void*)U3CU3Ec__DisplayClass46_0_U3CRenderDetailViewU3Eb__2_mD8FC15629A6B15C15960B0180F58C5130BFD520C_RuntimeMethod_var), NULL);
 		NullCheck(L_20);
 		CallbackEventHandler_RegisterCallback_TisClickEvent_t30651949F0BA68E61187B63F5D325323E92CC318_m228F02B0CEF93D7B882AE6665508BE5598EA02F6(L_20, L_22, 0, CallbackEventHandler_RegisterCallback_TisClickEvent_t30651949F0BA68E61187B63F5D325323E92CC318_m228F02B0CEF93D7B882AE6665508BE5598EA02F6_RuntimeMethod_var);
-		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:721>
+		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:729>
 		ScrollView_t7CE209084E084FAA0E8DF3CD8E3B8BB9EB27E8D9* L_23 = __this->___detailView;
 		Image_tAEB35FD00A2200BF406AE5EDD15B4CB24DBBB8E3* L_24 = V_1;
 		NullCheck(L_23);
@@ -22967,20 +23127,20 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void JobSearchUIController_U3CRenderDetailVie
 
 IL_008f:
 	{
-		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:725>
+		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:733>
 		Label_tC160668F9119CE0F5567021FB208E64A5B1C5B70* L_25 = (Label_tC160668F9119CE0F5567021FB208E64A5B1C5B70*)il2cpp_codegen_object_new(Label_tC160668F9119CE0F5567021FB208E64A5B1C5B70_il2cpp_TypeInfo_var);
 		Label__ctor_m83EBFB8426823A52FD005780264806926C731009(L_25, _stringLiteralC1550108E1E6D9DB1241CC57D980E187B2C5883F, NULL);
 		V_2 = L_25;
-		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:726>
+		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:734>
 		Label_tC160668F9119CE0F5567021FB208E64A5B1C5B70* L_26 = V_2;
 		NullCheck(L_26);
 		VisualElement_AddToClassList_mAF0DD8D8CFD5130229A0471DD260E01ED82117F1(L_26, _stringLiteral0A131A8E35103925FDD2D4B843CAE3B8E95B2C5A, NULL);
-		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:727>
+		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:735>
 		ScrollView_t7CE209084E084FAA0E8DF3CD8E3B8BB9EB27E8D9* L_27 = __this->___detailView;
 		Label_tC160668F9119CE0F5567021FB208E64A5B1C5B70* L_28 = V_2;
 		NullCheck(L_27);
 		VisualElement_Add_mE2571CCB23C09103F8732EEC73833683F7236A7F(L_27, L_28, NULL);
-		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:729>
+		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:737>
 		return;
 	}
 }
@@ -22988,7 +23148,7 @@ IL_008f:
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void JobSearchUIController_U3CRenderDetailViewU3Eb__46_1_mDD060941F9BA4462720633C5777A2F2DB0E978E3 (JobSearchUIController_t771C13329EF1AB812817519956ED4643E0DE28C3* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:834>
+		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:972>
 		JobSearchUIController_ScrollToMatch_mFEADB3FAAE8E4ED45226E858C6D2F703B8BAB056(__this, NULL);
 		return;
 	}
@@ -22997,7 +23157,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void JobSearchUIController_U3CRenderDetailVie
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void JobSearchUIController_U3CScrollToMatchU3Eb__55_0_m24834AC7338578744AFF042B723F4657592E0DF3 (JobSearchUIController_t771C13329EF1AB812817519956ED4643E0DE28C3* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1078>
+		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1216>
 		JobSearchUIController_ScrollToMatch_mFEADB3FAAE8E4ED45226E858C6D2F703B8BAB056(__this, NULL);
 		return;
 	}
@@ -23097,7 +23257,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3Ec_U3CApplyTableStylesU3Eb__56_0_mE
 	Action_1_t22E8B82538BC8F544BB9C326032C7572859A671F* G_B1_0 = NULL;
 	UQueryBuilder_1_tB0C1F7D8890925E132BB98AD40BAFE19DB0D6EC7* G_B1_1 = NULL;
 	{
-		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1100>
+		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1238>
 		VisualElement_t2667F9D19E62C7A315927506C06F223AB9234115* L_0 = ___0_cell;
 		NullCheck(L_0);
 		RuntimeObject* L_1;
@@ -23106,7 +23266,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3Ec_U3CApplyTableStylesU3Eb__56_0_mE
 		L_2 = StyleLength_op_Implicit_mA1ED6E9AD696C34231A35B83084B1298A700B019((28.0f), NULL);
 		NullCheck(L_1);
 		InterfaceActionInvoker1< StyleLength_tF02B24735FC88BE29BEB36F7A87709CA28AF72D8 >::Invoke(61, IStyle_t4FD66C97CA5F46BFE328FED0C65277A37E0A89F7_il2cpp_TypeInfo_var, L_1, L_2);
-		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1101>
+		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1239>
 		VisualElement_t2667F9D19E62C7A315927506C06F223AB9234115* L_3 = ___0_cell;
 		NullCheck(L_3);
 		RuntimeObject* L_4;
@@ -23115,7 +23275,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3Ec_U3CApplyTableStylesU3Eb__56_0_mE
 		L_5 = StyleLength_op_Implicit_mA1ED6E9AD696C34231A35B83084B1298A700B019((10.0f), NULL);
 		NullCheck(L_4);
 		InterfaceActionInvoker1< StyleLength_tF02B24735FC88BE29BEB36F7A87709CA28AF72D8 >::Invoke(93, IStyle_t4FD66C97CA5F46BFE328FED0C65277A37E0A89F7_il2cpp_TypeInfo_var, L_4, L_5);
-		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1102>
+		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1240>
 		VisualElement_t2667F9D19E62C7A315927506C06F223AB9234115* L_6 = ___0_cell;
 		NullCheck(L_6);
 		RuntimeObject* L_7;
@@ -23124,7 +23284,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3Ec_U3CApplyTableStylesU3Eb__56_0_mE
 		L_8 = StyleLength_op_Implicit_mA1ED6E9AD696C34231A35B83084B1298A700B019((10.0f), NULL);
 		NullCheck(L_7);
 		InterfaceActionInvoker1< StyleLength_tF02B24735FC88BE29BEB36F7A87709CA28AF72D8 >::Invoke(95, IStyle_t4FD66C97CA5F46BFE328FED0C65277A37E0A89F7_il2cpp_TypeInfo_var, L_7, L_8);
-		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1103>
+		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1241>
 		VisualElement_t2667F9D19E62C7A315927506C06F223AB9234115* L_9 = ___0_cell;
 		NullCheck(L_9);
 		RuntimeObject* L_10;
@@ -23133,7 +23293,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3Ec_U3CApplyTableStylesU3Eb__56_0_mE
 		L_11 = StyleLength_op_Implicit_mA1ED6E9AD696C34231A35B83084B1298A700B019((5.0f), NULL);
 		NullCheck(L_10);
 		InterfaceActionInvoker1< StyleLength_tF02B24735FC88BE29BEB36F7A87709CA28AF72D8 >::Invoke(97, IStyle_t4FD66C97CA5F46BFE328FED0C65277A37E0A89F7_il2cpp_TypeInfo_var, L_10, L_11);
-		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1104>
+		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1242>
 		VisualElement_t2667F9D19E62C7A315927506C06F223AB9234115* L_12 = ___0_cell;
 		NullCheck(L_12);
 		RuntimeObject* L_13;
@@ -23142,11 +23302,11 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3Ec_U3CApplyTableStylesU3Eb__56_0_mE
 		L_14 = StyleLength_op_Implicit_mA1ED6E9AD696C34231A35B83084B1298A700B019((5.0f), NULL);
 		NullCheck(L_13);
 		InterfaceActionInvoker1< StyleLength_tF02B24735FC88BE29BEB36F7A87709CA28AF72D8 >::Invoke(91, IStyle_t4FD66C97CA5F46BFE328FED0C65277A37E0A89F7_il2cpp_TypeInfo_var, L_13, L_14);
-		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1107>
-		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1108>
-		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1109>
-		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1110>
-		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1111>
+		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1245>
+		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1246>
+		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1247>
+		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1248>
+		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1249>
 		VisualElement_t2667F9D19E62C7A315927506C06F223AB9234115* L_15 = ___0_cell;
 		il2cpp_codegen_runtime_class_init_inline(UQueryExtensions_t1271382882DF1B8FEEDE5EFA510405ABA7BD3426_il2cpp_TypeInfo_var);
 		UQueryBuilder_1_tB0C1F7D8890925E132BB98AD40BAFE19DB0D6EC7 L_16;
@@ -23179,7 +23339,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3Ec_U3CApplyTableStylesU3Eb__56_0_mE
 IL_0093:
 	{
 		UQueryBuilder_1_ForEach_m0D844FA3788A7ED0D7EFE49D71B7C75061765B5F(G_B2_1, G_B2_0, UQueryBuilder_1_ForEach_m0D844FA3788A7ED0D7EFE49D71B7C75061765B5F_RuntimeMethod_var);
-		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1112>
+		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1250>
 		return;
 	}
 }
@@ -23194,7 +23354,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3Ec_U3CApplyTableStylesU3Eb__56_1_m6
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1109>
+		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1247>
 		Label_tC160668F9119CE0F5567021FB208E64A5B1C5B70* L_0 = ___0_label;
 		NullCheck(L_0);
 		RuntimeObject* L_1;
@@ -23203,7 +23363,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3Ec_U3CApplyTableStylesU3Eb__56_1_m6
 		L_2 = StyleLength_op_Implicit_mA1ED6E9AD696C34231A35B83084B1298A700B019((28.0f), NULL);
 		NullCheck(L_1);
 		InterfaceActionInvoker1< StyleLength_tF02B24735FC88BE29BEB36F7A87709CA28AF72D8 >::Invoke(61, IStyle_t4FD66C97CA5F46BFE328FED0C65277A37E0A89F7_il2cpp_TypeInfo_var, L_1, L_2);
-		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1110>
+		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1248>
 		Label_tC160668F9119CE0F5567021FB208E64A5B1C5B70* L_3 = ___0_label;
 		NullCheck(L_3);
 		RuntimeObject* L_4;
@@ -23212,7 +23372,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3Ec_U3CApplyTableStylesU3Eb__56_1_m6
 		L_5 = StyleEnum_1_op_Implicit_m0B550AA146AEBBB8694B45DBCFBB06B31BC4BEFF(0, StyleEnum_1_op_Implicit_m0B550AA146AEBBB8694B45DBCFBB06B31BC4BEFF_RuntimeMethod_var);
 		NullCheck(L_4);
 		InterfaceActionInvoker1< StyleEnum_1_t51D7E66C8AB4DE362954A97F01141AD6D749CAE2 >::Invoke(165, IStyle_t4FD66C97CA5F46BFE328FED0C65277A37E0A89F7_il2cpp_TypeInfo_var, L_4, L_5);
-		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1111>
+		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:1249>
 		return;
 	}
 }
@@ -23236,7 +23396,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3Ec__DisplayClass46_0__ctor_mA1290EE
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3Ec__DisplayClass46_0_U3CRenderDetailViewU3Eb__2_mD8FC15629A6B15C15960B0180F58C5130BFD520C (U3CU3Ec__DisplayClass46_0_t97113DEDA2F1DD304926E5AD7A239A5517987FC9* __this, ClickEvent_t30651949F0BA68E61187B63F5D325323E92CC318* ___0_evt, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:719>
+		//<source_info:C:/Users/btruf/UnityProjects/RB_Toolkit/Assets/Scripts/JobSearchUIController.cs:727>
 		JobSearchUIController_t771C13329EF1AB812817519956ED4643E0DE28C3* L_0 = __this->___U3CU3E4__this;
 		Texture2D_tE6505BC111DD8A424A9DBE8E05D7D09E11FFFCF4* L_1 = __this->___texture;
 		NullCheck(L_0);
