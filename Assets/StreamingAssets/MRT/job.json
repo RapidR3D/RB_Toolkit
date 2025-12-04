@@ -1,9 +1,33 @@
 {
-  "docType": "MRT",
   "title": "Mobile Rail Tool (MRT) Guide",
   "category": "Railroad/Yard Operations",
   "version": "2024.08.23",
+  "docType": "MRT",
   "summary": "Comprehensive guide for CSX Mobile Rail Tool application covering yard jobs, locals, work order completion, switching operations, and train planning for transportation employees.",
+  "keywords": [
+    "MRT",
+    "Mobile Rail Tool",
+    "CSX",
+    "Yard Switching",
+    "Switch Planning",
+    "Work Order",
+    "SPT",
+    "YST",
+    "AEI",
+    "Interchange",
+    "Customer Service",
+    "CSD",
+    "Exception Codes",
+    "Train Standing Order",
+    "EAC",
+    "Locomotive",
+    "EOT",
+    "Place",
+    "Pull",
+    "Pickup",
+    "Set Out",
+    "Add Cars"
+  ],
   "sections": [
     {
       "label": "Cover & Overview",
@@ -66,7 +90,7 @@
       "file": "14_completing.md"
     },
     {
-      "label": "**MRT_AEI**",
+      "label": "MRT AEI",
       "file": "MRTAEI/job.json"
     }
   ],
@@ -83,29 +107,5 @@
       "name": "Load/Empty Status Codes",
       "file": "table_load_empty.md"
     }
-  ],
-  "keywords": [
-    "MRT",
-    "Mobile Rail Tool",
-    "CSX",
-    "Yard Switching",
-    "Switch Planning",
-    "Work Order",
-    "SPT",
-    "YST",
-    "AEI",
-    "Interchange",
-    "Customer Service",
-    "CSD",
-    "Exception Codes",
-    "Train Standing Order",
-    "EAC",
-    "Locomotive",
-    "EOT",
-    "Place",
-    "Pull",
-    "Pickup",
-    "Set Out",
-	"Add Cars"
   ]
 }

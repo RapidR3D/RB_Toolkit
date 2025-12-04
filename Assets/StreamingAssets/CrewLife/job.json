@@ -1,15 +1,15 @@
 {
-  "docType": "crewlife",
   "title": "Crew Life",
   "category": "Lifestyle & Benefits",
   "version": "1.0",
+  "docType": "crewlife",
   "summary": "Information regarding benefits, scheduling, and crew resources.",
   "sections": [
     {
       "label": "Crewlife Overview",
       "file": "overview.md"
     },
-	{
+    {
       "label": "Operating Notes",
       "file": "operatingnotes.md"
     },
@@ -17,12 +17,12 @@
       "label": "Contact List",
       "file": "contacts.csv"
     },
-	{
-      "label": "**CLAIMS**",
+    {
+      "label": "Claims",
       "file": "Claims/job.json"
     }
   ],
-   "tables": [
+  "tables": [
     {
       "name": "Yard Office Address",
       "file": "address.csv"
@@ -32,15 +32,15 @@
       "file": "territory.csv"
     }
   ],
-   "images":[
-  {
-	  "name": "Crew Life Screenshot",
-	  "file": "crewlifescreenpic.PNG"
-  },
-  {
-	  "name": "Payroll/Claims example",
-	  "file": "claimsexamplepic.PNG"
-  }
+  "images": [
+    {
+      "name": "Crew Life Screenshot",
+      "file": "crewlifescreenpic.PNG"
+    },
+    {
+      "name": "Payroll/Claims example",
+      "file": "claimsexamplepic.PNG"
+    }
   ],
   "links": [
     {

@@ -5,6 +5,7 @@
             <ui:Button name="BackButton" text="Back" class="back-button" style="display: none;"/>
             <ui:TextField name="SearchField" label="Job ID:" placeholder-text="e.g. Y197" class="search-field"/>
             <ui:Button name="SearchButton" text="Load Job" class="search-button"/>
+            <ui:Button name="HomeButton" text="Home" class="home-button" style="display: none;"/>
         </ui:VisualElement>
         
         <ui:VisualElement name="JobDetailsArea" class="job-details-area" style="display: none;">

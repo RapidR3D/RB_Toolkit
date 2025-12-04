@@ -46,6 +46,23 @@
     background-color: #00ACC1;
 }
 
+.home-button {
+    width: 120px;
+    height: 90px;
+    background-color: #4CAF50; /* Green */
+    color: white;
+    -unity-font-style: bold;
+    border-radius: 15px;
+    font-size: 32px;
+    margin-left: 10px;
+    border-width: 1px;
+    border-color: #4CAF50;
+}
+
+.home-button:hover {
+    background-color: #66BB6A;
+}
+
 .back-button {
     width: 100px;
     height: 90px;
@@ -191,6 +208,16 @@
     color: #FFD700; /* Gold/Yellow */
     background-color: #222222; /* Slightly darker background */
     white-space: normal;
+}
+
+.list-item-subcategory {
+    background-color: rgba(33, 150, 243, 0.3); /* Blue background */
+    border-left-width: 5px;
+    border-left-color: #2196F3; /* Solid blue accent */
+}
+
+.list-item-subcategory:hover {
+    background-color: rgba(33, 150, 243, 0.5);
 }
 
 /* Target the selected item container directly to ensure it works even without focus */

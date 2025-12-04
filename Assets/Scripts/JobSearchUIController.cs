@@ -70,6 +70,7 @@ public class JobSearchUIController : MonoBehaviour
 
     // UI Elements
     private Button backButton;
+    private Button homeButton;
 
     private void OnEnable()
     {
@@ -116,6 +117,13 @@ public class JobSearchUIController : MonoBehaviour
         {
             backButton.clicked += OnBackClicked;
             backButton.style.display = DisplayStyle.None; // Hide initially
+        }
+
+        homeButton = root.Q<Button>("HomeButton");
+        if (homeButton != null)
+        {
+            homeButton.clicked += OnHomeClicked;
+            homeButton.style.display = DisplayStyle.None; // Hide initially
         }
 
         searchButton = root.Q<Button>("SearchButton");
@@ -230,6 +238,12 @@ public class JobSearchUIController : MonoBehaviour
                         {
                             label.text = text;
                             label.AddToClassList("list-item-label");
+
+                            // Check for sub-category (nested job)
+                            if (item.FileKey != null && item.FileKey.EndsWith(".json", StringComparison.OrdinalIgnoreCase))
+                            {
+                                label.AddToClassList("list-item-subcategory");
+                            }
                         }
                     }
                 }
@@ -295,6 +309,9 @@ public class JobSearchUIController : MonoBehaviour
 
         if (backButton != null)
             backButton.clicked -= OnBackClicked;
+
+        if (homeButton != null)
+            homeButton.clicked -= OnHomeClicked;
 
         if (jobDataLoader != null)
             jobDataLoader.JobLoaded -= OnJobLoaded;
@@ -391,6 +408,12 @@ public class JobSearchUIController : MonoBehaviour
         bool isUnion = docType == "union";
         bool isPayrollClaims = docType == "payroll_claims";
         
+
+        // Show/Hide Home Button
+        if (homeButton != null)
+        {
+            homeButton.style.display = isHelp ? DisplayStyle.None : DisplayStyle.Flex;
+        }
 
         // Show/Hide Content Search Field
         if (searchControlsContainer != null)
@@ -708,6 +731,9 @@ public class JobSearchUIController : MonoBehaviour
                 string fullFolderPath = System.IO.Path.Combine(currentFolder, directory);
                 fullFolderPath = fullFolderPath.Replace("\\", "/");
                 
+                // Resolve any relative paths (like ..) before loading
+                fullFolderPath = ResolvePath(fullFolderPath);
+                
                 jobDataLoader.LoadJobFromInputField(fullFolderPath);
                 return;
             }
@@ -786,6 +812,30 @@ public class JobSearchUIController : MonoBehaviour
             // Increased delay to ensure complex layouts (like tables) are fully calculated
             detailView.schedule.Execute(() => ScrollToMatch()).ExecuteLater(100);
         }
+    }
+
+    private string ResolvePath(string path)
+    {
+        // Normalize separators
+        path = path.Replace("\\", "/");
+        
+        var parts = new List<string>();
+        var segments = path.Split(new[] { '/' }, StringSplitOptions.RemoveEmptyEntries);
+
+        foreach (var segment in segments)
+        {
+            if (segment == "..")
+            {
+                if (parts.Count > 0)
+                    parts.RemoveAt(parts.Count - 1);
+            }
+            else if (segment != ".")
+            {
+                parts.Add(segment);
+            }
+        }
+
+        return string.Join("/", parts);
     }
 
     private List<Match> GetValidMatches(string text, string term)
@@ -1173,6 +1223,16 @@ public class JobSearchUIController : MonoBehaviour
         }
     }
 
+    private void OnHomeClicked()
+    {
+        // Clear history when going home
+        navigationHistory.Clear();
+        UpdateBackButtonState();
+        
+        // Load Help (Home)
+        jobDataLoader.LoadJobFromInputField("Help");
+    }
+
     private void UpdateBackButtonState()
     {
         if (backButton != null)
@@ -1203,23 +1263,23 @@ public class JobSearchUIController : MonoBehaviour
             // If it's a relative path starting with .., we need to handle it manually
             if (targetPath.StartsWith("../"))
             {
-                // Remove ../
-                targetPath = targetPath.Substring(3);
+                // Use ResolvePath to handle .. correctly
+                string currentFolder = jobDataLoader.JobFolder;
+                string fullPath = System.IO.Path.Combine(currentFolder, targetPath);
+                fullPath = ResolvePath(fullPath);
                 
                 // Remove /job.json to get the folder name
-                if (targetPath.EndsWith("/job.json", StringComparison.OrdinalIgnoreCase))
+                if (fullPath.EndsWith("/job.json", StringComparison.OrdinalIgnoreCase))
                 {
-                    targetPath = targetPath.Substring(0, targetPath.Length - 9);
+                    fullPath = fullPath.Substring(0, fullPath.Length - 9);
                 }
-                
-                // Now targetPath should be "DirectAccess"
                 
                 // Push current folder to history
                 navigationHistory.Push(jobDataLoader.JobFolder);
                 UpdateBackButtonState();
                 
                 // Load the new job
-                jobDataLoader.LoadJobFromInputField(targetPath);
+                jobDataLoader.LoadJobFromInputField(fullPath);
             }
             // If it's a relative path starting with StreamingAssets (e.g. from Quick Links in Help/job.json)
             else if (targetPath.StartsWith("StreamingAssets", StringComparison.OrdinalIgnoreCase))

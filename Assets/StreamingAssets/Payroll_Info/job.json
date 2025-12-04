@@ -1,24 +1,24 @@
 {
-  "docType": "payroll",
   "title": "Payroll Guide",
   "category": "Finance & Compensation",
   "version": "2025.1",
+  "docType": "payroll",
   "summary": "Information regarding pay periods, claims, and payroll contacts.",
   "sections": [
     {
       "label": "Pay Schedule",
       "file": "schedule.md"
-    },   
+    },
     {
       "label": "Payroll Web Reporting Guide",
       "file": "Payroll_Guide.md"
     },
-	{
-      "label": "**PAYROLL CLAIMS**",
+    {
+      "label": "Payroll Claims",
       "file": "Payroll_Claims/job.json"
     }
   ],
-   "tables": [
+  "tables": [
     {
       "name": "Contacts",
       "file": "contacts.csv"

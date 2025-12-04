@@ -12,6 +12,4 @@ Tap any link below to jump to that section:
 - [CrewLife](../CrewLife/job.json)
 - [Payroll](../Payroll_Info/job.json)
 - [MRT (Mobile Rail Tool)](../MRT/job.json)
-- [Over The Road](../OverTheRoad/job.json)
-- [SMART Union](../Union/job.json)
 - [Miscellaneous](../Miscellaneous/job.json)

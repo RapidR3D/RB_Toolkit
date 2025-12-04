@@ -20,7 +20,7 @@ Type any of the following into the search bar to access the corresponding guide:
 
 ## Mainframe
 - **Format**: `Mainframe`
-- **Example**: `Mainframe`
+- **Example**: `Mainframe | MF | Main`
 
 ## T&E Guide
 - **Format**: `TE`
@@ -32,7 +32,7 @@ Type any of the following into the search bar to access the corresponding guide:
 
 ## Payroll
 - **Format**: `Payroll`
-- **Example**: `Payroll`
+- **Example**: `Payroll | Pay`
 
 ## MRT
 - **Format**: `Mobile Rail Tool`
