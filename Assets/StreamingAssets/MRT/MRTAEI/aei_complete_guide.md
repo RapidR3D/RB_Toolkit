@@ -6,11 +6,11 @@
 
 ## Table of Contents
 
-1. [Overview & Access](#overview--access)
-2. [AEI Error Cars](#aei-error-cars)
-3. [AEI Added Cars](#aei-added-cars)
-4. [Accept AEI Standing Order](#accept-aei-standing-order)
-5. [Correct AEI Placeholder Cars](#correct-aei-placeholder-cars)
+1. Overview & Access(#overview--access)
+2. AEI Error Cars(#aei-error-cars)
+3. AEI Added Cars(#aei-added-cars)
+4. Accept AEI Standing Order(#accept-aei-standing-order)
+5. Correct AEI Placeholder Cars(#correct-aei-placeholder-cars)
 
 ---
 
@@ -617,7 +617,7 @@ Two cars show missing but the conductor verified they are on the train.
 
 1. **Check the Add Cars tab** for AEI Placeholder cars
 2. **Confirm:** There is one car (position 72)
-3. The placeholder shows as: `AEI ##7166A`
+3. The placeholder shows as: "AEI ##7166A"
 
 #### Correction Steps
 
@@ -628,7 +628,7 @@ Two cars show missing but the conductor verified they are on the train.
    - Car initial
    - Space
    - Car number
-   - Example: `CSXT 2797`
+   - Example: "CSXT 2797"
 5. Tap **Submit**
 6. Set the Load/Empty status:
    - If loaded: Tap **Set Loaded**
@@ -853,6 +853,4 @@ If Load/Empty status uncertain:
 
 **Support:** MRT Helpdesk 800-243-7743 option #4
 
----
-
-*End of AEI Guide*
+**End of AEI Guide**

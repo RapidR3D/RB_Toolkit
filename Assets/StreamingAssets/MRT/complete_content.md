@@ -962,9 +962,9 @@ Use SELECT/DESELECT ALL or select individually
 ### Visual Indicators
 
 **Progress Bar:**
-```
+
 Train Order COMPLETED 100%
-```
+
 
 **All Tiles:**
 - Grey color
@@ -996,10 +996,10 @@ Without logout:
 **Step 3:** Tap **Logout**
 
 **Step 4:** Wait for confirmation
-```
+
 Login with Okta
 [Button appears]
-```
+
 
 **Step 5:** NOW you can:
 - Close MRT app
@@ -1077,7 +1077,7 @@ Login with Okta
 ## About Screen (Critical Information)
 
 ### Displayed Information
-```
+
 App Name: mrt-ng
 App Version: 2.0.6000
 App Environment: prod
@@ -1085,7 +1085,7 @@ Device Type: iOS or browser
 
 MQTT Connected: Yes  ← MUST be Yes
 MQTT Subscribed: Yes ← MUST be Yes
-```
+
 
 ### MQTT Status Requirements
 

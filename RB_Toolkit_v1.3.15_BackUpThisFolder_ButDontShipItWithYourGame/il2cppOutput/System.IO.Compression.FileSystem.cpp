@@ -351,7 +351,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void File_SetLastWriteTime_mF2647DEE086B5F497
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 100720
+// Method Definition Index: 100721
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ZipFileExtensions_ExtractToFile_m2584E3670B741B08409D95BFB8ABC04AA92B49F2 (ZipArchiveEntry_tEFD75A0570102F8A3DF70A038302146B46071DD4* ___0_source, String_t* ___1_destinationFileName, bool ___2_overwrite, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -519,7 +519,7 @@ IL_0058:
 #ifdef __clang__
 #pragma clang diagnostic pop
 #endif
-// Method Definition Index: 96711
+// Method Definition Index: 96712
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR DateTimeOffset_t4EE701FE2F386D6F932FAC9B11E4B74A5B30F0A4 ZipArchiveEntry_get_LastWriteTime_m98EB193BEB589BE1739A89C6104830F11573AFE9_inline (ZipArchiveEntry_tEFD75A0570102F8A3DF70A038302146B46071DD4* __this, const RuntimeMethod* method) 
 {
 	{

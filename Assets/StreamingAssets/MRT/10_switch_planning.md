@@ -167,9 +167,9 @@ Cars are added to your train build
 
 #### 7. Verify Applied Count
 Customer tile now shows:
-```
+
 Planned: 4        Applied: 4
-```
+
 
 ---
 
@@ -357,13 +357,13 @@ Exception is recorded in the system
 #### Input Rules
 1. Enter **lead locomotive first**
 2. Format: **Space** between initial and number
-   - ✅ Correct: `CSXT 4555`
-   - ❌ Wrong: `CSXT4555`
+   - ✅ Correct: CSXT 4555
+   - ❌ Wrong: CSXT4555
 3. Add additional power in order (head to rear)
 
 #### Process
 1. Tap **(+)** next to Locomotive(s)
-2. Enter locomotive: `CSXT 4555`
+2. Enter locomotive: CSXT 4555
 3. Tap **SEND**
 4. Repeat for additional units
 5. Tap trash bin icon (🗑️) to remove equipment
@@ -372,12 +372,12 @@ Exception is recorded in the system
 
 #### Input Rules
 1. Format: **Space** between initial and number
-   - ✅ Correct: `CSXE 41852`
-   - ❌ Wrong: `CSXE41852`
+   - ✅ Correct: CSXE 41852
+   - ❌ Wrong: CSXE41852
 
 #### Process
 1. Tap **(+)** next to EOT(s)
-2. Enter EOT: `CSXE 41852`
+2. Enter EOT: CSXE 41852
 3. Tap **SEND**
 4. Tap trash bin icon (🗑️) to remove if needed
 

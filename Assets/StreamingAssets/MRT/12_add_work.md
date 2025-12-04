@@ -117,11 +117,11 @@
 **For Customer:**
 - System shows customer track/spot numbers
 - Select where car currently is
-- Example: `000010` (spot number)
+- Example: 000010 (spot number)
 
 **For Station:**
 - Select yard track
-- Example: `W23`, `R01`
+- Example: W23, R01
 
 ---
 
@@ -283,9 +283,9 @@ New Work consists of additional assignments sent to your tablet **during your sh
 ### Alert Indicators
 
 **Notification Bell:**
-```
+
 🔔 (2)
-```
+
 Number shows unread New Work notifications
 
 **Customer Tile:**

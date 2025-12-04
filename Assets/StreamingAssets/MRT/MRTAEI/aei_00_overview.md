@@ -49,10 +49,10 @@ The AEI Read Selection screen shows three tabs that must be processed in order:
 
 AEI reads appear in the **Notifications** panel:
 
-```
+
 AEI    Received at 12/28   09:56
 AEI Read: 469 2342 Verified
-```
+
 
 ---
 

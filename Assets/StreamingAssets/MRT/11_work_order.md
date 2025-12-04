@@ -126,7 +126,7 @@ Enter Train ID/WO#: _______
 **Format Requirements:**
 - Space between initial and number
 - Lead locomotive entered first
-- Example: `CSXT 4555`
+- Example: CSXT 4555
 
 **Process:**
 1. Tap **(+)** next to Locomotive(s)
@@ -139,7 +139,7 @@ Enter Train ID/WO#: _______
 
 **Format Requirements:**
 - Space between initial and number
-- Example: `CSXE 41852`
+- Example: CSXE 41852
 
 **Process:**
 1. Tap **(+)** next to EOT(s)

@@ -30087,7 +30087,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR bool UniversalRenderPipelineAsset
 		return L_0;
 	}
 }
-// Method Definition Index: 94621
+// Method Definition Index: 94622
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR float AdaptivePerformanceRenderSettings_get_DecalsDrawDistance_mC3D298759AD8A364A93E1AE73092C6EE54D42123_inline (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;

@@ -1298,7 +1298,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Quaternion_tDA59F214EF07D7700B26E40E562F267AF
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 100664
+// Method Definition Index: 100665
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR MonoScriptData_t9A5C34E4F68F3F9F38E32F103E137891DD76271A UnitySourceGeneratedAssemblyMonoScriptTypes_v1_Get_m98AEB819895E363829A67BCFACA89651CEBFB307 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -1332,7 +1332,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR MonoScriptData_t9A5C34E4F68F3F9F38E32F103E137
 		return L_6;
 	}
 }
-// Method Definition Index: 100665
+// Method Definition Index: 100666
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void UnitySourceGeneratedAssemblyMonoScriptTypes_v1__ctor_mB050D1950FFFD8D732E236B99C15F2DE8E8A08E8 (UnitySourceGeneratedAssemblyMonoScriptTypes_v1_t0AF7D4C1906440A8707C27C4B7C8C2F7359D3778* __this, const RuntimeMethod* method) 
 {
 	{
@@ -1418,7 +1418,7 @@ IL2CPP_EXTERN_C void MonoScriptData_t9A5C34E4F68F3F9F38E32F103E137891DD76271A_ma
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 100666
+// Method Definition Index: 100667
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Logic_Start_mA588FC0A81D2E438CF557B7CACBEEDFF5D78BF0A (Logic_t4D261E68748AF20E97F4DD3030E99E56B9FAF641* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -1507,7 +1507,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Logic_Start_mA588FC0A81D2E438CF557B7CACB
 		return;
 	}
 }
-// Method Definition Index: 100667
+// Method Definition Index: 100668
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Logic_Update_m3EB3032B4D6E5B238E288C3A5091CB8967ECF4F6 (Logic_t4D261E68748AF20E97F4DD3030E99E56B9FAF641* __this, const RuntimeMethod* method) 
 {
 	float V_0 = 0.0f;
@@ -1560,7 +1560,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Logic_Update_m3EB3032B4D6E5B238E288C3A50
 		return;
 	}
 }
-// Method Definition Index: 100668
+// Method Definition Index: 100669
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Logic_CustomImageLoader_mAB6E14D400D4E38AD40D10B9BC86E0DB2D73AFAA (Logic_t4D261E68748AF20E97F4DD3030E99E56B9FAF641* __this, UMarkdownContext_t0DACEEADCE750320BBEA9C49A396C0227BFC3713* ___0_ctx, MarkdownLinkUri_tFD48D70D5F6378D11AF1190B20259BC68E3686F6* ___1_uri, Action_1_tD7F74291FAA5A362F4A5F48D4E1CF3ED51FA6A33* ___2_applier, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -1698,7 +1698,7 @@ IL_004e:
 		return;
 	}
 }
-// Method Definition Index: 100669
+// Method Definition Index: 100670
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Logic__ctor_mA204D33575037F6C7149266A0C8BD8187E396F99 (Logic_t4D261E68748AF20E97F4DD3030E99E56B9FAF641* __this, const RuntimeMethod* method) 
 {
 	{
@@ -1708,7 +1708,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Logic__ctor_mA204D33575037F6C7149266A0C8
 		return;
 	}
 }
-// Method Definition Index: 100670
+// Method Definition Index: 100671
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 Logic_U3CStartU3Eb__6_0_m370B3D8E50BC99DFB641350BB3194EFC3F72BDE8 (Logic_t4D261E68748AF20E97F4DD3030E99E56B9FAF641* __this, Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 ___0__, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -1807,7 +1807,7 @@ IL_0036:
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 100671
+// Method Definition Index: 100672
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3Ec__DisplayClass8_0__ctor_mDE9D8BBC44E9E3762DA971020F9B195A1C96B5F1 (U3CU3Ec__DisplayClass8_0_t80113CCBD0899E1E4FD7C7D07DCA713BE4135C04* __this, const RuntimeMethod* method) 
 {
 	{
@@ -1815,7 +1815,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3Ec__DisplayClass8_0__ctor_mDE9D8BBC
 		return;
 	}
 }
-// Method Definition Index: 100672
+// Method Definition Index: 100673
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool U3CU3Ec__DisplayClass8_0_U3CCustomImageLoaderU3Eb__0_m11B36FFF5C3E6DBAA23AC81CC26D530AA967193F (U3CU3Ec__DisplayClass8_0_t80113CCBD0899E1E4FD7C7D07DCA713BE4135C04* __this, Texture2D_tE6505BC111DD8A424A9DBE8E05D7D09E11FFFCF4* ___0_t, const RuntimeMethod* method) 
 {
 	{

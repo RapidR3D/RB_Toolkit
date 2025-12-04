@@ -79,9 +79,9 @@ Tap and select the car that needs to be added.
 │ Please enter new car details:       │
 │                                     │
 │ ENTER CAR INITIAL & NUMBER          │
-│ [                                ]  │
 │                                     │
-│         [Submit]                    │
+│                                     │
+│           Submit                    │
 └─────────────────────────────────────┘
 
 ### Step 4: Input Information

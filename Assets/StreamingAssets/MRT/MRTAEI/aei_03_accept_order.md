@@ -35,9 +35,9 @@ Click the **All Cars** tab to view the complete verified consist.
 ## All Cars Display
 
 ### Screen Header
-```
+
 Mobile Rail Tool   Train: H79605   WO# 677846   AEI Read Selection
-```
+
 
 ### Tab Structure
 - **ALL AEI READS**

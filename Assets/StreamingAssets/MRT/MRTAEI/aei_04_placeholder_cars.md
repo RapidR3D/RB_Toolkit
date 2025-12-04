@@ -63,9 +63,9 @@ Highlight the car and tap **Set Initial/Number**.
 │ Please enter new car details:       │
 │                                     │
 │ ENTER CAR INITIAL & NUMBER          │
-│ [                                ]  │
 │                                     │
-│         [Submit]                    │
+│                                     │
+│         (Submit)                    │
 └─────────────────────────────────────┘
 
 1. To supply the **correct car number**
@@ -95,7 +95,7 @@ Two cars show missing but the conductor verified they are on the train.
 
 1. **Check the Add Cars tab** for AEI Placeholder cars
 2. **Confirm:** There is one car (position 72)
-3. The placeholder shows as: `AEI ##7166A`
+3. The placeholder shows as: AEI ##7166A
 
 ### Correction Steps
 
@@ -110,7 +110,7 @@ Two cars show missing but the conductor verified they are on the train.
 - Space
 - Car number
 
-**Example:** `CSXT 2797`
+**Example:** CSXT 2797
 
 **Step 5:** Tap **Submit**
 
@@ -137,9 +137,9 @@ Seq   Car             Load/Empty   From Instruction   To Instruction   Info
 │ Please enter new car details:        │
 │                                      │
 │ ENTER CAR INITIAL & NUMBER           │
-│ [CSXT 2797                        ]  │
+│   CSXT 2797                          │
 │                                      │
-│          [Submit]                    │
+│           Submit                     │
 └──────────────────────────────────────┘
 
 ### After Correction
@@ -334,17 +334,17 @@ If Load/Empty status uncertain:
 
 ### Placeholder Correction Process
 
-- [ ] Identify placeholder cars (AEI ## prefix)
-- [ ] Verify physical car presence
-- [ ] Tap Set Initial Number
-- [ ] Enter correct car initial and number
-- [ ] Click Submit
-- [ ] Set Load/Empty status
-- [ ] Or use Skip/Unskip if car absent/unknown
-- [ ] Verify correction appears in list
-- [ ] Repeat for all placeholders
-- [ ] Confirm Add Work button re-enabled
-- [ ] Continue with normal AEI processing
+-  Identify placeholder cars (AEI ## prefix)
+-  Verify physical car presence
+-  Tap Set Initial Number
+-  Enter correct car initial and number
+-  Click Submit
+-  Set Load/Empty status
+-  Or use Skip/Unskip if car absent/unknown
+-  Verify correction appears in list
+-  Repeat for all placeholders
+-  Confirm Add Work button re-enabled
+-  Continue with normal AEI processing
 
 ---
 

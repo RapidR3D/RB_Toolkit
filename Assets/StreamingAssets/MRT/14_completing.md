@@ -10,14 +10,14 @@ Properly completing and closing out work orders is critical for accurate reporti
 
 ### Before Logging Out
 
-- [ ] All customer tiles show **100% Complete**
-- [ ] All station tiles show **100% Complete**
-- [ ] All interchange tiles show **100% Complete**
-- [ ] Locomotives reported
-- [ ] EOT reported
-- [ ] Notification bell clear (no unread alerts)
-- [ ] No pending AEI reads
-- [ ] Train Order shows **COMPLETED 100%**
+-  All customer tiles show **100% Complete**
+-  All station tiles show **100% Complete**
+-  All interchange tiles show **100% Complete**
+-  Locomotives reported
+-  EOT reported
+-  Notification bell clear (no unread alerts)
+-  No pending AEI reads
+-  Train Order shows **COMPLETED 100%**
 
 ---
 

@@ -102,11 +102,11 @@ Exception codes communicate **why** planned work could not be completed. Choosin
 - BO, IC, OT, PI, PR, RE, RP, RR, RT
 
 **Example:**
-```
+
 Exception: SO (Set Out Other)
 Reason: IC (Delivered Interchange)
 Explanation: Car was delivered to interchange instead of customer
-```
+
 
 ---
 
@@ -118,11 +118,11 @@ Explanation: Car was delivered to interchange instead of customer
 - BD, BO, CI, CX, DW, EF, OB, OT, RA, RQ, RR, SS, TC, TX
 
 **Example:**
-```
+
 Exception: NP (Not Performed)
 Reason: CI (Customer Not Accessible)
 Explanation: Could not perform intraplant due to customer blue flag
-```
+
 
 ---
 
@@ -134,11 +134,11 @@ Explanation: Could not perform intraplant due to customer blue flag
 - BO, CX, DW, EF, FL, IC, RR, TX
 
 **Example:**
-```
+
 Exception: SO (Set Out Other)
 Reason: EF (Engine Failure)
 Explanation: Power set out due to mechanical failure
-```
+
 
 ---
 
@@ -150,11 +150,11 @@ Explanation: Power set out due to mechanical failure
 - BI, BO, CX, DR, DW, EF, FL, IL, NA, OT, RP, RQ, RR, SS, TC, TF, TN, TX
 
 **Example:**
-```
+
 Exception: NP (Not Performed)
 Reason: NA (Not Available at Station)
 Explanation: Cars had not arrived at yard yet
-```
+
 
 ---
 
@@ -167,22 +167,22 @@ Explanation: Cars had not arrived at yard yet
 - BD, CI, CX, DW, EF, FL, OB, RA, RN, RQ, RR, SS, TC, TX
 
 **Example:**
-```
+
 Exception: PD (Placed Different)
 Reason: TF (Track Full)
 Explanation: Primary spot full, placed on alternate track
-```
+
 
 #### Using SO (Set Out Other)
 **Valid Reason Codes:**
 - BD, BO, CI, CX, DW, EF, FL, IC, NO, OB, OT, PI, RA, RR, SS, TC, TX
 
 **Example:**
-```
+
 Exception: SO (Set Out Other)
 Reason: OT (Out of Time)
 Explanation: Could not reach customer before hours of service, set out at yard
-```
+
 
 #### Using NI (Not In)
 **Valid Reason Codes:**
@@ -207,11 +207,11 @@ Explanation: Could not reach customer before hours of service, set out at yard
 - BD, BO, CI, CX, DW, EF, IL, LN, OB, OT, RA, RQ, RR, SS, TC, TX
 
 **Example:**
-```
+
 Exception: NP (Not Performed)
 Reason: LN (Load/Unload Not Complete)
 Explanation: Customer still loading car, not ready for pickup
-```
+
 
 #### Using NI (Not In Industry)
 **Valid Reason Codes:**
@@ -235,11 +235,11 @@ Explanation: Customer still loading car, not ready for pickup
 - BO, CX, DW, EF, FL, IC, OT, PI, RR, TX
 
 **Example:**
-```
+
 Exception: NP (Not Performed)
 Reason: TX (Track Condition - Railroad)
 Explanation: Yard track out of service, could not set out
-```
+
 
 ---
 
@@ -274,44 +274,44 @@ Pick the **most accurate** reason from the valid options.
 ## Common Exception Scenarios
 
 ### Scenario 1: Customer Track Full
-```
+
 Work Instruction: PL (Place at Customer)
 Exception Code: SO (Set Out Other)
 Reason Code: TF (Customer Track Full)
 Result: Left car at yard, customer reason, no CSD impact
-```
+
 
 ### Scenario 2: Out of Time
-```
+
 Work Instruction: PL (Place at Customer)
 Exception Code: SO (Set Out Other)
 Reason Code: OT (Out of Time)
 Result: Left car at yard, railroad reason, COUNTS AS MISS
-```
+
 
 ### Scenario 3: Customer Blue Flag Up
-```
+
 Work Instruction: PU (Pull from Customer)
 Exception Code: NP (Not Performed)
 Reason Code: BD (Customer Blue Flag/Derail)
 Result: Could not pull, customer reason, no CSD impact, may charge customer
-```
+
 
 ### Scenario 4: Bad Ordered Car
-```
+
 Work Instruction: PL (Place at Customer)
 Exception Code: SO (Set Out Other)
 Reason Code: BO (Bad Ordered)
 Result: Car mechanically defective, railroad reason, COUNTS AS MISS
-```
+
 
 ### Scenario 5: Placed on Alternate Track
-```
+
 Work Instruction: PL at Track 1
 Exception Code: PD (Placed Different Track/Spot)
 Reason Code: RA (Customer Request on Arrival)
 Result: Customer asked for different spot, customer reason, no CSD impact
-```
+
 
 ---
 
@@ -346,20 +346,20 @@ These still don't count against CSD, but the customer may be billed for delays t
 You **CAN** change the destination of a car using exceptions:
 
 **To show a car DI exception as SO IC:**
-```
+
 Original: DI (Deliver Interchange)
 Exception: SO (Set Out Other)
 Reason: IC (Delivered Interchange)
 Result: Car set out at yard instead of interchange
-```
+
 
 **To show a car PL exception as SO PI:**
-```
+
 Original: PL (Place at Customer)
 Exception: SO (Set Out Other)
 Reason: PI (Placed in Industry)
 Result: Car placed inside different customer facility
-```
+
 
 ---
 

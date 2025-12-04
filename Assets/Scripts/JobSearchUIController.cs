@@ -560,6 +560,9 @@ public class JobSearchUIController : MonoBehaviour
 
     private void OnContentSearchChanged(string searchText)
     {
+        // Capture the currently selected item before filtering
+        var previouslySelectedItem = sectionList.selectedItem as SectionItem;
+
         currentSearchTerm = searchText;
         FilterSectionList(searchText);
         
@@ -575,11 +578,29 @@ public class JobSearchUIController : MonoBehaviour
             contentSearchField.value = searchText.Replace("\n", "");
         }
         
-        // Automatically refresh the current view if a section is selected
-        if (sectionList.selectedIndex >= 0)
+        // Try to restore selection if the item is still in the filtered list
+        if (previouslySelectedItem != null && currentSectionItems.Contains(previouslySelectedItem))
         {
-            // Re-trigger selection logic to update highlighting
+            int newIndex = currentSectionItems.IndexOf(previouslySelectedItem);
+            sectionList.selectedIndex = newIndex;
+            
+            // Force update detail view to show highlights
+            OnSectionSelected(new List<object> { previouslySelectedItem });
+        }
+        else if (sectionList.selectedIndex >= 0)
+        {
+            // If selection was preserved by ListView (unlikely but possible), update view
             OnSectionSelected(new List<object> { sectionList.selectedItem });
+        }
+        else if (currentSectionItems.Count > 0)
+        {
+            // Optional: If selection was lost, maybe select the first item?
+            // For now, let's just leave it unselected to avoid jumping around too much while typing,
+            // unless the user explicitly wants that behavior.
+            // But we should clear the detail view if nothing is selected?
+            // Actually, RenderDetailView handles null item by doing nothing, so the old content stays.
+            // This might be confusing. Let's clear it if nothing is selected.
+            // detailView.Clear(); // Maybe?
         }
     }
 
