@@ -1,0 +1,88 @@
+{
+  "jobNumber": "Y223",
+  "jobName": "DECOURSEY",
+  "craft": "FO FOREMAN",  
+  "onduty": "1530",
+  "yardCode": "QUE",
+  "subdivisionCode": "CI",
+  "serviceType": "Yard",
+  "location": "Decoursey Crew Room",
+  "radioChannels": "Channel 96(INDUST YM 96)",
+  "equipment": [    
+    "Personal Radio",
+    "PPE",
+    "June Street Map",
+    "Industry Maps(SEE IMAGES)",
+	"Safety Glasses",
+	"Work Boots",
+	"Gloves"
+  ],
+  "sections": [
+    {
+      "label": "Summary",
+      "file": "summary.md"
+    },
+    {
+      "label": "Operating Notes",
+      "file": "radio_procedures.md"
+    }
+  ],
+  "tables": [
+    {
+      "name": "Contacts",
+      "file": "Shared/SharedDocs/contacts.csv"
+    },
+    {
+      "name": "Yard Office Address",
+      "file": "address.csv"
+    },
+    {
+      "name": "Territory Info",
+      "file": "territory.csv"
+    }
+  ],
+  "procedures": [
+    {
+	  "name": ""
+    },
+    {
+      "name": "",
+      "file": ""
+    }
+  ],
+  "images":[
+	{
+	 "name": "<b>**Images**<b>"
+	},
+	{
+	 "name": "",
+	 "file": ""
+	},
+	{
+	 "name": "",
+	 "file": ""
+	},
+	{
+	 "name": "",
+	 "file": ""
+	},{
+	 "name": "",
+	 "file": ""
+	},{
+	 "name": "",
+	 "file": ""
+	},{
+	 "name": "",
+	 "file": ""
+	},{
+	 "name": "",
+	 "file": ""
+	},{
+	 "name": "",
+	 "file": ""
+	},{
+	 "name": "",
+	 "file": ""
+	}
+	]
+}
