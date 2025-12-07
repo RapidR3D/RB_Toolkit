@@ -1,0 +1,104 @@
+Here are the step-by-step instructions on how to add your own sub-categories to the project. This system allows you to nest folders as deep as you like.
+
+Step 1: Create the Sub-Category Folder
+
+1.  Navigate to the StreamingAssets folder in your project (Assets/StreamingAssets).
+2.  Open the folder of the Parent Category where you want to add the sub-category (e.g., Miscellaneous).
+3.  Create a New Folder inside it and name it whatever you want your sub-category to be (e.g., MyNewCategory).
+
+Step 2: Create the Configuration File (job.json)
+
+Every category needs a job.json file to tell the app what to display.
+
+1.  Inside your new folder (Assets/StreamingAssets/Miscellaneous/MyNewCategory), create a new text file named job.json.
+2.  Paste the following template into it and modify the values:
+
+[language=json]
+{
+  "title": "My New Category",
+  "docType": "my_new_category",
+  "version": "1.0",
+  "category": "General Info",
+  "keywords": [
+    "New",
+    "Category",
+    "Info"
+  ],
+  "sections": [
+    {
+      "label": "Overview",
+      "file": "overview.md"
+    }
+  ]
+}
+
+• title: The name displayed at the top of the screen.
+• docType: A unique internal ID (lowercase, no spaces).
+• sections: The list of items (files or other sub-categories) to show in the menu.
+
+Step 3: Add Your Content
+
+1.  Create the content files you referenced in the sections list (e.g., overview.md).
+2.  You can add Markdown files (.md), CSV tables (.csv), or Images (.png/.jpg).
+3.  Example overview.md:
+    [language=markdown]
+    # Welcome
+    This is the overview for my new sub-category.
+    
+
+Step 4: Link from the Parent Category
+
+Now you need to tell the Parent Category to show a button for your new sub-category.
+
+1.  Go back up to the Parent Folder (e.g., Assets/StreamingAssets/Miscellaneous).
+2.  Open the Parent's job.json file.
+3.  Add a new entry to the sections list pointing to your new folder's job.json.
+
+Example modification to Miscellaneous/job.json:
+
+[language=json]
+  "sections": [
+    {
+      "label": "Overview",
+      "file": "overview.md"
+    },
+    {
+      "label": "Over The Road",
+      "file": "OverTheRoad/job.json"
+    },
+    {
+      "label": "My New Category", 
+      "file": "MyNewCategory/job.json" 
+    }
+  ]
+
+• Note: Ensure you add a comma , after the previous item in the list!
+
+Step 5: (Optional) Add a Search Shortcut
+
+If you want users to be able to type a shortcut like "NEW" in the main search bar to jump directly to this folder, you need to edit the code.
+
+1.  Open Assets/Scripts/JobDataLoader.cs.
+2.  Find the LoadJobFromInputField method (around line 280).
+3.  Add a new else if block for your shortcut:
+
+[language=csharp]
+else if (upperInput == "NEW" || upperInput == "MY CATEGORY")
+{
+    // Path relative to StreamingAssets
+    JobFolder = "Miscellaneous/MyNewCategory"; 
+}
+
+
+Summary of Structure
+
+If you followed these steps, your file structure should look like this:
+
+[language=text]
+Assets/
+└── StreamingAssets/
+    └── Miscellaneous/
+        ├── job.json          <-- Links to "MyNewCategory/job.json"
+        └── MyNewCategory/    <-- Your new folder
+            ├── job.json      <-- Defines the sub-category
+            └── overview.md   <-- Your content

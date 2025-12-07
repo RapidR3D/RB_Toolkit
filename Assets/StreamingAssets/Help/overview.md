@@ -16,4 +16,4 @@
 - We also are trying to include information for things not gone over in training very much. Job bids. Vacation. Claims. How to use YES effectively. etc.
 
 Created: 120225
-Authored: GF, JA, JB, BT
+Authored: GF, JA, JB, DM, BT

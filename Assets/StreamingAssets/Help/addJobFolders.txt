@@ -1,0 +1,19 @@
+ADD NEW JOB FOLDERS:
+
+The issue with file paths on Android/iOS (which are case-sensitive) versus the Editor (which is often case-insensitive) has
+been addressed by implementing a Job Manifest system.
+
+What was done:
+1.  Created JobManifest Data Structure: A new class JobManifest was created to store the list of valid job directories.
+2.  Created Manifest Generator: An Editor tool (Assets/Editor/JobManifestGenerator.cs) was created to scan the StreamingAssets 
+	folder and generate a job_manifest.json file containing the exact, case-correct paths for all jobs.
+3.  Generated Manifest: The manifest was generated, capturing the correct casing for all your folders (e.g., Y199P, YR09, etc.).
+4.  Updated JobDataLoader: The loader script was modified to:
+		• Load the job_manifest.json at startup.
+			When searching for a job (e.g., "y199p"), it looks up the case-insensitive match in the manifest to find the actual* folder name (e.g., "Y199P").
+		• This ensures that even if the user types lowercase, the system uses the correct uppercase path required by Android/iOS.
+
+How to use:
+	• The fix is already applied and active.
+	• If you add new job folders in the future, you should go to the Unity Editor menu Tools > Generate Job Manifest to update the list of valid paths. 
+This ensures the new folders are also correctly recognized on mobile devices.

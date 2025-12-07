@@ -17,11 +17,11 @@
     },
     {
       "label": "Over The Road",
-      "file": "../OverTheRoad/job.json"
+      "file": "OverTheRoad/job.json"
     },
     {
       "label": "SMART Union",
-      "file": "../Union/job.json"
+      "file": "Union/job.json"
     }
   ]
 }

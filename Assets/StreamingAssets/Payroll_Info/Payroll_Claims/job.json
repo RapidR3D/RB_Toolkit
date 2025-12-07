@@ -11,43 +11,43 @@
     },
 	{
       "label": "Claims Guide (Part 1)",
-      "file": "SharedDocs/claims_01.md"
+      "file": "Shared/SharedDocs/claims_01.md"
     },
     {
       "label": "Claims Guide (Part 2)",
-      "file": "SharedDocs/claims_02.md"
+      "file": "Shared/SharedDocs/claims_02.md"
     },
     {
       "label": "Claims Guide (Part 3)",
-      "file": "SharedDocs/claims_03.md"
+      "file": "Shared/SharedDocs/claims_03.md"
     },
     {
       "label": "Claims Guide (Part 4)",
-      "file": "SharedDocs/claims_04.md"
+      "file": "Shared/SharedDocs/claims_04.md"
     },
     {
       "label": "Claims Guide (Part 5)",
-      "file": "SharedDocs/claims_05.md"
+      "file": "Shared/SharedDocs/claims_05.md"
     },
     {
       "label": "Claims Guide (Part 6)",
-      "file": "SharedDocs/claims_06.md"
+      "file": "Shared/SharedDocs/claims_06.md"
     },
     {
       "label": "Claims Guide (Part 7)",
-      "file": "SharedDocs/claims_07.md"
+      "file": "Shared/SharedDocs/claims_07.md"
     },
     {
       "label": "Claims Guide (Part 8)",
-      "file": "SharedDocs/claims_08.md"
+      "file": "Shared/SharedDocs/claims_08.md"
     },
     {
       "label": "Claims Guide (Part 9)",
-      "file": "SharedDocs/claims_09.md"
+      "file": "Shared/SharedDocs/claims_09.md"
     },
     {
       "label": "Claims Guide (Part 10)",
-      "file": "SharedDocs/claims_10.md"
+      "file": "Shared/SharedDocs/claims_10.md"
     }  
   ],
   "keywords": [

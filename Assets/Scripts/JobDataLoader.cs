@@ -5,8 +5,6 @@ using System.IO;
 using UnityEngine;
 using UnityEngine.Networking;
 
-
-
 // Attach this to an empty GameObject. Set JobFolder to the folder name under StreamingAssets that contains job.json.
 public class JobDataLoader : MonoBehaviour
 {
@@ -26,8 +24,43 @@ public class JobDataLoader : MonoBehaviour
     // Event invoked when load completes (successful or not). Subscribers can bind when ready.
     public event Action<JobData, Dictionary<string, string>> JobLoaded;
 
+    private JobManifest _manifest;
+
     void Start()
     {
+        StartCoroutine(LoadManifestAndJob());
+    }
+
+    private IEnumerator LoadManifestAndJob()
+    {
+        // Load Manifest
+        string manifestPath = Path.Combine(Application.streamingAssetsPath, "job_manifest.json");
+#if (UNITY_ANDROID || UNITY_IOS) && !UNITY_EDITOR
+        manifestPath = manifestPath.Replace("\\", "/");
+#endif
+        string url = ToPathUrl(manifestPath);
+        
+        using (var uwr = UnityWebRequest.Get(url))
+        {
+            yield return uwr.SendWebRequest();
+            if (uwr.result == UnityWebRequest.Result.Success)
+            {
+                try
+                {
+                    _manifest = JsonUtility.FromJson<JobManifest>(uwr.downloadHandler.text);
+                    Debug.Log($"Loaded Job Manifest with {_manifest.directories.Count} entries.");
+                }
+                catch (Exception ex)
+                {
+                    Debug.LogError($"Failed to parse job_manifest.json: {ex}");
+                }
+            }
+            else
+            {
+                Debug.LogWarning($"Could not load job_manifest.json: {uwr.error}. Case-insensitive fallback will be disabled.");
+            }
+        }
+
         if (LoadOnStart) StartCoroutine(LoadJobCoroutine());
     }
 
@@ -36,13 +69,9 @@ public class JobDataLoader : MonoBehaviour
         LoadedJob = null;
         LoadedFiles.Clear();
 
-        string basePath = Path.Combine(Application.streamingAssetsPath, JobFolder);
-        string jobJsonPath = Path.Combine(basePath, JobJsonFile);
-        
-#if (UNITY_ANDROID || UNITY_IOS) && !UNITY_EDITOR
-        // Ensure forward slashes on Android and iOS
-        jobJsonPath = jobJsonPath.Replace("\\", "/");
-#endif
+        // Use manual path construction to ensure forward slashes on all platforms, especially Android
+        string basePath = CombinePathUrl(Application.streamingAssetsPath, JobFolder);
+        string jobJsonPath = CombinePathUrl(basePath, JobJsonFile);
 
         string jobJsonText = null;
         // streamingAssetsPath may require UnityWebRequest on some platforms (Android)
@@ -205,55 +234,56 @@ public class JobDataLoader : MonoBehaviour
         if (relativePath.StartsWith("Shared/", StringComparison.OrdinalIgnoreCase) || 
             relativePath.StartsWith("Shared\\", StringComparison.OrdinalIgnoreCase))
         {
-            fullPath = Path.Combine(Application.streamingAssetsPath, relativePath);
-        }
-        // Check if the path starts with "SharedDocs/" or "SharedDocs\" (case-insensitive)
-        else if (relativePath.StartsWith("SharedDocs/", StringComparison.OrdinalIgnoreCase) || 
-                 relativePath.StartsWith("SharedDocs\\", StringComparison.OrdinalIgnoreCase))
-        {
-            // On Android, we need to be careful with Path.Combine if the path already contains separators
-            // relativePath might be "SharedDocs/filename.md"
-            // Application.streamingAssetsPath on Android is "jar:file://.../assets"
-            
-            // If we use Path.Combine, it might use backslashes on Windows editor which is fine,
-            // but on Android we want forward slashes.
-            
-            // Let's construct the path manually to ensure forward slashes for Android/iOS consistency
-            // relativePath is expected to be like "SharedDocs/file.md"
-            
-            // Remove any leading slash/backslash just in case
-            string cleanRelativePath = relativePath.TrimStart('/', '\\');
-            
-            fullPath = Path.Combine(Application.streamingAssetsPath, cleanRelativePath);
+            fullPath = CombinePathUrl(Application.streamingAssetsPath, relativePath);
         }
         else
         {
             // Handle nested folders in JobFolder (e.g. CREWLIFE/CLAIMS)
-            // If JobFolder contains slashes, Path.Combine might fail on Android if not handled carefully
-            // But usually Path.Combine(base, nested, file) works if base is clean.
-            
-            // However, if relativePath itself contains slashes (e.g. "SubFolder/file.md"), 
-            // we need to ensure separators are correct.
-            
-            fullPath = Path.Combine(Application.streamingAssetsPath, JobFolder, relativePath);
+            fullPath = CombinePathUrl(Application.streamingAssetsPath, JobFolder, relativePath);
         }
         
-        // Fix for Android: Ensure no backslashes in the final path if it's a URL
-        // Path.Combine might introduce backslashes on Windows Editor, which is fine,
-        // but on Android device, we want forward slashes for the jar:file:// URL.
-        // The ToPathUrl method handles the prefix, but let's ensure the path part is clean.
-        
-#if (UNITY_ANDROID || UNITY_IOS) && !UNITY_EDITOR
-        fullPath = fullPath.Replace("\\", "/");
-#endif
-        
         return ToPathUrl(fullPath);
+    }
+
+    // Helper to combine paths with forward slashes, safe for Android jar:file:// paths
+    private string CombinePathUrl(params string[] parts)
+    {
+        if (parts == null || parts.Length == 0) return "";
+        
+        string result = parts[0].Replace("\\", "/");
+        
+        for (int i = 1; i < parts.Length; i++)
+        {
+            string p = parts[i];
+            if (string.IsNullOrEmpty(p)) continue;
+            
+            p = p.Replace("\\", "/");
+            
+            // Ensure separator
+            if (!result.EndsWith("/")) result += "/";
+            
+            // Remove leading slash from part to avoid double slash
+            if (p.StartsWith("/")) p = p.Substring(1);
+            
+            result += p;
+        }
+        
+        return result;
     }
 
     string ToPathUrl(string path)
     {
 #if UNITY_ANDROID && !UNITY_EDITOR
         // On Android, streamingAssetsPath is inside the APK, use "jar:file://" + path
+        // However, if path already starts with jar:file://, we don't need to add it.
+        // Application.streamingAssetsPath usually includes it, but let's be safe.
+        if (!path.StartsWith("jar:file://"))
+        {
+             // If it starts with file://, replace it? No, jar:file:// expects a path inside apk.
+             // But we are constructing paths from Application.streamingAssetsPath which HAS it.
+             // So usually we just return path.
+             return path;
+        }
         return path;
 #else
         // For other platforms (and editor), path prefixed with file:// works
@@ -311,53 +341,74 @@ public class JobDataLoader : MonoBehaviour
         }
         else if (upperInput == "OTR" || upperInput == "OVER THE ROAD" || upperInput == "ROAD" || upperInput == "AWAY" || upperInput == "OUT OF TOWN" || upperInput == "OVER" || upperInput == "ROAD TRAIN")
         {
-            JobFolder = "OverTheRoad";
+            JobFolder = "Miscellaneous/OverTheRoad";
         }
         else if (upperInput == "OVERTHEROAD")
         {
-            JobFolder = "OverTheRoad";
+            JobFolder = "Miscellaneous/OverTheRoad";
         }
         else if (upperInput == "UNION" || upperInput == "UN" || upperInput == "UNI" || upperInput == "UNIO" || upperInput == "SMART")
         {
-            JobFolder = "Union";
+            JobFolder = "Miscellaneous/Union";
         }
         else
         {
-            // If it's not a shortcut, use the input as is (preserving case for nested paths)
-            // But if it's a simple root folder like "y197", we might want to uppercase it if that's the convention
-            // The convention seems to be that Job IDs (Y197) are uppercase, but folders like CrewLife are CamelCase.
-            
-            // If it contains a slash, assume it's a constructed path from the UI and trust its casing.
-            if (input.Contains("/") || input.Contains("\\"))
+            // Try to resolve using manifest first (Case-Insensitive Lookup)
+            bool foundInManifest = false;
+            if (_manifest != null && _manifest.directories != null)
             {
-                JobFolder = input;
-            }
-            else
-            {
-                // If it's a single word, try to be smart.
-                // If it looks like a Job ID (starts with Y), uppercase it.
-                if (upperInput.StartsWith("Y"))
+                // Normalize input slashes
+                string normalizedInput = input.Replace("\\", "/");
+                
+                // Try exact match first
+                foreach (var dir in _manifest.directories)
                 {
-                    JobFolder = upperInput;
+                    if (dir.Equals(normalizedInput, StringComparison.OrdinalIgnoreCase))
+                    {
+                        JobFolder = dir; // Use the correct casing from manifest
+                        foundInManifest = true;
+                        break;
+                    }
+                }
+                
+                // If not found, and input doesn't have slashes, maybe it's a root folder?
+                if (!foundInManifest && !normalizedInput.Contains("/"))
+                {
+                    foreach (var dir in _manifest.directories)
+                    {
+                        // Check if the directory name matches the input
+                        // But manifest contains relative paths like "Miscellaneous/OverTheRoad"
+                        // If input is "OverTheRoad", we might want to match?
+                        // But usually input is the full relative path OR a root folder.
+                        
+                        // If input is "y199p", and manifest has "Y199P", it matches.
+                        if (dir.Equals(normalizedInput, StringComparison.OrdinalIgnoreCase))
+                        {
+                            JobFolder = dir;
+                            foundInManifest = true;
+                            break;
+                        }
+                    }
+                }
+            }
+
+            if (!foundInManifest)
+            {
+                // Fallback to old logic if manifest not loaded or not found
+                if (input.Contains("/") || input.Contains("\\"))
+                {
+                    JobFolder = input;
                 }
                 else
                 {
-                    // For other single words, we might need to check if they exist or just use as is.
-                    // Previously we uppercased everything.
-                    // If we uppercase "CrewLife", it becomes "CREWLIFE", which fails.
-                    // But "CrewLife" is handled by the shortcut above.
-                    
-                    // If the user types "Claims" directly (if that's supported), we might have an issue.
-                    // But usually they type "Y197" or "CrewLife".
-                    
-                    // Let's default to preserving case if it's not a known shortcut/pattern.
-                    // But wait, if they type "y197", we want "Y197".
-                    // If they type "crewlife", we want "CrewLife" (handled above).
-                    
-                    // If they type "SomeFolder", we probably want "SomeFolder".
-                    
-                    // Let's stick to: if it has a slash, trust it. If not, uppercase it (legacy behavior for Job IDs).
-                    JobFolder = upperInput;
+                    if (upperInput.StartsWith("Y"))
+                    {
+                        JobFolder = upperInput;
+                    }
+                    else
+                    {
+                        JobFolder = upperInput;
+                    }
                 }
             }
         }

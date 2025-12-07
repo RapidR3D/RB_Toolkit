@@ -1,0 +1,26 @@
+{
+  "jobNumber": "YR11",
+  "jobName": "Trim Relief 1",
+  "craft": "FO/SW",
+  "onduty": "See Job ID for that day",
+  "yardCode": "QUE",
+  "subdivisionCode": "CI",
+  "serviceType": "Yard",
+  "location": "Trim Tower Crew Room",
+  "radioChannels": "021-021",
+"equipment": [   
+    "Personal Radio",
+    "PPE",
+    "R Yard Map",
+    "Bowl/Trim Map",
+	"Safety Glasses",
+	"Work Boots",
+	"Gloves"
+  ],
+  "sections": [
+    {
+      "label": "Summary",
+      "file": "overview.md"
+    }
+  ]
+}

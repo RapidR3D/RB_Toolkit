@@ -1,7 +1,7 @@
 **Welcome to the Rail Brothers Toolkit**
 
-Created by: George Feller, Jeremy Ackley, Joe Boze, Brian Truesdell
-v1.3.14 120225
+Developed by: George Feller, Jeremy Ackley, Joe Boze, Dean McCleese, Brian Truesdell
+v1.3.17 120225
 # Search Commands
 
 Type any of the following into the search bar to access the corresponding guide:
@@ -9,6 +9,9 @@ Type any of the following into the search bar to access the corresponding guide:
 ## Jobs
 - **Format**: `[Job ID]`
 - **Example**: <color=#FFD700>Y197</color>, <color=#FFD700>Y295</color>
+- **Note** If called as a pin puller, example Y199, Job ID:  <color=#FFD700>Y199P</color>
+- **Note** If called as a pin puller, example Y299, Job ID:  <color=#FFD700>Y299P</color>
+- **Note** If called as a pin puller, example Y399, Job ID:  <color=#FFD700>Y399P</color>
 
 ## Direct Access
 - **Format**: `Direct Access`

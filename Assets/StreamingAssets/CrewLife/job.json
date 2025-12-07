@@ -20,7 +20,11 @@
     {
       "label": "Claims",
       "file": "Claims/job.json"
-    }
+    }, 
+	{
+	  "label": "Check Job Award",
+	  "file": "checkjobaward.md"
+	}
   ],
   "tables": [
     {

@@ -1,0 +1,26 @@
+{
+  "jobNumber": "YR60",
+  "jobName": "Hump Relief",
+  "craft": "HF HUMP FOREMAN",
+  "onduty": "See Job ID for that day",
+  "yardCode": "QUE",
+  "subdivisionCode": "CI",
+  "serviceType": "Yard",
+  "location": "Hump Tower Crew Room",
+  "radioChannels": "044-044",
+"equipment": [   
+    "Personal Radio",
+    "PPE",
+    "R Yard Map",
+    "Bowl/Trim Map",
+	"Safety Glasses",
+	"Work Boots",
+	"Gloves"
+  ],
+  "sections": [
+    {
+      "label": "Summary",
+      "file": "overview.md"
+    }
+  ]
+}

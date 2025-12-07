@@ -32,7 +32,7 @@
   "tables": [
     {
       "name": "Contacts",
-      "file": "SharedDocs/contacts.csv"
+      "file": "Shared/SharedDocs/contacts.csv"
     },
     {
       "name": "Yard Office Address",
@@ -49,19 +49,19 @@
     },
     {
       "name": "Tilt / Time-Out Test",
-      "file": "SharedDocs/tilt_timeout.md"
+      "file": "Shared/SharedDocs/tilt_timeout.md"
     },
     {
       "name": "Vigilance Test",
-      "file": "SharedDocs/vigilance.md"
+      "file": "Shared/SharedDocs/vigilance.md"
     },
     {
       "name": "Standing Locomotive Air Brake Test",
-      "file": "SharedDocs/standing_brake.md"
+      "file": "Shared/SharedDocs/standing_brake.md"
     },
     {
       "name": "Locomotive Hand Brake Test",
-      "file": "SharedDocs/hand_brake.md"
+      "file": "Shared/SharedDocs/hand_brake.md"
     }
   ],
   "images":[

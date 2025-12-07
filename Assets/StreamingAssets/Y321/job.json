@@ -27,7 +27,7 @@
   "tables": [
     {
       "name": "Contacts",
-      "file": "SharedDocs/contacts.csv"
+      "file": "Shared/SharedDocs/contacts.csv"
     },
     {
       "name": "North Crew Room",
