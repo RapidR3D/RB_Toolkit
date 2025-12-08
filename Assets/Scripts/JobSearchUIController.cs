@@ -47,6 +47,9 @@ public class JobSearchUIController : MonoBehaviour
     private AudioSource audioSource;
     private AudioClip clickSound;
 
+    // Fonts
+    private Font _systemFont;
+
     // Data
     private List<SectionItem> allSectionItems = new List<SectionItem>();
     private List<SectionItem> currentSectionItems = new List<SectionItem>();
@@ -85,6 +88,9 @@ public class JobSearchUIController : MonoBehaviour
         
         clickSound = Resources.Load<AudioClip>("click");
         if (clickSound == null) Debug.LogWarning("Could not load 'click.ogg' from Resources.");
+
+        // Load System Font for Mobile
+        LoadSystemFont();
 
         if (uiDocument == null)
         {
@@ -469,19 +475,43 @@ public class JobSearchUIController : MonoBehaviour
         // Set Header
         if (isMainframe)
         {
-            if (jobTitle != null) jobTitle.text = job.title;
-            if (jobSubtitle != null) jobSubtitle.text = $"{job.systemName} v{job.version}";
+            if (jobTitle != null) 
+            {
+                jobTitle.text = job.title;
+                ApplyColor(jobTitle, job.titleColor);
+            }
+            if (jobSubtitle != null) 
+            {
+                jobSubtitle.text = $"{job.systemName} v{job.version}";
+                ApplyColor(jobSubtitle, job.categoryColor);
+            }
         }
         else if (isTEGuide || isCrewLife || isPayroll || isHelp || isMRT || isMRTAEI || isYES || isDirectAccess || isMiscellaneous || isOverTheRoad || isUnion || isClaims || isPayrollClaims)
         {
-            if (jobTitle != null) jobTitle.text = job.title;
-            if (jobSubtitle != null) jobSubtitle.text = $"{job.category} v{job.version}";
+            if (jobTitle != null) 
+            {
+                jobTitle.text = job.title;
+                ApplyColor(jobTitle, job.titleColor);
+            }
+            if (jobSubtitle != null) 
+            {
+                jobSubtitle.text = $"{job.category} v{job.version}";
+                ApplyColor(jobSubtitle, job.categoryColor);
+            }
         }
         else
         {
             // Standard Job Header
-            if (jobTitle != null) jobTitle.text = $"{job.jobNumber} - {job.jobName}";
-            if (jobSubtitle != null) jobSubtitle.text = $"{job.craft} | {job.onduty} | {job.location}";
+            if (jobTitle != null) 
+            {
+                jobTitle.text = $"{job.jobNumber} - {job.jobName}";
+                ApplyColor(jobTitle, job.titleColor);
+            }
+            if (jobSubtitle != null) 
+            {
+                jobSubtitle.text = $"{job.craft} | {job.onduty} | {job.location}";
+                ApplyColor(jobSubtitle, job.categoryColor);
+            }
         }
 
         // Populate List
@@ -927,6 +957,7 @@ public class JobSearchUIController : MonoBehaviour
                 var mdElement = UMarkdown.Parse(content, UMarkdownContext.Runtime());
                 detailView.Add(mdElement);
                 ApplyTableStyles(mdElement);
+                ApplyMobileFonts(mdElement);
             }
             else if (fileKey.EndsWith(".csv", StringComparison.OrdinalIgnoreCase))
             {
@@ -955,12 +986,14 @@ public class JobSearchUIController : MonoBehaviour
                 var mdElement = UMarkdown.Parse(mdTableRaw, UMarkdownContext.Runtime());
                 detailView.Add(mdElement);
                 ApplyTableStyles(mdElement);
+                ApplyMobileFonts(mdElement);
             }
             else
             {
                 var label = new Label(content);
                 label.AddToClassList("detail-content");
                 detailView.Add(label);
+                ApplyMobileFonts(label);
             }
         }
         
@@ -1154,6 +1187,7 @@ public class JobSearchUIController : MonoBehaviour
         var mdElement = UMarkdown.Parse(content, UMarkdownContext.Runtime());
         detailView.Add(mdElement);
         ApplyTableStyles(mdElement);
+        ApplyMobileFonts(mdElement);
     }
     
     private void UpdateMatchCountUI()
@@ -1536,5 +1570,97 @@ public class JobSearchUIController : MonoBehaviour
             }
             evt.StopPropagation();
         }
+    }
+
+    private void ApplyColor(Label label, string colorHex)
+    {
+        if (label == null) return;
+        
+        if (!string.IsNullOrEmpty(colorHex))
+        {
+            if (ColorUtility.TryParseHtmlString(colorHex, out Color color))
+            {
+                label.style.color = color;
+            }
+        }
+        else
+        {
+            // Reset to default if no color specified (optional, or keep previous style)
+            // label.style.color = StyleKeyword.Null; 
+        }
+    }
+
+    private void LoadSystemFont()
+    {
+#if UNITY_ANDROID || UNITY_IOS
+        if (_systemFont != null) return;
+
+        string[] fontNames = Font.GetOSInstalledFontNames();
+        string fontName = null;
+
+#if UNITY_ANDROID
+        // Try to find a system font that supports emojis and normal text
+        // "Roboto" is standard, "Noto" is often used for emojis
+        foreach (var f in fontNames)
+        {
+            if (f.Contains("Roboto")) 
+            {
+                fontName = f;
+                break;
+            }
+        }
+        if (string.IsNullOrEmpty(fontName))
+        {
+             foreach (var f in fontNames)
+             {
+                 if (f.Contains("Noto")) 
+                 {
+                     fontName = f;
+                     break;
+                 }
+             }
+        }
+#elif UNITY_IOS
+        // iOS usually handles fallback well with system font
+        foreach (var f in fontNames)
+        {
+            if (f.Contains("Helvetica") || f.Contains("Arial")) 
+            {
+                fontName = f;
+                break;
+            }
+        }
+#endif
+
+        if (!string.IsNullOrEmpty(fontName))
+        {
+            _systemFont = Font.CreateDynamicFontFromOSFont(fontName, 16);
+            Debug.Log($"Loaded system font: {fontName}");
+        }
+        else
+        {
+            Debug.LogWarning("Could not find suitable system font for mobile.");
+        }
+#endif
+    }
+
+    private void ApplyMobileFonts(VisualElement root)
+    {
+#if UNITY_ANDROID || UNITY_IOS
+        if (_systemFont != null)
+        {
+            if (root is Label rootLabel)
+            {
+                rootLabel.style.unityFont = _systemFont;
+                rootLabel.style.unityFontDefinition = StyleKeyword.Null;
+            }
+
+            root.Query<Label>().ForEach(label => 
+            {
+                label.style.unityFont = _systemFont;
+                label.style.unityFontDefinition = StyleKeyword.Null;
+            });
+        }
+#endif
     }
 }

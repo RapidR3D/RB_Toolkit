@@ -1,7 +1,7 @@
 # Job Summary
 
 **Yard Job #:** Y131  
-**Job Name:** 1st RAMP YM-QUE 
+**Job Name:** 1st RAMP YM-QUE  
 **Craft:** FO FOREMAN  
 **On Duty:** 1700  
 

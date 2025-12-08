@@ -59,4 +59,9 @@ public class JobData
     public List<string> usageTips;
     public List<JobTableRef> links; // Reusing JobTableRef for links (name=title, file=url)
     public List<string> keywords;
+
+    // Color Customization (Optional)
+    public string titleColor;
+    public string categoryColor;
+    public string summaryColor;
 }

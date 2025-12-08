@@ -1,18 +1,19 @@
-# Job Summary
+# <color=#FFD700>Job Summary</color>  
+===========
 
-**Yard Job #:** Y127 
-**Job Name:** IVORYDALE JUNE STREET
-**Craft:** FO FOREMAN  
-**On Duty:**  
+<color=#FF8C00>**Yard Job #:**</color> Y127  
+<color=#FF8C00>**Job Name:**</color> IVORYDALE JUNE STREET  
+<color=#FF8C00>**Craft:**</color> FO FOREMAN  
+<color=#FF8C00>**On Duty:**</color> 0630   
 
-**Yard Code:** QUE  
-**Subdivision Code:** CI  
-**Service Type:** Yard  
+<color=#FF8C00>**Yard Code:**</color> QUE  
+<color=#FF8C00>**Subdivision Code:**</color> CI  
+<color=#FF8C00>**Service Type:**</color> Yard  
 
-**Location:** Ivorydale Yard (June St.)  
-**Radio Channels:** Channel 96(INDUST YM 96)  
+<color=#FF8C00>**Location:**</color> Ivorydale Yard (June St.)  
+<color=#FF8C00>**Radio Channels:**</color> Channel 96(INDUST YM 96)  
 
-**Equipment Needed:**
+<color=#FF8C00>**Equipment Needed:**</color>  
 
 - Personal Radio
 - PPE
