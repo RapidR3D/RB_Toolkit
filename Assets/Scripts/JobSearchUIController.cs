@@ -1637,75 +1637,17 @@ public class JobSearchUIController : MonoBehaviour
 
     private void LoadSystemFont()
     {
-#if UNITY_ANDROID || UNITY_IOS
-        if (_systemFont != null) return;
-
-        string[] fontNames = Font.GetOSInstalledFontNames();
-        string fontName = null;
-
-#if UNITY_ANDROID
-        // Try to find a system font that supports emojis and normal text
-        // "Roboto" is standard, "Noto" is often used for emojis
-        foreach (var f in fontNames)
-        {
-            if (f.Contains("Roboto")) 
-            {
-                fontName = f;
-                break;
-            }
-        }
-        if (string.IsNullOrEmpty(fontName))
-        {
-             foreach (var f in fontNames)
-             {
-                 if (f.Contains("Noto")) 
-                 {
-                     fontName = f;
-                     break;
-                 }
-             }
-        }
-#elif UNITY_IOS
-        // iOS usually handles fallback well with system font
-        foreach (var f in fontNames)
-        {
-            if (f.Contains("Helvetica") || f.Contains("Arial")) 
-            {
-                fontName = f;
-                break;
-            }
-        }
-#endif
-
-        if (!string.IsNullOrEmpty(fontName))
-        {
-            _systemFont = Font.CreateDynamicFontFromOSFont(fontName, 16);
-            Debug.Log($"Loaded system font: {fontName}");
-        }
-        else
-        {
-            Debug.LogWarning("Could not find suitable system font for mobile.");
-        }
-#endif
+        // No-op: We are using TextMeshPro's sprite asset for emojis now.
     }
 
     private void ApplyMobileFonts(VisualElement root)
     {
-#if UNITY_ANDROID || UNITY_IOS
-        if (_systemFont != null)
-        {
-            if (root is Label rootLabel)
-            {
-                rootLabel.style.unityFont = _systemFont;
-                rootLabel.style.unityFontDefinition = StyleKeyword.Null;
-            }
+        // No-op: Rely on TextMeshPro's sprite asset fallback for emojis
+    }
 
-            root.Query<Label>().ForEach(label => 
-            {
-                label.style.unityFont = _systemFont;
-                label.style.unityFontDefinition = StyleKeyword.Null;
-            });
-        }
-#endif
+    // Helper to apply mobile fonts to a specific label (used when creating labels manually)
+    private void ApplyMobileFonts(Label label)
+    {
+        // No-op: Rely on TextMeshPro's sprite asset fallback for emojis
     }
 }
