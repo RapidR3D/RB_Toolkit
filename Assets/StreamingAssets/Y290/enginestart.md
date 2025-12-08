@@ -1,9 +1,9 @@
-# ENGINE START
+# <color=#FFD700>ENGINE START</color>  
 
-**Channel:** Channel 96(INDUST YM 96)
-**Engine #:** (enter engine number)
+<color=#FF8C00>**Channel:**</color> Channel 96(INDUST YM 96)  
+<color=#FF8C00>**Engine #:**</color> (enter engine number)  
 
-## Operating Notes
+## <color=#FF8C00>Operating Notes</color>  
 - <b>_LOCOMOTIVE CAB_<b>
 - Place the <b>Isolation Switch<b> in the <b>START<b>
 - Close the battery knife switch closed
@@ -32,7 +32,7 @@
 - --<b>NOTE:<b> Hold the layshaft lever (if equipped) at 1/3 travel
 - -- There may be a delay of up to 15 seconds before a GE diesel engine begins to crankcase
 - -- If the diesel fails to start, repeat this procedure. If it does not start after a second attempt, contact the Mechanical Department
-## IF AESS equipped
+## <color=#FF8C00>IF AESS equipped</color>  
 - Set Isolation switch to position Start/Stop/Isolate
 - Close the Battery Knife Switch
 - Close the Auxiliary Generator

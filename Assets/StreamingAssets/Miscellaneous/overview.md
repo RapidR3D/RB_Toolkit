@@ -1,5 +1,5 @@
-# Miscellaneous Overview
+# <color=#FFD700>Miscellaneous Overview</color>
 
-Welcome to the Miscellaneous section.
+Welcome to the Miscellaneous section.  
 
-This area contains general information and other resources.
+This area contains general information and other resources.  

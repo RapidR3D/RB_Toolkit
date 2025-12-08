@@ -1,9 +1,9 @@
-# Radio Procedures
+# <color=#FFD700>Radio Procedures</color>
 
-**Channel:** Channel 96(INDUST YM 96)  
-**Engine #:** (enter engine number)
+<color=#FF8C00>**Channel:**</color> Channel 96(INDUST YM 96)  
+<color=#FF8C00>**Engine #:**</color> (enter engine number)  
 
-Sample radio calls:
+Sample radio calls:  
 - "CSXT 880,I'm clear, drop three, test the brakes"
 
 - "CSXT 880, I'm clear all tracks"
@@ -17,6 +17,6 @@ Sample radio calls:
 - "CSXT 880, I'm clear, drop 3, cuts in the clear, up and riding, ahead"
 
 
-## Operating Notes
+## <color=#FF8C00>Operating Notes</color>
 
-- 
+-  

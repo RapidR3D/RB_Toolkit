@@ -1,10 +1,11 @@
-# Job Summary
+# <color=#FFD700>Job Summary</color>
+===========
 
-This is a template summary file. 
+This is a template summary file.  
 
-## Instructions
-1. Edit this file to add job-specific details.
-2. You can use **bold**, *italics*, and lists.
+## <color=#FF8C00>Instructions</color>
+1. Edit this file to add job-specific details.  
+2. You can use **bold**, *italics*, and lists.  
 
-- Point 1
-- Point 2
+- Point 1  
+- Point 2  

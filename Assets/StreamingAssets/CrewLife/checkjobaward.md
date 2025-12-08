@@ -1,5 +1,5 @@
-# Check Job Award
-** Job Awards are updated on Thursdays at 1600**
+# <color=#FFD700>Check Job Award</color>  
+<color=#FF8C00>** Job Awards are updated on Thursdays at 1600**</color>  
 - Open up CrewLife on your tablet
 - Navigate to **My Job** which will be the third option from the top
 - Select the "My Job Awards" section

@@ -1,24 +1,25 @@
-# Job Summary
+# <color=#FFD700>Job Summary</color>
+===========
 
-**Yard Job #:** Y392  
-**Job Name:** TRIM 2  
-**Craft:** FO FOREMAN
-**Craft:** S1 SWITCHMAN 
-**On Duty:** 2300  
+<color=#FF8C00>**Yard Job #:**</color> Y392  
+<color=#FF8C00>**Job Name:**</color> TRIM 2  
+<color=#FF8C00>**Craft:**</color> FO FOREMAN  
+<color=#FF8C00>**Craft:**</color> S1 SWITCHMAN  
+<color=#FF8C00>**On Duty:**</color> 2300  
 
-**Yard Code:** QUE  
-**Subdivision Code:** CI  
-**Service Type:** Yard  
+<color=#FF8C00>**Yard Code:**</color> QUE  
+<color=#FF8C00>**Subdivision Code:**</color> CI  
+<color=#FF8C00>**Service Type:**</color> Yard  
 
-**Location:** Trim Tower Crew Room  
-**Radio Channels:** Trim 1 (Channel: 021)  
+<color=#FF8C00>**Location:**</color> Trim Tower Crew Room  
+<color=#FF8C00>**Radio Channels:**</color> Trim 1 (Channel: 021)  
 
-**Equipment Needed:**
+<color=#FF8C00>**Equipment Needed:**</color>  
 
-- RCO Vest
-- RCO Flashlight
-- Personal Radio
-- PPE
-- R Yard Map
-- Bowl/Trim Map
-- RCO Box
+- RCO Vest  
+- RCO Flashlight  
+- Personal Radio  
+- PPE  
+- R Yard Map  
+- Bowl/Trim Map  
+- RCO Box  

@@ -192,6 +192,9 @@ MonoBehaviour:
     usageTips: []
     links: []
     keywords: []
+    titleColor: 
+    categoryColor: 
+    summaryColor: 
 --- !u!114 &103159885
 MonoBehaviour:
   m_ObjectHideFlags: 0

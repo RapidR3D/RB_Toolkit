@@ -1,31 +1,31 @@
-# Load/Empty Status Codes Reference
+# <color=#FFD700>Load/Empty Status Codes Reference</color>  
 
-## Overview
+## <color=#FF8C00>Overview</color>  
 
-Load/Empty (L/E) status identifies whether a railcar is carrying freight or is empty. This information is critical for billing, routing, and operational planning.
+Load/Empty (L/E) status identifies whether a railcar is carrying freight or is empty. This information is critical for billing, routing, and operational planning.  
 
 ---
 
-## Status Code Definitions
+## <color=#FF8C00>Status Code Definitions</color>  
 
-### Loaded Status Codes
+### <color=#20B2AA>Loaded Status Codes</color>  
 
 #### L - Loaded
-**Definition:** Standard loaded railcar carrying revenue freight
+<color=#FF8C00>**Definition:**</color> Standard loaded railcar carrying revenue freight  
 
-**Characteristics:**
+<color=#FF8C00>**Characteristics:**</color>  
 - Contains customer commodity
 - Generating freight revenue
 - Has active waybill/billing
 - Normal loaded operations
 
-**Examples:**
+<color=#FF8C00>**Examples:**</color>  
 - Tank car with chemicals
 - Boxcar with manufactured goods
 - Hopper with coal
 - Flatcar with lumber
 
-**When to Use:**
+<color=#FF8C00>**When to Use:**</color>  
 - Standard loaded car movements
 - Customer has loaded the car
 - Car carrying revenue freight
@@ -33,89 +33,88 @@ Load/Empty (L/E) status identifies whether a railcar is carrying freight or is e
 ---
 
 #### M - Company Material
-**Definition:** CSX-owned loads or company material
+<color=#FF8C00>**Definition:**</color> CSX-owned loads or company material  
 
-**Characteristics:**
+<color=#FF8C00>**Characteristics:**</color>  
 - Not customer revenue freight
 - CSX internal movements
 - Company materials or supplies
 - Special handling
 
-**Examples:**
+<color=#FF8C00>**Examples:**</color>  
 - Rail carrying ties for CSX
 - MOW (Maintenance of Way) materials
 - CSX equipment or supplies
 - Internal company shipments
 
-**When to Use:**
+<color=#FF8C00>**When to Use:**</color>  
 - System assigns this status
 - CSX materials being transported
 - Non-revenue company loads
 
-**Note:** You cannot input "M" status in MRT - system controlled
+<color=#FF8C00>**Note:**</color> You cannot input "M" status in MRT - system controlled  
 
 ---
 
 #### N - Nobill
-**Definition:** Loaded car with no billing information in CSX systems, or unknown L/E status
+<color=#FF8C00>**Definition:**</color> Loaded car with no billing information in CSX systems, or unknown L/E status  
 
-**Characteristics:**
+<color=#FF8C00>**Characteristics:**</color>  
 - Car is loaded (or appears loaded)
 - No waybill in system
 - Billing information missing/unknown
 - Status uncertain
 
-**Examples:**
+<color=#FF8C00>**Examples:**</color>  
 - Customer loaded but hasn't submitted billing
 - Loaded car with missing paperwork
 - Status unknown from foreign railroad
 - Billing not yet processed
 
-**When to Use:**
+<color=#FF8C00>**When to Use:**</color>  
 - System assigns this status
 - Indicates billing issue needs resolution
 
-**⚠️ CRITICAL COMPANY DIRECTIVE:**
-**LEAVE NOBILLS AT THE CUSTOMER UNTIL THEY ARE BILLED!**
-
-**Nobill Rules:**
-1. **Loaded NOBILL Pulls:**
+<color=#FF8C00>**⚠️ CRITICAL COMPANY DIRECTIVE:**</color>  
+<color=#FF8C00>**LEAVE NOBILLS AT THE CUSTOMER UNTIL THEY ARE BILLED!**</color>  
+<color=#FF8C00>**Nobill Rules:**</color>  
+1. <color=#FF8C00>**Loaded NOBILL Pulls:**</color>  
    - ❌ DO NOT add work them
    - ✅ Must be on your work order, OR
    - ✅ Must come through MRT New Work
    - Wait for proper billing
 
-2. **Empty Nobill Pulls:**
+2. <color=#FF8C00>**Empty Nobill Pulls:**</color>  
    - ✅ OK to add work and pull
    - Can remove empty nobills as needed
 
-3. **Status Changes:**
+3. <color=#FF8C00>**Status Changes:**</color>  
    - You may need to change L/E status if car changes
    - Change N→E if car actually empty
    - Change N→L if car gets properly billed
 
-**Note:** You cannot input "N" status in MRT - system controlled
+<color=#FF8C00>**Note:**</color> You cannot input "N" status in MRT - system controlled  
 
 ---
 
-### Empty Status Codes
+### <color=#20B2AA>Empty Status Codes</color>  
 
 #### E - Empty
-**Definition:** Standard empty railcar not carrying freight
+<color=#FF8C00>**Definition:**</color> Standard empty railcar not carrying freight  
 
-**Characteristics:**
+<color=#FF8C00>**Characteristics:**</color>  
 - No freight loaded
 - Available for loading
 - Normal empty operations
 - Standard empty movement
 
-**Examples:**
+<color=#FF8C00>**Examples:**</color>  
 - Empty hopper ready for loading
 - Empty tank car after unloading
 - Empty boxcar returning to customer
 - Empty flatcar repositioning
 
-**When to Use:**
+<color=#FF8C00>**When to Use:**</color>  
 - Car has been unloaded
 - Empty car for positioning
 - Available for customer loading
@@ -123,97 +122,97 @@ Load/Empty (L/E) status identifies whether a railcar is carrying freight or is e
 ---
 
 #### F - Revenue Empty
-**Definition:** Empty car generating revenue (special movement)
+<color=#FF8C00>**Definition:**</color> Empty car generating revenue (special movement)  
 
-**Characteristics:**
+<color=#FF8C00>**Characteristics:**</color>  
 - Empty but earning revenue
 - Special empty movement contract
 - Customer pays for empty move
 - Unique billing arrangement
 
-**Examples:**
+<color=#FF8C00>**Examples:**</color>  
 - Customer-owned car returning empty
 - Dedicated equipment repositioning
 - Contracted empty movements
 - Special customer agreements
 
-**When to Use:**
+<color=#FF8C00>**When to Use:**</color>  
 - System assigns this status
 - Special revenue empty movements
 - Customer contracts for empty return
 
-**Note:** You cannot input "F" status in MRT - system controlled
+<color=#FF8C00>**Note:**</color> You cannot input "F" status in MRT - system controlled  
 
 ---
 
-## MRT Input Rules
+## <color=#FF8C00>MRT Input Rules</color>  
 
-### What You CAN Input
+### <color=#20B2AA>What You CAN Input</color>  
 
-In MRT, you can only input two status codes:
+In MRT, you can only input two status codes:  
 
-✅ **L** (Loaded)
-✅ **E** (Empty)
+✅ **L** (Loaded)  
+✅ **E** (Empty)  
 
-### What You CANNOT Input
+### <color=#20B2AA>What You CANNOT Input</color>  
 
-You cannot directly input these codes - they are system-controlled:
+You cannot directly input these codes - they are system-controlled:  
 
-❌ **M** (Company Material) - System assigned
+❌ **M** (Company Material) - System assigned  
 ❌ **N** (Nobill) - System assigned  
-❌ **F** (Revenue Empty) - System assigned
+❌ **F** (Revenue Empty) - System assigned  
 
-### What You CAN See
+### <color=#20B2AA>What You CAN See</color>  
 
-All status codes (L, E, M, N, F) will **display** to you in MRT, but you can only change between L and E.
-
----
-
-## When to Change Status
-
-### Change FROM Empty TO Loaded (E → L)
-
-**Scenario 1:** Customer Loaded the Car
-Before: Car spotted empty for customer to load
-Status: E (Empty)
-Action: Customer fills car with commodity
-After: Change status to L (Loaded)
-When: When you pick up the now-loaded car
-
-**Scenario 2:** Found Loaded Car Listed as Empty
-Before: System shows E (Empty)
-Reality: Car is actually loaded
-Action: Change to L (Loaded)
-When: When you discover the discrepancy
+All status codes (L, E, M, N, F) will **display** to you in MRT, but you can only change between L and E.  
 
 ---
 
-### Change FROM Loaded TO Empty (L → E)
+## <color=#FF8C00>When to Change Status</color>  
 
-**Scenario 1:** Customer Unloaded the Car
-Before: Car placed loaded for customer to unload
-Status: L (Loaded)
-Action: Customer empties car
-After: Change status to E (Empty)
-When: When you pick up the now-empty car
+### <color=#20B2AA>Change FROM Empty TO Loaded (E → L)</color>  
 
-**Scenario 2:** Found Empty Car Listed as Loaded
-Before: System shows L (Loaded)
-Reality: Car is actually empty
-Action: Change to E (Empty)
-When: When you discover the discrepancy
+<color=#FF8C00>**Scenario 1:**</color> Customer Loaded the Car  
+Before: Car spotted empty for customer to load  
+Status: E (Empty)  
+Action: Customer fills car with commodity  
+After: Change status to L (Loaded)  
+When: When you pick up the now-loaded car  
+
+<color=#FF8C00>**Scenario 2:**</color> Found Loaded Car Listed as Empty  
+Before: System shows E (Empty)  
+Reality: Car is actually loaded  
+Action: Change to L (Loaded)  
+When: When you discover the discrepancy  
 
 ---
 
-### Leave Status "As Is"
+### <color=#20B2AA>Change FROM Loaded TO Empty (L → E)</color>  
 
-**When NOT to change:**
+<color=#FF8C00>**Scenario 1:**</color> Customer Unloaded the Car  
+Before: Car placed loaded for customer to unload  
+Status: L (Loaded)  
+Action: Customer empties car  
+After: Change status to E (Empty)  
+When: When you pick up the now-empty car  
+
+<color=#FF8C00>**Scenario 2:**</color> Found Empty Car Listed as Loaded  
+Before: System shows L (Loaded)  
+Reality: Car is actually empty  
+Action: Change to E (Empty)  
+When: When you discover the discrepancy  
+
+---
+
+### <color=#20B2AA>Leave Status "As Is"</color>  
+
+<color=#FF8C00>**When NOT to change:**</color>  
 - ✅ Status already matches actual condition
 - ✅ System shows M, N, or F and condition hasn't changed
 - ✅ Car status is correct
 - ✅ No change in loading/unloading occurred
 
-**Special case - Nobills:**
+<color=#FF8C00>**Special case - Nobills:**</color>  
 - Car shows N status
 - Car is still loaded without billing
 - **Leave as N** until proper billing received
@@ -221,38 +220,38 @@ When: When you discover the discrepancy
 
 ---
 
-## Status Change Process in MRT
+## <color=#FF8C00>Status Change Process in MRT</color>  
 
-### Step 1: Identify Need to Change
+### <color=#20B2AA>Step 1: Identify Need to Change</color>  
 - Car's actual condition differs from displayed status
 - Customer has loaded or unloaded car
 - Discovered incorrect status
 
-### Step 2: Select the Car(s)
+### <color=#20B2AA>Step 2: Select the Car(s)</color>  
 - In work order, select car(s) needing status change
 - Can select multiple cars if same change needed
 
-### Step 3: Use Status Button
+### <color=#20B2AA>Step 3: Use Status Button</color>  
 - **SET EMPTY** - Changes selected car(s) to E
 - **SET LOADED** - Changes selected car(s) to L
 
-### Step 4: Verify Change
+### <color=#20B2AA>Step 4: Verify Change</color>  
 - Check that status updated correctly
 - Proceed with reporting work
 
 ---
 
-## Status and Billing Implications
+## <color=#FF8C00>Status and Billing Implications</color>  
 
-### Loaded Cars (L, M, N)
+### <color=#20B2AA>Loaded Cars (L, M, N)</color>  
 
-**Customer Impact:**
+<color=#FF8C00>**Customer Impact:**</color>  
 - Customer may be charged for placement
 - Loaded pulls generate revenue
 - Billing based on loaded status
 - Commodity rates apply
 
-**Operational Impact:**
+<color=#FF8C00>**Operational Impact:**</color>  
 - Different handling requirements
 - Hazmat considerations if applicable
 - Weight considerations for tonnage
@@ -260,15 +259,15 @@ When: When you discover the discrepancy
 
 ---
 
-### Empty Cars (E, F)
+### <color=#20B2AA>Empty Cars (E, F)</color>  
 
-**Customer Impact:**
+<color=#FF8C00>**Customer Impact:**</color>  
 - Different billing rates for empties
 - Customer may request empty positioning
 - Empty storage charges may apply
 - Return empties for loading
 
-**Operational Impact:**
+<color=#FF8C00>**Operational Impact:**</color>  
 - Lighter weight for tonnage
 - Fewer restrictions generally
 - Available for loading
@@ -276,69 +275,68 @@ When: When you discover the discrepancy
 
 ---
 
-## Special Nobill Handling
+## <color=#FF8C00>Special Nobill Handling</color>  
 
-### Understanding Nobills
+### <color=#20B2AA>Understanding Nobills</color>  
 
-**Why N Status Exists:**
+<color=#FF8C00>**Why N Status Exists:**</color>  
 - Billing not yet in system
 - Paperwork delayed or missing
 - New customer setup incomplete
 - Foreign road billing pending
 - Load/Empty status uncertain
 
-### The Problem with Nobills
+### <color=#20B2AA>The Problem with Nobills</color>  
 
-If crews pull loaded nobills before billing:
+If crews pull loaded nobills before billing:  
 - Customer not charged properly
 - Revenue lost
 - Billing disputes arise
 - Inventory tracking problems
 - Customer service window issues
 
-### The Solution
+### <color=#20B2AA>The Solution</color>  
 
-**COMPANY DIRECTIVE:**
-**LEAVE NOBILLS AT THE CUSTOMER UNTIL THEY ARE BILLED!**
-
-**What This Means:**
-1. **Loaded NOBILL at customer:**
+<color=#FF8C00>**COMPANY DIRECTIVE:**</color>  
+<color=#FF8C00>**LEAVE NOBILLS AT THE CUSTOMER UNTIL THEY ARE BILLED!**</color>  
+<color=#FF8C00>**What This Means:**</color>  
+1. <color=#FF8C00>**Loaded NOBILL at customer:**</color>  
    - DO NOT pull unless directed
    - Wait for billing to post
    - Car will appear on work order when billed
    - May come through New Work once billed
 
-2. **Empty NOBILL at customer:**
+2. <color=#FF8C00>**Empty NOBILL at customer:**</color>  
    - OK to pull if needed
    - Can add work empty pulls
    - Less critical than loaded
 
-3. **If loaded NOBILL on your work order:**
+3. <color=#FF8C00>**If loaded NOBILL on your work order:**</color>  
    - Then it's OK to pull
    - Billing has been addressed
    - Pull and report normally
 
-4. **If loaded NOBILL in New Work:**
+4. <color=#FF8C00>**If loaded NOBILL in New Work:**</color>  
    - Then it's OK to pull
    - Has been specifically assigned
    - Accept and report normally
 
 ---
 
-## Status Verification
+## <color=#FF8C00>Status Verification</color>  
 
-### Before Reporting Customer Pulls
+### <color=#20B2AA>Before Reporting Customer Pulls</color>  
 
-**Checklist:**
+<color=#FF8C00>**Checklist:**</color>  
 - [ ] Visually verify car is loaded or empty
 - [ ] Check displayed L/E status matches reality
 - [ ] Change status if needed before reporting
 - [ ] For loaded cars, verify not a Nobill
 - [ ] For Nobills, verify it's on work order or New Work
 
-### Before Reporting Customer Places
+### <color=#20B2AA>Before Reporting Customer Places</color>  
 
-**Checklist:**
+<color=#FF8C00>**Checklist:**</color>  
 - [ ] Verify L/E status correct for what customer expects
 - [ ] Loaded cars have proper billing
 - [ ] Empty cars show E status
@@ -346,144 +344,144 @@ If crews pull loaded nobills before billing:
 
 ---
 
-## Common Status Scenarios
+## <color=#FF8C00>Common Status Scenarios</color>  
 
-### Scenario 1: Empty Car Placed, Now Loading
+### <color=#20B2AA>Scenario 1: Empty Car Placed, Now Loading</color>  
 
-**Initial:**
-Car: TILX 334912
-Status: E (Empty)
-Action: Placed at customer for loading
+<color=#FF8C00>**Initial:**</color>  
+Car: TILX 334912  
+Status: E (Empty)  
+Action: Placed at customer for loading  
 
-**Later That Day:**
-Customer has loaded the car
-Status still shows: E (Empty)
-Correct Action: Change to L (Loaded) when pulling
-
----
-
-### Scenario 2: Loaded Car Placed, Now Empty
-
-**Initial:**
-Car: UTLX 920035
-Status: L (Loaded)
-Action: Placed at customer for unloading
-
-**Next Day:**
-Customer has unloaded the car
-Status still shows: L (Loaded)
-Correct Action: Change to E (Empty) when pulling
-
+<color=#FF8C00>**Later That Day:**</color>  
+Customer has loaded the car  
+Status still shows: E (Empty)  
+Correct Action: Change to L (Loaded) when pulling  
 
 ---
 
-### Scenario 3: Found Nobill at Customer
+### <color=#20B2AA>Scenario 2: Loaded Car Placed, Now Empty</color>  
 
-**Discovery:**
-Car: ACFX 75577
-Status: N (Nobill)
-Location: At customer facility
-Work Order: Car NOT on your work order
+<color=#FF8C00>**Initial:**</color>  
+Car: UTLX 920035  
+Status: L (Loaded)  
+Action: Placed at customer for unloading  
 
-**Correct Action:**
-1. DO NOT pull the car
-2. Leave at customer
-3. Report to MRT Helpdesk if customer requests removal
-4. Wait for billing to post
-5. Will appear on future work order when billed
+<color=#FF8C00>**Next Day:**</color>  
+Customer has unloaded the car  
+Status still shows: L (Loaded)  
+Correct Action: Change to E (Empty) when pulling  
+
 
 ---
 
-### Scenario 4: Nobill Appears as New Work
+### <color=#20B2AA>Scenario 3: Found Nobill at Customer</color>  
 
-**Notification:**
-NEW WORK: GATX 32067
-Status: N (Nobill) → may have changed to L
-Location: Customer facility
-Action: Pull requested
+<color=#FF8C00>**Discovery:**</color>  
+Car: ACFX 75577  
+Status: N (Nobill)  
+Location: At customer facility  
+Work Order: Car NOT on your work order  
 
-**Correct Action:**
-1. Check status - may now show L (billed)
-2. Accept the New Work
-3. Pull the car
-4. Report normally
-5. Has been specifically assigned/cleared
-
----
-
-## Status Quick Reference
-
-| Code | Name | Can Input? | Meaning | Action Required |
-|------|------|-----------|---------|-----------------|
-| **L** | Loaded | ✅ Yes | Car has freight | Normal handling |
-| **E** | Empty | ✅ Yes | Car is empty | Normal handling |
-| **M** | Company Material | ❌ No | CSX-owned loads | Leave as-is |
-| **N** | Nobill | ❌ No | No billing / Unknown | DO NOT pull loaded |
-| **F** | Revenue Empty | ❌ No | Special empty | Leave as-is |
+<color=#FF8C00>**Correct Action:**</color>  
+1. DO NOT pull the car  
+2. Leave at customer  
+3. Report to MRT Helpdesk if customer requests removal  
+4. Wait for billing to post  
+5. Will appear on future work order when billed  
 
 ---
 
-## Status Change Quick Reference
+### <color=#20B2AA>Scenario 4: Nobill Appears as New Work</color>  
 
-| Current Status | Actual Condition | Change To | When |
-|----------------|------------------|-----------|------|
-| E | Customer loaded it | L | When pulling |
-| L | Customer unloaded it | E | When pulling |
-| N | Now properly billed | L | System will change |
-| N | Actually empty | E | If you verify it's empty |
-| M | Any change | - | Call MRT Helpdesk |
-| F | Any change | - | Call MRT Helpdesk |
+<color=#FF8C00>**Notification:**</color>  
+NEW WORK: GATX 32067  
+Status: N (Nobill) → may have changed to L  
+Location: Customer facility  
+Action: Pull requested  
 
----
-
-## Troubleshooting Status Issues
-
-### Problem: Can't Change Status
-
-**Solution:**
-1. Verify you're using SET EMPTY or SET LOADED buttons
-2. Confirm car is selected
-3. Check you're not trying to change M, N, or F
-4. Call MRT Helpdesk if issues persist
+<color=#FF8C00>**Correct Action:**</color>  
+1. Check status - may now show L (billed)  
+2. Accept the New Work  
+3. Pull the car  
+4. Report normally  
+5. Has been specifically assigned/cleared  
 
 ---
 
-### Problem: System Changed Status Back
+## <color=#FF8C00>Status Quick Reference</color>  
 
-**Solution:**
-1. System may have overridden your change
-2. Verify actual car condition
-3. Re-apply correct status
-4. If persists, call MRT Helpdesk
-5. May indicate data conflict
-
----
-
-### Problem: Nobill Won't Clear
-
-**Solution:**
-1. DO NOT force pull the car
-2. Contact customer about billing
-3. Report to MRT Helpdesk
-4. Car may need billing department involvement
-5. Wait for proper billing to post
+| Code | Name | Can Input? | Meaning | Action Required |  
+|------|------|-----------|---------|-----------------|  
+| **L** | Loaded | ✅ Yes | Car has freight | Normal handling |  
+| **E** | Empty | ✅ Yes | Car is empty | Normal handling |  
+| **M** | Company Material | ❌ No | CSX-owned loads | Leave as-is |  
+| **N** | Nobill | ❌ No | No billing / Unknown | DO NOT pull loaded |  
+| **F** | Revenue Empty | ❌ No | Special empty | Leave as-is |  
 
 ---
 
-### Problem: Don't Know if Car is Loaded
+## <color=#FF8C00>Status Change Quick Reference</color>  
 
-**Solution:**
-1. Visually inspect the car if possible
-2. Check car ride height (loaded sits lower)
-3. Ask customer if accessible
-4. Check original placement records
-5. If uncertain, leave status as-is and call MRT Helpdesk
+| Current Status | Actual Condition | Change To | When |  
+|----------------|------------------|-----------|------|  
+| E | Customer loaded it | L | When pulling |  
+| L | Customer unloaded it | E | When pulling |  
+| N | Now properly billed | L | System will change |  
+| N | Actually empty | E | If you verify it's empty |  
+| M | Any change | - | Call MRT Helpdesk |  
+| F | Any change | - | Call MRT Helpdesk |  
 
 ---
 
-## Best Practices
+## <color=#FF8C00>Troubleshooting Status Issues</color>  
 
-### ✅ DO
+### <color=#20B2AA>Problem: Can't Change Status</color>  
+
+<color=#FF8C00>**Solution:**</color>  
+1. Verify you're using SET EMPTY or SET LOADED buttons  
+2. Confirm car is selected  
+3. Check you're not trying to change M, N, or F  
+4. Call MRT Helpdesk if issues persist  
+
+---
+
+### <color=#20B2AA>Problem: System Changed Status Back</color>  
+
+<color=#FF8C00>**Solution:**</color>  
+1. System may have overridden your change  
+2. Verify actual car condition  
+3. Re-apply correct status  
+4. If persists, call MRT Helpdesk  
+5. May indicate data conflict  
+
+---
+
+### <color=#20B2AA>Problem: Nobill Won't Clear</color>  
+
+<color=#FF8C00>**Solution:**</color>  
+1. DO NOT force pull the car  
+2. Contact customer about billing  
+3. Report to MRT Helpdesk  
+4. Car may need billing department involvement  
+5. Wait for proper billing to post  
+
+---
+
+### <color=#20B2AA>Problem: Don't Know if Car is Loaded</color>  
+
+<color=#FF8C00>**Solution:**</color>  
+1. Visually inspect the car if possible  
+2. Check car ride height (loaded sits lower)  
+3. Ask customer if accessible  
+4. Check original placement records  
+5. If uncertain, leave status as-is and call MRT Helpdesk  
+
+---
+
+## <color=#FF8C00>Best Practices</color>  
+
+### <color=#20B2AA>✅ DO</color>  
 
 - Visually verify L/E status before reporting
 - Change status when you KNOW it changed
@@ -491,7 +489,7 @@ Action: Pull requested
 - Report status changes immediately
 - Use SET EMPTY/SET LOADED buttons properly
 
-### ❌ DON'T
+### <color=#20B2AA>❌ DON'T</color>  
 
 - Guess at status if uncertain
 - Pull loaded nobills without authorization
@@ -501,11 +499,11 @@ Action: Pull requested
 
 ---
 
-## Need Help?
+## <color=#FF8C00>Need Help?</color>  
 
-📞 **MRT Helpdesk: 800-243-7743 option #4**
+📞 **MRT Helpdesk: 800-243-7743 option #4**  
 
-**Call for:**
+<color=#FF8C00>**Call for:**</color>  
 - Uncertain about car status
 - Nobill handling questions
 - Status won't change in MRT
@@ -513,7 +511,7 @@ Action: Pull requested
 - Customer requesting pull of nobill
 - System overriding your status changes
 
-**Have ready:**
+<color=#FF8C00>**Have ready:**</color>  
 - Car initial and number
 - Current displayed status
 - Actual condition of car

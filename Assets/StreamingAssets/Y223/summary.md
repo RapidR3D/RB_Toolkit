@@ -1,23 +1,24 @@
-# Job Summary
+# <color=#FFD700>Job Summary</color>
+===========
 
-**Yard Job #:** Y223 
-**Job Name:** DECOURSEY
-**Craft:** FO FOREMAN  
-**On Duty:**  
+<color=#FF8C00>**Yard Job #:**</color> Y223  
+<color=#FF8C00>**Job Name:**</color> DECOURSEY  
+<color=#FF8C00>**Craft:**</color> FO FOREMAN  
+<color=#FF8C00>**On Duty:**</color>  
 
-**Yard Code:** QUE  
-**Subdivision Code:** CI  
-**Service Type:** Yard  
+<color=#FF8C00>**Yard Code:**</color> QUE  
+<color=#FF8C00>**Subdivision Code:**</color> CI  
+<color=#FF8C00>**Service Type:**</color> Yard  
 
-**Location:** Decoursey Yard 
-**Radio Channels:** Channel 96(INDUST YM 96)  
+<color=#FF8C00>**Location:**</color> Decoursey Yard  
+<color=#FF8C00>**Radio Channels:**</color> Channel 96(INDUST YM 96)  
 
-**Equipment Needed:**
+<color=#FF8C00>**Equipment Needed:**</color>  
 
-- Personal Radio
-- PPE
-- Decoursey Yard Map
-- Industry Maps (See Images)
-- Safety Glasses
-- Work Boots
-- Gloves
+- Personal Radio  
+- PPE  
+- Decoursey Yard Map  
+- Industry Maps (See Images)  
+- Safety Glasses  
+- Work Boots  
+- Gloves  

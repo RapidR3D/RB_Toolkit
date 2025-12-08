@@ -12,12 +12,6 @@
     {
       "label": "Operating Notes",
       "file": "operatingnotes.md"
-    }
-  ],
-  "links": [
-    {
-      "name": "Payroll Portal",
-      "file": "https://payroll.example.com"
-    }
+    }  
   ]
 }

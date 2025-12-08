@@ -1,9 +1,9 @@
 {
   "docType": "Payroll_Claims",
   "title": "Claims Codes",
-  "category": "Payroll Claims",
-  "version": "2024.1",
-  "summary": "Claims Codes with a description of what the code represents, the qualifier, and who ultimately approves or denies",
+  "category": "Payroll Claims",  
+  "version": "2024.1",  
+  "summary": "Claims Codes with a description of what the code represents, the qualifier, and who ultimately approves or denies",  
   "sections": [
     {
       "label": "Overview",

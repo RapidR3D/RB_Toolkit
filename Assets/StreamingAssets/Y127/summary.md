@@ -15,10 +15,10 @@
 
 <color=#FF8C00>**Equipment Needed:**</color>  
 
-- Personal Radio
-- PPE
-- Ivorydale Yard Map
-- Industry Maps (See Images)
-- Safety Glasses
-- Work Boots
-- Gloves
+- Personal Radio  
+- PPE  
+- Ivorydale Yard Map  
+- Industry Maps (See Images)  
+- Safety Glasses  
+- Work Boots  
+- Gloves  

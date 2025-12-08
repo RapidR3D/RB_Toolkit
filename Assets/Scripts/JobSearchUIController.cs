@@ -513,6 +513,13 @@ public class JobSearchUIController : MonoBehaviour
                 ApplyColor(jobSubtitle, job.categoryColor);
             }
         }
+        
+        // Apply Summary Color if available (for Mainframe/Category guides)
+        if (job.summaryColor != null)
+        {
+            // We don't have a direct reference to the summary label here as it's generated in RenderMainframeGuide
+            // But we can store it for later use
+        }
 
         // Populate List
         allSectionItems.Clear();
@@ -1124,15 +1131,51 @@ public class JobSearchUIController : MonoBehaviour
         // Summary
         if (!string.IsNullOrEmpty(guide.summary))
         {
-            sb.AppendLine($"# Summary");
-            sb.AppendLine(guide.summary);
+            string summaryHeader = "# Summary";
+            // If summaryColor is defined, apply it to the header? 
+            // Or maybe the user wants the summary TEXT to be colored?
+            // "where things like Summary are rendered in the gold color" implies the header "Summary".
+            // But we already have a global rule for # Header -> Gold.
+            // However, if the user wants to override it via JSON, we can do that.
+            
+            // Actually, the user said: "I'd like to have the same color formatting that is being applied to the specific job folder .json files where things like Summary are rendered in the gold color"
+            // In specific jobs (like Y290), "Summary" is a section label in the list.
+            // In Category files (like MRT), "Summary" is part of the generated content from `guide.summary`.
+            
+            // The generated content uses markdown headers: `# Summary`.
+            // My previous script `FormatAllMarkdownFilesExtended` formatted ALL .md files on disk.
+            // BUT `GenerateMainframeContent` generates markdown in memory! It doesn't read from a file.
+            // So the global formatting script didn't touch this generated content.
+            
+            // We need to apply the same formatting rules here in code.
+            
+            sb.AppendLine($"# <color=#FFD700>Summary</color>");
+            sb.AppendLine("==========="); // Add separator line for consistency
+            
+            if (!string.IsNullOrEmpty(guide.summaryColor))
+            {
+                sb.AppendLine($"<color={guide.summaryColor}>{guide.summary}</color>");
+            }
+            else
+            {
+                // Ensure summary starts on a new line if it doesn't already
+                // The previous AppendLine("===========") adds a newline, so it should be fine.
+                // But if the summary text itself starts with something that looks like it belongs to the previous line?
+                // Markdown usually handles this.
+                // However, if the user sees "Claims" on the same line as "==========", it means the newline after "==========" is missing or ignored.
+                // Let's add an extra newline before the summary content just to be safe.
+                
+                sb.AppendLine(); 
+                sb.AppendLine(guide.summary);
+            }
             sb.AppendLine();
         }
 
         // Access Steps
         if (guide.accessSteps != null && guide.accessSteps.Count > 0)
         {
-            sb.AppendLine($"# Access Steps");
+            sb.AppendLine($"# <color=#FFD700>Access Steps</color>");
+            sb.AppendLine("===========");
             for (int i = 0; i < guide.accessSteps.Count; i++)
             {
                 sb.AppendLine($"{i + 1}. {guide.accessSteps[i]}");
@@ -1143,7 +1186,8 @@ public class JobSearchUIController : MonoBehaviour
         // Usage Tips
         if (guide.usageTips != null && guide.usageTips.Count > 0)
         {
-            sb.AppendLine($"# Usage Tips");
+            sb.AppendLine($"# <color=#FFD700>Usage Tips</color>");
+            sb.AppendLine("===========");
             foreach (var tip in guide.usageTips)
             {
                 sb.AppendLine($"- {tip}");
@@ -1154,7 +1198,8 @@ public class JobSearchUIController : MonoBehaviour
         // Links
         if (guide.links != null && guide.links.Count > 0)
         {
-            sb.AppendLine($"# Links");
+            sb.AppendLine($"# <color=#FFD700>Links</color>");
+            sb.AppendLine("===========");
             foreach (var link in guide.links)
             {
                 sb.AppendLine($"- [{link.name}]({link.file})");

@@ -1,10 +1,7 @@
-# Quick Links
+# <color=#FFD700>Quick Links</color>
 
-Tap any link below to jump to that section:
-
-**NOTE: You may have to double click link for proper loading**
-
-
+Tap any link below to jump to that section:  
+<color=#FF8C00>**NOTE: You may have to double click link for proper loading**</color>  
 - [Direct Access](../DirectAccess/job.json)
 - [YES](../YES/job.json)
 - [Mainframe](../Mainframe/job.json)

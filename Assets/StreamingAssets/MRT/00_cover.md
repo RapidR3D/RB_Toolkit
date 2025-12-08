@@ -1,34 +1,32 @@
-# Customer Mobile Rail Tool (MRT)
+# <color=#FFD700>Customer Mobile Rail Tool (MRT)</color>  
 
-## Yard Jobs and Locals Guide
+## <color=#FF8C00>Yard Jobs and Locals Guide</color>  
+<color=#FF8C00>**Revised: 8/23/24**</color>  
+---
 
-**Revised: 8/23/24**
+## <color=#FF8C00>MRT Tools Overview</color>  
+
+The Mobile Rail Tool provides three primary tools for yard operations:  
+
+### <color=#20B2AA>Mobile Work Order</color>  
+Complete work orders for train movements and customer service  
+
+### <color=#20B2AA>Yard Switching Tool</color>  
+Update manual and automated switch lists for yard operations  
+
+### <color=#20B2AA>Switch Planning Tool (SPT)</color>  
+Build outbound trains and generate work orders  
 
 ---
 
-## MRT Tools Overview
+## <color=#FF8C00>Primary Workflow</color>  
 
-The Mobile Rail Tool provides three primary tools for yard operations:
-
-### Mobile Work Order
-Complete work orders for train movements and customer service
-
-### Yard Switching Tool
-Update manual and automated switch lists for yard operations
-
-### Switch Planning Tool (SPT)
-Build outbound trains and generate work orders
+1. **Interchange/Station** → Access station and interchange work  
+2. **Customer** → Handle customer-specific switching operations  
+3. **Mobile Work Order** → Complete and report train movements  
+4. **Yard Switching Tool** → Manage yard inventory movements  
+5. **Switch Planning Tool** → Plan and build outbound trains  
 
 ---
 
-## Primary Workflow
-
-1. **Interchange/Station** → Access station and interchange work
-2. **Customer** → Handle customer-specific switching operations
-3. **Mobile Work Order** → Complete and report train movements
-4. **Yard Switching Tool** → Manage yard inventory movements
-5. **Switch Planning Tool** → Plan and build outbound trains
-
----
-
-*For support and training resources, see the Contacts & Support section.*
+*For support and training resources, see the Contacts & Support section.*  

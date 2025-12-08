@@ -1,15 +1,15 @@
-# Radio Procedures
+# <color=#FFD700>Radio Procedures</color>
 
-**Channel:** Trim 1 (Channel: 021)
-**Engine #:** (enter engine number)
+<color=#FF8C00>**Channel:**</color> Trim 1 (Channel: 021)  
+<color=#FF8C00>**Engine #:**</color> (enter engine number)  
 
-Sample radio calls:
+Sample radio calls:  
 - "Y193 Trim Tower, over"
 - "Permission into bowl 19"
 - ""
 
 
-## Operating Notes
+## <color=#FF8C00>Operating Notes</color>
 - If Trim Tower says "Clear, Clear" = Clear track, Grab birdie from bus stop, safety stop (Tie handbrake), put in clear of whichever D track.
 - If Trim Tower says "Tie, Spot" = Tie on, spot at yard air.
 - If Trim Tower says "Tie, Clear" = Tie on, put in Clear.

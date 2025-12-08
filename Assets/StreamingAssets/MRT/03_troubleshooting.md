@@ -1,68 +1,66 @@
-# Troubleshooting & Quick Reference
+# <color=#FFD700>Troubleshooting & Quick Reference</color>  
 
-## Samsung Tablet Troubleshooting
+## <color=#FF8C00>Samsung Tablet Troubleshooting</color>  
 
-### Missing Apps or Green Android Icons
+### <color=#20B2AA>Missing Apps or Green Android Icons</color>  
 
-**Solution:**
-1. Open **Settings**
-2. Select **Reload Profile**
+<color=#FF8C00>**Solution:**</color>  
+1. Open **Settings**  
+2. Select **Reload Profile**  
    - Brings back missing apps
    - Replaces green Android aliens with CSX icons
 
-### Check for Updates
+### <color=#20B2AA>Check for Updates</color>  
 
-**Solution:**
-1. Open **Settings**
-2. Select **Sync Hub**
-3. Wait for synchronization to complete
-
----
-
-## iPad Troubleshooting
-
-### Check Your MRT App Version
-
-**Current Required Version:** 2.0.6000
-
-**How to Check:**
-1. Open MRT app
-2. Tap **Menu** → **About**
-3. Look for **App Version: 2.0.6000**
-
-### Update if Needed
-1. Tap **Hub** → **Support**
-2. Select **Sync Device**
-3. Wait for update to complete
+<color=#FF8C00>**Solution:**</color>  
+1. Open **Settings**  
+2. Select **Sync Hub**  
+3. Wait for synchronization to complete  
 
 ---
 
-## Searching for Work Orders
+## <color=#FF8C00>iPad Troubleshooting</color>  
 
-### Search Methods
+### <color=#20B2AA>Check Your MRT App Version</color>  
 
-**Option 1: Train ID with Date**
-Search Box 1: 070729
-Search Box 2: (leave blank for non-yard jobs)
+<color=#FF8C00>**Current Required Version:**</color> 2.0.6000  
 
-**Option 2: Work Order Number**
-Search Box 1: 677637
-Search Box 2: (leave blank for non-yard jobs)
+<color=#FF8C00>**How to Check:**</color>  
+1. Open MRT app  
+2. Tap **Menu** → **About**  
+3. Look for **App Version: 2.0.6000**  
 
-### For Yard Jobs ONLY
-**You MUST also input the Terminal Milepost:**
-Search Box 1: L83207
-Search Box 2: AY 856
-
-### Executing Search
-- **iPad:** Tap the **RETURN** key
-- **Samsung:** Tap the **GO** key
+### <color=#20B2AA>Update if Needed</color>  
+1. Tap **Hub** → **Support**  
+2. Select **Sync Device**  
+3. Wait for update to complete  
 
 ---
 
-## T&E Quick Reference Guide
+## <color=#FF8C00>Searching for Work Orders</color>  
 
-### Daily Tablet Maintenance
+### <color=#20B2AA>Search Methods</color>  
+<color=#FF8C00>**Option 1: Train ID with Date**</color>  
+Search Box 1: 070729  
+Search Box 2: (leave blank for non-yard jobs)  
+<color=#FF8C00>**Option 2: Work Order Number**</color>  
+Search Box 1: 677637  
+Search Box 2: (leave blank for non-yard jobs)  
+
+### <color=#20B2AA>For Yard Jobs ONLY</color>  
+<color=#FF8C00>**You MUST also input the Terminal Milepost:**</color>  
+Search Box 1: L83207  
+Search Box 2: AY 856  
+
+### <color=#20B2AA>Executing Search</color>  
+- <color=#FF8C00>**iPad:**</color> Tap the **RETURN** key
+- <color=#FF8C00>**Samsung:**</color> Tap the **GO** key
+
+---
+
+## <color=#FF8C00>T&E Quick Reference Guide</color>  
+
+### <color=#20B2AA>Daily Tablet Maintenance</color>  
 
 #### ✅ Before Your Shift
 - [ ] Bring tablet **fully charged**
@@ -71,15 +69,15 @@ Search Box 2: AY 856
 - [ ] Run **Settings** → **Reload Profile** if apps are missing
 
 #### ✅ Content Management
-Navigate to: **Content (folder)** → **CSX** → **CSX Safety Documents**
+Navigate to: **Content (folder)** → **CSX** → **CSX Safety Documents**  
 
-**Required Downloads:**
+<color=#FF8C00>**Required Downloads:**</color>  
 - CSX Rule Books
 - CSX System Bulletins & Notices
 - CSX Subdivision Bulletins & Notices
 - Timetables
 
-**Location-Specific Downloads:**
+<color=#FF8C00>**Location-Specific Downloads:**</color>  
 - Canadian R&C (if applicable)
 - Foreign Roads
 - Tonnage Ratings
@@ -88,7 +86,7 @@ Navigate to: **Content (folder)** → **CSX** → **CSX Safety Documents**
 - Safety Communication
 - Waivers
 
-**IMPORTANT:** Click the blue arrows to convert them to PDF files for compliance.
+<color=#FF8C00>**IMPORTANT:**</color> Click the blue arrows to convert them to PDF files for compliance.  
 
 #### ✅ OneDrive Backup
 - Located on **Page 2** of tablet
@@ -97,82 +95,82 @@ Navigate to: **Content (folder)** → **CSX** → **CSX Safety Documents**
 
 ---
 
-## MRT Application Issues
+## <color=#FF8C00>MRT Application Issues</color>  
 
-### Cannot Login or Getting Errors
-1. **Reboot the tablet** first
-2. Call MRT Helpdesk: **800-243-7743 option #4**
-3. May need account unlocked or codeset updated
+### <color=#20B2AA>Cannot Login or Getting Errors</color>  
+1. **Reboot the tablet** first  
+2. Call MRT Helpdesk: **800-243-7743 option #4**  
+3. May need account unlocked or codeset updated  
 
-### Always Logout When Done
-⚠️ **Critical:** Logout of MRT Work Order after completing work so pending data posts down to the system.
+### <color=#20B2AA>Always Logout When Done</color>  
+⚠️ <color=#FF8C00>**Critical:**</color> Logout of MRT Work Order after completing work so pending data posts down to the system.  
 
-**How to Logout:**
-1. Tap **Menu** (three horizontal lines)
-2. Tap **Logout**
+<color=#FF8C00>**How to Logout:**</color>  
+1. Tap **Menu** (three horizontal lines)  
+2. Tap **Logout**  
 
 ---
 
-## Crew Life App
+## <color=#FF8C00>Crew Life App</color>  
 
-### Signing Off Your Ticket
+### <color=#20B2AA>Signing Off Your Ticket</color>  
 
-**Requirements:**
+<color=#FF8C00>**Requirements:**</color>  
 - ✅ Must be on **CSX approved property** (most CSX crew hotels included)
 - ✅ Requires **GPS** to pinpoint location
 - ✅ Need **strong cellular signal**
 
-**If Signal is Weak:**
+<color=#FF8C00>**If Signal is Weak:**</color>  
 - Get near a door/window
 - Step outside
 - Move to vehicle
 
 ---
 
-## End of Shift Procedures
+## <color=#FF8C00>End of Shift Procedures</color>  
 
-### Close All Apps
-1. Tap the **3 vertical lines** (bottom left of screen)
-2. View all open apps
-3. Tap **Close All** to free up memory
+### <color=#20B2AA>Close All Apps</color>  
+1. Tap the **3 vertical lines** (bottom left of screen)  
+2. View all open apps  
+3. Tap **Close All** to free up memory  
 
-### Restart Tablet (NOT Power Down!)
-**Why Restart?**
+### <color=#20B2AA>Restart Tablet (NOT Power Down!)</color>  
+<color=#FF8C00>**Why Restart?**</color>  
 - Allows overnight updates to install
 - Keeps system performance optimal
 
-**How to Restart:**
-1. Hold the **power button**
-2. Tap **Restart** (tap twice to confirm)
+<color=#FF8C00>**How to Restart:**</color>  
+1. Hold the **power button**  
+2. Tap **Restart** (tap twice to confirm)  
 
-**Don't Power Down Unless Necessary:**
+<color=#FF8C00>**Don't Power Down Unless Necessary:**</color>  
 - Powering down prevents updates from installing
 
 ---
 
-## Training Resources
+## <color=#FF8C00>Training Resources</color>  
 
-### Learning App
-1. Open **Learning** app
-2. Keyword search: **MRT**
-3. Wait for courses to populate
-4. Select a course
-5. Tap **GO** to enroll and launch
-
----
-
-## Quick Support Reference
-
-| Issue Type | Phone Number | Option |
-|------------|--------------|--------|
-| Tablet hardware/software | 800-243-7743 | #2 |
-| Printer/fax/work phone | 800-243-7743 | #3 |
-| MRT application issues | 800-243-7743 | #4 |
+### <color=#20B2AA>Learning App</color>  
+1. Open **Learning** app  
+2. Keyword search: **MRT**  
+3. Wait for courses to populate  
+4. Select a course  
+5. Tap **GO** to enroll and launch  
 
 ---
 
-## OKTA Setup
+## <color=#FF8C00>Quick Support Reference</color>  
 
-**Recommendation:** Set up OKTA on your tablet to receive push notifications directly instead of using your cell phone for email/text verification.
+| Issue Type | Phone Number | Option |  
+|------------|--------------|--------|  
+| Tablet hardware/software | 800-243-7743 | #2 |  
+| Printer/fax/work phone | 800-243-7743 | #3 |  
+| MRT application issues | 800-243-7743 | #4 |  
 
-This speeds up login and authentication processes.
+---
+
+## <color=#FF8C00>OKTA Setup</color>  
+
+<color=#FF8C00>**Recommendation:**</color> Set up OKTA on your tablet to receive push notifications directly instead of using your cell phone for email/text verification.  
+
+This speeds up login and authentication processes.  

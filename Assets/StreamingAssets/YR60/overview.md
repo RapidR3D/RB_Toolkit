@@ -1,22 +1,22 @@
-# Job Summary
+# <color=#FFD700>Job Summary</color>
+===========
 
-**Yard Job #:** YR60 Hump Relief
-**Job Name:** YR50 Hump Relief
-**Craft:** HUMP FOREMAN  
-**On Duty:** See Schedule, Pull up specific job for that day
+<color=#FF8C00>**Yard Job #:**</color> YR60 Hump Relief  
+<color=#FF8C00>**Job Name:**</color> YR50 Hump Relief  
+<color=#FF8C00>**Craft:**</color> HUMP FOREMAN  
+<color=#FF8C00>**On Duty:**</color> See Schedule, Pull up specific job for that day  
 
-**Yard Code:** QUE  
-**Subdivision Code:** CI  
-**Service Type:** Yard  
+<color=#FF8C00>**Yard Code:**</color> QUE  
+<color=#FF8C00>**Subdivision Code:**</color> CI  
+<color=#FF8C00>**Service Type:**</color> Yard  
 
-**Location:** Hump Tower Crew Room  
-**Radio Channels:** 044-044
-
-**SCHEDULE**
-- **Mon:**   -- Off  
-- **Tue:**   -- Off  
-- **Wed:**   -- Y395  
-- **Thurs:** -- Y395  
-- **Fri:**   -- Y399  
-- **Sat:**   -- Y399  
-- **Sun:**   -- Y396  
+<color=#FF8C00>**Location:**</color> Hump Tower Crew Room  
+<color=#FF8C00>**Radio Channels:**</color> 044-044  
+<color=#FF8C00>**SCHEDULE**</color>  
+- <color=#FF8C00>**Mon:**</color>   -- Off  
+- <color=#FF8C00>**Tue:**</color>   -- Off  
+- <color=#FF8C00>**Wed:**</color>   -- Y395  
+- <color=#FF8C00>**Thurs:**</color> -- Y395  
+- <color=#FF8C00>**Fri:**</color>   -- Y399  
+- <color=#FF8C00>**Sat:**</color>   -- Y399  
+- <color=#FF8C00>**Sun:**</color>   -- Y396  

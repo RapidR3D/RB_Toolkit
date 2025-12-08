@@ -16,12 +16,12 @@
 
 <color=#FF8C00>**Equipment Needed:**</color>  
 
-- RCO Vest
-- RCO Flashlight
-- Personal Radio
-- PPE
-- D Yard Map
-- Bowl/Trim Map
-- Safety Glasses
-- Work Boots
-- Gloves
+- RCO Vest  
+- RCO Flashlight  
+- Personal Radio  
+- PPE  
+- D Yard Map  
+- Bowl/Trim Map  
+- Safety Glasses  
+- Work Boots  
+- Gloves  

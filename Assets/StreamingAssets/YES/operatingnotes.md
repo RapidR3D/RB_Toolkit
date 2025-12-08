@@ -1,4 +1,4 @@
-# Yes System
+# <color=#FFD700>Yes System</color>
 
 - **Home Screen**: Station: 0kc110 (Cincinnati Terminal)
 - -- Select: Save Location

@@ -1,4 +1,4 @@
-# Benefits Overview
+# <color=#FFD700>Benefits Overview</color>
 
 - Health Insurance
 - Retirement Plan

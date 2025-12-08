@@ -1,9 +1,9 @@
-# Radio Procedures
+# <color=#FFD700>Radio Procedures</color>
 
-**Channel:** 044-044  
-**Engine #:** (enter engine number)
+<color=#FF8C00>**Channel:**</color> 044-044  
+<color=#FF8C00>**Engine #:**</color> (enter engine number)  
 
-Sample radio calls:
+Sample radio calls:  
 - "Tower has us lined to the crest."
 - "You’re clear of all tracks."
 - "Point protected."
@@ -11,7 +11,7 @@ Sample radio calls:
 - "Sending them north."
 - "I got the brake."
 
-## Operating Notes
+## <color=#FF8C00>Operating Notes</color>
 
 - You will jump on your power either in front of the Humptower crew room on the car shop lead, or...
 - you will swap out on the crest. (Either is possible although in front of the crew room is more probable.)

@@ -1,14 +1,14 @@
-# Radio Procedures
+# <color=#FFD700>Radio Procedures</color>
 
-**Channel:** 028-028  
-**Engine #:** (enter engine number)
+<color=#FF8C00>**Channel:**</color> 028-028  
+<color=#FF8C00>**Engine #:**</color> (enter engine number)  
 
-Sample radio calls:
+Sample radio calls:  
 - "Ramp Job, Ramp Office, Over"
 - "Permission into A/B track"
 
 
-## Operating Notes
+## <color=#FF8C00>Operating Notes</color>
 
 - Queensgate may use you for a roustabout.
 - If you have been on duty for 30 minutes and haven't heard anything, talk to the clerks to find out the plan for the day.

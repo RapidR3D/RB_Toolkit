@@ -1,9 +1,9 @@
-# Operating Notes
+# <color=#FFD700>Operating Notes</color>  
 
-# Tips/Tricks/Advice
+# <color=#FFD700>Tips/Tricks/Advice</color>  
 
 - To Be Implemented
 
-**NOTES:**
+<color=#FF8C00>**NOTES:**</color>  
 
 - To Be Implemented

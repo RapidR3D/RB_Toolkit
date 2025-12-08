@@ -1,275 +1,273 @@
-# Correct AEI Placeholder Cars
+# <color=#FFD700>Correct AEI Placeholder Cars</color>  
 
-## Overview
+## <color=#FF8C00>Overview</color>  
 
-AEI Placeholder Cars are temporary entries created when the AEI system cannot read a car's identification tag. These must be corrected with actual car information.
+AEI Placeholder Cars are temporary entries created when the AEI system cannot read a car's identification tag. These must be corrected with actual car information.  
 
 ---
 
-## What Are Placeholder Cars?
+## <color=#FF8C00>What Are Placeholder Cars?</color>  
 
-### Definition
+### <color=#20B2AA>Definition</color>  
 
-**Placeholder Car:** An entry in the AEI Add Cars column marked as **AEI** in the **Add Cars** column.
+<color=#FF8C00>**Placeholder Car:**</color> An entry in the AEI Add Cars column marked as **AEI** in the **Add Cars** column.  
 
-### Why They Exist
+### <color=#20B2AA>Why They Exist</color>  
 
-Placeholder cars appear when:
+Placeholder cars appear when:  
 - AEI tag is damaged or missing
 - AEI reader malfunction
 - Car passed too quickly for accurate scan
 - Environmental interference with RFID signal
 
-### Identifying Placeholders
+### <color=#20B2AA>Identifying Placeholders</color>  
 
-Look for entries like:
-Car: AEI ##7166A
-Info: AEI Added
+Look for entries like:  
+Car: AEI ##7166A  
+Info: AEI Added  
 
-The **AEI ##** prefix indicates a placeholder.
+The **AEI ##** prefix indicates a placeholder.  
 
 ---
 
-## When to Check for Placeholders
+## <color=#FF8C00>When to Check for Placeholders</color>  
 
-### Scenario Trigger
+### <color=#20B2AA>Scenario Trigger</color>  
 
-**If the Add Work button is disabled**, check for AEI placeholder cars.
+**If the Add Work button is disabled**, check for AEI placeholder cars.  
 
-### How to Check
+### <color=#20B2AA>How to Check</color>  
 
-Navigate to the **AEI Add Cars** column and look for:
+Navigate to the **AEI Add Cars** column and look for:  
 - Cars marked **AEI** 
 - Entries with fake car numbers
 - Highlighted placeholder entries
 
 ---
 
-## Correction Process
+## <color=#FF8C00>Correction Process</color>  
 
-### Step 1: Identify Placeholder Cars
+### <color=#20B2AA>Step 1: Identify Placeholder Cars</color>  
 
-These cars **did not pick up the AEI tag** and have **fake car numbers**.
+These cars **did not pick up the AEI tag** and have **fake car numbers**.  
 
-### Step 2: Highlight Correct Car
+### <color=#20B2AA>Step 2: Highlight Correct Car</color>  
 
-Highlight the car and tap **Set Initial/Number**.
+Highlight the car and tap **Set Initial/Number**.  
 
-### Step 3: Enter Correct Information
+### <color=#20B2AA>Step 3: Enter Correct Information</color>  
+<color=#FF8C00>**Pop-up: "Please enter new car details:"**</color>  
+┌─────────────────────────────────────┐  
+│ Please enter new car details:       │  
+│                                     │  
+│ ENTER CAR INITIAL & NUMBER          │  
+│                                     │  
+│                                     │  
+│         (Submit)                    │  
+└─────────────────────────────────────┘  
 
-**Pop-up: "Please enter new car details:"**
+1. To supply the **correct car number**  
+2. Click **Submit**  
 
-┌─────────────────────────────────────┐
-│ Please enter new car details:       │
-│                                     │
-│ ENTER CAR INITIAL & NUMBER          │
-│                                     │
-│                                     │
-│         (Submit)                    │
-└─────────────────────────────────────┘
+### <color=#20B2AA>Step 4: Set Load/Empty Status</color>  
 
-1. To supply the **correct car number**
-2. Click **Submit**
-
-### Step 4: Set Load/Empty Status
-
-Then, indicate the **Load/Empty** status using:
+Then, indicate the **Load/Empty** status using:  
 - **Set Loaded** button, OR
 - **Set Empty** button
 
-### Step 5: Handle Missing/Unknown Cars
+### <color=#20B2AA>Step 5: Handle Missing/Unknown Cars</color>  
 
-If there is no car, or you're unsure of the car type:
-1. Select the car
-2. Tap the **Skip/Unskip Car** button
+If there is no car, or you're unsure of the car type:  
+1. Select the car  
+2. Tap the **Skip/Unskip Car** button  
 
 ---
 
-## Detailed Example Scenario
+## <color=#FF8C00>Detailed Example Scenario</color>  
 
-### Situation
+### <color=#20B2AA>Situation</color>  
 
-Two cars show missing but the conductor verified they are on the train.
+Two cars show missing but the conductor verified they are on the train.  
 
-### Investigation Steps
+### <color=#20B2AA>Investigation Steps</color>  
 
-1. **Check the Add Cars tab** for AEI Placeholder cars
-2. **Confirm:** There is one car (position 72)
-3. The placeholder shows as: AEI ##7166A
+1. **Check the Add Cars tab** for AEI Placeholder cars  
+2. <color=#FF8C00>**Confirm:**</color> There is one car (position 72)  
+3. The placeholder shows as: AEI ##7166A  
 
-### Correction Steps
+### <color=#20B2AA>Correction Steps</color>  
 
-**Step 1:** Tap and select **the car** that is there (position 72)
+<color=#FF8C00>**Step 1:**</color> Tap and select **the car** that is there (position 72)  
 
-**Step 2:** Tap **Set Initial Number**
+<color=#FF8C00>**Step 2:**</color> Tap **Set Initial Number**  
 
-**Step 3:** A pop-up box will open
+<color=#FF8C00>**Step 3:**</color> A pop-up box will open  
 
-**Step 4:** Input the railcar that is present in that spot by entering:
+<color=#FF8C00>**Step 4:**</color> Input the railcar that is present in that spot by entering:  
 - Car initial
 - Space
 - Car number
 
-**Example:** CSXT 2797
+<color=#FF8C00>**Example:**</color> CSXT 2797  
 
-**Step 5:** Tap **Submit**
+<color=#FF8C00>**Step 5:**</color> Tap **Submit**  
 
-**Step 6:** Set the Load/Empty status:
+<color=#FF8C00>**Step 6:**</color> Set the Load/Empty status:  
 - If loaded: Tap **Set Loaded**
 - If empty: Tap **Set Empty**
 
-**Step 7:** The placeholder is now replaced with actual car information
+<color=#FF8C00>**Step 7:**</color> The placeholder is now replaced with actual car information  
 
 ---
 
-## Screen Display Example
+## <color=#FF8C00>Screen Display Example</color>  
 
-### Before Correction
+### <color=#20B2AA>Before Correction</color>  
 
-AEI Add Cars (4)
+AEI Add Cars (4)  
 
-Seq   Car             Load/Empty   From Instruction   To Instruction   Info
-072   AEI ##7166A     (unknown)                                       AEI Added
+Seq   Car             Load/Empty   From Instruction   To Instruction   Info  
+072   AEI ##7166A     (unknown)                                       AEI Added  
 
-### During Correction
+### <color=#20B2AA>During Correction</color>  
 
-┌──────────────────────────────────────┐
-│ Please enter new car details:        │
-│                                      │
-│ ENTER CAR INITIAL & NUMBER           │
-│   CSXT 2797                          │
-│                                      │
-│           Submit                     │
-└──────────────────────────────────────┘
+┌──────────────────────────────────────┐  
+│ Please enter new car details:        │  
+│                                      │  
+│ ENTER CAR INITIAL & NUMBER           │  
+│   CSXT 2797                          │  
+│                                      │  
+│           Submit                     │  
+└──────────────────────────────────────┘  
 
-### After Correction
+### <color=#20B2AA>After Correction</color>  
 
 
-AEI Add Cars (3)
+AEI Add Cars (3)  
 
-Seq   Car          Load/Empty   From Instruction   To Instruction   Info
-072   CSXT 2797    L           (to be set)        (to be set)     In Work Order
-
----
-
-## Common Placeholder Scenarios
-
-### Scenario 1: Readable Car in Position
-
-**Situation:** Placeholder exists, actual car present and readable
-
-**Action:**
-1. Visually identify car
-2. Set Initial Number with correct car info
-3. Set Load/Empty status
-4. Add work instructions (FROM/TO)
+Seq   Car          Load/Empty   From Instruction   To Instruction   Info  
+072   CSXT 2797    L           (to be set)        (to be set)     In Work Order  
 
 ---
 
-### Scenario 2: No Car in Position
+## <color=#FF8C00>Common Placeholder Scenarios</color>  
 
-**Situation:** Placeholder exists but position is empty
+### <color=#20B2AA>Scenario 1: Readable Car in Position</color>  
 
-**Action:**
-1. Select the placeholder
-2. Tap **Skip/Unskip Car**
-3. Placeholder removed from consideration
-4. Continue processing other cars
+<color=#FF8C00>**Situation:**</color> Placeholder exists, actual car present and readable  
 
----
-
-### Scenario 3: Unknown Car Type
-
-**Situation:** Car present but cannot determine car number
-
-**Action:**
-1. Stop and physically verify
-2. Walk to car location if safe
-3. Read car marking directly
-4. If cannot verify, tap **Skip/Unskip Car**
-5. Report to MRT Helpdesk
+<color=#FF8C00>**Action:**</color>  
+1. Visually identify car  
+2. Set Initial Number with correct car info  
+3. Set Load/Empty status  
+4. Add work instructions (FROM/TO)  
 
 ---
 
-### Scenario 4: Multiple Placeholders
+### <color=#20B2AA>Scenario 2: No Car in Position</color>  
 
-**Situation:** Several placeholder cars in Add Cars list
+<color=#FF8C00>**Situation:**</color> Placeholder exists but position is empty  
 
-**Action:**
-1. Process each placeholder individually
-2. Verify physical position of each
-3. Correct placeholders in sequence order
-4. Skip any that cannot be verified
-5. Do not guess - accuracy is critical
+<color=#FF8C00>**Action:**</color>  
+1. Select the placeholder  
+2. Tap **Skip/Unskip Car**  
+3. Placeholder removed from consideration  
+4. Continue processing other cars  
 
 ---
 
-## Add Work Button Status
+### <color=#20B2AA>Scenario 3: Unknown Car Type</color>  
 
-### When Add Work is Disabled
+<color=#FF8C00>**Situation:**</color> Car present but cannot determine car number  
 
-The **Add Work** button becomes disabled when:
+<color=#FF8C00>**Action:**</color>  
+1. Stop and physically verify  
+2. Walk to car location if safe  
+3. Read car marking directly  
+4. If cannot verify, tap **Skip/Unskip Car**  
+5. Report to MRT Helpdesk  
+
+---
+
+### <color=#20B2AA>Scenario 4: Multiple Placeholders</color>  
+
+<color=#FF8C00>**Situation:**</color> Several placeholder cars in Add Cars list  
+
+<color=#FF8C00>**Action:**</color>  
+1. Process each placeholder individually  
+2. Verify physical position of each  
+3. Correct placeholders in sequence order  
+4. Skip any that cannot be verified  
+5. Do not guess - accuracy is critical  
+
+---
+
+## <color=#FF8C00>Add Work Button Status</color>  
+
+### <color=#20B2AA>When Add Work is Disabled</color>  
+
+The **Add Work** button becomes disabled when:  
 - AEI placeholder cars exist in the system
 - System requires placeholder correction first
 - Cannot add new work until placeholders resolved
 
-### Enabling Add Work Button
+### <color=#20B2AA>Enabling Add Work Button</color>  
 
-To re-enable the Add Work button:
-1. Correct all placeholder cars OR
-2. Skip/unskip all placeholders
-3. Verify AEI Add Cars count reduces
-4. Add Work button becomes active again
+To re-enable the Add Work button:  
+1. Correct all placeholder cars OR  
+2. Skip/unskip all placeholders  
+3. Verify AEI Add Cars count reduces  
+4. Add Work button becomes active again  
 
 ---
 
-## Load/Empty Status
+## <color=#FF8C00>Load/Empty Status</color>  
 
-### Set Loaded
+### <color=#20B2AA>Set Loaded</color>  
 
-Use **Set Loaded** when:
+Use **Set Loaded** when:  
 - Car contains freight
 - Visual inspection confirms loaded
 - Car sits low on trucks (loaded position)
 
-### Set Empty
+### <color=#20B2AA>Set Empty</color>  
 
-Use **Set Empty** when:
+Use **Set Empty** when:  
 - Car has no freight
 - Visual inspection confirms empty
 - Car sits high on trucks (empty position)
 
-### Cannot Determine
+### <color=#20B2AA>Cannot Determine</color>  
 
-If Load/Empty status uncertain:
-1. Do not guess
-2. Tap **Skip/Unskip Car**
-3. Call MRT Helpdesk for guidance
-4. Verify with conductor/yardmaster
+If Load/Empty status uncertain:  
+1. Do not guess  
+2. Tap **Skip/Unskip Car**  
+3. Call MRT Helpdesk for guidance  
+4. Verify with conductor/yardmaster  
 
 ---
 
-## Best Practices
+## <color=#FF8C00>Best Practices</color>  
 
-### Verification
+### <color=#20B2AA>Verification</color>  
 - ✅ Always visually verify car before correcting placeholder
 - ✅ Read car markings directly when possible
 - ✅ Confirm sequence position matches reality
 - ✅ Double-check car initial and number entry
 
-### Data Entry
+### <color=#20B2AA>Data Entry</color>  
 - ✅ Use space between initial and number (CSXT 2797)
 - ✅ Enter exactly as marked on car
 - ✅ Verify spelling of railroad initials
 - ✅ Confirm number is complete
 
-### When Uncertain
+### <color=#20B2AA>When Uncertain</color>  
 - ✅ Use Skip/Unskip rather than guessing
 - ✅ Call MRT Helpdesk for assistance
 - ✅ Document uncertainty
 - ✅ Coordinate with conductor for verification
 
-### Safety
+### <color=#20B2AA>Safety</color>  
 - ✅ Only approach cars if safe to do so
 - ✅ Do not enter between cars
 - ✅ Follow all safety protocols
@@ -277,62 +275,62 @@ If Load/Empty status uncertain:
 
 ---
 
-## Troubleshooting
+## <color=#FF8C00>Troubleshooting</color>  
 
-### Cannot Find Physical Car
+### <color=#20B2AA>Cannot Find Physical Car</color>  
 
-**Problem:** Placeholder exists but cannot locate actual car
+<color=#FF8C00>**Problem:**</color> Placeholder exists but cannot locate actual car  
 
-**Solution:**
-1. Verify train position and sequence
-2. Count cars from known reference point
-3. Check for cars in unexpected positions
-4. If truly missing, tap Skip/Unskip Car
-5. Report discrepancy to MRT Helpdesk
-
----
-
-### Multiple Placeholders for Same Position
-
-**Problem:** Two placeholders seem to indicate same car
-
-**Solution:**
-1. Process first placeholder with correct info
-2. Skip second placeholder
-3. Verify Add Cars count decreases appropriately
-4. If confusion persists, call MRT Helpdesk
+<color=#FF8C00>**Solution:**</color>  
+1. Verify train position and sequence  
+2. Count cars from known reference point  
+3. Check for cars in unexpected positions  
+4. If truly missing, tap Skip/Unskip Car  
+5. Report discrepancy to MRT Helpdesk  
 
 ---
 
-### Cannot Submit Car Information
+### <color=#20B2AA>Multiple Placeholders for Same Position</color>  
 
-**Problem:** Submit button not working after entering car info
+<color=#FF8C00>**Problem:**</color> Two placeholders seem to indicate same car  
 
-**Solution:**
-1. Verify format: INITIAL SPACE NUMBER
-2. Check for special characters
-3. Ensure all fields completed
-4. Try re-entering information
-5. Call MRT Helpdesk if persists
-
----
-
-### Add Work Still Disabled After Corrections
-
-**Problem:** Add Work button remains disabled after fixing placeholders
-
-**Solution:**
-1. Verify all placeholders corrected or skipped
-2. Check AEI Add Cars count
-3. Refresh screen by backing out and re-entering
-4. Restart MRT app if needed
-5. Call MRT Helpdesk
+<color=#FF8C00>**Solution:**</color>  
+1. Process first placeholder with correct info  
+2. Skip second placeholder  
+3. Verify Add Cars count decreases appropriately  
+4. If confusion persists, call MRT Helpdesk  
 
 ---
 
-## Summary Checklist
+### <color=#20B2AA>Cannot Submit Car Information</color>  
 
-### Placeholder Correction Process
+<color=#FF8C00>**Problem:**</color> Submit button not working after entering car info  
+
+<color=#FF8C00>**Solution:**</color>  
+1. Verify format: INITIAL SPACE NUMBER  
+2. Check for special characters  
+3. Ensure all fields completed  
+4. Try re-entering information  
+5. Call MRT Helpdesk if persists  
+
+---
+
+### <color=#20B2AA>Add Work Still Disabled After Corrections</color>  
+
+<color=#FF8C00>**Problem:**</color> Add Work button remains disabled after fixing placeholders  
+
+<color=#FF8C00>**Solution:**</color>  
+1. Verify all placeholders corrected or skipped  
+2. Check AEI Add Cars count  
+3. Refresh screen by backing out and re-entering  
+4. Restart MRT app if needed  
+5. Call MRT Helpdesk  
+
+---
+
+## <color=#FF8C00>Summary Checklist</color>  
+
+### <color=#20B2AA>Placeholder Correction Process</color>  
 
 -  Identify placeholder cars (AEI ## prefix)
 -  Verify physical car presence
@@ -348,11 +346,11 @@ If Load/Empty status uncertain:
 
 ---
 
-## Need Help?
+## <color=#FF8C00>Need Help?</color>  
 
-📞 **MRT Helpdesk: 800-243-7743 option #4**
+📞 **MRT Helpdesk: 800-243-7743 option #4**  
 
-**Call for:**
+<color=#FF8C00>**Call for:**</color>  
 - Cannot identify placeholder car
 - Multiple placeholders in same position
 - Add Work button remains disabled
@@ -360,7 +358,7 @@ If Load/Empty status uncertain:
 - Safety concerns accessing cars
 - System not accepting corrections
 
-**Have ready:**
+<color=#FF8C00>**Have ready:**</color>  
 - Train ID and Work Order number
 - AEI scan location and time
 - Placeholder car numbers
