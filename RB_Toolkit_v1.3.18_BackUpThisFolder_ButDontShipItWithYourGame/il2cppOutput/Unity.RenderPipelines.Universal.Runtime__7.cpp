@@ -35937,7 +35937,7 @@ IL_0035:
 		return L_10;
 	}
 }
-// Method Definition Index: 94653
+// Method Definition Index: 94652
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR bool AdaptivePerformanceRenderSettings_get_SkipFrontToBackSorting_mC73182E28DEF80E85310854E7DF9D15E655A4CF9_inline (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -35953,7 +35953,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR bool AdaptivePerformanceRenderSet
 		return L_0;
 	}
 }
-// Method Definition Index: 94645
+// Method Definition Index: 94644
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR float AdaptivePerformanceRenderSettings_get_MaxShadowDistanceMultiplier_mD8879DD88AE8FF3CB2106FF35910D57E1BCC5D27_inline (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -35969,7 +35969,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR float AdaptivePerformanceRenderSe
 		return L_0;
 	}
 }
-// Method Definition Index: 94647
+// Method Definition Index: 94646
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR float AdaptivePerformanceRenderSettings_get_RenderScaleMultiplier_m3300CA2A6EDA35A504D99656B11FF2DDD2BCA4C0_inline (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -35985,7 +35985,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR float AdaptivePerformanceRenderSe
 		return L_0;
 	}
 }
-// Method Definition Index: 94649
+// Method Definition Index: 94648
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t AdaptivePerformanceRenderSettings_get_AntiAliasingQualityBias_mDA59F3EE645D94B63DD3B89AD65925B47C365C5A_inline (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -36001,7 +36001,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t AdaptivePerformanceRender
 		return L_0;
 	}
 }
-// Method Definition Index: 94651
+// Method Definition Index: 94650
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR bool AdaptivePerformanceRenderSettings_get_SkipDynamicBatching_m939E279451A083DF507A8CFC6CE0449905C3C88A_inline (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -36017,7 +36017,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR bool AdaptivePerformanceRenderSet
 		return L_0;
 	}
 }
-// Method Definition Index: 94635
+// Method Definition Index: 94634
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR float AdaptivePerformanceRenderSettings_get_MainLightShadowmapResolutionMultiplier_mE4F508B1B1B29F7D7AE1C1E61A6F251C9F4C55B5_inline (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -36033,7 +36033,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR float AdaptivePerformanceRenderSe
 		return L_0;
 	}
 }
-// Method Definition Index: 94639
+// Method Definition Index: 94638
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t AdaptivePerformanceRenderSettings_get_MainLightShadowCascadesCountBias_mFB9E643A5D67393F20BCEAE1FD7C076E93424F8A_inline (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -36049,7 +36049,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t AdaptivePerformanceRender
 		return L_0;
 	}
 }
-// Method Definition Index: 94641
+// Method Definition Index: 94640
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t AdaptivePerformanceRenderSettings_get_ShadowQualityBias_mDC7B30DE123707A8EB0BFC6273D087C4B514CDD3_inline (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -36065,7 +36065,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t AdaptivePerformanceRender
 		return L_0;
 	}
 }
-// Method Definition Index: 94643
+// Method Definition Index: 94642
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR float AdaptivePerformanceRenderSettings_get_LutBias_m066C8AE5F8123FE07E7159CC96A465E33968B9C8_inline (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;

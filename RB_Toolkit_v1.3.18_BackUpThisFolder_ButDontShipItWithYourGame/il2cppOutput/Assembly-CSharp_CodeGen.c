@@ -173,7 +173,6 @@ extern void JobSearchUIController_U3COnEnableU3Eb__39_8_m27B8DE0D50187D8992194CA
 extern void JobSearchUIController_U3CRenderDetailViewU3Eb__47_0_m801D4C6A2485157570E0A20136341AC6403E442D (void);
 extern void JobSearchUIController_U3CRenderDetailViewU3Eb__47_1_mB84D07EF588E773CA90D68701A40840CE56940FA (void);
 extern void JobSearchUIController_U3CScrollToMatchU3Eb__56_0_mE7CD926C0F869F7A6F74708E791282DAF1B3CEC6 (void);
-extern void JobSearchUIController_U3CApplyMobileFontsU3Eb__75_0_m49642820C687C0357E42DB609538436D449436D0 (void);
 extern void SectionItem__ctor_m32F2F46EF89925BCFF1861A70C70D455E571125E (void);
 extern void U3CU3Ec__cctor_m8E376B81FA734FD101757115B14E379591A6C91C (void);
 extern void U3CU3Ec__ctor_m6ABFEA894F454C475CA1B58968C69DB61F9EC0AD (void);
@@ -624,7 +623,7 @@ extern void UITableCellSpacer_OnRectTransformDimensionsChange_m165C96E46B7F96499
 extern void UITableCellSpacer_OnSizeChanged_mAEE4EC49CD93919DC91167A5A965A16704A34882 (void);
 extern void UITableCellSpacer_Calculate_m559472A587AAE5D917F533C5C99F7476387090CD (void);
 extern void UITableCellSpacer__ctor_m76379CD8026FF7165BB0CDAAE1A8D1B1AE6CDD1A (void);
-static Il2CppMethodPointer s_methodPointers[617] = 
+static Il2CppMethodPointer s_methodPointers[616] = 
 {
 	ContactRowController_Setup_mE400885E1EDD214F6A4363F9C5EE5DDAE018D915,
 	ContactRowController__ctor_m93390145DDEA6A0EF7888850670D057818390241,
@@ -792,7 +791,6 @@ static Il2CppMethodPointer s_methodPointers[617] =
 	JobSearchUIController_U3CRenderDetailViewU3Eb__47_0_m801D4C6A2485157570E0A20136341AC6403E442D,
 	JobSearchUIController_U3CRenderDetailViewU3Eb__47_1_mB84D07EF588E773CA90D68701A40840CE56940FA,
 	JobSearchUIController_U3CScrollToMatchU3Eb__56_0_mE7CD926C0F869F7A6F74708E791282DAF1B3CEC6,
-	JobSearchUIController_U3CApplyMobileFontsU3Eb__75_0_m49642820C687C0357E42DB609538436D449436D0,
 	SectionItem__ctor_m32F2F46EF89925BCFF1861A70C70D455E571125E,
 	U3CU3Ec__cctor_m8E376B81FA734FD101757115B14E379591A6C91C,
 	U3CU3Ec__ctor_m6ABFEA894F454C475CA1B58968C69DB61F9EC0AD,
@@ -1252,14 +1250,14 @@ extern void U3CParseMarkdownU3Ed__10_MoveNext_mB85062847D1D747CDC7E2A6E288191341
 extern void U3CParseMarkdownU3Ed__10_SetStateMachine_m5978775207E01270BADFDD15E1927801A14C74F6_AdjustorThunk (void);
 static Il2CppTokenAdjustorThunkPair s_adjustorThunks[6] = 
 {
-	{ 0x06000216, U3COpenMarkbookU3Ed__8_MoveNext_mBFF4947D2DDF4B33C97315E2DAE20A0B331A66CF_AdjustorThunk },
-	{ 0x06000217, U3COpenMarkbookU3Ed__8_SetStateMachine_m2117227D64269DA737C95CA0EDFEE86916D5EA63_AdjustorThunk },
-	{ 0x06000218, U3COpenMarkbookChapterU3Ed__9_MoveNext_m0C12410BBCC3FA4F4310DD5F2390EBDC51AA59C8_AdjustorThunk },
-	{ 0x06000219, U3COpenMarkbookChapterU3Ed__9_SetStateMachine_m11C4CB224599E9A574193BE19FC13431A7B824BD_AdjustorThunk },
-	{ 0x0600021A, U3CParseMarkdownU3Ed__10_MoveNext_mB85062847D1D747CDC7E2A6E288191341571363A_AdjustorThunk },
-	{ 0x0600021B, U3CParseMarkdownU3Ed__10_SetStateMachine_m5978775207E01270BADFDD15E1927801A14C74F6_AdjustorThunk },
+	{ 0x06000215, U3COpenMarkbookU3Ed__8_MoveNext_mBFF4947D2DDF4B33C97315E2DAE20A0B331A66CF_AdjustorThunk },
+	{ 0x06000216, U3COpenMarkbookU3Ed__8_SetStateMachine_m2117227D64269DA737C95CA0EDFEE86916D5EA63_AdjustorThunk },
+	{ 0x06000217, U3COpenMarkbookChapterU3Ed__9_MoveNext_m0C12410BBCC3FA4F4310DD5F2390EBDC51AA59C8_AdjustorThunk },
+	{ 0x06000218, U3COpenMarkbookChapterU3Ed__9_SetStateMachine_m11C4CB224599E9A574193BE19FC13431A7B824BD_AdjustorThunk },
+	{ 0x06000219, U3CParseMarkdownU3Ed__10_MoveNext_mB85062847D1D747CDC7E2A6E288191341571363A_AdjustorThunk },
+	{ 0x0600021A, U3CParseMarkdownU3Ed__10_SetStateMachine_m5978775207E01270BADFDD15E1927801A14C74F6_AdjustorThunk },
 };
-static const int32_t s_InvokerIndices[617] = 
+static const int32_t s_InvokerIndices[616] = 
 {
 	2566,
 	14690,
@@ -1427,7 +1425,6 @@ static const int32_t s_InvokerIndices[617] =
 	11230,
 	14690,
 	14690,
-	11230,
 	14690,
 	24778,
 	14690,
@@ -1883,7 +1880,7 @@ IL2CPP_EXTERN_C const Il2CppCodeGenModule g_AssemblyU2DCSharp_CodeGenModule;
 const Il2CppCodeGenModule g_AssemblyU2DCSharp_CodeGenModule = 
 {
 	"Assembly-CSharp.dll",
-	617,
+	616,
 	s_methodPointers,
 	6,
 	s_adjustorThunks,

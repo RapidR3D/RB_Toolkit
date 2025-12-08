@@ -10,9 +10,6 @@ Type any of the following into the search bar to access the corresponding guide:
 ## <color=#FF8C00>Jobs</color>
 - **Format**: `[Job ID]`
 - **Example**: <color=#FFD700>Y197</color>, <color=#FFD700>Y295</color>
-- **Note** If called as a pin puller, example Y199, Job ID:  <color=#FFD700>Y199P</color>
-- **Note** If called as a pin puller, example Y299, Job ID:  <color=#FFD700>Y299P</color>
-- **Note** If called as a pin puller, example Y399, Job ID:  <color=#FFD700>Y399P</color>
 
 ## <color=#FF8C00>Direct Access</color>
 - **Format**: `Direct Access`

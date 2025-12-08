@@ -512,7 +512,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void* IntPtr_op_Explicit_m2728CBA081E79B97DDC
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 100445
+// Method Definition Index: 100440
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR PlayableHandle_t5D6A01EF94382EFEDC047202F71DF882769654D4 VideoClipPlayable_GetHandle_m1D990903234220E9FE756F2DA895650EBDC1415D (VideoClipPlayable_t2AAA6B40D35759730C170CA3124BC2499B50A0F1* __this, const RuntimeMethod* method) 
 {
 	PlayableHandle_t5D6A01EF94382EFEDC047202F71DF882769654D4 V_0;
@@ -538,7 +538,7 @@ IL2CPP_EXTERN_C  PlayableHandle_t5D6A01EF94382EFEDC047202F71DF882769654D4 VideoC
 	_returnValue = VideoClipPlayable_GetHandle_m1D990903234220E9FE756F2DA895650EBDC1415D(_thisAdjusted, method);
 	return _returnValue;
 }
-// Method Definition Index: 100446
+// Method Definition Index: 100441
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool VideoClipPlayable_Equals_mDBA2CCE1368B628829B065EA8DEDE84512B2723E (VideoClipPlayable_t2AAA6B40D35759730C170CA3124BC2499B50A0F1* __this, VideoClipPlayable_t2AAA6B40D35759730C170CA3124BC2499B50A0F1 ___0_other, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -655,7 +655,7 @@ IL2CPP_EXTERN_C  bool VideoClipPlayable_Equals_mDBA2CCE1368B628829B065EA8DEDE845
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 100447
+// Method Definition Index: 100442
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void VideoPlayer_set_source_m31B8A16AF9B6FE58D5DCF549614BE6B53DE53052 (VideoPlayer_t48EA4A8117B822BC59590150DED9AD46C62F65D3* __this, int32_t ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -691,7 +691,7 @@ IL_000f:
 		return;
 	}
 }
-// Method Definition Index: 100448
+// Method Definition Index: 100443
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void VideoPlayer_set_url_m02AC2BB229F9441257D62F9ACFD96D09F51B4F14 (VideoPlayer_t48EA4A8117B822BC59590150DED9AD46C62F65D3* __this, String_t* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -787,7 +787,7 @@ IL_0047:
 		return;
 	}
 }
-// Method Definition Index: 100449
+// Method Definition Index: 100444
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void VideoPlayer_set_targetTexture_mCFEE8D0342A11CD20CF51A3C467BA745BEB49E02 (VideoPlayer_t48EA4A8117B822BC59590150DED9AD46C62F65D3* __this, RenderTexture_tBA90C4C3AD9EECCFDDCC632D97C29FAB80D60D27* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -826,7 +826,7 @@ IL_000f:
 		return;
 	}
 }
-// Method Definition Index: 100450
+// Method Definition Index: 100445
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Texture_t791CBB51219779964E0E8A2ED7C1AA5F92A4A700* VideoPlayer_get_texture_m1BA7033FEB30FEC507A4605FDD5C4B78BB81C379 (VideoPlayer_t48EA4A8117B822BC59590150DED9AD46C62F65D3* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -865,7 +865,7 @@ IL_000f:
 		return L_3;
 	}
 }
-// Method Definition Index: 100451
+// Method Definition Index: 100446
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void VideoPlayer_Prepare_mC0EF4CC2E5A6B7C04F9F810DD9406A6146BEE6EA (VideoPlayer_t48EA4A8117B822BC59590150DED9AD46C62F65D3* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -900,7 +900,7 @@ IL_000f:
 		return;
 	}
 }
-// Method Definition Index: 100452
+// Method Definition Index: 100447
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void VideoPlayer_Play_m8E99607F39F1D214BDD704F3E130DD2418787ACE (VideoPlayer_t48EA4A8117B822BC59590150DED9AD46C62F65D3* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -935,7 +935,7 @@ IL_000f:
 		return;
 	}
 }
-// Method Definition Index: 100453
+// Method Definition Index: 100448
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void VideoPlayer_set_isLooping_m37563E7D24110FDBBBB4E48EA90E639BE778264E (VideoPlayer_t48EA4A8117B822BC59590150DED9AD46C62F65D3* __this, bool ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -971,7 +971,7 @@ IL_000f:
 		return;
 	}
 }
-// Method Definition Index: 100454
+// Method Definition Index: 100449
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void VideoPlayer_add_prepareCompleted_m4DB8843A3E3E3CFF7E361E70EA51983AF457183B (VideoPlayer_t48EA4A8117B822BC59590150DED9AD46C62F65D3* __this, EventHandler_tE1FA51515FC895E3A02E317912FBDCDCF390A411* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -1014,7 +1014,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 100455
+// Method Definition Index: 100450
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void VideoPlayer_remove_prepareCompleted_mDA77FE81F97195666D407DBB5689F8289A0513DF (VideoPlayer_t48EA4A8117B822BC59590150DED9AD46C62F65D3* __this, EventHandler_tE1FA51515FC895E3A02E317912FBDCDCF390A411* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -1057,7 +1057,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 100456
+// Method Definition Index: 100451
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void VideoPlayer_InvokePrepareCompletedCallback_Internal_mF483B141E9AF0B553FF87B32A0EE54E40BE21EFD (VideoPlayer_t48EA4A8117B822BC59590150DED9AD46C62F65D3* ___0_source, const RuntimeMethod* method) 
 {
 	bool V_0 = false;
@@ -1086,7 +1086,7 @@ IL_001b:
 		return;
 	}
 }
-// Method Definition Index: 100457
+// Method Definition Index: 100452
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void VideoPlayer_InvokeFrameReadyCallback_Internal_mF5F02FE6BBEA70C62108F3FD836E1B378CB9F5E7 (VideoPlayer_t48EA4A8117B822BC59590150DED9AD46C62F65D3* ___0_source, int64_t ___1_frameIdx, const RuntimeMethod* method) 
 {
 	bool V_0 = false;
@@ -1116,7 +1116,7 @@ IL_001c:
 		return;
 	}
 }
-// Method Definition Index: 100458
+// Method Definition Index: 100453
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void VideoPlayer_InvokeLoopPointReachedCallback_Internal_m090FD00BB12721EB3CEB337E30687D5DE6B1EBD6 (VideoPlayer_t48EA4A8117B822BC59590150DED9AD46C62F65D3* ___0_source, const RuntimeMethod* method) 
 {
 	bool V_0 = false;
@@ -1145,7 +1145,7 @@ IL_001b:
 		return;
 	}
 }
-// Method Definition Index: 100459
+// Method Definition Index: 100454
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void VideoPlayer_InvokeStartedCallback_Internal_mBDD186C95E57DD264CD0957FA46D9F65728C67EF (VideoPlayer_t48EA4A8117B822BC59590150DED9AD46C62F65D3* ___0_source, const RuntimeMethod* method) 
 {
 	bool V_0 = false;
@@ -1174,7 +1174,7 @@ IL_001b:
 		return;
 	}
 }
-// Method Definition Index: 100460
+// Method Definition Index: 100455
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void VideoPlayer_InvokeFrameDroppedCallback_Internal_m6E6B6353404AF76AB16D1433B8553659B0744DC0 (VideoPlayer_t48EA4A8117B822BC59590150DED9AD46C62F65D3* ___0_source, const RuntimeMethod* method) 
 {
 	bool V_0 = false;
@@ -1203,7 +1203,7 @@ IL_001b:
 		return;
 	}
 }
-// Method Definition Index: 100461
+// Method Definition Index: 100456
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void VideoPlayer_InvokeErrorReceivedCallback_Internal_m91E59ED70189824AB2C5D0AEB47742130EE98574 (VideoPlayer_t48EA4A8117B822BC59590150DED9AD46C62F65D3* ___0_source, String_t* ___1_errorStr, const RuntimeMethod* method) 
 {
 	bool V_0 = false;
@@ -1233,7 +1233,7 @@ IL_001c:
 		return;
 	}
 }
-// Method Definition Index: 100462
+// Method Definition Index: 100457
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void VideoPlayer_InvokeSeekCompletedCallback_Internal_m62AEB9826ACE95B88CC60220375C1C7EF5EEEE1F (VideoPlayer_t48EA4A8117B822BC59590150DED9AD46C62F65D3* ___0_source, const RuntimeMethod* method) 
 {
 	bool V_0 = false;
@@ -1262,7 +1262,7 @@ IL_001b:
 		return;
 	}
 }
-// Method Definition Index: 100463
+// Method Definition Index: 100458
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void VideoPlayer_InvokeClockResyncOccurredCallback_Internal_m743B8421E9538761141364EBDCEBC673BA58D8C6 (VideoPlayer_t48EA4A8117B822BC59590150DED9AD46C62F65D3* ___0_source, double ___1_seconds, const RuntimeMethod* method) 
 {
 	bool V_0 = false;
@@ -1292,7 +1292,7 @@ IL_001c:
 		return;
 	}
 }
-// Method Definition Index: 100464
+// Method Definition Index: 100459
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void VideoPlayer_set_source_Injected_m4E38E5A67DD6BB9746C481CEEED0608E75A1DDD1 (intptr_t ___0__unity_self, int32_t ___1_value, const RuntimeMethod* method) 
 {
 	typedef void (*VideoPlayer_set_source_Injected_m4E38E5A67DD6BB9746C481CEEED0608E75A1DDD1_ftn) (intptr_t, int32_t);
@@ -1301,7 +1301,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void VideoPlayer_set_source_Injected_m4E38E5A
 	_il2cpp_icall_func = (VideoPlayer_set_source_Injected_m4E38E5A67DD6BB9746C481CEEED0608E75A1DDD1_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.Video.VideoPlayer::set_source_Injected(System.IntPtr,UnityEngine.Video.VideoSource)");
 	_il2cpp_icall_func(___0__unity_self, ___1_value);
 }
-// Method Definition Index: 100465
+// Method Definition Index: 100460
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void VideoPlayer_set_url_Injected_m4A150A878AD11372E0FC794F53B7FC310222E9EC (intptr_t ___0__unity_self, ManagedSpanWrapper_tE7FC4BBB631B130757F8DEB15853D98FD3D5DC0E* ___1_value, const RuntimeMethod* method) 
 {
 	typedef void (*VideoPlayer_set_url_Injected_m4A150A878AD11372E0FC794F53B7FC310222E9EC_ftn) (intptr_t, ManagedSpanWrapper_tE7FC4BBB631B130757F8DEB15853D98FD3D5DC0E*);
@@ -1310,7 +1310,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void VideoPlayer_set_url_Injected_m4A150A878A
 	_il2cpp_icall_func = (VideoPlayer_set_url_Injected_m4A150A878AD11372E0FC794F53B7FC310222E9EC_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.Video.VideoPlayer::set_url_Injected(System.IntPtr,UnityEngine.Bindings.ManagedSpanWrapper&)");
 	_il2cpp_icall_func(___0__unity_self, ___1_value);
 }
-// Method Definition Index: 100466
+// Method Definition Index: 100461
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void VideoPlayer_set_targetTexture_Injected_m6B6934A931A38D42F7F070755F46584D2AEE1B26 (intptr_t ___0__unity_self, intptr_t ___1_value, const RuntimeMethod* method) 
 {
 	typedef void (*VideoPlayer_set_targetTexture_Injected_m6B6934A931A38D42F7F070755F46584D2AEE1B26_ftn) (intptr_t, intptr_t);
@@ -1319,7 +1319,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void VideoPlayer_set_targetTexture_Injected_m
 	_il2cpp_icall_func = (VideoPlayer_set_targetTexture_Injected_m6B6934A931A38D42F7F070755F46584D2AEE1B26_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.Video.VideoPlayer::set_targetTexture_Injected(System.IntPtr,System.IntPtr)");
 	_il2cpp_icall_func(___0__unity_self, ___1_value);
 }
-// Method Definition Index: 100467
+// Method Definition Index: 100462
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR intptr_t VideoPlayer_get_texture_Injected_mB0ACDC271788360E8FBA55758C0FB4FA9D8B3812 (intptr_t ___0__unity_self, const RuntimeMethod* method) 
 {
 	typedef intptr_t (*VideoPlayer_get_texture_Injected_mB0ACDC271788360E8FBA55758C0FB4FA9D8B3812_ftn) (intptr_t);
@@ -1329,7 +1329,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR intptr_t VideoPlayer_get_texture_Injected_mB0
 	intptr_t icallRetVal = _il2cpp_icall_func(___0__unity_self);
 	return icallRetVal;
 }
-// Method Definition Index: 100468
+// Method Definition Index: 100463
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void VideoPlayer_Prepare_Injected_m946CDD19D59354A22257F58821F870E0E6BE3066 (intptr_t ___0__unity_self, const RuntimeMethod* method) 
 {
 	typedef void (*VideoPlayer_Prepare_Injected_m946CDD19D59354A22257F58821F870E0E6BE3066_ftn) (intptr_t);
@@ -1338,7 +1338,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void VideoPlayer_Prepare_Injected_m946CDD19D5
 	_il2cpp_icall_func = (VideoPlayer_Prepare_Injected_m946CDD19D59354A22257F58821F870E0E6BE3066_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.Video.VideoPlayer::Prepare_Injected(System.IntPtr)");
 	_il2cpp_icall_func(___0__unity_self);
 }
-// Method Definition Index: 100469
+// Method Definition Index: 100464
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void VideoPlayer_Play_Injected_m6AB297C015723C8F94E805F269EF8A03D1E7835A (intptr_t ___0__unity_self, const RuntimeMethod* method) 
 {
 	typedef void (*VideoPlayer_Play_Injected_m6AB297C015723C8F94E805F269EF8A03D1E7835A_ftn) (intptr_t);
@@ -1347,7 +1347,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void VideoPlayer_Play_Injected_m6AB297C015723
 	_il2cpp_icall_func = (VideoPlayer_Play_Injected_m6AB297C015723C8F94E805F269EF8A03D1E7835A_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.Video.VideoPlayer::Play_Injected(System.IntPtr)");
 	_il2cpp_icall_func(___0__unity_self);
 }
-// Method Definition Index: 100470
+// Method Definition Index: 100465
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void VideoPlayer_set_isLooping_Injected_mDFF375EC3EA1A2167C2589C9D52836677A63F46D (intptr_t ___0__unity_self, bool ___1_value, const RuntimeMethod* method) 
 {
 	typedef void (*VideoPlayer_set_isLooping_Injected_mDFF375EC3EA1A2167C2589C9D52836677A63F46D_ftn) (intptr_t, bool);
@@ -1386,7 +1386,7 @@ void EventHandler_Invoke_m8A3288B6DF1FE2699A58EA22D0B830BB20E94E15_OpenStatic(Ev
 	typedef void (*FunctionPointerType) (VideoPlayer_t48EA4A8117B822BC59590150DED9AD46C62F65D3*, const RuntimeMethod*);
 	((FunctionPointerType)__this->___method_ptr)(___0_source, method);
 }
-// Method Definition Index: 100471
+// Method Definition Index: 100466
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void EventHandler__ctor_mFCF62E0BB29DD3D2B2F1306BD8657E374CF60903 (EventHandler_tE1FA51515FC895E3A02E317912FBDCDCF390A411* __this, RuntimeObject* ___0_object, intptr_t ___1_method, const RuntimeMethod* method) 
 {
 	__this->___method_ptr = (intptr_t)il2cpp_codegen_get_method_pointer((RuntimeMethod*)___1_method);
@@ -1423,7 +1423,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void EventHandler__ctor_mFCF62E0BB29DD3D2B2F1
 	}
 	__this->___extra_arg = (intptr_t)&EventHandler_Invoke_m8A3288B6DF1FE2699A58EA22D0B830BB20E94E15_Multicast;
 }
-// Method Definition Index: 100472
+// Method Definition Index: 100467
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void EventHandler_Invoke_m8A3288B6DF1FE2699A58EA22D0B830BB20E94E15 (EventHandler_tE1FA51515FC895E3A02E317912FBDCDCF390A411* __this, VideoPlayer_t48EA4A8117B822BC59590150DED9AD46C62F65D3* ___0_source, const RuntimeMethod* method) 
 {
 	typedef void (*FunctionPointerType) (RuntimeObject*, VideoPlayer_t48EA4A8117B822BC59590150DED9AD46C62F65D3*, const RuntimeMethod*);
@@ -1459,7 +1459,7 @@ void ErrorEventHandler_Invoke_m0601D855B85F5053A0A10A0166A8CE469D4672C5_OpenStat
 	typedef void (*FunctionPointerType) (VideoPlayer_t48EA4A8117B822BC59590150DED9AD46C62F65D3*, String_t*, const RuntimeMethod*);
 	((FunctionPointerType)__this->___method_ptr)(___0_source, ___1_message, method);
 }
-// Method Definition Index: 100473
+// Method Definition Index: 100468
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ErrorEventHandler__ctor_m78073CD72C64AAFAF54A01702919A847185F4C58 (ErrorEventHandler_t6DD292ED79129AF67D909EDA603DA9DC5C762462* __this, RuntimeObject* ___0_object, intptr_t ___1_method, const RuntimeMethod* method) 
 {
 	__this->___method_ptr = (intptr_t)il2cpp_codegen_get_method_pointer((RuntimeMethod*)___1_method);
@@ -1496,7 +1496,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ErrorEventHandler__ctor_m78073CD72C64AAF
 	}
 	__this->___extra_arg = (intptr_t)&ErrorEventHandler_Invoke_m0601D855B85F5053A0A10A0166A8CE469D4672C5_Multicast;
 }
-// Method Definition Index: 100474
+// Method Definition Index: 100469
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ErrorEventHandler_Invoke_m0601D855B85F5053A0A10A0166A8CE469D4672C5 (ErrorEventHandler_t6DD292ED79129AF67D909EDA603DA9DC5C762462* __this, VideoPlayer_t48EA4A8117B822BC59590150DED9AD46C62F65D3* ___0_source, String_t* ___1_message, const RuntimeMethod* method) 
 {
 	typedef void (*FunctionPointerType) (RuntimeObject*, VideoPlayer_t48EA4A8117B822BC59590150DED9AD46C62F65D3*, String_t*, const RuntimeMethod*);
@@ -1532,7 +1532,7 @@ void FrameReadyEventHandler_Invoke_m73FF71F81A620194421226D8A98C64FB82E7B235_Ope
 	typedef void (*FunctionPointerType) (VideoPlayer_t48EA4A8117B822BC59590150DED9AD46C62F65D3*, int64_t, const RuntimeMethod*);
 	((FunctionPointerType)__this->___method_ptr)(___0_source, ___1_frameIdx, method);
 }
-// Method Definition Index: 100475
+// Method Definition Index: 100470
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FrameReadyEventHandler__ctor_mD875F736BCA2A2128427AB0546B5081ED3B22D56 (FrameReadyEventHandler_tDEDADF060B051C2953122274EBF3896AF48735E8* __this, RuntimeObject* ___0_object, intptr_t ___1_method, const RuntimeMethod* method) 
 {
 	__this->___method_ptr = (intptr_t)il2cpp_codegen_get_method_pointer((RuntimeMethod*)___1_method);
@@ -1569,7 +1569,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FrameReadyEventHandler__ctor_mD875F736BC
 	}
 	__this->___extra_arg = (intptr_t)&FrameReadyEventHandler_Invoke_m73FF71F81A620194421226D8A98C64FB82E7B235_Multicast;
 }
-// Method Definition Index: 100476
+// Method Definition Index: 100471
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FrameReadyEventHandler_Invoke_m73FF71F81A620194421226D8A98C64FB82E7B235 (FrameReadyEventHandler_tDEDADF060B051C2953122274EBF3896AF48735E8* __this, VideoPlayer_t48EA4A8117B822BC59590150DED9AD46C62F65D3* ___0_source, int64_t ___1_frameIdx, const RuntimeMethod* method) 
 {
 	typedef void (*FunctionPointerType) (RuntimeObject*, VideoPlayer_t48EA4A8117B822BC59590150DED9AD46C62F65D3*, int64_t, const RuntimeMethod*);
@@ -1605,7 +1605,7 @@ void TimeEventHandler_Invoke_m2327761543815FB7181FFF73E87FC5EC0F84349D_OpenStati
 	typedef void (*FunctionPointerType) (VideoPlayer_t48EA4A8117B822BC59590150DED9AD46C62F65D3*, double, const RuntimeMethod*);
 	((FunctionPointerType)__this->___method_ptr)(___0_source, ___1_seconds, method);
 }
-// Method Definition Index: 100477
+// Method Definition Index: 100472
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TimeEventHandler__ctor_m7BF78A616C8FF71B3A7CA62B1A03446A5C581309 (TimeEventHandler_t8F77A92148F1A0F37AE8DE9CA7E25D90D001DC1E* __this, RuntimeObject* ___0_object, intptr_t ___1_method, const RuntimeMethod* method) 
 {
 	__this->___method_ptr = (intptr_t)il2cpp_codegen_get_method_pointer((RuntimeMethod*)___1_method);
@@ -1642,7 +1642,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TimeEventHandler__ctor_m7BF78A616C8FF71B
 	}
 	__this->___extra_arg = (intptr_t)&TimeEventHandler_Invoke_m2327761543815FB7181FFF73E87FC5EC0F84349D_Multicast;
 }
-// Method Definition Index: 100478
+// Method Definition Index: 100473
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TimeEventHandler_Invoke_m2327761543815FB7181FFF73E87FC5EC0F84349D (TimeEventHandler_t8F77A92148F1A0F37AE8DE9CA7E25D90D001DC1E* __this, VideoPlayer_t48EA4A8117B822BC59590150DED9AD46C62F65D3* ___0_source, double ___1_seconds, const RuntimeMethod* method) 
 {
 	typedef void (*FunctionPointerType) (RuntimeObject*, VideoPlayer_t48EA4A8117B822BC59590150DED9AD46C62F65D3*, double, const RuntimeMethod*);
@@ -1752,25 +1752,25 @@ IL_000d:
 		return L_6;
 	}
 }
-// Method Definition Index: 100472
+// Method Definition Index: 100467
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void EventHandler_Invoke_m8A3288B6DF1FE2699A58EA22D0B830BB20E94E15_inline (EventHandler_tE1FA51515FC895E3A02E317912FBDCDCF390A411* __this, VideoPlayer_t48EA4A8117B822BC59590150DED9AD46C62F65D3* ___0_source, const RuntimeMethod* method) 
 {
 	typedef void (*FunctionPointerType) (RuntimeObject*, VideoPlayer_t48EA4A8117B822BC59590150DED9AD46C62F65D3*, const RuntimeMethod*);
 	((FunctionPointerType)__this->___invoke_impl)((Il2CppObject*)__this->___method_code, ___0_source, reinterpret_cast<RuntimeMethod*>(__this->___method));
 }
-// Method Definition Index: 100476
+// Method Definition Index: 100471
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void FrameReadyEventHandler_Invoke_m73FF71F81A620194421226D8A98C64FB82E7B235_inline (FrameReadyEventHandler_tDEDADF060B051C2953122274EBF3896AF48735E8* __this, VideoPlayer_t48EA4A8117B822BC59590150DED9AD46C62F65D3* ___0_source, int64_t ___1_frameIdx, const RuntimeMethod* method) 
 {
 	typedef void (*FunctionPointerType) (RuntimeObject*, VideoPlayer_t48EA4A8117B822BC59590150DED9AD46C62F65D3*, int64_t, const RuntimeMethod*);
 	((FunctionPointerType)__this->___invoke_impl)((Il2CppObject*)__this->___method_code, ___0_source, ___1_frameIdx, reinterpret_cast<RuntimeMethod*>(__this->___method));
 }
-// Method Definition Index: 100474
+// Method Definition Index: 100469
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void ErrorEventHandler_Invoke_m0601D855B85F5053A0A10A0166A8CE469D4672C5_inline (ErrorEventHandler_t6DD292ED79129AF67D909EDA603DA9DC5C762462* __this, VideoPlayer_t48EA4A8117B822BC59590150DED9AD46C62F65D3* ___0_source, String_t* ___1_message, const RuntimeMethod* method) 
 {
 	typedef void (*FunctionPointerType) (RuntimeObject*, VideoPlayer_t48EA4A8117B822BC59590150DED9AD46C62F65D3*, String_t*, const RuntimeMethod*);
 	((FunctionPointerType)__this->___invoke_impl)((Il2CppObject*)__this->___method_code, ___0_source, ___1_message, reinterpret_cast<RuntimeMethod*>(__this->___method));
 }
-// Method Definition Index: 100478
+// Method Definition Index: 100473
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void TimeEventHandler_Invoke_m2327761543815FB7181FFF73E87FC5EC0F84349D_inline (TimeEventHandler_t8F77A92148F1A0F37AE8DE9CA7E25D90D001DC1E* __this, VideoPlayer_t48EA4A8117B822BC59590150DED9AD46C62F65D3* ___0_source, double ___1_seconds, const RuntimeMethod* method) 
 {
 	typedef void (*FunctionPointerType) (RuntimeObject*, VideoPlayer_t48EA4A8117B822BC59590150DED9AD46C62F65D3*, double, const RuntimeMethod*);

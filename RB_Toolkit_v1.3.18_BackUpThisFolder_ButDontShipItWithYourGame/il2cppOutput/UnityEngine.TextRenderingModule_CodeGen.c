@@ -69,16 +69,12 @@ extern void Font_get_material_m61ABDEC14C6D659DDC5A4F080023699116C17364 (void);
 extern void Font_get_dynamic_m5231258BFEAABA3B3EA6AB5D8C2FDCBC2AD1371C (void);
 extern void Font_get_fontSize_m02C2F5C7A7C89A878F04C2087248DD46BBF9E26B (void);
 extern void Font__ctor_m9106C7F312AE77F6721001A5A3143951201AC841 (void);
-extern void Font__ctor_m9F4256214EE9A4A3F9C8287C21ABCAA0BCCBA461 (void);
-extern void Font_CreateDynamicFontFromOSFont_m3DF4B7A70F4AD6918FC44195252D9A645B3C5D62 (void);
 extern void Font_InvokeTextureRebuilt_Internal_m874D1025267C908E5FCD437B41929E4DE248B01B (void);
 extern void Font_HasCharacter_m71A84FE036055880E1543D79A38FEFA495AD200B (void);
 extern void Font_HasCharacter_mAB838A26F002CB5E4B4DB297F7D6836A28625B18 (void);
-extern void Font_GetOSInstalledFontNames_m0C3D5751862D10A13CA25B9DE98C0EAE8A686B75 (void);
 extern void Font_GetPathsToOSFonts_mF2EB5A086E0313B02C22666C9C0E980FE0EB60B8 (void);
 extern void Font_GetOSFallbacks_mB3FE14E050081E45B0855EF5699B0A1D93B17A78 (void);
 extern void Font_Internal_CreateFont_m97CB036BAA033DDAD87E14F9D3493A3A2D9C72B1 (void);
-extern void Font_Internal_CreateDynamicFont_m5252E98E214E0B9B2D42C70A67A9A446341E050E (void);
 extern void Font_get_material_Injected_mFD3477FFA6CA61152AC98B142DFE004137D231F7 (void);
 extern void Font_get_dynamic_Injected_mE1610EDFBB9092E562D21E9FC5A4AAFA89696690 (void);
 extern void Font_get_fontSize_Injected_m34A9893F1D744CC3CE823AE7BF0902957C8A268E (void);
@@ -86,7 +82,7 @@ extern void Font_HasCharacter_Injected_mCCBE7842CC556C3C1693FA8148B1928B5321151B
 extern void Font_Internal_CreateFont_Injected_mCE3C0EE5FA346C2703391929A1D88ABC1B2A10FA (void);
 extern void FontTextureRebuildCallback__ctor_m1AF27FC83F3136E493F47015F99CE7A4E6BCA0BC (void);
 extern void FontTextureRebuildCallback_Invoke_m8B52C3F4823ADBB80062209E6BA2B33202AE958D (void);
-static Il2CppMethodPointer s_methodPointers[79] = 
+static Il2CppMethodPointer s_methodPointers[75] = 
 {
 	TextGenerationSettings_CompareColors_m29E454405FB3871CA77CC7F94DAB1B4320BD5E53,
 	TextGenerationSettings_CompareVector2_mF3EE374922B2ECE13BA7B01B26199494A30C2E2E,
@@ -150,16 +146,12 @@ static Il2CppMethodPointer s_methodPointers[79] =
 	Font_get_dynamic_m5231258BFEAABA3B3EA6AB5D8C2FDCBC2AD1371C,
 	Font_get_fontSize_m02C2F5C7A7C89A878F04C2087248DD46BBF9E26B,
 	Font__ctor_m9106C7F312AE77F6721001A5A3143951201AC841,
-	Font__ctor_m9F4256214EE9A4A3F9C8287C21ABCAA0BCCBA461,
-	Font_CreateDynamicFontFromOSFont_m3DF4B7A70F4AD6918FC44195252D9A645B3C5D62,
 	Font_InvokeTextureRebuilt_Internal_m874D1025267C908E5FCD437B41929E4DE248B01B,
 	Font_HasCharacter_m71A84FE036055880E1543D79A38FEFA495AD200B,
 	Font_HasCharacter_mAB838A26F002CB5E4B4DB297F7D6836A28625B18,
-	Font_GetOSInstalledFontNames_m0C3D5751862D10A13CA25B9DE98C0EAE8A686B75,
 	Font_GetPathsToOSFonts_mF2EB5A086E0313B02C22666C9C0E980FE0EB60B8,
 	Font_GetOSFallbacks_mB3FE14E050081E45B0855EF5699B0A1D93B17A78,
 	Font_Internal_CreateFont_m97CB036BAA033DDAD87E14F9D3493A3A2D9C72B1,
-	Font_Internal_CreateDynamicFont_m5252E98E214E0B9B2D42C70A67A9A446341E050E,
 	Font_get_material_Injected_mFD3477FFA6CA61152AC98B142DFE004137D231F7,
 	Font_get_dynamic_Injected_mE1610EDFBB9092E562D21E9FC5A4AAFA89696690,
 	Font_get_fontSize_Injected_m34A9893F1D744CC3CE823AE7BF0902957C8A268E,
@@ -177,7 +169,7 @@ static Il2CppTokenAdjustorThunkPair s_adjustorThunks[3] =
 	{ 0x06000002, TextGenerationSettings_CompareVector2_mF3EE374922B2ECE13BA7B01B26199494A30C2E2E_AdjustorThunk },
 	{ 0x06000003, TextGenerationSettings_Equals_m04DE9655555622E3A4EECC2EAB3BC36B38E20840_AdjustorThunk },
 };
-static const int32_t s_InvokerIndices[79] = 
+static const int32_t s_InvokerIndices[75] = 
 {
 	3319,
 	3600,
@@ -241,16 +233,12 @@ static const int32_t s_InvokerIndices[79] =
 	14289,
 	14421,
 	14690,
-	5751,
-	20219,
 	23551,
 	8117,
 	7890,
 	24690,
 	24690,
-	24690,
 	21025,
-	19004,
 	23077,
 	22836,
 	23021,
@@ -263,7 +251,7 @@ IL2CPP_EXTERN_C const Il2CppCodeGenModule g_UnityEngine_TextRenderingModule_Code
 const Il2CppCodeGenModule g_UnityEngine_TextRenderingModule_CodeGenModule = 
 {
 	"UnityEngine.TextRenderingModule.dll",
-	79,
+	75,
 	s_methodPointers,
 	3,
 	s_adjustorThunks,

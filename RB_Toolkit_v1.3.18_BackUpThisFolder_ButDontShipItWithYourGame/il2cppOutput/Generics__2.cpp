@@ -27363,7 +27363,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Action_9_Invoke_m5FA25CAE4C971A34023F31C
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 95219
+// Method Definition Index: 95218
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AdaptivePerformanceSubsystemBase_3__ctor_m74C2D799C6BB1B311039CE9CE2FED174549F683D_gshared (AdaptivePerformanceSubsystemBase_3_tC5B76CDEB4C187C57E29DE16FA78DD53C40A1987* __this, const RuntimeMethod* method) 
 {
 	{

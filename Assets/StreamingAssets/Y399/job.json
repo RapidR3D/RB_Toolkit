@@ -1,6 +1,6 @@
 {
   "jobNumber": "Y399",
-  "jobName": "UTIL HUMP RCO YM-QUE",
+  "jobName": "PIN PULLER",
   "craft": "HF HUMP FOREMAN",
   "onduty": "2300",
   "yardCode": "QUE",
@@ -8,9 +8,7 @@
   "serviceType": "Yard",
   "location": "Hump Tower Crew Room",
   "radioChannels": "044-044",
-  "equipment": [
-    "RCO Vest",
-    "RCO Flashlight",
+"equipment": [   
     "Personal Radio",
     "PPE",
     "R Yard Map",
@@ -22,7 +20,7 @@
   "sections": [
     {
       "label": "Summary",
-      "file": "summary.md"
+      "file": "overview.md"
     },
     {
       "label": "Operating Notes",
@@ -43,26 +41,7 @@
       "file": "territory.csv"
     }
   ],
-  "procedures": [
-	{
-	  "name": "<b>**RCO TESTS**<b>"
-    },
-    {
-      "name": "Tilt / Time-Out Test",
-      "file": "Shared/SharedDocs/tilt_timeout.md"
-    },
-    {
-      "name": "Vigilance Test",
-      "file": "Shared/SharedDocs/vigilance.md"
-    },
-    {
-      "name": "Standing Locomotive Air Brake Test",
-      "file": "Shared/SharedDocs/standing_brake.md"
-    },
-    {
-      "name": "Locomotive Hand Brake Test",
-      "file": "Shared/SharedDocs/hand_brake.md"
-    }
+  "procedures": [	
   ],
   "images":[
   {
@@ -94,4 +73,3 @@
   }  
   ]
 }
-
