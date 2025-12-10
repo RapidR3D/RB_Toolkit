@@ -51,6 +51,6 @@ Type any of the following into the search bar to access the corresponding guide:
 ## <color=#4169E1>Keyword Search Bar</color>
 - <color=#FF6347>Above categories (DA/MRT/T&E/ETC) you can type in a keyword. The categories that contain the keyword will be available for selection and the keywords will be highlighted with a GREEN background for quicker reference.</color>
 
-Developed by: <color=#20B2AA>George Feller, Jeremy Ackley, Joe Boze, Dean McCleese, Brian Truesdell</color>   
-v1.3.18  
+Developed by: <color=#20B2AA>George Feller, Jeremy Ackley, Joe Boze, Dean McCleese, Brian Truesdell</color>  
+v1.3.19  
 🚂🚃🚃🚃🚃🚃🚃🚃  
