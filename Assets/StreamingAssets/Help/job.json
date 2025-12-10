@@ -20,5 +20,14 @@
       "label": "Quick Links",
       "file": "quick_links.md"
     }
+  ],
+  "images": [
+    {
+      "name": "<b>**Images**<b>"
+    },
+    {
+      "name": "Logo",
+      "file": "Shared/Images/RB_Toolkit_Logo1024x1024.png"
+    }
   ]
 }

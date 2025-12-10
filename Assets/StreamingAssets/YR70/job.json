@@ -1,13 +1,13 @@
 {
-  "jobNumber": "YR09",
-  "jobName": "Hump Relief",
-  "craft": "HF Hump Foreman",
+  "jobNumber": "YR70",
+  "jobName": "Industry Relief",
+  "craft": "FO FOREMAN",
   "onduty": "See Job ID for that day",
   "yardCode": "QUE",
   "subdivisionCode": "CI",
   "serviceType": "Yard",
-  "location": "Hump Tower Crew Room",
-  "radioChannels": "044-044",
+  "location": "See Job ID for that day",
+  "radioChannels": "096-096",
 "equipment": [   
     "Personal Radio",
     "PPE",

@@ -191,10 +191,21 @@ public class JobDataLoader : MonoBehaviour
         Debug.Log($"[JobDataLoader] OnLoaded() called - forcing UI refresh for {LoadedJob?.jobNumber}");
     
         // Find every FileBrowserController in the scene and force it to rebuild the list
+        StartCoroutine(RefreshBrowsersCoroutine());
+    }
+
+    private IEnumerator RefreshBrowsersCoroutine()
+    {
+        // Wait for the end of the frame to allow the inspector to update
+        yield return new WaitForEndOfFrame();
+
         var browsers = FindObjectsOfType<FileBrowserController>();
         foreach (var browser in browsers)
         {
-            browser.BuildList();
+            if (browser != null) // Check if the browser object is still valid
+            {
+                browser.BuildList();
+            }
         }
     }
 

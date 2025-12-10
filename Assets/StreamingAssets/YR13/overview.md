@@ -1,8 +1,8 @@
 # <color=#FFD700>Job Summary</color>
 ===========
 
-<color=#FF8C00>**Yard Job #:**</color> YR13 Trim Relief  
-<color=#FF8C00>**Job Name:**</color> YR13 Trim Relief 3  
+<color=#FF8C00>**Yard Job #:**</color> YR13  
+<color=#FF8C00>**Job Name:**</color> Trim Relief 3  
 <color=#FF8C00>**Craft:**</color> SW/FO  
 <color=#FF8C00>**On Duty:**</color> See Schedule, Pull up specific job for that day  
 

@@ -1,8 +1,8 @@
 # <color=#FFD700>Job Summary</color>
 ===========
 
-<color=#FF8C00>**Yard Job #:**</color> YR60 Hump Relief  
-<color=#FF8C00>**Job Name:**</color> YR50 Hump Relief  
+<color=#FF8C00>**Yard Job #:**</color> YR60  
+<color=#FF8C00>**Job Name:**</color> Hump Relief  
 <color=#FF8C00>**Craft:**</color> HUMP FOREMAN  
 <color=#FF8C00>**On Duty:**</color> See Schedule, Pull up specific job for that day  
 
