@@ -1637,17 +1637,14 @@ public class JobSearchUIController : MonoBehaviour
 
     private void LoadSystemFont()
     {
-        // No-op: We are using TextMeshPro's sprite asset for emojis now.
     }
 
     private void ApplyMobileFonts(VisualElement root)
     {
-        // No-op: Rely on TextMeshPro's sprite asset fallback for emojis
     }
 
     // Helper to apply mobile fonts to a specific label (used when creating labels manually)
     private void ApplyMobileFonts(Label label)
     {
-        // No-op: Rely on TextMeshPro's sprite asset fallback for emojis
     }
 }
