@@ -1,33 +1,49 @@
 {
-  "title": "Over The Road",
-  "category": "Road Operations",
-  "version": "1.0",
-  "docType": "over_the_road",
-  "keywords": [
-    "Over The Road",
-    "OTR",
-    "Road",
-    "Away",
-    "Travel"
-  ],
-  "sections": [
-    {
-      "label": "Overview",
-      "file": "overview.md"
-    }
-  ],
-  "tables": [
-    {
-      "name": "Contacts",
-      "file": "Shared/SharedDocs/road_contactsPR.csv"
-    },
-    {
-      "name": "",
-      "file": ""
-    },
-    {
-      "name": "",
-      "file": ""
-    }
-  ]
+    "docType": "over_the_road",
+    "title": "Over The Road",
+    "category": "Road Operations",
+    "version": "1.0",
+    "keywords": [
+        "Over The Road",
+        "OTR",
+        "Road",
+        "Away",
+        "Travel"
+    ],
+    "sections": [
+        {
+            "label": "Overview",
+            "file": "overview.md"
+        },
+        {
+            "label": "EC1 Instructions",
+            "file": "EC1.md"
+        },
+        {
+            "label": "<b>**VIDEOS**</b>", 
+			"file": ""			
+        },
+        {
+            "label": "EC1 Training Video",
+            "file": "TrainingVideos/EC1_video_00.mp4"
+        },
+        {
+            "label": "<b>**-------------**</b>",
+            "file": ""
+        }		
+    ],
+    "tables": [
+        {
+            "name": "Contacts",
+            "file": "Shared/SharedDocs/road_contactsPR.csv"
+        },
+        {
+            "name": "",
+            "file": ""
+        },
+        {
+            "name": "",
+            "file": ""
+        }
+    ]
 }

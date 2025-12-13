@@ -61,7 +61,7 @@ public class JobSearchUIController : MonoBehaviour
     private const string ActiveMatchColor = "#4CAF5066";
     private const string InactiveMatchColor = "#FFFF0080";
 
-    private enum ItemType { Text, Image, MainframeGuide }
+    private enum ItemType { Text, Image, Video, MainframeGuide }
 
     private class SectionItem
     {
@@ -74,6 +74,29 @@ public class JobSearchUIController : MonoBehaviour
     // UI Elements
     private Button backButton;
     private Button homeButton;
+
+    private void Start()
+    {
+        // Ensure VideoController is initialized. 
+        // We do this in Start to ensure VideoController.Awake has run.
+        if (VideoController.Instance != null)
+        {
+            VideoController.Instance.Initialize(uiDocument);
+        }
+        else
+        {
+            // Fallback: Try to find it if Instance is not set yet (unlikely in Start, but possible if disabled)
+            var vc = FindFirstObjectByType<VideoController>();
+            if (vc != null)
+            {
+                vc.Initialize(uiDocument);
+            }
+            else
+            {
+                Debug.LogError("VideoController not found in scene!");
+            }
+        }
+    }
 
     private void OnEnable()
     {
@@ -302,7 +325,23 @@ public class JobSearchUIController : MonoBehaviour
             easterEggManager.Initialize(root);
         }
 
+        // Try to initialize VideoController if it's already ready (e.g. re-enabling)
+        if (VideoController.Instance != null)
+        {
+            VideoController.Instance.Initialize(uiDocument);
+            VideoController.Instance.OnClose -= OnVideoClosed;
+            VideoController.Instance.OnClose += OnVideoClosed;
+        }
+
         Debug.Log("JobSearchUIController initialized.");
+    }
+
+    private void OnVideoClosed()
+    {
+        if (sectionList != null)
+        {
+            sectionList.ClearSelection();
+        }
     }
 
     private void OnDisable()
@@ -523,28 +562,39 @@ public class JobSearchUIController : MonoBehaviour
 
         // Populate List
         allSectionItems.Clear();
-
+        
         if (isMainframe || isMRT || isMRTAEI || isYES || isDirectAccess || isMiscellaneous || isOverTheRoad || isUnion || isClaims || isPayrollClaims)
         {
             // Add Mainframe/MRT/YES/DA/Misc/OTR/Union specific sections
             allSectionItems.Add(new SectionItem { DisplayName = "**Summary**", Type = ItemType.MainframeGuide, GuideData = job });
-            
+    
             // Also add any standard sections/tables defined in the JSON for Mainframe
             if (job.sections != null)
             {
                 foreach (var section in job.sections)
-                {
+                { 
                     // Skip adding "Summary" again if it's already handled by the hardcoded item above
                     if (section.label.Equals("Summary", StringComparison.OrdinalIgnoreCase))
                         continue;
 
-                    allSectionItems.Add(new SectionItem { DisplayName = section.label, FileKey = section.file, Type = ItemType.Text });
+                    // Check if it's a video
+                    ItemType type; 
+                    if (section.file.EndsWith(".mp4", StringComparison.OrdinalIgnoreCase))
+                    {
+                      type = ItemType.Video;
+                    }
+                    else
+                    {
+                        type = ItemType.Text;
+                    }
+
+                    allSectionItems.Add(new SectionItem { DisplayName = section.label, FileKey = section.file, Type = type });
                 }
             }
 
             if (job.tables != null)
             {
-                foreach (var table in job.tables)
+                foreach (var table in job.tables) 
                 {
                     allSectionItems.Add(new SectionItem { DisplayName = table.name, FileKey = table.file, Type = ItemType.Text });
                 }
@@ -555,10 +605,18 @@ public class JobSearchUIController : MonoBehaviour
             // Add Standard Sections (Works for Jobs, T&E, CrewLife, and Payroll)
             if (job.sections != null)
             {
-                foreach (var section in job.sections)
+                foreach (var section in job.sections) 
                 {
-                    // Check if the file is a CSV (Table) or MD (Text)
-                    ItemType type = section.file.EndsWith(".csv", StringComparison.OrdinalIgnoreCase) ? ItemType.Text : ItemType.Text;
+                    ItemType type; 
+                    if (section.file.EndsWith(".mp4", StringComparison.OrdinalIgnoreCase))
+                    {
+                        type = ItemType. Video;
+                    }
+                    else
+                    {
+                        // Default to Text for .md, .csv, etc.
+                        type = ItemType.Text;
+                    }
                     allSectionItems.Add(new SectionItem { DisplayName = section.label, FileKey = section.file, Type = type });
                 }
             }
@@ -566,18 +624,18 @@ public class JobSearchUIController : MonoBehaviour
             // Add Tables (Explicit tables list)
             if (job.tables != null)
             {
-                foreach (var table in job.tables)
+                foreach (var table in job.tables) 
                 {
                     allSectionItems.Add(new SectionItem { DisplayName = table.name, FileKey = table.file, Type = ItemType.Text });
                 }
             }
 
             // Add Procedures
-            if (job.procedures != null)
+            if (job. procedures != null)
             {
-                foreach (var proc in job.procedures)
+                foreach (var proc in job. procedures)
                 {
-                    allSectionItems.Add(new SectionItem { DisplayName = proc.name, FileKey = proc.file, Type = ItemType.Text });
+                    allSectionItems.Add(new SectionItem { DisplayName = proc. name, FileKey = proc.file, Type = ItemType.Text });
                 }
             }
 
@@ -586,7 +644,7 @@ public class JobSearchUIController : MonoBehaviour
             {
                 foreach (var img in job.images)
                 {
-                    allSectionItems.Add(new SectionItem { DisplayName = img.name, FileKey = img.file, Type = ItemType.Image });
+                    allSectionItems.Add(new SectionItem { DisplayName = img.name, FileKey = img. file, Type = ItemType.Image });
                 }
             }
         }
@@ -773,6 +831,21 @@ public class JobSearchUIController : MonoBehaviour
                 }
             });
         }
+        else if (item.Type == ItemType.Video)
+        {
+            Debug.Log($"Play video requested for file: {item.FileKey}");
+            // Handle Video Playback
+            if (VideoController.Instance != null)
+            {
+                VideoController.Instance.PlayVideo(item.FileKey);
+            }
+            else
+            {
+                var label = new Label("Video Player not available.");
+                label.AddToClassList("detail-content");
+                detailView.Add(label);
+            }
+        }
         else
         {
             // Handle Text Content
@@ -935,7 +1008,19 @@ public class JobSearchUIController : MonoBehaviour
             }
             
             content = GetFileContent(fileKey);
-            if (content == null) content = "Content not found.";
+            if (content == null)
+            {
+                // For videos, content will be null because they are not pre-loaded as text.
+                // This is expected, so we don't show a "Content not found" message.
+                if (!fileKey.EndsWith(".mp4", StringComparison.OrdinalIgnoreCase))
+                {
+                    content = "Content not found.";
+                }
+                else
+                {
+                    content = ""; // Set to empty for videos
+                }
+            }
 
             // Highlight Search Term and Count Matches
             if (!string.IsNullOrEmpty(currentSearchTerm))

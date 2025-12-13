@@ -1,0 +1,56 @@
+HOW TO ADD VIDEOS TO THE APPLICATION
+======================================
+
+This guide explains how to add new video content to the application.
+
+1. PREPARE THE VIDEO FILE
+-------------------------
+- The video must be in .mp4 format.
+- Place the video file inside the "StreamingAssets" folder (or any subfolder within it).
+  - Recommended location: "Assets/StreamingAssets/TrainingVideos/"
+  - Example: "Assets/StreamingAssets/TrainingVideos/NewTrainingVideo.mp4"
+
+2. UPDATE THE JSON DATA
+-----------------------
+- Locate the "job.json" file for the specific job or category where you want the video to appear.
+  - Example: "Assets/StreamingAssets/Y197/job.json"
+- Open the file in a text editor.
+- Find the "sections" array.
+- Add a new section entry for the video.
+
+Format:
+{
+  "label": "Display Name of the Video",
+  "file": "Path/To/Video.mp4"
+}
+
+IMPORTANT: The "file" path must be relative to the "StreamingAssets" folder.
+
+Examples:
+- If video is in "Assets/StreamingAssets/TrainingVideos/Intro.mp4":
+  "file": "TrainingVideos/Intro.mp4"
+
+- If video is in "Assets/StreamingAssets/Y197/Process.mp4":
+  "file": "Y197/Process.mp4"
+
+3. CODE CHANGES (OPTIONAL)
+--------------------------
+- No code changes are required to add videos to existing jobs or categories.
+- The application automatically detects ".mp4" files in the JSON and treats them as videos.
+
+Advanced: New Document Types
+- If you are creating a completely new category (docType) in a new job.json file (e.g., "docType": "new_category"), and you want the Search Bar to be visible for this category:
+  1. Open "Assets/Scripts/JobSearchUIController.cs".
+  2. Find the "OnJobLoaded" method.
+  3. Locate the boolean flags for docTypes (e.g., "bool isMainframe = ...").
+  4. Add a flag for your new docType.
+  5. Add your flag to the condition that shows the "SearchControlsContainer".
+
+4. TROUBLESHOOTING
+------------------
+- Video not playing?
+  - Check that the file path in job.json is correct and relative to StreamingAssets.
+  - Ensure the file extension is exactly ".mp4".
+  - Check the Unity Console for errors (e.g., "Video not found").
+- Video plays but screen is black?
+  - Ensure the video codec is supported by Unity (H.264 is recommended).

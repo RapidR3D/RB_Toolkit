@@ -16,7 +16,7 @@
 - We also are trying to include information for things not gone over in training very much. Job bids. Vacation. Claims. How to use YES effectively. etc.  
 
 🚂🚃🚃🚃🚃🚃🚃🚃
-Version:  <color=#20B2AA>1.3.19</color>
+Version:  <color=#20B2AA>1.4.22</color>
 Created: <color=#20B2AA>120225</color>  
 Developed by: <color=#20B2AA>GF, JA, JB, DM, BT</color>  
 🚂🚃🚃🚃🚃🚃🚃🚃
