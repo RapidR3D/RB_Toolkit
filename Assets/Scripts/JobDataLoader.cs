@@ -141,7 +141,7 @@ public class JobDataLoader : MonoBehaviour
     private IEnumerator RefreshBrowsersCoroutine()
     {
         yield return new WaitForEndOfFrame();
-        var browsers = FindObjectsOfType<FileBrowserController>();
+        var browsers = FindObjectsByType<FileBrowserController>(FindObjectsSortMode.None);
         foreach (var browser in browsers)
         {
             if (browser != null) browser.BuildList();

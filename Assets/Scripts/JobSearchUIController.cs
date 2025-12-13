@@ -815,7 +815,7 @@ public class JobSearchUIController : MonoBehaviour
                     var img = new Image();
                     img.image = texture;
                     img.style.flexGrow = 1;
-                    img.style.unityBackgroundScaleMode = ScaleMode.ScaleToFit;
+                    img.style.backgroundSize = new BackgroundSize(BackgroundSizeType.Contain);
                     img.style.minHeight = 500; // Ensure it has some height
                     
                     // Add click handler to open full screen
@@ -1216,7 +1216,6 @@ public class JobSearchUIController : MonoBehaviour
         // Summary
         if (!string.IsNullOrEmpty(guide.summary))
         {
-            string summaryHeader = "# Summary";
             // If summaryColor is defined, apply it to the header? 
             // Or maybe the user wants the summary TEXT to be colored?
             // "where things like Summary are rendered in the gold color" implies the header "Summary".
@@ -1458,8 +1457,8 @@ public class JobSearchUIController : MonoBehaviour
         
         // Reset Zoom/Pan
         currentZoom = 1f;
-        fullImage.transform.scale = Vector3.one;
-        fullImage.transform.position = Vector3.zero;
+        fullImage.style.scale = new Scale(Vector3.one);
+        fullImage.style.translate = new Translate(0, 0, 0);
     }
 
     private void CloseFullScreen()
@@ -1472,7 +1471,7 @@ public class JobSearchUIController : MonoBehaviour
     {
         if (fullImage == null) return;
         currentZoom = Mathf.Min(currentZoom + 0.5f, 5f); // Max zoom 5x
-        fullImage.transform.scale = Vector3.one * currentZoom;
+        fullImage.style.scale = new Scale(Vector3.one * currentZoom);
     }
 
     private void ZoomOut()
@@ -1481,9 +1480,9 @@ public class JobSearchUIController : MonoBehaviour
         currentZoom = Mathf.Max(currentZoom - 0.5f, 1f); // Min zoom 1x
         if (currentZoom == 1f)
         {
-            fullImage.transform.position = Vector3.zero; // Reset position if zoomed out completely
+            fullImage.style.translate = new Translate(0, 0, 0); // Reset position if zoomed out completely
         }
-        fullImage.transform.scale = Vector3.one * currentZoom;
+        fullImage.style.scale = new Scale(Vector3.one * currentZoom);
     }
 
     private void OnPointerDown(PointerDownEvent evt)
@@ -1492,7 +1491,7 @@ public class JobSearchUIController : MonoBehaviour
         {
             isPanning = true;
             panStart = evt.position;
-            imageStartPos = fullImage.transform.position;
+            imageStartPos = new Vector3(fullImage.resolvedStyle.translate.x, fullImage.resolvedStyle.translate.y, 0);
             fullImage.CapturePointer(evt.pointerId);
             evt.StopPropagation();
         }
@@ -1503,7 +1502,7 @@ public class JobSearchUIController : MonoBehaviour
         if (isPanning && fullImage.HasPointerCapture(evt.pointerId))
         {
             Vector2 delta = (Vector2)evt.position - panStart;
-            fullImage.transform.position = imageStartPos + (Vector3)delta;
+            fullImage.style.translate = new Translate(imageStartPos.x + delta.x, imageStartPos.y + delta.y, 0);
             evt.StopPropagation();
         }
     }

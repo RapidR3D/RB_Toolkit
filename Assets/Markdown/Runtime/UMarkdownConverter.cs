@@ -309,7 +309,7 @@ namespace BrewedInk.MarkdownSupport
             
             var lbl = new SelectableLabel(codeString);
             lbl.AddToClassList("code-block-text");
-            lbl.selection.selectionColor = context.config.RichTextStyle.codeSelectionColor;
+            // lbl.selection.selectionColor = context.config.RichTextStyle.codeSelectionColor; // Deprecated
 
             if (context.config.useCodeCopyButtons)
             {

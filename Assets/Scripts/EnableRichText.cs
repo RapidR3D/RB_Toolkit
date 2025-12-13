@@ -5,7 +5,7 @@ public class EnableRichText : MonoBehaviour
 {
     void Start()
     {
-        TextMeshProUGUI[] textComponents = FindObjectsOfType<TextMeshProUGUI>();
+        TextMeshProUGUI[] textComponents = FindObjectsByType<TextMeshProUGUI>(FindObjectsSortMode.None);
         foreach (TextMeshProUGUI component in textComponents)
         {
             component.richText = true;

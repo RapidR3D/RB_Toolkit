@@ -12,7 +12,7 @@ public class UIManager : MonoBehaviour
 
     public void ShowFile(string key)
     {
-        var content = FindObjectOfType<JobDataLoader>().LoadedFiles;
+        var content = FindFirstObjectByType<JobDataLoader>().LoadedFiles;
         if (content.TryGetValue(key, out string text))
         {
             if (key.EndsWith(".md", System.StringComparison.OrdinalIgnoreCase))
