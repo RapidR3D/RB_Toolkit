@@ -22,13 +22,20 @@ public class JobDataLoader : MonoBehaviour
 
     private JobManifest _manifest;
 
+    void Awake()
+    {
+        Debug.Log("JobDataLoader: Awake called.");
+    }
+
     void Start()
     {
+        Debug.Log("JobDataLoader: Start called.");
         StartCoroutine(LoadManifestAndJob());
     }
 
     private IEnumerator LoadManifestAndJob()
     {
+        Debug.Log("JobDataLoader: Loading manifest...");
         string manifestPath = Path.Combine(Application.streamingAssetsPath, "job_manifest.json");
         string url = ToPathUrl(manifestPath);
         
@@ -52,11 +59,16 @@ public class JobDataLoader : MonoBehaviour
             }
         }
 
-        if (LoadOnStart) StartCoroutine(LoadJobCoroutine());
+        if (LoadOnStart) 
+        {
+            Debug.Log($"JobDataLoader: LoadOnStart is true. Loading job from folder: {JobFolder}");
+            StartCoroutine(LoadJobCoroutine());
+        }
     }
 
     public IEnumerator LoadJobCoroutine()
     {
+        Debug.Log($"JobDataLoader: Starting LoadJobCoroutine for {JobFolder}");
         LoadedJob = null;
         LoadedFiles.Clear();
 
@@ -129,6 +141,7 @@ public class JobDataLoader : MonoBehaviour
             LoadedFiles[jname] = jobJsonText;
         }
 
+        Debug.Log("JobDataLoader: Job loaded successfully. Invoking JobLoaded event.");
         JobLoaded?.Invoke(LoadedJob, LoadedFiles);
         OnLoaded();
     }

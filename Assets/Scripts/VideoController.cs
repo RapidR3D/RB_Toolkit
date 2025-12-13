@@ -124,6 +124,7 @@ public class VideoController : MonoBehaviour
         videoPlayer.prepareCompleted += OnVideoPrepared;
 
         videoContainer.style.display = DisplayStyle.None;
+        Debug.Log("VideoController: Initialization complete.");
     }
 
     private void OnVideoError(VideoPlayer source, string message)
@@ -141,9 +142,13 @@ public class VideoController : MonoBehaviour
 
         string videoPath = Path.Combine(Application.streamingAssetsPath, relativePath).Replace("\\", "/");
 
-        #if (UNITY_ANDROID || UNITY_IOS) && !UNITY_EDITOR
-            // On mobile, the path from StreamingAssets is used directly by VideoPlayer
+        #if UNITY_ANDROID && !UNITY_EDITOR
+            // On Android, the path from StreamingAssets is used directly by VideoPlayer
+        #elif UNITY_IOS && !UNITY_EDITOR
+            // On iOS, we need to ensure the path is correct
+            videoPath = Path.Combine(Application.streamingAssetsPath, relativePath).Replace("\\", "/");
         #else
+            // Editor and Standalone
             videoPath = "file://" + videoPath;
         #endif
 

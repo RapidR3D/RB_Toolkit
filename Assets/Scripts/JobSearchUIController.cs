@@ -100,8 +100,14 @@ public class JobSearchUIController : MonoBehaviour
 
     private void OnEnable()
     {
+        Debug.Log("JobSearchUIController: OnEnable called.");
         if (uiDocument == null) uiDocument = GetComponent<UIDocument>();
-        if (jobDataLoader == null) jobDataLoader = FindFirstObjectByType<JobDataLoader>();
+        if (jobDataLoader == null) 
+        {
+            jobDataLoader = FindFirstObjectByType<JobDataLoader>();
+            if (jobDataLoader == null) Debug.LogError("JobSearchUIController: JobDataLoader not found!");
+            else Debug.Log("JobSearchUIController: JobDataLoader found.");
+        }
         if (easterEggManager == null) easterEggManager = GetComponent<EasterEggManager>();
         if (easterEggManager == null) easterEggManager = gameObject.AddComponent<EasterEggManager>();
 
