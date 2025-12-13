@@ -110,8 +110,8 @@ public class VideoController : MonoBehaviour
         
         videoScreen.image = renderTexture;
 
-        // Rotate video screen 270 degrees to fix orientation
-        videoScreen.style.rotate = new Rotate(new Angle(270, AngleUnit.Degree));
+        // Rotate video screen 0 degrees to fix orientation (Landscape)
+        videoScreen.style.rotate = new Rotate(new Angle(0, AngleUnit.Degree));
 
         closeButton.clicked -= StopVideo;
         closeButton.clicked += StopVideo;
